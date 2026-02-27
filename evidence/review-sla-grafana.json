@@ -1,0 +1,30 @@
+﻿{
+    "generated_at_utc":  "2026-02-27T09:55:19Z",
+    "repository":  "grafana/grafana",
+    "contributor":  "dusan-maintains",
+    "sla_hours":  24,
+    "summary":  {
+                    "tracked_open_prs":  1,
+                    "needs_response_count":  1,
+                    "overdue_count":  0
+                },
+    "items":  [
+                  {
+                      "pr_number":  119212,
+                      "pr_title":  "Email: remove remote font and logo dependencies in default templates",
+                      "pr_state":  "open",
+                      "pr_url":  "https://github.com/grafana/grafana/pull/119212",
+                      "updated_at":  "2026-02-27T09:51:29Z",
+                      "external_feedback_count":  1,
+                      "own_followups_count":  0,
+                      "last_external_type":  "issue_comment",
+                      "last_external_author":  "CLAassistant",
+                      "last_external_at":  "2026-02-27T09:51:06Z",
+                      "last_external_url":  "https://github.com/grafana/grafana/pull/119212#issuecomment-3971898638",
+                      "last_own_after_external_at":  null,
+                      "needs_response":  true,
+                      "hours_since_last_external":  0.07,
+                      "overdue_sla":  false
+                  }
+              ]
+}
