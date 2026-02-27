@@ -95,11 +95,20 @@ function New-Event {
   }
 }
 
+function Convert-ToUtcDateTime {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Value
+  )
+
+  return ([DateTimeOffset]::Parse($Value)).UtcDateTime
+}
+
 if (!(Test-Path $OutDir)) {
   New-Item -ItemType Directory -Path $OutDir | Out-Null
 }
 
-$now = (Get-Date).ToUniversalTime()
+$now = ([DateTimeOffset]::UtcNow).UtcDateTime
 $items = @()
 
 foreach ($n in $PrNumbers) {
@@ -134,10 +143,10 @@ foreach ($n in $PrNumbers) {
   $hoursSince = $null
 
   if ($externalEvents.Count -gt 0) {
-    $lastExternal = $externalEvents | Sort-Object { [DateTime]$_.created_at } -Descending | Select-Object -First 1
-    $lastOwnAfterExternal = $ownEvents | Where-Object { [DateTime]$_.created_at -gt [DateTime]$lastExternal.created_at } | Sort-Object { [DateTime]$_.created_at } -Descending | Select-Object -First 1
+    $lastExternal = $externalEvents | Sort-Object { Convert-ToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
+    $lastOwnAfterExternal = $ownEvents | Where-Object { (Convert-ToUtcDateTime -Value $_.created_at) -gt (Convert-ToUtcDateTime -Value $lastExternal.created_at) } | Sort-Object { Convert-ToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
 
-    $hoursSince = [Math]::Round(($now - [DateTime]$lastExternal.created_at).TotalHours, 2)
+    $hoursSince = [Math]::Round(($now - (Convert-ToUtcDateTime -Value $lastExternal.created_at)).TotalHours, 2)
     if ($pr.state -eq "open" -and -not $lastOwnAfterExternal) {
       $needsResponse = $true
       $overdue = $hoursSince -ge $SlaHours
