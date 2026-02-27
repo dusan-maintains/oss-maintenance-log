@@ -1,6 +1,6 @@
 ﻿{
-    "generated_at_utc":  "2026-02-27T08:23:19Z",
-    "repository":  "kylefox/jquery-tablesort",
+    "generated_at_utc":  "2026-02-27T08:23:31Z",
+    "repository":  "Hellenic/react-hexgrid",
     "contributor":  "dusan-maintains",
     "sla_hours":  24,
     "summary":  {
@@ -10,11 +10,11 @@
                 },
     "items":  [
                   {
-                      "pr_number":  49,
-                      "pr_title":  "Fix stale tablesort.$th reference after header clicks",
+                      "pr_number":  123,
+                      "pr_title":  "test: add coverage for GridGenerator.ring and .spiral",
                       "pr_state":  "open",
-                      "pr_url":  "https://github.com/kylefox/jquery-tablesort/pull/49",
-                      "updated_at":  "2026-02-27T07:05:04Z",
+                      "pr_url":  "https://github.com/Hellenic/react-hexgrid/pull/123",
+                      "updated_at":  "2026-02-27T08:14:45Z",
                       "external_feedback_count":  0,
                       "own_followups_count":  0,
                       "last_external_type":  null,

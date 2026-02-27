@@ -20,12 +20,63 @@ function New-GitHubHeaders {
   return $headers
 }
 
+function Get-JsonWithFallback {
+  param(
+    [string]$Uri,
+    [hashtable]$Headers
+  )
+
+  try {
+    return Invoke-RestMethod -Uri $Uri -Headers $Headers
+  } catch {
+    $pythonCmd = if (Get-Command python -ErrorAction SilentlyContinue) { "python" } elseif (Get-Command python3 -ErrorAction SilentlyContinue) { "python3" } else { $null }
+    if (-not $pythonCmd) {
+      throw
+    }
+
+    $prevHttpProxy = $env:HTTP_PROXY
+    $prevHttpsProxy = $env:HTTPS_PROXY
+    $prevAllProxy = $env:ALL_PROXY
+    $prevGitHttpProxy = $env:GIT_HTTP_PROXY
+    $prevGitHttpsProxy = $env:GIT_HTTPS_PROXY
+    try {
+      $env:HTTP_PROXY = ""
+      $env:HTTPS_PROXY = ""
+      $env:ALL_PROXY = ""
+      $env:GIT_HTTP_PROXY = ""
+      $env:GIT_HTTPS_PROXY = ""
+      $env:REQ_URL = $Uri
+      $env:REQ_HEADERS_JSON = ($Headers | ConvertTo-Json -Compress)
+      $json = @'
+import json
+import os
+import urllib.request
+
+url = os.environ["REQ_URL"]
+headers = json.loads(os.environ.get("REQ_HEADERS_JSON", "{}"))
+req = urllib.request.Request(url, headers=headers)
+with urllib.request.urlopen(req, timeout=30) as resp:
+    print(resp.read().decode("utf-8"))
+'@ | & $pythonCmd -
+      return ($json | ConvertFrom-Json)
+    } finally {
+      $env:HTTP_PROXY = $prevHttpProxy
+      $env:HTTPS_PROXY = $prevHttpsProxy
+      $env:ALL_PROXY = $prevAllProxy
+      $env:GIT_HTTP_PROXY = $prevGitHttpProxy
+      $env:GIT_HTTPS_PROXY = $prevGitHttpsProxy
+      Remove-Item Env:REQ_URL -ErrorAction SilentlyContinue
+      Remove-Item Env:REQ_HEADERS_JSON -ErrorAction SilentlyContinue
+    }
+  }
+}
+
 function Get-GitHubJson {
   param(
     [string]$Uri
   )
 
-  return Invoke-RestMethod -Uri $Uri -Headers (New-GitHubHeaders)
+  return Get-JsonWithFallback -Uri $Uri -Headers (New-GitHubHeaders)
 }
 
 function New-Event {

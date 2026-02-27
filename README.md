@@ -14,19 +14,22 @@ Public, verifiable record of open-source maintenance activity.
 - Track B: [`kylefox/jquery-tablesort`](https://github.com/kylefox/jquery-tablesort) (`Maintainers Wanted` in README)
 - Track C: [`extrabacon/python-shell`](https://github.com/extrabacon/python-shell) (maintainer-gap signal in issues)
 - Track D: [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (high-impact package with open maintenance backlog)
+- Track E: [`Hellenic/react-hexgrid`](https://github.com/Hellenic/react-hexgrid) (maintainer-needed signal in issues)
 - Active forks:
   - [`dusan-maintains/jquery-modal`](https://github.com/dusan-maintains/jquery-modal)
   - [`dusan-maintains/jquery-tablesort`](https://github.com/dusan-maintains/jquery-tablesort)
   - [`dusan-maintains/python-shell`](https://github.com/dusan-maintains/python-shell)
   - [`dusan-maintains/rrule`](https://github.com/dusan-maintains/rrule)
+  - [`dusan-maintains/react-hexgrid`](https://github.com/dusan-maintains/react-hexgrid)
 
 ## Live Snapshot (2026-02-27 UTC)
 - `jquery-modal`: 2,614 stars, 24,399 npm weekly downloads
 - `jquery-tablesort`: 258 stars, 1,667 npm weekly downloads
 - `python-shell`: 2,163 stars, 194,847 npm weekly downloads
 - `rrule`: 3,681 stars, 1,374,236 npm weekly downloads
-- Combined footprint under active maintenance: 8,716 stars, 1,595,149 npm weekly downloads
-- Open upstream PRs from this account: 6 (`#315`, `#316`, `#317`, `#49`, `#320`, `#664`)
+- `react-hexgrid`: 350 stars, 1,702 npm weekly downloads
+- Combined footprint under active maintenance: 9,066 stars, 1,596,851 npm weekly downloads
+- Open upstream PRs from this account: 7 (`#315`, `#316`, `#317`, `#49`, `#320`, `#664`, `#123`)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
 - Latest ecosystem status: [`evidence/ecosystem-status.json`](./evidence/ecosystem-status.json)
 - Latest SLA reports:
@@ -34,6 +37,8 @@ Public, verifiable record of open-source maintenance activity.
   - [`evidence/review-sla-tablesort.md`](./evidence/review-sla-tablesort.md) (`jquery-tablesort`)
   - [`evidence/review-sla-python-shell.md`](./evidence/review-sla-python-shell.md) (`python-shell`)
   - [`evidence/review-sla-rrule.md`](./evidence/review-sla-rrule.md) (`rrule`)
+  - [`evidence/review-sla-react-hexgrid.md`](./evidence/review-sla-react-hexgrid.md) (`react-hexgrid`)
+- Latest unattended response queue: [`evidence/action-queue.md`](./evidence/action-queue.md)
 
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |
@@ -60,13 +65,17 @@ Public, verifiable record of open-source maintenance activity.
 | 2026-02-27 | rrule | Branch | [maintenance/fix-weekdaystr-serialization](https://github.com/dusan-maintains/rrule/tree/maintenance/fix-weekdaystr-serialization) | Pushed | Issue-driven serialization reliability patch |
 | 2026-02-27 | rrule | Commit | [c5ae606](https://github.com/dusan-maintains/rrule/commit/c5ae606afad4e5f7e44e4a17bd56dc01b14e6363) | Published | Fix `WeekdayStr[]` serialization for `BYDAY` output |
 | 2026-02-27 | rrule | PR | [jkbrzt/rrule#664](https://github.com/jkbrzt/rrule/pull/664) | Open | Fixes `BYDAY=undefined` for string weekday arrays (#648) |
+| 2026-02-27 | react-hexgrid | Fork | [dusan-maintains/react-hexgrid](https://github.com/dusan-maintains/react-hexgrid) | Active | Fifth ecosystem package under active maintenance |
+| 2026-02-27 | react-hexgrid | Branch | [maintenance/add-ring-spiral-tests](https://github.com/dusan-maintains/react-hexgrid/tree/maintenance/add-ring-spiral-tests) | Pushed | Focused test coverage branch for geometry generators |
+| 2026-02-27 | react-hexgrid | Commit | [cbfcc50](https://github.com/dusan-maintains/react-hexgrid/commit/cbfcc50f8be57495170a4908d19920f5ff5f87ca) | Published | Add ring/spiral regression coverage to stabilize generator behavior |
+| 2026-02-27 | react-hexgrid | PR | [Hellenic/react-hexgrid#123](https://github.com/Hellenic/react-hexgrid/pull/123) | Open | Raises confidence for generator correctness before future compatibility fixes |
 
 ## Priority Radar (Researched 2026-02-27)
 | Project | Signals | Why It Is Strong | Next Patch Type |
 |---|---|---|---|
 | [`gpodder/mygpo`](https://github.com/gpodder/mygpo) | 301 stars, active 2025 updates | Maintained service dependency surface | Small reliability/docs patch |
-| [`Hellenic/react-hexgrid`](https://github.com/Hellenic/react-hexgrid) | 350 stars, 1,647 npm weekly | Moderate ecosystem footprint and manageable code | React compatibility/dependency patch |
 | [`stefanjudis/grunt-phantomas`](https://github.com/stefanjudis/grunt-phantomas) | 282 stars, legacy tooling use | Maintainer-gap profile package | Toolchain/docs maintenance patch |
+| [`0sir1ss/Carbon`](https://github.com/0sir1ss/Carbon) | 101 stars, small Python codebase | Fast turnaround for compatibility maintenance | Python 3.12 compatibility + CLI polish |
 
 ## Operations
 1. Keep PR response SLA under 24 hours.
@@ -83,3 +92,4 @@ Public, verifiable record of open-source maintenance activity.
 - [Target repo radar](./target-repo-radar.md)
 - [Evidence updater](./scripts/update-evidence.ps1)
 - [Ecosystem status updater](./scripts/update-ecosystem-status.ps1)
+- [Action queue updater](./scripts/update-action-queue.ps1)

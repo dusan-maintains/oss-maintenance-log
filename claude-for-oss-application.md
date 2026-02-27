@@ -9,11 +9,12 @@ My current focus is maintainer-needed ecosystem packages:
 - `kylefox/jquery-tablesort` (README includes "Maintainers Wanted")
 - `extrabacon/python-shell` (active maintainer-gap signal in issue tracker)
 - `jkbrzt/rrule` (high-impact package with longstanding maintenance backlog)
+- `Hellenic/react-hexgrid` (maintainer-needed signal in issue tracker)
 
 Combined public footprint in my current track:
-- 8,716 GitHub stars across actively maintained targets
-- 1,595,149 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`, `python-shell`, `rrule`)
-- 6 open upstream PRs from my account with scoped, issue-linked fixes
+- 9,066 GitHub stars across actively maintained targets
+- 1,596,851 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`, `python-shell`, `rrule`, `react-hexgrid`)
+- 7 open upstream PRs from my account with scoped, issue-linked fixes
 
 Evidence:
 - GitHub profile: https://github.com/dusan-maintains
@@ -40,6 +41,10 @@ Evidence:
 - Branch 6: https://github.com/dusan-maintains/rrule/tree/maintenance/fix-weekdaystr-serialization
 - Commit 6: https://github.com/dusan-maintains/rrule/commit/c5ae606afad4e5f7e44e4a17bd56dc01b14e6363
 - Pull request 6: https://github.com/jkbrzt/rrule/pull/664
+- Fork 5: https://github.com/dusan-maintains/react-hexgrid
+- Branch 7: https://github.com/dusan-maintains/react-hexgrid/tree/maintenance/add-ring-spiral-tests
+- Commit 7: https://github.com/dusan-maintains/react-hexgrid/commit/cbfcc50f8be57495170a4908d19920f5ff5f87ca
+- Pull request 7: https://github.com/Hellenic/react-hexgrid/pull/123
 
 Patch summary:
 - Render close button text as plain text rather than HTML during button creation.
@@ -50,6 +55,7 @@ Patch summary:
 - Keep `tablesort.$th` state synchronized with the actively sorted header to resolve stale/null state reports (issues #40 and #45).
 - Fix `runString()` temp-path generation in `python-shell` (`tmpdir()` call) and add focused regression coverage.
 - Fix `rrule` serialization for `WeekdayStr[]` so `BYDAY` is emitted correctly (issue #648 context).
+- Add focused tests for `GridGenerator.ring()` and `GridGenerator.spiral()` in `react-hexgrid` to improve confidence for future compatibility maintenance.
 
 I plan to continue with small, high-signal maintenance contributions: issue triage, compatibility fixes, documentation quality, and follow-up PRs based on maintainer review. The goal is to reduce downstream friction for teams still relying on these packages.
 
