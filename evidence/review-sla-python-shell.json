@@ -1,6 +1,6 @@
 ﻿{
-    "generated_at_utc":  "2026-02-27T07:23:04Z",
-    "repository":  "kylefox/jquery-tablesort",
+    "generated_at_utc":  "2026-02-27T07:23:05Z",
+    "repository":  "extrabacon/python-shell",
     "contributor":  "dusan-maintains",
     "sla_hours":  24,
     "summary":  {
@@ -10,11 +10,11 @@
                 },
     "items":  [
                   {
-                      "pr_number":  49,
-                      "pr_title":  "Fix stale tablesort.$th reference after header clicks",
+                      "pr_number":  320,
+                      "pr_title":  "Fix runString temp path to use tmpdir() and add regression test",
                       "pr_state":  "open",
-                      "pr_url":  "https://github.com/kylefox/jquery-tablesort/pull/49",
-                      "updated_at":  "2026-02-27T07:05:04Z",
+                      "pr_url":  "https://github.com/extrabacon/python-shell/pull/320",
+                      "updated_at":  "2026-02-27T07:19:49Z",
                       "external_feedback_count":  0,
                       "own_followups_count":  0,
                       "last_external_type":  null,

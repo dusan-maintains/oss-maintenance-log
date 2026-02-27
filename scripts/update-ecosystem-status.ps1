@@ -48,6 +48,13 @@ $targets = @(
     package = "jquery-tablesort"
     maintainer_needed_signal = "README Maintainers Wanted"
     tracked_prs = @(49)
+  },
+  [PSCustomObject]@{
+    owner = "extrabacon"
+    repo = "python-shell"
+    package = "python-shell"
+    maintainer_needed_signal = "Issue #290: Looking for maintainer"
+    tracked_prs = @(320)
   }
 )
 

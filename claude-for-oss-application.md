@@ -4,14 +4,15 @@ I am applying under the Ecosystem Impact track.
 
 I contribute maintenance-focused work to public OSS packages and keep all activity verifiable through public links. I created this GitHub account on February 27, 2026 to keep my maintenance work public and consistent in one place. Before this, most coding work was local/private and not organized as public OSS contributions.
 
-My current focus is maintainer-needed jQuery ecosystem packages:
+My current focus is maintainer-needed ecosystem packages:
 - `kylefox/jquery-modal` (README includes "Maintainers Wanted")
 - `kylefox/jquery-tablesort` (README includes "Maintainers Wanted")
+- `extrabacon/python-shell` (active maintainer-gap signal in issue tracker)
 
 Combined public footprint in my current track:
-- 2,872 GitHub stars across actively maintained targets
-- 27,231 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`)
-- 4 open upstream PRs from my account with scoped, issue-linked fixes
+- 5,035 GitHub stars across actively maintained targets
+- 217,792 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`, `python-shell`)
+- 5 open upstream PRs from my account with scoped, issue-linked fixes
 
 Evidence:
 - GitHub profile: https://github.com/dusan-maintains
@@ -30,6 +31,10 @@ Evidence:
 - Branch 4: https://github.com/dusan-maintains/jquery-tablesort/tree/maintenance/update-sorted-column-ref
 - Commit 4: https://github.com/dusan-maintains/jquery-tablesort/commit/d5a5aae333d5305a5dd372f9be2d202238ce1161
 - Pull request 4: https://github.com/kylefox/jquery-tablesort/pull/49
+- Fork 3: https://github.com/dusan-maintains/python-shell
+- Branch 5: https://github.com/dusan-maintains/python-shell/tree/maintenance/fix-runstring-temp-path
+- Commit 5: https://github.com/dusan-maintains/python-shell/commit/1520d01cd15d9463022608e86b1919f95444116f
+- Pull request 5: https://github.com/extrabacon/python-shell/pull/320
 
 Patch summary:
 - Render close button text as plain text rather than HTML during button creation.
@@ -38,6 +43,7 @@ Patch summary:
 - Scope AJAX callbacks to the originating modal instance to avoid wrong-modal behavior in race conditions.
 - Add an idempotent initialization guard to handle multiple imports safely (issue #309 context).
 - Keep `tablesort.$th` state synchronized with the actively sorted header to resolve stale/null state reports (issues #40 and #45).
+- Fix `runString()` temp-path generation in `python-shell` (`tmpdir()` call) and add focused regression coverage.
 
 I plan to continue with small, high-signal maintenance contributions: issue triage, compatibility fixes, documentation quality, and follow-up PRs based on maintainer review. The goal is to reduce downstream friction for teams still relying on these packages.
 

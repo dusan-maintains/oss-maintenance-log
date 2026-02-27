@@ -12,20 +12,24 @@ Public, verifiable record of open-source maintenance activity.
 ## Current Scope
 - Track A: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal) (`Maintainers Wanted` in README)
 - Track B: [`kylefox/jquery-tablesort`](https://github.com/kylefox/jquery-tablesort) (`Maintainers Wanted` in README)
+- Track C: [`extrabacon/python-shell`](https://github.com/extrabacon/python-shell) (maintainer-gap signal in issues)
 - Active forks:
   - [`dusan-maintains/jquery-modal`](https://github.com/dusan-maintains/jquery-modal)
   - [`dusan-maintains/jquery-tablesort`](https://github.com/dusan-maintains/jquery-tablesort)
+  - [`dusan-maintains/python-shell`](https://github.com/dusan-maintains/python-shell)
 
 ## Live Snapshot (2026-02-27 UTC)
-- `jquery-modal`: 2,614 stars, 25,327 npm weekly downloads
+- `jquery-modal`: 2,614 stars, 24,399 npm weekly downloads
 - `jquery-tablesort`: 258 stars, 1,904 npm weekly downloads
-- Combined footprint under active maintenance: 2,872 stars, 27,231 npm weekly downloads
-- Open upstream PRs from this account: 4 (`#315`, `#316`, `#317`, `#49`)
+- `python-shell`: 2,163 stars, 191,489 npm weekly downloads
+- Combined footprint under active maintenance: 5,035 stars, 217,792 npm weekly downloads
+- Open upstream PRs from this account: 5 (`#315`, `#316`, `#317`, `#49`, `#320`)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
 - Latest ecosystem status: [`evidence/ecosystem-status.json`](./evidence/ecosystem-status.json)
 - Latest SLA reports:
   - [`evidence/review-sla.md`](./evidence/review-sla.md) (`jquery-modal`)
   - [`evidence/review-sla-tablesort.md`](./evidence/review-sla-tablesort.md) (`jquery-tablesort`)
+  - [`evidence/review-sla-python-shell.md`](./evidence/review-sla-python-shell.md) (`python-shell`)
 
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |
@@ -44,12 +48,16 @@ Public, verifiable record of open-source maintenance activity.
 | 2026-02-27 | jquery-tablesort | Branch | [maintenance/update-sorted-column-ref](https://github.com/dusan-maintains/jquery-tablesort/tree/maintenance/update-sorted-column-ref) | Pushed | Issue-driven branch for stale state fix |
 | 2026-02-27 | jquery-tablesort | Commit | [d5a5aae](https://github.com/dusan-maintains/jquery-tablesort/commit/d5a5aae333d5305a5dd372f9be2d202238ce1161) | Published | Keep `tablesort.$th` synced with active sorted header |
 | 2026-02-27 | jquery-tablesort | PR | [kylefox/jquery-tablesort#49](https://github.com/kylefox/jquery-tablesort/pull/49) | Open | Fixes open issue reports (#40, #45) |
+| 2026-02-27 | python-shell | Fork | [dusan-maintains/python-shell](https://github.com/dusan-maintains/python-shell) | Active | Third ecosystem package under active maintenance |
+| 2026-02-27 | python-shell | Branch | [maintenance/fix-runstring-temp-path](https://github.com/dusan-maintains/python-shell/tree/maintenance/fix-runstring-temp-path) | Pushed | Focused reliability patch branch |
+| 2026-02-27 | python-shell | Commit | [1520d01](https://github.com/dusan-maintains/python-shell/commit/1520d01cd15d9463022608e86b1919f95444116f) | Published | Fix `runString()` temp path + regression test |
+| 2026-02-27 | python-shell | PR | [extrabacon/python-shell#320](https://github.com/extrabacon/python-shell/pull/320) | Open | Prevent invalid temp-file path generation in `runString()` |
 
 ## Priority Radar (Researched 2026-02-27)
 | Project | Signals | Why It Is Strong | Next Patch Type |
 |---|---|---|---|
 | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 3,681 stars, 1,343,411 npm weekly | Very high downstream usage | Focused compatibility/doc patch |
-| [`extrabacon/python-shell`](https://github.com/extrabacon/python-shell) | 2,163 stars, 191,489 npm weekly | Bridge package used in many Node stacks | Python 3.12 edge-case fix or examples |
+| [`gpodder/mygpo`](https://github.com/gpodder/mygpo) | 301 stars, active 2025 updates | Maintained service dependency surface | Small reliability/docs patch |
 | [`Hellenic/react-hexgrid`](https://github.com/Hellenic/react-hexgrid) | 350 stars, 1,647 npm weekly | Moderate ecosystem footprint and manageable code | React compatibility/dependency patch |
 
 ## Operations
