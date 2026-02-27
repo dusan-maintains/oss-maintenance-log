@@ -3,11 +3,26 @@
 Public, verifiable record of open-source maintenance activity.
 
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 ## What This Repository Does
 - Stores public evidence of maintenance work (forks, branches, commits, PRs, review response speed).
 - Tracks maintainer-needed OSS packages where small fixes reduce downstream break risk.
 - Provides machine-readable snapshots that can be audited without private context.
+
+## How Others Can Use This Repo
+This repository is intentionally reusable as a template for maintainers.
+
+1. Fork this repository.
+2. Update tracked repositories and PR numbers in:
+   - `scripts/update-evidence.ps1`
+   - `scripts/update-ecosystem-status.ps1`
+   - `scripts/update-review-sla.ps1`
+3. Run scripts locally once to generate your initial `evidence/*` snapshot.
+4. Keep `.github/workflows/evidence-daily.yml` enabled for unattended updates.
+5. Share your public `README.md` + `evidence/*` links in applications or maintainer outreach.
+
+The license is MIT, so teams can freely reuse and adapt the workflow.
 
 ## Current Scope
 - Track A: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal) (`Maintainers Wanted` in README)
@@ -90,6 +105,8 @@ Public, verifiable record of open-source maintenance activity.
 - [Maintainer reply templates](./maintainer-reply-templates.md)
 - [Post-submit checklist](./post-submit-approval-checklist.md)
 - [Target repo radar](./target-repo-radar.md)
+- [Contributing guide](./CONTRIBUTING.md)
+- [MIT license](./LICENSE)
 - [Evidence updater](./scripts/update-evidence.ps1)
 - [Ecosystem status updater](./scripts/update-ecosystem-status.ps1)
 - [Action queue updater](./scripts/update-action-queue.ps1)
