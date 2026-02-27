@@ -1,30 +1,30 @@
-﻿{
-    "generated_at_utc":  "2026-02-27T07:54:50Z",
-    "repository":  "extrabacon/python-shell",
-    "contributor":  "dusan-maintains",
-    "sla_hours":  24,
-    "summary":  {
-                    "tracked_open_prs":  1,
-                    "needs_response_count":  0,
-                    "overdue_count":  0
-                },
-    "items":  [
-                  {
-                      "pr_number":  320,
-                      "pr_title":  "Fix runString temp path to use tmpdir() and add regression test",
-                      "pr_state":  "open",
-                      "pr_url":  "https://github.com/extrabacon/python-shell/pull/320",
-                      "updated_at":  "2026-02-27T07:19:49Z",
-                      "external_feedback_count":  0,
-                      "own_followups_count":  0,
-                      "last_external_type":  null,
-                      "last_external_author":  null,
-                      "last_external_at":  null,
-                      "last_external_url":  null,
-                      "last_own_after_external_at":  null,
-                      "needs_response":  false,
-                      "hours_since_last_external":  null,
-                      "overdue_sla":  false
-                  }
-              ]
+{
+  "generated_at_utc": "2026-02-27T07:59:33Z",
+  "repository": "extrabacon/python-shell",
+  "contributor": "dusan-maintains",
+  "sla_hours": 24,
+  "summary": {
+    "tracked_open_prs": 1,
+    "needs_response_count": 0,
+    "overdue_count": 0
+  },
+  "items": [
+    {
+      "pr_number": 320,
+      "pr_title": "Fix runString temp path to use tmpdir() and add regression test",
+      "pr_state": "open",
+      "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
+      "updated_at": "2026-02-27T07:19:49Z",
+      "external_feedback_count": 0,
+      "own_followups_count": 0,
+      "last_external_type": null,
+      "last_external_author": null,
+      "last_external_at": null,
+      "last_external_url": null,
+      "last_own_after_external_at": null,
+      "needs_response": false,
+      "hours_since_last_external": null,
+      "overdue_sla": false
+    }
+  ]
 }
