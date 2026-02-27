@@ -1,0 +1,41 @@
+name: Evidence Daily Update
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-evidence:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Git Identity
+        run: |
+          git config user.name "dusan-maintains-bot"
+          git config user.email "action@users.noreply.github.com"
+
+      - name: Update Evidence Snapshot
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./scripts/update-evidence.ps1
+          ./scripts/update-review-sla.ps1
+
+      - name: Commit and Push Changes
+        run: |
+          git add evidence/*.json evidence/*.md
+          if git diff --cached --quiet; then
+            echo "No evidence changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(evidence): daily automated snapshot"
+          git push

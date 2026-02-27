@@ -2,6 +2,8 @@
 
 Public, verifiable record of open-source maintenance activity.
 
+[![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
+
 ## Current Scope
 - Primary project: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal)
 - Maintainer context: README includes **Maintainers Wanted**
@@ -13,6 +15,7 @@ Public, verifiable record of open-source maintenance activity.
 - npm weekly downloads (`jquery-modal`): 25,327 (2026-02-19 to 2026-02-25)
 - Open PRs from this account to upstream: 3 (`#315`, `#316`, `#317`)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
+- Latest SLA report: [`evidence/review-sla.md`](./evidence/review-sla.md)
 
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |

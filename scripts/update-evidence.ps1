@@ -3,41 +3,68 @@ param(
   [string]$Repo = "jquery-modal",
   [string]$PackageName = "jquery-modal",
   [int[]]$PrNumbers = @(315, 316, 317),
-  [string]$OutDir = "evidence"
+  [string]$OutDir = "evidence",
+  [int]$KeepSnapshots = 45
 )
 
 $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+function New-GitHubHeaders {
+  $headers = @{ "User-Agent" = "dusan-maintains-oss-log" }
+  if ($env:GITHUB_TOKEN) {
+    $headers["Authorization"] = "Bearer $($env:GITHUB_TOKEN)"
+    $headers["X-GitHub-Api-Version"] = "2022-11-28"
+  }
+  return $headers
+}
+
+function Get-GitHubJson {
+  param(
+    [string]$Uri
+  )
+
+  $headers = New-GitHubHeaders
+  return Invoke-RestMethod -Uri $Uri -Headers $headers
+}
 
 function Get-Json {
   param(
     [string]$Uri
   )
 
-  $headers = @{ "User-Agent" = "dusan-maintains-oss-log" }
-  return Invoke-RestMethod -Uri $Uri -Headers $headers
+  return Invoke-RestMethod -Uri $Uri -Headers @{ "User-Agent" = "dusan-maintains-oss-log" }
 }
 
 if (!(Test-Path $OutDir)) {
   New-Item -ItemType Directory -Path $OutDir | Out-Null
 }
 
-$repoMeta = Get-Json -Uri "https://api.github.com/repos/$Owner/$Repo"
+$repoMeta = Get-GitHubJson -Uri "https://api.github.com/repos/$Owner/$Repo"
 $npmMeta = Get-Json -Uri "https://api.npmjs.org/downloads/point/last-week/$PackageName"
 
 $prs = @()
 foreach ($n in $PrNumbers) {
-  $pr = Get-Json -Uri "https://api.github.com/repos/$Owner/$Repo/pulls/$n"
+  $pr = Get-GitHubJson -Uri "https://api.github.com/repos/$Owner/$Repo/pulls/$n"
   $prs += [PSCustomObject]@{
     number = $pr.number
     title = $pr.title
     state = $pr.state
     html_url = $pr.html_url
+    head_label = $pr.head.label
+    head_sha = $pr.head.sha
+    base_ref = $pr.base.ref
+    draft = $pr.draft
     mergeable_state = $pr.mergeable_state
     updated_at = $pr.updated_at
+    created_at = $pr.created_at
+    merged_at = $pr.merged_at
     comments = $pr.comments
     review_comments = $pr.review_comments
     commits = $pr.commits
+    additions = $pr.additions
+    deletions = $pr.deletions
+    changed_files = $pr.changed_files
   }
 }
 
@@ -68,6 +95,15 @@ Set-Content -Path $latest -Value $json -Encoding utf8
 $stamp = (Get-Date).ToUniversalTime().ToString("yyyyMMdd-HHmmssZ")
 $snap = Join-Path $OutDir "status-$stamp.json"
 Set-Content -Path $snap -Value $json -Encoding utf8
+
+$snapshots = Get-ChildItem -Path $OutDir -Filter "status-*.json" | Sort-Object LastWriteTime -Descending
+if ($snapshots.Count -gt $KeepSnapshots) {
+  $toDelete = $snapshots | Select-Object -Skip $KeepSnapshots
+  foreach ($file in $toDelete) {
+    Remove-Item -Path $file.FullName -Force
+  }
+  Write-Host "Pruned $($toDelete.Count) old snapshot(s)."
+}
 
 Write-Host "Updated:"
 Write-Host " - $latest"
