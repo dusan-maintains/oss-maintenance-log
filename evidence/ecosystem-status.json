@@ -1,130 +1,130 @@
-﻿{
-    "generated_at_utc":  "2026-02-27T07:22:59Z",
-    "summary":  {
-                    "tracked_projects":  3,
-                    "tracked_prs_total":  5,
-                    "tracked_prs_open":  5,
-                    "total_stars":  5035,
-                    "total_forks":  973,
-                    "total_npm_downloads_last_week":  217792
-                },
-    "projects":  [
-                     {
-                         "owner":  "kylefox",
-                         "repo":  "jquery-modal",
-                         "repo_url":  "https://github.com/kylefox/jquery-modal",
-                         "stars":  2614,
-                         "forks":  655,
-                         "open_issues":  75,
-                         "pushed_at":  "2024-04-18T03:52:43Z",
-                         "package":  "jquery-modal",
-                         "npm_downloads_last_week":  24399,
-                         "npm_start":  "2026-02-20",
-                         "npm_end":  "2026-02-26",
-                         "maintainer_needed_signal":  "README Maintainers Wanted",
-                         "tracked_pr_numbers":  [
-                                                    315,
-                                                    316,
-                                                    317
-                                                ],
-                         "tracked_prs_open":  3,
-                         "tracked_pr_details":  [
-                                                    {
-                                                        "number":  315,
-                                                        "title":  "fix: harden close button rendering and refresh docs/examples",
-                                                        "state":  "open",
-                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/315",
-                                                        "updated_at":  "2026-02-27T06:24:34Z",
-                                                        "mergeable_state":  "clean",
-                                                        "comments":  1,
-                                                        "review_comments":  0,
-                                                        "commits":  1
-                                                    },
-                                                    {
-                                                        "number":  316,
-                                                        "title":  "fix: keep ajax callbacks scoped to their originating modal",
-                                                        "state":  "open",
-                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/316",
-                                                        "updated_at":  "2026-02-27T06:24:35Z",
-                                                        "mergeable_state":  "clean",
-                                                        "comments":  1,
-                                                        "review_comments":  0,
-                                                        "commits":  1
-                                                    },
-                                                    {
-                                                        "number":  317,
-                                                        "title":  "fix: make plugin initialization idempotent for multiple imports",
-                                                        "state":  "open",
-                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/317",
-                                                        "updated_at":  "2026-02-27T06:24:35Z",
-                                                        "mergeable_state":  "clean",
-                                                        "comments":  1,
-                                                        "review_comments":  0,
-                                                        "commits":  1
-                                                    }
-                                                ]
-                     },
-                     {
-                         "owner":  "kylefox",
-                         "repo":  "jquery-tablesort",
-                         "repo_url":  "https://github.com/kylefox/jquery-tablesort",
-                         "stars":  258,
-                         "forks":  96,
-                         "open_issues":  15,
-                         "pushed_at":  "2022-01-14T13:52:41Z",
-                         "package":  "jquery-tablesort",
-                         "npm_downloads_last_week":  1904,
-                         "npm_start":  "2026-02-19",
-                         "npm_end":  "2026-02-25",
-                         "maintainer_needed_signal":  "README Maintainers Wanted",
-                         "tracked_pr_numbers":  [
-                                                    49
-                                                ],
-                         "tracked_prs_open":  1,
-                         "tracked_pr_details":  [
-                                                    {
-                                                        "number":  49,
-                                                        "title":  "Fix stale tablesort.$th reference after header clicks",
-                                                        "state":  "open",
-                                                        "html_url":  "https://github.com/kylefox/jquery-tablesort/pull/49",
-                                                        "updated_at":  "2026-02-27T07:05:04Z",
-                                                        "mergeable_state":  "clean",
-                                                        "comments":  0,
-                                                        "review_comments":  0,
-                                                        "commits":  1
-                                                    }
-                                                ]
-                     },
-                     {
-                         "owner":  "extrabacon",
-                         "repo":  "python-shell",
-                         "repo_url":  "https://github.com/extrabacon/python-shell",
-                         "stars":  2163,
-                         "forks":  222,
-                         "open_issues":  61,
-                         "pushed_at":  "2025-12-13T20:10:15Z",
-                         "package":  "python-shell",
-                         "npm_downloads_last_week":  191489,
-                         "npm_start":  "2026-02-19",
-                         "npm_end":  "2026-02-25",
-                         "maintainer_needed_signal":  "Issue #290: Looking for maintainer",
-                         "tracked_pr_numbers":  [
-                                                    320
-                                                ],
-                         "tracked_prs_open":  1,
-                         "tracked_pr_details":  [
-                                                    {
-                                                        "number":  320,
-                                                        "title":  "Fix runString temp path to use tmpdir() and add regression test",
-                                                        "state":  "open",
-                                                        "html_url":  "https://github.com/extrabacon/python-shell/pull/320",
-                                                        "updated_at":  "2026-02-27T07:19:49Z",
-                                                        "mergeable_state":  "clean",
-                                                        "comments":  0,
-                                                        "review_comments":  0,
-                                                        "commits":  1
-                                                    }
-                                                ]
-                     }
-                 ]
+{
+  "generated_at_utc": "2026-02-27T07:25:48Z",
+  "summary": {
+    "tracked_projects": 3,
+    "tracked_prs_total": 5,
+    "tracked_prs_open": 5,
+    "total_stars": 5035,
+    "total_forks": 973,
+    "total_npm_downloads_last_week": 221841
+  },
+  "projects": [
+    {
+      "owner": "kylefox",
+      "repo": "jquery-modal",
+      "repo_url": "https://github.com/kylefox/jquery-modal",
+      "stars": 2614,
+      "forks": 655,
+      "open_issues": 75,
+      "pushed_at": "2024-04-18T03:52:43Z",
+      "package": "jquery-modal",
+      "npm_downloads_last_week": 25327,
+      "npm_start": "2026-02-19",
+      "npm_end": "2026-02-25",
+      "maintainer_needed_signal": "README Maintainers Wanted",
+      "tracked_pr_numbers": [
+        315,
+        316,
+        317
+      ],
+      "tracked_prs_open": 3,
+      "tracked_pr_details": [
+        {
+          "number": 315,
+          "title": "fix: harden close button rendering and refresh docs/examples",
+          "state": "open",
+          "html_url": "https://github.com/kylefox/jquery-modal/pull/315",
+          "updated_at": "2026-02-27T06:24:34Z",
+          "mergeable_state": "clean",
+          "comments": 1,
+          "review_comments": 0,
+          "commits": 1
+        },
+        {
+          "number": 316,
+          "title": "fix: keep ajax callbacks scoped to their originating modal",
+          "state": "open",
+          "html_url": "https://github.com/kylefox/jquery-modal/pull/316",
+          "updated_at": "2026-02-27T06:24:35Z",
+          "mergeable_state": "clean",
+          "comments": 1,
+          "review_comments": 0,
+          "commits": 1
+        },
+        {
+          "number": 317,
+          "title": "fix: make plugin initialization idempotent for multiple imports",
+          "state": "open",
+          "html_url": "https://github.com/kylefox/jquery-modal/pull/317",
+          "updated_at": "2026-02-27T06:24:35Z",
+          "mergeable_state": "clean",
+          "comments": 1,
+          "review_comments": 0,
+          "commits": 1
+        }
+      ]
+    },
+    {
+      "owner": "kylefox",
+      "repo": "jquery-tablesort",
+      "repo_url": "https://github.com/kylefox/jquery-tablesort",
+      "stars": 258,
+      "forks": 96,
+      "open_issues": 15,
+      "pushed_at": "2022-01-14T13:52:41Z",
+      "package": "jquery-tablesort",
+      "npm_downloads_last_week": 1667,
+      "npm_start": "2026-02-20",
+      "npm_end": "2026-02-26",
+      "maintainer_needed_signal": "README Maintainers Wanted",
+      "tracked_pr_numbers": [
+        49
+      ],
+      "tracked_prs_open": 1,
+      "tracked_pr_details": [
+        {
+          "number": 49,
+          "title": "Fix stale tablesort.$th reference after header clicks",
+          "state": "open",
+          "html_url": "https://github.com/kylefox/jquery-tablesort/pull/49",
+          "updated_at": "2026-02-27T07:05:04Z",
+          "mergeable_state": "clean",
+          "comments": 0,
+          "review_comments": 0,
+          "commits": 1
+        }
+      ]
+    },
+    {
+      "owner": "extrabacon",
+      "repo": "python-shell",
+      "repo_url": "https://github.com/extrabacon/python-shell",
+      "stars": 2163,
+      "forks": 222,
+      "open_issues": 61,
+      "pushed_at": "2025-12-13T20:10:15Z",
+      "package": "python-shell",
+      "npm_downloads_last_week": 194847,
+      "npm_start": "2026-02-20",
+      "npm_end": "2026-02-26",
+      "maintainer_needed_signal": "Issue #290: Looking for maintainer",
+      "tracked_pr_numbers": [
+        320
+      ],
+      "tracked_prs_open": 1,
+      "tracked_pr_details": [
+        {
+          "number": 320,
+          "title": "Fix runString temp path to use tmpdir() and add regression test",
+          "state": "open",
+          "html_url": "https://github.com/extrabacon/python-shell/pull/320",
+          "updated_at": "2026-02-27T07:19:49Z",
+          "mergeable_state": "clean",
+          "comments": 0,
+          "review_comments": 0,
+          "commits": 1
+        }
+      ]
+    }
+  ]
 }

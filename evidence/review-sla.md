@@ -1,6 +1,6 @@
-﻿# PR Review SLA Status
+# PR Review SLA Status
 
-Generated: 2026-02-27T07:22:59Z
+Generated: 2026-02-27T07:25:48Z
 Repository: `kylefox/jquery-modal`
 Contributor: `dusan-maintains`
 SLA: `24` hours
