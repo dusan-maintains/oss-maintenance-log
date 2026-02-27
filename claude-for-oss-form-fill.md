@@ -4,8 +4,8 @@ Use this exact mapping in the form at `https://claude.com/contact-sales/claude-f
 
 ## Field Values
 
-- First name: `<your real first name>`
-- Last name: `<your real last name>`
+- First name: `DUSAN`
+- Last name: `HUNTER`
 - Email: `hunterdusan27@gmail.com` (or the exact email tied to your Claude account)
 - GitHub Handle: `dusan-maintains`
 - GitHub Repository URL: `https://github.com/kylefox/jquery-modal`
