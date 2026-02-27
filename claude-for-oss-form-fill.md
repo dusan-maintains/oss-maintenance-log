@@ -12,7 +12,7 @@ Use this exact mapping in the form at `https://claude.com/contact-sales/claude-f
 
 ## Other info (paste as one block)
 
-I am applying under the Ecosystem Impact track. I created this public GitHub account on February 27, 2026 to keep my OSS maintenance work verifiable in one place. I actively contribute to three maintenance-needed packages with public upstream PRs: jquery-modal, jquery-tablesort, and python-shell. Current tracked footprint: 5,035 GitHub stars and 217,792 npm downloads/week across these maintained targets (latest npm API weekly snapshot). I published five maintenance PRs: jquery-modal #315 (closeText safety + ESC handling + docs consistency), #316 (AJAX callback instance-safety/race-condition hardening), #317 (idempotent initialization guard, issue #309), jquery-tablesort #49 (fix stale tablesort.$th state, issues #40 and #45), and python-shell #320 (fix runString temp-path generation + regression test). Public evidence log with links to branches, commits, PRs, and SLA tracking: https://github.com/dusan-maintains/oss-maintenance-log. I will continue triage and follow-up fixes based on maintainer review.
+I am applying under the Ecosystem Impact track. I created this public GitHub account on February 27, 2026 to keep my OSS maintenance work verifiable in one place. I actively contribute to four maintenance-needed packages with public upstream PRs: jquery-modal, jquery-tablesort, python-shell, and rrule. Current tracked footprint: 8,716 GitHub stars and 1,595,149 npm downloads/week across these maintained targets (latest npm API weekly snapshot). I published six maintenance PRs: jquery-modal #315 (closeText safety + ESC handling + docs consistency), #316 (AJAX callback instance-safety/race-condition hardening), #317 (idempotent initialization guard, issue #309), jquery-tablesort #49 (fix stale tablesort.$th state, issues #40 and #45), python-shell #320 (fix runString temp-path generation + regression test), and rrule #664 (fix WeekdayStr array serialization for BYDAY, issue #648). Public evidence log with links to branches, commits, PRs, and SLA tracking: https://github.com/dusan-maintains/oss-maintenance-log. I will continue triage and follow-up fixes based on maintainer review.
 
 ## Quick Links
 
@@ -21,4 +21,5 @@ I am applying under the Ecosystem Impact track. I created this public GitHub acc
 - PR 317: https://github.com/kylefox/jquery-modal/pull/317
 - PR 49: https://github.com/kylefox/jquery-tablesort/pull/49
 - PR 320: https://github.com/extrabacon/python-shell/pull/320
+- PR 664: https://github.com/jkbrzt/rrule/pull/664
 - Evidence log: https://github.com/dusan-maintains/oss-maintenance-log

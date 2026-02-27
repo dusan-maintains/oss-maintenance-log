@@ -13,23 +13,27 @@ Public, verifiable record of open-source maintenance activity.
 - Track A: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal) (`Maintainers Wanted` in README)
 - Track B: [`kylefox/jquery-tablesort`](https://github.com/kylefox/jquery-tablesort) (`Maintainers Wanted` in README)
 - Track C: [`extrabacon/python-shell`](https://github.com/extrabacon/python-shell) (maintainer-gap signal in issues)
+- Track D: [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (high-impact package with open maintenance backlog)
 - Active forks:
   - [`dusan-maintains/jquery-modal`](https://github.com/dusan-maintains/jquery-modal)
   - [`dusan-maintains/jquery-tablesort`](https://github.com/dusan-maintains/jquery-tablesort)
   - [`dusan-maintains/python-shell`](https://github.com/dusan-maintains/python-shell)
+  - [`dusan-maintains/rrule`](https://github.com/dusan-maintains/rrule)
 
 ## Live Snapshot (2026-02-27 UTC)
 - `jquery-modal`: 2,614 stars, 24,399 npm weekly downloads
-- `jquery-tablesort`: 258 stars, 1,904 npm weekly downloads
-- `python-shell`: 2,163 stars, 191,489 npm weekly downloads
-- Combined footprint under active maintenance: 5,035 stars, 217,792 npm weekly downloads
-- Open upstream PRs from this account: 5 (`#315`, `#316`, `#317`, `#49`, `#320`)
+- `jquery-tablesort`: 258 stars, 1,667 npm weekly downloads
+- `python-shell`: 2,163 stars, 194,847 npm weekly downloads
+- `rrule`: 3,681 stars, 1,374,236 npm weekly downloads
+- Combined footprint under active maintenance: 8,716 stars, 1,595,149 npm weekly downloads
+- Open upstream PRs from this account: 6 (`#315`, `#316`, `#317`, `#49`, `#320`, `#664`)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
 - Latest ecosystem status: [`evidence/ecosystem-status.json`](./evidence/ecosystem-status.json)
 - Latest SLA reports:
   - [`evidence/review-sla.md`](./evidence/review-sla.md) (`jquery-modal`)
   - [`evidence/review-sla-tablesort.md`](./evidence/review-sla-tablesort.md) (`jquery-tablesort`)
   - [`evidence/review-sla-python-shell.md`](./evidence/review-sla-python-shell.md) (`python-shell`)
+  - [`evidence/review-sla-rrule.md`](./evidence/review-sla-rrule.md) (`rrule`)
 
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |
@@ -52,13 +56,17 @@ Public, verifiable record of open-source maintenance activity.
 | 2026-02-27 | python-shell | Branch | [maintenance/fix-runstring-temp-path](https://github.com/dusan-maintains/python-shell/tree/maintenance/fix-runstring-temp-path) | Pushed | Focused reliability patch branch |
 | 2026-02-27 | python-shell | Commit | [1520d01](https://github.com/dusan-maintains/python-shell/commit/1520d01cd15d9463022608e86b1919f95444116f) | Published | Fix `runString()` temp path + regression test |
 | 2026-02-27 | python-shell | PR | [extrabacon/python-shell#320](https://github.com/extrabacon/python-shell/pull/320) | Open | Prevent invalid temp-file path generation in `runString()` |
+| 2026-02-27 | rrule | Fork | [dusan-maintains/rrule](https://github.com/dusan-maintains/rrule) | Active | Fourth ecosystem package under active maintenance |
+| 2026-02-27 | rrule | Branch | [maintenance/fix-weekdaystr-serialization](https://github.com/dusan-maintains/rrule/tree/maintenance/fix-weekdaystr-serialization) | Pushed | Issue-driven serialization reliability patch |
+| 2026-02-27 | rrule | Commit | [c5ae606](https://github.com/dusan-maintains/rrule/commit/c5ae606afad4e5f7e44e4a17bd56dc01b14e6363) | Published | Fix `WeekdayStr[]` serialization for `BYDAY` output |
+| 2026-02-27 | rrule | PR | [jkbrzt/rrule#664](https://github.com/jkbrzt/rrule/pull/664) | Open | Fixes `BYDAY=undefined` for string weekday arrays (#648) |
 
 ## Priority Radar (Researched 2026-02-27)
 | Project | Signals | Why It Is Strong | Next Patch Type |
 |---|---|---|---|
-| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 3,681 stars, 1,343,411 npm weekly | Very high downstream usage | Focused compatibility/doc patch |
 | [`gpodder/mygpo`](https://github.com/gpodder/mygpo) | 301 stars, active 2025 updates | Maintained service dependency surface | Small reliability/docs patch |
 | [`Hellenic/react-hexgrid`](https://github.com/Hellenic/react-hexgrid) | 350 stars, 1,647 npm weekly | Moderate ecosystem footprint and manageable code | React compatibility/dependency patch |
+| [`stefanjudis/grunt-phantomas`](https://github.com/stefanjudis/grunt-phantomas) | 282 stars, legacy tooling use | Maintainer-gap profile package | Toolchain/docs maintenance patch |
 
 ## Operations
 1. Keep PR response SLA under 24 hours.

@@ -55,6 +55,13 @@ $targets = @(
     package = "python-shell"
     maintainer_needed_signal = "Issue #290: Looking for maintainer"
     tracked_prs = @(320)
+  },
+  [PSCustomObject]@{
+    owner = "jkbrzt"
+    repo = "rrule"
+    package = "rrule"
+    maintainer_needed_signal = "High-impact package with long-lived open maintenance backlog"
+    tracked_prs = @(664)
   }
 )
 

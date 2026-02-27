@@ -1,6 +1,6 @@
 ﻿{
-    "generated_at_utc":  "2026-02-27T07:54:50Z",
-    "repository":  "extrabacon/python-shell",
+    "generated_at_utc":  "2026-02-27T07:54:52Z",
+    "repository":  "jkbrzt/rrule",
     "contributor":  "dusan-maintains",
     "sla_hours":  24,
     "summary":  {
@@ -10,11 +10,11 @@
                 },
     "items":  [
                   {
-                      "pr_number":  320,
-                      "pr_title":  "Fix runString temp path to use tmpdir() and add regression test",
+                      "pr_number":  664,
+                      "pr_title":  "fix: handle WeekdayStr arrays when serializing BYDAY",
                       "pr_state":  "open",
-                      "pr_url":  "https://github.com/extrabacon/python-shell/pull/320",
-                      "updated_at":  "2026-02-27T07:19:49Z",
+                      "pr_url":  "https://github.com/jkbrzt/rrule/pull/664",
+                      "updated_at":  "2026-02-27T07:52:51Z",
                       "external_feedback_count":  0,
                       "own_followups_count":  0,
                       "last_external_type":  null,

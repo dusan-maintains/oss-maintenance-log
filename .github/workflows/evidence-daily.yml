@@ -31,6 +31,7 @@ jobs:
           ./scripts/update-review-sla.ps1
           ./scripts/update-review-sla.ps1 -Repo jquery-tablesort -PrNumbers 49 -OutBaseName review-sla-tablesort
           ./scripts/update-review-sla.ps1 -Owner extrabacon -Repo python-shell -PrNumbers 320 -OutBaseName review-sla-python-shell
+          ./scripts/update-review-sla.ps1 -Owner jkbrzt -Repo rrule -PrNumbers 664 -OutBaseName review-sla-rrule
 
       - name: Commit and Push Changes
         run: |
