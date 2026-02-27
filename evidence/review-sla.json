@@ -1,64 +1,64 @@
-﻿{
-    "generated_at_utc":  "2026-02-27T08:23:07Z",
-    "repository":  "kylefox/jquery-modal",
-    "contributor":  "dusan-maintains",
-    "sla_hours":  24,
-    "summary":  {
-                    "tracked_open_prs":  3,
-                    "needs_response_count":  0,
-                    "overdue_count":  0
-                },
-    "items":  [
-                  {
-                      "pr_number":  315,
-                      "pr_title":  "fix: harden close button rendering and refresh docs/examples",
-                      "pr_state":  "open",
-                      "pr_url":  "https://github.com/kylefox/jquery-modal/pull/315",
-                      "updated_at":  "2026-02-27T06:24:34Z",
-                      "external_feedback_count":  0,
-                      "own_followups_count":  1,
-                      "last_external_type":  null,
-                      "last_external_author":  null,
-                      "last_external_at":  null,
-                      "last_external_url":  null,
-                      "last_own_after_external_at":  null,
-                      "needs_response":  false,
-                      "hours_since_last_external":  null,
-                      "overdue_sla":  false
-                  },
-                  {
-                      "pr_number":  316,
-                      "pr_title":  "fix: keep ajax callbacks scoped to their originating modal",
-                      "pr_state":  "open",
-                      "pr_url":  "https://github.com/kylefox/jquery-modal/pull/316",
-                      "updated_at":  "2026-02-27T06:24:35Z",
-                      "external_feedback_count":  0,
-                      "own_followups_count":  1,
-                      "last_external_type":  null,
-                      "last_external_author":  null,
-                      "last_external_at":  null,
-                      "last_external_url":  null,
-                      "last_own_after_external_at":  null,
-                      "needs_response":  false,
-                      "hours_since_last_external":  null,
-                      "overdue_sla":  false
-                  },
-                  {
-                      "pr_number":  317,
-                      "pr_title":  "fix: make plugin initialization idempotent for multiple imports",
-                      "pr_state":  "open",
-                      "pr_url":  "https://github.com/kylefox/jquery-modal/pull/317",
-                      "updated_at":  "2026-02-27T06:24:35Z",
-                      "external_feedback_count":  0,
-                      "own_followups_count":  1,
-                      "last_external_type":  null,
-                      "last_external_author":  null,
-                      "last_external_at":  null,
-                      "last_external_url":  null,
-                      "last_own_after_external_at":  null,
-                      "needs_response":  false,
-                      "hours_since_last_external":  null,
-                      "overdue_sla":  false
-                  }
-              ]
+{
+  "generated_at_utc": "2026-02-27T08:32:24Z",
+  "repository": "kylefox/jquery-modal",
+  "contributor": "dusan-maintains",
+  "sla_hours": 24,
+  "summary": {
+    "tracked_open_prs": 3,
+    "needs_response_count": 0,
+    "overdue_count": 0
+  },
+  "items": [
+    {
+      "pr_number": 315,
+      "pr_title": "fix: harden close button rendering and refresh docs/examples",
+      "pr_state": "open",
+      "pr_url": "https://github.com/kylefox/jquery-modal/pull/315",
+      "updated_at": "2026-02-27T06:24:34Z",
+      "external_feedback_count": 0,
+      "own_followups_count": 1,
+      "last_external_type": null,
+      "last_external_author": null,
+      "last_external_at": null,
+      "last_external_url": null,
+      "last_own_after_external_at": null,
+      "needs_response": false,
+      "hours_since_last_external": null,
+      "overdue_sla": false
+    },
+    {
+      "pr_number": 316,
+      "pr_title": "fix: keep ajax callbacks scoped to their originating modal",
+      "pr_state": "open",
+      "pr_url": "https://github.com/kylefox/jquery-modal/pull/316",
+      "updated_at": "2026-02-27T06:24:35Z",
+      "external_feedback_count": 0,
+      "own_followups_count": 1,
+      "last_external_type": null,
+      "last_external_author": null,
+      "last_external_at": null,
+      "last_external_url": null,
+      "last_own_after_external_at": null,
+      "needs_response": false,
+      "hours_since_last_external": null,
+      "overdue_sla": false
+    },
+    {
+      "pr_number": 317,
+      "pr_title": "fix: make plugin initialization idempotent for multiple imports",
+      "pr_state": "open",
+      "pr_url": "https://github.com/kylefox/jquery-modal/pull/317",
+      "updated_at": "2026-02-27T06:24:35Z",
+      "external_feedback_count": 0,
+      "own_followups_count": 1,
+      "last_external_type": null,
+      "last_external_author": null,
+      "last_external_at": null,
+      "last_external_url": null,
+      "last_own_after_external_at": null,
+      "needs_response": false,
+      "hours_since_last_external": null,
+      "overdue_sla": false
+    }
+  ]
 }

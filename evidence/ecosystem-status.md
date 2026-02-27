@@ -1,6 +1,6 @@
-﻿# Ecosystem Status
+# Ecosystem Status
 
-Generated: 2026-02-27T08:23:07Z
+Generated: 2026-02-27T08:32:24Z
 
 ## Summary
 - Tracked projects: 5
