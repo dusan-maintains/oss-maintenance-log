@@ -1,0 +1,53 @@
+﻿{
+    "generated_at_utc":  "2026-02-27T06:30:56Z",
+    "repo":  {
+                 "owner":  "kylefox",
+                 "name":  "jquery-modal",
+                 "html_url":  "https://github.com/kylefox/jquery-modal",
+                 "stars":  2614,
+                 "forks":  655,
+                 "open_issues":  75,
+                 "pushed_at":  "2024-04-18T03:52:43Z"
+             },
+    "npm":  {
+                "package":  "jquery-modal",
+                "downloads_last_week":  25327,
+                "start":  "2026-02-19",
+                "end":  "2026-02-25"
+            },
+    "tracked_prs":  [
+                        {
+                            "number":  315,
+                            "title":  "fix: harden close button rendering and refresh docs/examples",
+                            "state":  "open",
+                            "html_url":  "https://github.com/kylefox/jquery-modal/pull/315",
+                            "mergeable_state":  "clean",
+                            "updated_at":  "2026-02-27T06:24:34Z",
+                            "comments":  1,
+                            "review_comments":  0,
+                            "commits":  1
+                        },
+                        {
+                            "number":  316,
+                            "title":  "fix: keep ajax callbacks scoped to their originating modal",
+                            "state":  "open",
+                            "html_url":  "https://github.com/kylefox/jquery-modal/pull/316",
+                            "mergeable_state":  "clean",
+                            "updated_at":  "2026-02-27T06:24:35Z",
+                            "comments":  1,
+                            "review_comments":  0,
+                            "commits":  1
+                        },
+                        {
+                            "number":  317,
+                            "title":  "fix: make plugin initialization idempotent for multiple imports",
+                            "state":  "open",
+                            "html_url":  "https://github.com/kylefox/jquery-modal/pull/317",
+                            "mergeable_state":  "clean",
+                            "updated_at":  "2026-02-27T06:24:35Z",
+                            "comments":  1,
+                            "review_comments":  0,
+                            "commits":  1
+                        }
+                    ]
+}
