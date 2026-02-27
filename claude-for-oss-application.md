@@ -16,6 +16,7 @@ Combined public footprint in my current track:
 - 1,596,851 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`, `python-shell`, `rrule`, `react-hexgrid`)
 - 7 open upstream PRs from my account with scoped, issue-linked fixes
 - Additional merged maintainer-interaction signal: `lingdojo/kana-dojo#6309` (merged 2026-02-27)
+- Additional large-repo maintenance signal: `grafana/grafana#119212` (opened 2026-02-27, security/privacy email template fix)
 
 Evidence:
 - GitHub profile: https://github.com/dusan-maintains
@@ -47,6 +48,7 @@ Evidence:
 - Commit 7: https://github.com/dusan-maintains/react-hexgrid/commit/cbfcc50f8be57495170a4908d19920f5ff5f87ca
 - Pull request 7: https://github.com/Hellenic/react-hexgrid/pull/123
 - Supplemental merged PR: https://github.com/lingdojo/kana-dojo/pull/6309
+- Supplemental large-repo PR: https://github.com/grafana/grafana/pull/119212
 
 Patch summary:
 - Render close button text as plain text rather than HTML during button creation.
