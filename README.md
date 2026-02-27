@@ -13,9 +13,15 @@ I created this GitHub account on February 27, 2026 to keep my OSS maintenance ac
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |
 |---|---|---|---|---|---|
-| 2026-02-27 | jquery-modal | Branch | [maintenance/first-patch](PASTE_LINK) | In progress | Security/reliability + docs consistency |
-| 2026-02-27 | jquery-modal | PR | PASTE_LINK | Open | Review + merge path |
-| 2026-02-27 | jquery-modal | Commit | PASTE_LINK | Pushed | Safer close rendering, ESC handling, docs updates |
+| 2026-02-27 | jquery-modal | Branch | `maintenance/first-patch` | Ready locally | PR branch prepared |
+| 2026-02-27 | jquery-modal | Commit | `8b3d55eb3b3fdf13e962b8865e13c7234cf8ab3c` | Ready locally | Safer close rendering, ESC handling, docs updates |
+| 2026-02-27 | jquery-modal | PR | `TBD after fork push` | Pending | Review + merge path |
+
+## Next Publish Step
+1. Fork `kylefox/jquery-modal` into `dusan-maintains/jquery-modal`.
+2. Push branch `maintenance/first-patch`.
+3. Open PR to `kylefox/jquery-modal:master`.
+4. Replace `TBD` with live links in this log.
 
 ## 90-Day Maintenance Plan
 1. Ship small, high-signal fixes with clear changelogs.
