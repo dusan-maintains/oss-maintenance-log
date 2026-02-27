@@ -45,6 +45,7 @@ The license is MIT, so teams can freely reuse and adapt the workflow.
 - `react-hexgrid`: 350 stars, 1,702 npm weekly downloads
 - Combined footprint under active maintenance: 9,066 stars, 1,596,851 npm weekly downloads
 - Open upstream PRs from this account: 7 (`#315`, `#316`, `#317`, `#49`, `#320`, `#664`, `#123`)
+- Supplemental fast-review PR signal: [`lingdojo/kana-dojo#6309`](https://github.com/lingdojo/kana-dojo/pull/6309) (merged on 2026-02-27)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
 - Latest ecosystem status: [`evidence/ecosystem-status.json`](./evidence/ecosystem-status.json)
 - Latest SLA reports:
@@ -53,6 +54,7 @@ The license is MIT, so teams can freely reuse and adapt the workflow.
   - [`evidence/review-sla-python-shell.md`](./evidence/review-sla-python-shell.md) (`python-shell`)
   - [`evidence/review-sla-rrule.md`](./evidence/review-sla-rrule.md) (`rrule`)
   - [`evidence/review-sla-react-hexgrid.md`](./evidence/review-sla-react-hexgrid.md) (`react-hexgrid`)
+  - [`evidence/review-sla-kana-dojo.md`](./evidence/review-sla-kana-dojo.md) (`kana-dojo`)
 - Latest unattended response queue: [`evidence/action-queue.md`](./evidence/action-queue.md)
 
 ## Contribution Evidence

@@ -33,6 +33,7 @@ jobs:
           ./scripts/update-review-sla.ps1 -Owner extrabacon -Repo python-shell -PrNumbers 320 -OutBaseName review-sla-python-shell
           ./scripts/update-review-sla.ps1 -Owner jkbrzt -Repo rrule -PrNumbers 664 -OutBaseName review-sla-rrule
           ./scripts/update-review-sla.ps1 -Owner Hellenic -Repo react-hexgrid -PrNumbers 123 -OutBaseName review-sla-react-hexgrid
+          ./scripts/update-review-sla.ps1 -Owner lingdojo -Repo kana-dojo -PrNumbers 6309 -OutBaseName review-sla-kana-dojo
           ./scripts/update-action-queue.ps1
 
       - name: Commit and Push Changes

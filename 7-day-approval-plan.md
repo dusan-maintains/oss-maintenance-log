@@ -13,6 +13,7 @@ Objective: increase approval probability through consistent, verifiable maintain
    - https://github.com/extrabacon/python-shell/pull/320
    - https://github.com/jkbrzt/rrule/pull/664
    - https://github.com/Hellenic/react-hexgrid/pull/123
+   - https://github.com/lingdojo/kana-dojo/pull/6309
 3. Keep profile stable (username/email unchanged).
 
 ## Day 2

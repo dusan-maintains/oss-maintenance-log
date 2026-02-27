@@ -6,7 +6,7 @@ Goal: maximize approval probability while staying fully accurate.
 
 1. Watch inbox + spam for Anthropic messages.
 2. Keep GitHub profile and account email stable.
-3. Check tracked PRs for activity: `#315`, `#316`, `#317`, `#49`, `#320`, `#664`, `#123`.
+3. Check tracked PRs for activity: `#315`, `#316`, `#317`, `#49`, `#320`, `#664`, `#123`, `kana-dojo#6309`.
 
 ## Daily for next 7 days
 
