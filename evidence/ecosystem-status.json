@@ -1,0 +1,99 @@
+﻿{
+    "generated_at_utc":  "2026-02-27T06:59:05Z",
+    "summary":  {
+                    "tracked_projects":  2,
+                    "tracked_prs_total":  4,
+                    "tracked_prs_open":  4,
+                    "total_stars":  2872,
+                    "total_forks":  751,
+                    "total_npm_downloads_last_week":  27231
+                },
+    "projects":  [
+                     {
+                         "owner":  "kylefox",
+                         "repo":  "jquery-modal",
+                         "repo_url":  "https://github.com/kylefox/jquery-modal",
+                         "stars":  2614,
+                         "forks":  655,
+                         "open_issues":  75,
+                         "pushed_at":  "2024-04-18T03:52:43Z",
+                         "package":  "jquery-modal",
+                         "npm_downloads_last_week":  25327,
+                         "npm_start":  "2026-02-19",
+                         "npm_end":  "2026-02-25",
+                         "maintainer_needed_signal":  "README Maintainers Wanted",
+                         "tracked_pr_numbers":  [
+                                                    315,
+                                                    316,
+                                                    317
+                                                ],
+                         "tracked_prs_open":  3,
+                         "tracked_pr_details":  [
+                                                    {
+                                                        "number":  315,
+                                                        "title":  "fix: harden close button rendering and refresh docs/examples",
+                                                        "state":  "open",
+                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/315",
+                                                        "updated_at":  "2026-02-27T06:24:34Z",
+                                                        "mergeable_state":  "clean",
+                                                        "comments":  1,
+                                                        "review_comments":  0,
+                                                        "commits":  1
+                                                    },
+                                                    {
+                                                        "number":  316,
+                                                        "title":  "fix: keep ajax callbacks scoped to their originating modal",
+                                                        "state":  "open",
+                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/316",
+                                                        "updated_at":  "2026-02-27T06:24:35Z",
+                                                        "mergeable_state":  "clean",
+                                                        "comments":  1,
+                                                        "review_comments":  0,
+                                                        "commits":  1
+                                                    },
+                                                    {
+                                                        "number":  317,
+                                                        "title":  "fix: make plugin initialization idempotent for multiple imports",
+                                                        "state":  "open",
+                                                        "html_url":  "https://github.com/kylefox/jquery-modal/pull/317",
+                                                        "updated_at":  "2026-02-27T06:24:35Z",
+                                                        "mergeable_state":  "clean",
+                                                        "comments":  1,
+                                                        "review_comments":  0,
+                                                        "commits":  1
+                                                    }
+                                                ]
+                     },
+                     {
+                         "owner":  "kylefox",
+                         "repo":  "jquery-tablesort",
+                         "repo_url":  "https://github.com/kylefox/jquery-tablesort",
+                         "stars":  258,
+                         "forks":  96,
+                         "open_issues":  15,
+                         "pushed_at":  "2022-01-14T13:52:41Z",
+                         "package":  "jquery-tablesort",
+                         "npm_downloads_last_week":  1904,
+                         "npm_start":  "2026-02-19",
+                         "npm_end":  "2026-02-25",
+                         "maintainer_needed_signal":  "README Maintainers Wanted",
+                         "tracked_pr_numbers":  [
+                                                    49
+                                                ],
+                         "tracked_prs_open":  1,
+                         "tracked_pr_details":  [
+                                                    {
+                                                        "number":  49,
+                                                        "title":  "Fix stale tablesort.$th reference after header clicks",
+                                                        "state":  "open",
+                                                        "html_url":  "https://github.com/kylefox/jquery-tablesort/pull/49",
+                                                        "updated_at":  "2026-02-27T06:54:15Z",
+                                                        "mergeable_state":  "clean",
+                                                        "comments":  0,
+                                                        "review_comments":  0,
+                                                        "commits":  1
+                                                    }
+                                                ]
+                     }
+                 ]
+}

@@ -27,7 +27,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./scripts/update-evidence.ps1
+          ./scripts/update-ecosystem-status.ps1
           ./scripts/update-review-sla.ps1
+          ./scripts/update-review-sla.ps1 -Repo jquery-tablesort -PrNumbers 49 -OutBaseName review-sla-tablesort
 
       - name: Commit and Push Changes
         run: |

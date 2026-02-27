@@ -4,18 +4,28 @@ Public, verifiable record of open-source maintenance activity.
 
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
 
+## What This Repository Does
+- Stores public evidence of maintenance work (forks, branches, commits, PRs, review response speed).
+- Tracks maintainer-needed OSS packages where small fixes reduce downstream break risk.
+- Provides machine-readable snapshots that can be audited without private context.
+
 ## Current Scope
-- Primary project: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal)
-- Maintainer context: README includes **Maintainers Wanted**
-- Active fork: [`dusan-maintains/jquery-modal`](https://github.com/dusan-maintains/jquery-modal)
-- Public evidence source of truth: this repository
+- Track A: [`kylefox/jquery-modal`](https://github.com/kylefox/jquery-modal) (`Maintainers Wanted` in README)
+- Track B: [`kylefox/jquery-tablesort`](https://github.com/kylefox/jquery-tablesort) (`Maintainers Wanted` in README)
+- Active forks:
+  - [`dusan-maintains/jquery-modal`](https://github.com/dusan-maintains/jquery-modal)
+  - [`dusan-maintains/jquery-tablesort`](https://github.com/dusan-maintains/jquery-tablesort)
 
 ## Live Snapshot (2026-02-27 UTC)
-- Project metrics: 2,614 stars, 655 forks
-- npm weekly downloads (`jquery-modal`): 25,327 (2026-02-19 to 2026-02-25)
-- Open PRs from this account to upstream: 3 (`#315`, `#316`, `#317`)
+- `jquery-modal`: 2,614 stars, 25,327 npm weekly downloads
+- `jquery-tablesort`: 258 stars, 1,904 npm weekly downloads
+- Combined footprint under active maintenance: 2,872 stars, 27,231 npm weekly downloads
+- Open upstream PRs from this account: 4 (`#315`, `#316`, `#317`, `#49`)
 - Latest machine-readable status: [`evidence/latest-status.json`](./evidence/latest-status.json)
-- Latest SLA report: [`evidence/review-sla.md`](./evidence/review-sla.md)
+- Latest ecosystem status: [`evidence/ecosystem-status.json`](./evidence/ecosystem-status.json)
+- Latest SLA reports:
+  - [`evidence/review-sla.md`](./evidence/review-sla.md) (`jquery-modal`)
+  - [`evidence/review-sla-tablesort.md`](./evidence/review-sla-tablesort.md) (`jquery-tablesort`)
 
 ## Contribution Evidence
 | Date (UTC) | Project | Type | Link | Status | Impact |
@@ -26,15 +36,27 @@ Public, verifiable record of open-source maintenance activity.
 | 2026-02-27 | jquery-modal | PR | [kylefox/jquery-modal#315](https://github.com/kylefox/jquery-modal/pull/315) | Open | Reliability + documentation correctness |
 | 2026-02-27 | jquery-modal | Branch | [maintenance/ajax-instance-safety](https://github.com/dusan-maintains/jquery-modal/tree/maintenance/ajax-instance-safety) | Pushed | Independent second maintenance branch |
 | 2026-02-27 | jquery-modal | Commit | [4e6fd0f](https://github.com/dusan-maintains/jquery-modal/commit/4e6fd0f85604b0dc71dfd59503a7b66a3fa2df42) | Published | AJAX callback instance safety (race paths) |
-| 2026-02-27 | jquery-modal | PR | [kylefox/jquery-modal#316](https://github.com/kylefox/jquery-modal/pull/316) | Open | Concurrency/ownership hardening |
+| 2026-02-27 | jquery-modal | PR | [kylefox/jquery-modal#316](https://github.com/kylefox/jquery-modal/pull/316) | Open | Concurrency and ownership hardening |
 | 2026-02-27 | jquery-modal | Branch | [maintenance/no-double-init](https://github.com/dusan-maintains/jquery-modal/tree/maintenance/no-double-init) | Pushed | Third independent maintenance branch |
 | 2026-02-27 | jquery-modal | Commit | [97f9643](https://github.com/dusan-maintains/jquery-modal/commit/97f9643361b2487328f5741b50a8fd5129ab7c9b) | Published | Idempotent init guard for duplicate imports |
 | 2026-02-27 | jquery-modal | PR | [kylefox/jquery-modal#317](https://github.com/kylefox/jquery-modal/pull/317) | Open | Issue-driven fix for multiple imports (#309) |
+| 2026-02-27 | jquery-tablesort | Fork | [dusan-maintains/jquery-tablesort](https://github.com/dusan-maintains/jquery-tablesort) | Active | Second maintainer-needed package adopted |
+| 2026-02-27 | jquery-tablesort | Branch | [maintenance/update-sorted-column-ref](https://github.com/dusan-maintains/jquery-tablesort/tree/maintenance/update-sorted-column-ref) | Pushed | Issue-driven branch for stale state fix |
+| 2026-02-27 | jquery-tablesort | Commit | [d5a5aae](https://github.com/dusan-maintains/jquery-tablesort/commit/d5a5aae333d5305a5dd372f9be2d202238ce1161) | Published | Keep `tablesort.$th` synced with active sorted header |
+| 2026-02-27 | jquery-tablesort | PR | [kylefox/jquery-tablesort#49](https://github.com/kylefox/jquery-tablesort/pull/49) | Open | Fixes open issue reports (#40, #45) |
+
+## Priority Radar (Researched 2026-02-27)
+| Project | Signals | Why It Is Strong | Next Patch Type |
+|---|---|---|---|
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 3,681 stars, 1,343,411 npm weekly | Very high downstream usage | Focused compatibility/doc patch |
+| [`extrabacon/python-shell`](https://github.com/extrabacon/python-shell) | 2,163 stars, 191,489 npm weekly | Bridge package used in many Node stacks | Python 3.12 edge-case fix or examples |
+| [`Hellenic/react-hexgrid`](https://github.com/Hellenic/react-hexgrid) | 350 stars, 1,647 npm weekly | Moderate ecosystem footprint and manageable code | React compatibility/dependency patch |
 
 ## Operations
 1. Keep PR response SLA under 24 hours.
 2. Keep changes scoped and backward-compatible.
 3. Prefer issue-linked fixes with explicit test plan and compatibility notes.
+4. Keep evidence machine-readable and updated daily.
 
 ## Repo Index
 - [Claude application draft](./claude-for-oss-application.md)
@@ -42,4 +64,6 @@ Public, verifiable record of open-source maintenance activity.
 - [7-day approval plan](./7-day-approval-plan.md)
 - [Maintainer reply templates](./maintainer-reply-templates.md)
 - [Post-submit checklist](./post-submit-approval-checklist.md)
-- [Automation script](./scripts/update-evidence.ps1)
+- [Target repo radar](./target-repo-radar.md)
+- [Evidence updater](./scripts/update-evidence.ps1)
+- [Ecosystem status updater](./scripts/update-ecosystem-status.ps1)

@@ -4,7 +4,8 @@ param(
   [string]$Contributor = "dusan-maintains",
   [int[]]$PrNumbers = @(315, 316, 317),
   [string]$OutDir = "evidence",
-  [int]$SlaHours = 24
+  [int]$SlaHours = 24,
+  [string]$OutBaseName = "review-sla"
 )
 
 $ErrorActionPreference = "Stop"
@@ -127,7 +128,7 @@ $report = [PSCustomObject]@{
   items = $items
 }
 
-$jsonPath = Join-Path $OutDir "review-sla.json"
+$jsonPath = Join-Path $OutDir "$OutBaseName.json"
 $jsonText = $report | ConvertTo-Json -Depth 8
 Set-Content -Path $jsonPath -Value $jsonText -Encoding utf8
 
@@ -157,7 +158,7 @@ foreach ($it in ($items | Sort-Object pr_number)) {
   $lines += "| #$($it.pr_number) | $($it.pr_state) | $needs | $hours | $od | $author | $at | [link]($($it.pr_url)) |"
 }
 
-$mdPath = Join-Path $OutDir "review-sla.md"
+$mdPath = Join-Path $OutDir "$OutBaseName.md"
 Set-Content -Path $mdPath -Value ($lines -join "`r`n") -Encoding utf8
 
 Write-Host "Updated:"
