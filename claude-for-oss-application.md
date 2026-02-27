@@ -15,6 +15,7 @@ Combined public footprint in my current track:
 - 9,066 GitHub stars across actively maintained targets
 - 1,596,851 npm weekly downloads across tracked packages (`jquery-modal`, `jquery-tablesort`, `python-shell`, `rrule`, `react-hexgrid`)
 - 7 open upstream PRs from my account with scoped, issue-linked fixes
+- Additional merged maintainer-interaction signal: `lingdojo/kana-dojo#6309` (merged 2026-02-27)
 
 Evidence:
 - GitHub profile: https://github.com/dusan-maintains
@@ -45,6 +46,7 @@ Evidence:
 - Branch 7: https://github.com/dusan-maintains/react-hexgrid/tree/maintenance/add-ring-spiral-tests
 - Commit 7: https://github.com/dusan-maintains/react-hexgrid/commit/cbfcc50f8be57495170a4908d19920f5ff5f87ca
 - Pull request 7: https://github.com/Hellenic/react-hexgrid/pull/123
+- Supplemental merged PR: https://github.com/lingdojo/kana-dojo/pull/6309
 
 Patch summary:
 - Render close button text as plain text rather than HTML during button creation.
