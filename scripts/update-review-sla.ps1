@@ -95,7 +95,7 @@ function New-Event {
   }
 }
 
-function Convert-ToUtcDateTime {
+function Convert-StringToUtcDateTime {
   param(
     [Parameter(Mandatory = $true)]
     [string]$Value
@@ -143,10 +143,10 @@ foreach ($n in $PrNumbers) {
   $hoursSince = $null
 
   if ($externalEvents.Count -gt 0) {
-    $lastExternal = $externalEvents | Sort-Object { Convert-ToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
-    $lastOwnAfterExternal = $ownEvents | Where-Object { (Convert-ToUtcDateTime -Value $_.created_at) -gt (Convert-ToUtcDateTime -Value $lastExternal.created_at) } | Sort-Object { Convert-ToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
+    $lastExternal = $externalEvents | Sort-Object { Convert-StringToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
+    $lastOwnAfterExternal = $ownEvents | Where-Object { (Convert-StringToUtcDateTime -Value $_.created_at) -gt (Convert-StringToUtcDateTime -Value $lastExternal.created_at) } | Sort-Object { Convert-StringToUtcDateTime -Value $_.created_at } -Descending | Select-Object -First 1
 
-    $hoursSince = [Math]::Round(($now - (Convert-ToUtcDateTime -Value $lastExternal.created_at)).TotalHours, 2)
+    $hoursSince = [Math]::Round(($now - (Convert-StringToUtcDateTime -Value $lastExternal.created_at)).TotalHours, 2)
     if ($pr.state -eq "open" -and -not $lastOwnAfterExternal) {
       $needsResponse = $true
       $overdue = $hoursSince -ge $SlaHours
