@@ -164,13 +164,13 @@ async function load() {
     const items = Array.isArray(rawItems) ? rawItems : (rawItems && typeof rawItems === 'object' && rawItems.pr_number ? [rawItems] : []);
     if (items.length) {
       const qHtml = `<table>
-        <thead><tr><th>Repo</th><th>PR</th><th>Priority</th><th>Days Open</th><th>Action</th></tr></thead>
+        <thead><tr><th>Repository</th><th>PR</th><th>Priority</th><th>Hours Since Feedback</th><th>Overdue</th></tr></thead>
         <tbody>${items.map(q => `<tr>
-          <td>${q.repo || q.owner_repo || '—'}</td>
+          <td>${q.repository || q.repo || '—'}</td>
           <td>${q.pr_number ? `<a href="${q.pr_url || '#'}" target="_blank">#${q.pr_number}</a>` : '—'}</td>
           <td>${q.priority || '—'}</td>
-          <td class="num">${q.days_open || '—'}</td>
-          <td>${q.action || q.next_action || '—'}</td>
+          <td class="num">${q.hours_since_last_external != null ? q.hours_since_last_external.toFixed(1) + 'h' : '—'}</td>
+          <td>${q.overdue_sla ? '<span class="badge gap">Overdue</span>' : '<span class="badge open">OK</span>'}</td>
         </tr>`).join('')}</tbody>
       </table>`;
       document.getElementById('queue-table').innerHTML = qHtml;
