@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#58a6ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Top accent bar -->
+  <rect width="1280" height="4" fill="url(#accent)"/>
+
+  <!-- Border lines -->
+  <rect x="60" y="60" width="1160" height="520" rx="12" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Left column: title + description -->
+  <text x="100" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="42" font-weight="700" fill="#e6edf3">OSS Maintenance Log</text>
+  <text x="100" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" fill="#8b949e">Automated public evidence log for OSS maintenance work</text>
+  <text x="100" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" fill="#8b949e">Self-updates every 6 hours via GitHub Actions</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="250" x2="580" y2="250" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Stat cards row -->
+  <!-- Card 1: Downloads -->
+  <rect x="100" y="275" width="220" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">NPM DOWNLOADS/WEEK</text>
+  <text x="120" y="355" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#3fb950">1.6M</text>
+
+  <!-- Card 2: Stars -->
+  <rect x="340" y="275" width="220" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">COMBINED STARS</text>
+  <text x="360" y="355" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#d29922">9,066</text>
+
+  <!-- Card 3: Packages -->
+  <rect x="100" y="405" width="220" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="435" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">PACKAGES TRACKED</text>
+  <text x="120" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#58a6ff">7</text>
+
+  <!-- Card 4: PRs -->
+  <rect x="340" y="405" width="220" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="435" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#8b949e" letter-spacing="1">UPSTREAM PRs</text>
+  <text x="360" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="36" font-weight="700" fill="#bc8cff">8</text>
+
+  <!-- Right column: package list -->
+  <rect x="660" y="100" width="560" height="460" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="690" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#8b949e" letter-spacing="1">TRACKED PACKAGES</text>
+
+  <!-- Package rows -->
+  <line x1="680" y1="148" x2="1200" y2="148" stroke="#30363d" stroke-width="1"/>
+
+  <circle cx="700" cy="183" r="5" fill="#3fb950"/>
+  <text x="718" y="188" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">rrule</text>
+  <text x="1180" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">1.37M/wk</text>
+
+  <circle cx="700" cy="223" r="5" fill="#f85149"/>
+  <text x="718" y="228" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">python-shell</text>
+  <text x="1180" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">195k/wk</text>
+
+  <circle cx="700" cy="263" r="5" fill="#d29922"/>
+  <text x="718" y="268" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">jquery-modal</text>
+  <text x="1180" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">24k/wk</text>
+
+  <circle cx="700" cy="303" r="5" fill="#d29922"/>
+  <text x="718" y="308" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">jquery-tablesort</text>
+  <text x="1180" y="308" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">1.7k/wk</text>
+
+  <circle cx="700" cy="343" r="5" fill="#d29922"/>
+  <text x="718" y="348" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">react-hexgrid</text>
+  <text x="1180" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">1.7k/wk</text>
+
+  <circle cx="700" cy="383" r="5" fill="#58a6ff"/>
+  <text x="718" y="388" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">grafana</text>
+  <text x="1180" y="388" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#8b949e" text-anchor="end">72k ★</text>
+
+  <circle cx="700" cy="423" r="5" fill="#3fb950"/>
+  <text x="718" y="428" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">kana-dojo</text>
+  <text x="1180" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#3fb950" text-anchor="end">✓ merged</text>
+
+  <line x1="680" y1="455" x2="1200" y2="455" stroke="#30363d" stroke-width="1"/>
+  <text x="690" y="490" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#8b949e">github.com/dusan-maintains/oss-maintenance-log</text>
+
+  <!-- Bottom label -->
+  <text x="100" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#8b949e">MIT · Template repo · Auto-updates every 6h · GitHub Pages dashboard</text>
+</svg>

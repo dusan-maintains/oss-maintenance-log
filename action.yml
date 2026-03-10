@@ -1,0 +1,33 @@
+name: "OSS Maintenance Evidence Log"
+description: "Automatically track OSS package health, PR SLA, and npm stats. Commits machine-readable evidence snapshots every run."
+author: "dusan-maintains"
+
+branding:
+  icon: "activity"
+  color: "green"
+
+inputs:
+  github-token:
+    description: "GitHub token for API access (use secrets.GITHUB_TOKEN)"
+    required: true
+  evidence-dir:
+    description: "Directory to write evidence files into"
+    required: false
+    default: "evidence"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Update Evidence Snapshot
+      shell: pwsh
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        $dir = "${{ inputs.evidence-dir }}"
+        ./scripts/update-evidence.ps1 -OutDir $dir
+        ./scripts/update-ecosystem-status.ps1 -OutDir $dir
+        ./scripts/update-review-sla.ps1 -OutDir $dir
+        ./scripts/update-action-queue.ps1 -OutDir $dir
+        if (Test-Path "./scripts/update-readme-stats.ps1") {
+          ./scripts/update-readme-stats.ps1
+        }
