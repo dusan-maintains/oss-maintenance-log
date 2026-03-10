@@ -132,45 +132,44 @@ async function load() {
       fetch(RAW + 'action-queue.json').then(r => r.json()).catch(() => null)
     ]);
 
-    // Stats
-    const repos = eco.repos || [];
-    const totalDownloads = repos.reduce((a, r) => a + (r.npm_weekly_downloads || 0), 0);
-    const totalStars = repos.reduce((a, r) => a + (r.stars || 0), 0);
-    const totalPRs = repos.reduce((a, r) => a + (r.open_prs || 0), 0);
+    // Real JSON shape: eco.projects, eco.summary, eco.generated_at_utc
+    const repos = eco.projects || [];
+    const s = eco.summary || {};
 
-    document.getElementById('s-packages').textContent = repos.length;
-    document.getElementById('s-downloads').textContent = fmt(totalDownloads);
-    document.getElementById('s-stars').textContent = fmt(totalStars);
-    document.getElementById('s-prs').textContent = totalPRs;
+    document.getElementById('s-packages').textContent = s.tracked_projects || repos.length;
+    document.getElementById('s-downloads').textContent = fmt(s.total_npm_downloads_last_week || 0);
+    document.getElementById('s-stars').textContent = fmt(s.total_stars || 0);
+    document.getElementById('s-prs').textContent = s.tracked_prs_open || 0;
 
-    if (eco.generated_at) {
-      document.getElementById('last-updated').textContent = 'Last updated: ' + new Date(eco.generated_at).toUTCString();
+    if (eco.generated_at_utc) {
+      document.getElementById('last-updated').textContent = 'Last updated: ' + new Date(eco.generated_at_utc).toUTCString();
     }
 
     // Packages table
     const pkgHtml = `<table>
-      <thead><tr><th>Package</th><th>Stars</th><th>npm/week</th><th>Open Issues</th><th>Last Push</th><th>Status</th></tr></thead>
+      <thead><tr><th>Package</th><th>Stars</th><th>npm/week</th><th>Open Issues</th><th>Last Push</th><th>Open PRs</th></tr></thead>
       <tbody>${repos.map(r => `<tr>
-        <td><a href="https://github.com/${r.owner || ''}/${r.repo || r.name}" target="_blank">${r.owner || ''}/${r.repo || r.name}</a></td>
+        <td><a href="${r.repo_url || 'https://github.com/' + r.owner + '/' + r.repo}" target="_blank">${r.owner}/${r.repo}</a></td>
         <td class="num">${fmt(r.stars || 0)}</td>
-        <td class="num">${fmt(r.npm_weekly_downloads || 0)}</td>
+        <td class="num">${fmt(r.npm_downloads_last_week || 0)}</td>
         <td class="num">${r.open_issues || 0}</td>
-        <td>${r.last_push ? r.last_push.slice(0,10) : '—'}</td>
-        <td>${statusBadge(r.status || '')}</td>
+        <td>${r.pushed_at ? r.pushed_at.slice(0,10) : '—'}</td>
+        <td class="num">${r.tracked_prs_open || 0}</td>
       </tr>`).join('')}</tbody>
     </table>`;
     document.getElementById('packages-table').innerHTML = pkgHtml;
 
-    // Queue
-    if (queue && queue.items && queue.items.length) {
+    // Queue — action-queue.json uses array at root or .items
+    const items = Array.isArray(queue) ? queue : (queue && queue.items ? queue.items : []);
+    if (items.length) {
       const qHtml = `<table>
         <thead><tr><th>Repo</th><th>PR</th><th>Priority</th><th>Days Open</th><th>Action</th></tr></thead>
-        <tbody>${queue.items.map(q => `<tr>
-          <td>${q.repo || '—'}</td>
-          <td>${q.pr ? `<a href="${q.pr_url || '#'}" target="_blank">#${q.pr}</a>` : '—'}</td>
+        <tbody>${items.map(q => `<tr>
+          <td>${q.repo || q.owner_repo || '—'}</td>
+          <td>${q.pr_number ? `<a href="${q.pr_url || '#'}" target="_blank">#${q.pr_number}</a>` : '—'}</td>
           <td>${q.priority || '—'}</td>
           <td class="num">${q.days_open || '—'}</td>
-          <td>${q.action || '—'}</td>
+          <td>${q.action || q.next_action || '—'}</td>
         </tr>`).join('')}</tbody>
       </table>`;
       document.getElementById('queue-table').innerHTML = qHtml;
