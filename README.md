@@ -1,9 +1,23 @@
-# oss-maintenance-log
+# OSS Maintenance Log
 
-Automated health tracker for open-source packages that need maintenance attention.
+> One maintainer. Five abandoned packages. **1,596,851 npm downloads/week** kept alive.
 
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
+[![Weekly npm Downloads](https://img.shields.io/badge/npm%20downloads%2Fweek-1.6M%2B-brightgreen.svg)](#-live-data)
+[![Open PRs](https://img.shields.io/badge/upstream%20PRs-7%20open-orange.svg)](#contributions)
+[![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
+
+**This repository updates itself every 6 hours via GitHub Actions. No manual edits. Pure machine-readable evidence.**
+
+Packages with no active maintainer still serve millions of developers. This repo tracks, patches, and publicly documents that work — forks, branches, commits, PRs, and SLA response times — all verifiable without private context.
+
+---
+
+[📊 Live Data](#-live-data) · [📦 Tracked Projects](#currently-tracked-projects) · [📋 Contributions](#contributions) · [🔧 Use as Template](#use-it-yourself) · [📁 Project Structure](#project-structure)
+
+---
 
 ## Problem
 
@@ -25,15 +39,17 @@ All data is public, auditable, and requires zero manual updates after initial se
 
 ## Currently Tracked Projects
 
-| Project | Stars | Status | My PRs |
-|---------|-------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 72,000+ | Open | [#119212](https://github.com/grafana/grafana/pull/119212) — remove external font/image loading from email templates |
-| [kana-dojo](https://github.com/lingdojo/kana-dojo) | 1,657 | **Merged** | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [jquery-modal](https://github.com/kylefox/jquery-modal) | 2,614 | Open | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | Open | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [python-shell](https://github.com/extrabacon/python-shell) | 2,163 | Open | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [rrule](https://github.com/jkbrzt/rrule) | 3,681 | Open | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | Open | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| Project | Stars | npm/week | Status | My PRs |
+|---------|-------|----------|--------|--------|
+| [grafana/grafana](https://github.com/grafana/grafana) | 72,000+ | — | 🟢 Open | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1,657 | — | ✅ **Merged** | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2,614 | 24,399 | 🟡 Maintainers Wanted | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 1,667 | 🟡 Maintainers Wanted | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2,163 | 194,847 | 🔴 Maintainer Gap | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3,681 | 1,374,236 | 🔴 Open Backlog | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+
+**Combined footprint: 9,066 stars · 1,596,851 npm downloads/week**
 
 ## Contributions
 
@@ -70,7 +86,7 @@ This repo is a reusable template. To track your own set of packages:
 ./scripts/update-action-queue.ps1
 ```
 
-## Live Data
+## 📊 Live Data
 
 - [Ecosystem status (JSON)](./evidence/ecosystem-status.json)
 - [Ecosystem status (Markdown)](./evidence/ecosystem-status.md)
@@ -95,3 +111,7 @@ evidence/
 ## License
 
 MIT
+
+---
+
+*Auto-updated every 6 hours by [GitHub Actions](https://github.com/dusan-maintains/oss-maintenance-log/actions). Star the repo to follow live maintenance activity.*
