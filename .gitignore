@@ -1,0 +1,20 @@
+# Logs and temp files
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PowerShell
+*.ps1.bak
+
+# Node (if anyone runs local tooling)
+node_modules/
