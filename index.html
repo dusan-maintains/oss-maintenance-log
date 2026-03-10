@@ -159,8 +159,9 @@ async function load() {
     </table>`;
     document.getElementById('packages-table').innerHTML = pkgHtml;
 
-    // Queue — action-queue.json uses array at root or .items
-    const items = Array.isArray(queue) ? queue : (queue && queue.items ? queue.items : []);
+    // Queue — action-queue.json: items can be object or array
+    const rawItems = queue && queue.items ? queue.items : queue;
+    const items = Array.isArray(rawItems) ? rawItems : (rawItems && typeof rawItems === 'object' && rawItems.pr_number ? [rawItems] : []);
     if (items.length) {
       const qHtml = `<table>
         <thead><tr><th>Repo</th><th>PR</th><th>Priority</th><th>Days Open</th><th>Action</th></tr></thead>
