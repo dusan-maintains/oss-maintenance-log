@@ -24,7 +24,7 @@ $stars     = Format-Num $s.total_stars
 $downloads = Format-Num $s.total_npm_downloads_last_week
 $packages  = $s.tracked_projects
 $openPrs   = $s.tracked_prs_open
-$date      = $eco.generated_at_utc.Substring(0,10)
+$date      = ([string]$eco.generated_at_utc).Substring(0,10)
 
 $readme = Get-Content $ReadmePath -Raw
 
