@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live Dashboard
+    url: https://dusan-maintains.github.io/oss-maintenance-log
+    about: View the auto-updating live dashboard
+  - name: Evidence files
+    url: https://github.com/dusan-maintains/oss-maintenance-log/tree/main/evidence
+    about: Browse raw JSON + Markdown evidence snapshots
