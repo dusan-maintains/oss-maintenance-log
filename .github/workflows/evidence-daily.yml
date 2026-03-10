@@ -36,14 +36,15 @@ jobs:
           ./scripts/update-review-sla.ps1 -Owner lingdojo -Repo kana-dojo -PrNumbers 6309 -OutBaseName review-sla-kana-dojo
           ./scripts/update-review-sla.ps1 -Owner grafana -Repo grafana -PrNumbers 119212 -OutBaseName review-sla-grafana
           ./scripts/update-action-queue.ps1
+          ./scripts/update-readme-stats.ps1
 
       - name: Commit and Push Changes
         run: |
-          git add evidence/*.json evidence/*.md
+          git add evidence/*.json evidence/*.md README.md
           if git diff --cached --quiet; then
-            echo "No evidence changes to commit."
+            echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore(evidence): daily automated snapshot"
+          git commit -m "chore(evidence): automated snapshot $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
