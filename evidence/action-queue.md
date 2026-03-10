@@ -1,12 +1,12 @@
-﻿# Action Queue
+# Action Queue
 
-Generated: 2026-02-27T09:55:23Z
+Generated: 2026-03-10T19:10:39Z
 - Open actions: 1
-- Urgent actions: 0
+- Urgent actions: 1
 
 | Priority | Repository | PR | Hours since external feedback | Last author | Last feedback at | Link |
 |---|---|---|---|---|---|---|
-| normal | `grafana/grafana` | #119212 | 0.07 | CLAassistant | 2026-02-27T09:51:06Z | [link](https://github.com/grafana/grafana/pull/119212) |
+| urgent | `grafana/grafana` | #119212 | 273.33 | CLAassistant | 02/27/2026 09:51:06 | [link](https://github.com/grafana/grafana/pull/119212) |
 
 Suggested quick reply template:
 
