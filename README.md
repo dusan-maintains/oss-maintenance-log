@@ -17,7 +17,7 @@
 ## 🔬 Scan Your Dependencies — In One Command
 
 ```bash
-npx github:dusan-maintains/oss-maintenance-log lodash moment request express
+npx oss-health-scan lodash moment request express
 ```
 
 ```
@@ -43,11 +43,11 @@ npx github:dusan-maintains/oss-maintenance-log lodash moment request express
 <summary><strong>CLI flags</strong></summary>
 
 ```bash
-npx github:dusan-maintains/oss-maintenance-log            # Scan ./package.json
-npx github:dusan-maintains/oss-maintenance-log pkg1 pkg2   # Scan specific packages
-npx github:dusan-maintains/oss-maintenance-log --dev       # Include devDependencies
-npx github:dusan-maintains/oss-maintenance-log --json      # JSON output for CI
-npx github:dusan-maintains/oss-maintenance-log --threshold 40  # Only unhealthy
+npx oss-health-scan            # Scan ./package.json
+npx oss-health-scan pkg1 pkg2   # Scan specific packages
+npx oss-health-scan --dev       # Include devDependencies
+npx oss-health-scan --json      # JSON output for CI
+npx oss-health-scan --threshold 40  # Only unhealthy
 ```
 </details>
 
@@ -158,7 +158,7 @@ Each package gets a **weighted health score (0–100)**:
 ### Quick Scan (no install)
 
 ```bash
-npx github:dusan-maintains/oss-maintenance-log express lodash moment
+npx oss-health-scan express lodash moment
 ```
 
 ### Full Monitoring Setup
@@ -201,7 +201,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npx github:dusan-maintains/oss-maintenance-log --threshold 30
+      - run: npx oss-health-scan --threshold 30
 ```
 
 <!-- LIVE_DATA:START -->
