@@ -42,3 +42,20 @@ runs:
         $dir = "${{ inputs.evidence-dir }}"
         $cfg = "${{ inputs.config-file }}"
         ./scripts/compute-health-scores.ps1 -OutDir $dir -ConfigPath $cfg
+
+    - name: Compute Trends
+      if: ${{ inputs.compute-health-scores == 'true' }}
+      shell: pwsh
+      run: |
+        $dir = "${{ inputs.evidence-dir }}"
+        ./scripts/compute-trends.ps1 -OutDir $dir
+
+    - name: Check Alerts
+      if: ${{ inputs.compute-health-scores == 'true' }}
+      shell: pwsh
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        $dir = "${{ inputs.evidence-dir }}"
+        ./scripts/check-alerts.ps1 -OutDir $dir
+
