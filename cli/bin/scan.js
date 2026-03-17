@@ -17,6 +17,7 @@ const HELP = `
 
   Options:
     --json          Output raw JSON instead of terminal report
+    --ci            Output GitHub Actions annotations (::warning::, ::error::)
     --threshold N   Only show packages below health score N (default: show all)
     --dev           Include devDependencies
     --no-color      Disable colored output
@@ -24,11 +25,12 @@ const HELP = `
 `;
 
 async function resolvePackages(args) {
-  const flags = { json: false, threshold: 0, dev: false, color: true, packages: [] };
+  const flags = { json: false, ci: false, threshold: 0, dev: false, color: true, packages: [] };
 
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
     if (a === '--json') flags.json = true;
+    else if (a === '--ci') flags.ci = true;
     else if (a === '--dev') flags.dev = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -161,6 +163,16 @@ async function main() {
 
   if (flags.json) {
     process.stdout.write(JSON.stringify({ scanned: packages.length, results: filtered }, null, 2) + '\n');
+  } else if (flags.ci) {
+    for (const r of filtered) {
+      if (r.error) continue;
+      const level = r.risk_level === 'critical' ? 'error' : r.risk_level === 'warning' ? 'warning' : 'notice';
+      const msg = `${r.name}@${r.latest || '?'}: health ${r.health_score}/100` +
+        (r.reason ? ` — ${r.reason}` : '') +
+        (r.daysSincePush ? ` (last push ${r.daysSincePush}d ago)` : '');
+      process.stdout.write(`::${level}::${msg}\n`);
+    }
+    printReport(filtered, flags.color);
   } else {
     printReport(filtered, flags.color);
   }

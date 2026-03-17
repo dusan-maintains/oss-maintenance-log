@@ -1,5 +1,5 @@
 {
-  "name": "@dusan-maintains/oss-health-scan",
+  "name": "oss-health-scan",
   "version": "1.0.0",
   "description": "Scan your package.json for abandoned, unmaintained, or unhealthy npm dependencies. Get health scores (0-100) for every dependency. Zero external dependencies.",
   "bin": {
@@ -16,7 +16,9 @@
     "maintenance",
     "oss",
     "scanner",
-    "supply-chain"
+    "supply-chain",
+    "deprecated",
+    "dead-packages"
   ],
   "author": "dusan-maintains",
   "license": "MIT",
@@ -36,8 +38,5 @@
     "bin/",
     "lib/",
     "README.md"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  ]
 }
