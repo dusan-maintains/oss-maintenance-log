@@ -1,12 +1,12 @@
 # OSS Maintenance Log
 
-> <!-- TAGLINE:START -->One maintainer. 5 packages. **1.4M npm downloads/week** kept alive.<!-- TAGLINE:END -->
+> <!-- TAGLINE:START -->One maintainer. 7 packages. **1.4M npm downloads/week** kept alive.<!-- TAGLINE:END -->
 
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Tracked Packages](https://img.shields.io/badge/packages%20tracked-5-blue.svg)](#currently-tracked-projects)
+[![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
 [![Weekly npm Downloads](https://img.shields.io/badge/npm%20downloads%2Fweek-1.6M%2B-brightgreen.svg)](#-live-data)
-[![Open PRs](https://img.shields.io/badge/upstream%20PRs-7%20open-orange.svg)](#contributions)
+[![Open PRs](https://img.shields.io/badge/upstream%20PRs-8%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
 **This repository updates itself every 6 hours via GitHub Actions. No manual edits. Pure machine-readable evidence.**
@@ -49,7 +49,7 @@ All data is public, auditable, and requires zero manual updates after initial se
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3,681 | 1,374,236 | 🔴 Open Backlog | [#664](https://github.com/jkbrzt/rrule/pull/664) |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 
-**Combined footprint: <!-- STATS:START -->9.1k stars · 1.4M npm downloads/week<!-- STATS:END -->**
+**Combined footprint: <!-- STATS:START -->83.7k stars · 1.4M npm downloads/week<!-- STATS:END -->**
 
 ## Contributions
 

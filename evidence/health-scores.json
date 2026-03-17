@@ -1,0 +1,285 @@
+{
+  "generated_at_utc": "2026-03-17T15:46:37Z",
+  "summary": {
+    "total_projects": 7,
+    "average_health_score": 57.3,
+    "critical": 0,
+    "warning": 5,
+    "healthy": 2
+  },
+  "scores": [
+    {
+      "owner": "grafana",
+      "repo": "grafana",
+      "repo_url": "https://github.com/grafana/grafana",
+      "package": null,
+      "health_score": 48.1,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.33,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 0.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 10.0,
+          "stars_score": 10.0,
+          "forks_score": 10.0
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.5,
+          "days_since_push": 0.0,
+          "open_issues": 3871,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 72713,
+      "npm_downloads_last_week": 0,
+      "status_label": "Open"
+    },
+    {
+      "owner": "Hellenic",
+      "repo": "react-hexgrid",
+      "repo_url": "https://github.com/Hellenic/react-hexgrid",
+      "package": "react-hexgrid",
+      "health_score": 49.6,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.67,
+          "push_recency": 1.02,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 6.42,
+          "stars_score": 6.37,
+          "forks_score": 6.47
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 5.29,
+          "download_score": 5.29,
+          "downloads_last_week": 1492
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 5.5,
+          "days_since_push": 594.0,
+          "open_issues": 33,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 351,
+      "npm_downloads_last_week": 1492,
+      "status_label": "Maintainer Needed"
+    },
+    {
+      "owner": "kylefox",
+      "repo": "jquery-tablesort",
+      "repo_url": "https://github.com/kylefox/jquery-tablesort",
+      "package": "jquery-tablesort",
+      "health_score": 52.0,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 4.18,
+          "push_recency": 0.03,
+          "issue_ratio": 2.5,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 6.02,
+          "stars_score": 6.03,
+          "forks_score": 6.02
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 5.97,
+          "download_score": 5.97,
+          "downloads_last_week": 3823
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 5.5,
+          "days_since_push": 1523.0,
+          "open_issues": 15,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 258,
+      "npm_downloads_last_week": 3823,
+      "status_label": "Maintainers Wanted"
+    },
+    {
+      "owner": "kylefox",
+      "repo": "jquery-modal",
+      "repo_url": "https://github.com/kylefox/jquery-modal",
+      "package": "jquery-modal",
+      "health_score": 56.0,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.56,
+          "push_recency": 0.68,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.54,
+          "stars_score": 8.54,
+          "forks_score": 8.53
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 7.21,
+          "download_score": 7.21,
+          "downloads_last_week": 21066
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 4.0,
+          "days_since_push": 698.0,
+          "open_issues": 75,
+          "open_tracked_prs": 3
+        }
+      },
+      "stars": 2613,
+      "npm_downloads_last_week": 21066,
+      "status_label": "Maintainers Wanted"
+    },
+    {
+      "owner": "jkbrzt",
+      "repo": "rrule",
+      "repo_url": "https://github.com/jkbrzt/rrule",
+      "package": "rrule",
+      "health_score": 59.8,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.63,
+          "push_recency": 0.89,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.6,
+          "stars_score": 8.92,
+          "forks_score": 8.29
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 10.0,
+          "download_score": 10.0,
+          "downloads_last_week": 1188607
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 2.5,
+          "days_since_push": 628.0,
+          "open_issues": 210,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 3683,
+      "npm_downloads_last_week": 1188607,
+      "status_label": "Open Backlog"
+    },
+    {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "package": null,
+      "health_score": 61.2,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.72,
+          "stars_score": 8.19,
+          "forks_score": 9.24
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 8.5,
+          "days_since_push": 0.0,
+          "open_issues": 55,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 1881,
+      "npm_downloads_last_week": 0,
+      "status_label": "Merged"
+    },
+    {
+      "owner": "extrabacon",
+      "repo": "python-shell",
+      "repo_url": "https://github.com/extrabacon/python-shell",
+      "package": "python-shell",
+      "health_score": 74.7,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.46,
+          "push_recency": 9.39,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 7.73,
+          "stars_score": 8.34,
+          "forks_score": 7.12
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 8.74,
+          "download_score": 8.74,
+          "downloads_last_week": 175041
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 8.0,
+          "days_since_push": 16.0,
+          "open_issues": 63,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 2166,
+      "npm_downloads_last_week": 175041,
+      "status_label": "Maintainer Gap"
+    }
+  ]
+}

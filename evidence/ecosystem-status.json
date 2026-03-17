@@ -1,14 +1,78 @@
 {
-  "generated_at_utc": "2026-03-17T08:09:08Z",
+  "generated_at_utc": "2026-03-17T15:46:20Z",
   "summary": {
-    "tracked_projects": 5,
-    "tracked_prs_total": 7,
-    "tracked_prs_open": 7,
-    "total_stars": 9071,
-    "total_forks": 1654,
+    "tracked_projects": 7,
+    "tracked_prs_total": 9,
+    "tracked_prs_open": 8,
+    "total_stars": 83665,
+    "total_forks": 16332,
     "total_npm_downloads_last_week": 1390029
   },
   "projects": [
+    {
+      "owner": "grafana",
+      "repo": "grafana",
+      "repo_url": "https://github.com/grafana/grafana",
+      "stars": 72713,
+      "forks": 13554,
+      "open_issues": 3871,
+      "pushed_at": "2026-03-17T15:45:13Z",
+      "package": null,
+      "npm_downloads_last_week": 0,
+      "npm_start": null,
+      "npm_end": null,
+      "maintainer_needed_signal": "Active upstream maintenance PR under review.",
+      "status_label": "Open",
+      "tracked_pr_numbers": [
+        119212
+      ],
+      "tracked_prs_open": 1,
+      "tracked_pr_details": [
+        {
+          "number": 119212,
+          "title": "Emails: Remove external Google Fonts and logo URL from email templates",
+          "state": "open",
+          "html_url": "https://github.com/grafana/grafana/pull/119212",
+          "updated_at": "2026-02-27T10:11:22Z",
+          "mergeable_state": "unknown",
+          "comments": 1,
+          "review_comments": 0,
+          "commits": 1
+        }
+      ]
+    },
+    {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "stars": 1881,
+      "forks": 1124,
+      "open_issues": 55,
+      "pushed_at": "2026-03-17T15:45:38Z",
+      "package": null,
+      "npm_downloads_last_week": 0,
+      "npm_start": null,
+      "npm_end": null,
+      "maintainer_needed_signal": "Merged contribution with follow-up issue closed.",
+      "status_label": "Merged",
+      "tracked_pr_numbers": [
+        6309
+      ],
+      "tracked_prs_open": 0,
+      "tracked_pr_details": [
+        {
+          "number": 6309,
+          "title": "content: add new japanese idiom",
+          "state": "closed",
+          "html_url": "https://github.com/lingdojo/kana-dojo/pull/6309",
+          "updated_at": "2026-02-27T09:12:37Z",
+          "mergeable_state": "unknown",
+          "comments": 1,
+          "review_comments": 0,
+          "commits": 1
+        }
+      ]
+    },
     {
       "owner": "kylefox",
       "repo": "jquery-modal",
@@ -22,6 +86,7 @@
       "npm_start": "2026-03-10",
       "npm_end": "2026-03-16",
       "maintainer_needed_signal": "README Maintainers Wanted",
+      "status_label": "Maintainers Wanted",
       "tracked_pr_numbers": [
         315,
         316,
@@ -77,6 +142,7 @@
       "npm_start": "2026-03-10",
       "npm_end": "2026-03-16",
       "maintainer_needed_signal": "README Maintainers Wanted",
+      "status_label": "Maintainers Wanted",
       "tracked_pr_numbers": [
         49
       ],
@@ -108,6 +174,7 @@
       "npm_start": "2026-03-10",
       "npm_end": "2026-03-16",
       "maintainer_needed_signal": "Issue #290: Looking for maintainer",
+      "status_label": "Maintainer Gap",
       "tracked_pr_numbers": [
         320
       ],
@@ -139,6 +206,7 @@
       "npm_start": "2026-03-10",
       "npm_end": "2026-03-16",
       "maintainer_needed_signal": "High-impact package with long-lived open maintenance backlog",
+      "status_label": "Open Backlog",
       "tracked_pr_numbers": [
         664
       ],
@@ -170,6 +238,7 @@
       "npm_start": "2026-03-10",
       "npm_end": "2026-03-16",
       "maintainer_needed_signal": "Issue #72: Maintainers wanted",
+      "status_label": "Maintainer Needed",
       "tracked_pr_numbers": [
         123
       ],
