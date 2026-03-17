@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update-evidence:
@@ -32,6 +33,18 @@ jobs:
         shell: pwsh
         run: |
           ./scripts/compute-health-scores.ps1
+
+      - name: Compute Trends
+        shell: pwsh
+        run: |
+          ./scripts/compute-trends.ps1
+
+      - name: Check Alerts
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./scripts/check-alerts.ps1
 
       - name: Commit and Push Changes
         run: |

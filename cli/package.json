@@ -1,0 +1,32 @@
+{
+  "name": "oss-health-scan",
+  "version": "1.0.0",
+  "description": "Scan your package.json for abandoned, unmaintained, or unhealthy npm dependencies. Get health scores (0-100) for every dependency.",
+  "bin": {
+    "oss-health-scan": "./bin/scan.js"
+  },
+  "keywords": [
+    "npm",
+    "dependencies",
+    "health",
+    "abandoned",
+    "unmaintained",
+    "security",
+    "audit",
+    "maintenance",
+    "oss"
+  ],
+  "author": "dusan-maintains",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dusan-maintains/oss-maintenance-log.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ]
+}
