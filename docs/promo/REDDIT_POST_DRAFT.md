@@ -5,7 +5,7 @@
 21% of the top 50k npm packages depend on deprecated packages. `npm audit` catches CVEs — but not abandoned ones. So I built a scanner.
 
 ```
-npx github:dusan-maintains/oss-maintenance-log express lodash moment request
+npx oss-health-scan express lodash moment request
 ```
 
 It scores every dependency 0–100 based on:

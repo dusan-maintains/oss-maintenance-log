@@ -15,7 +15,7 @@ I maintain 7 of these packages — combined 1.4M npm downloads/week. After getti
 ## One command
 
 ```bash
-npx github:dusan-maintains/oss-maintenance-log express lodash moment request
+npx oss-health-scan express lodash moment request
 ```
 
 ```
@@ -70,7 +70,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npx github:dusan-maintains/oss-maintenance-log --threshold 30
+      - run: npx oss-health-scan --threshold 30
 ```
 
 Exits with code 1 if any critical packages found — works as a PR gate.

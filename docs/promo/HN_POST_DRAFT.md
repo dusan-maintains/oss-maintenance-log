@@ -8,7 +8,7 @@
 
 I built a zero-dependency Node.js CLI that scores every dependency 0–100:
 
-    npx github:dusan-maintains/oss-maintenance-log lodash moment request
+    npx oss-health-scan lodash moment request
 
 It checks:
 - When the repo was last pushed to
