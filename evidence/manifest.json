@@ -1,0 +1,267 @@
+﻿{
+    "schema_version":  1,
+    "run_started_at_utc":  "2026-03-17T15:24:43Z",
+    "run_completed_at_utc":  "2026-03-17T15:24:52Z",
+    "run_status":  "failed",
+    "config_version":  1,
+    "summary":  {
+                    "total_steps":  17,
+                    "successful_steps":  2,
+                    "failed_steps":  15,
+                    "skipped_steps":  0,
+                    "tracked_repositories":  7,
+                    "fresh_repositories":  0,
+                    "partial_repositories":  0,
+                    "failed_repositories":  7
+                },
+    "global_steps":  [
+                         {
+                             "name":  "ecosystem_status",
+                             "scope":  "global",
+                             "status":  "failed",
+                             "message":  "HTTP 403 from https://api.github.com/repos/grafana/grafana",
+                             "outputs":  [
+                                             "ecosystem-status.json",
+                                             "ecosystem-status.md"
+                                         ]
+                         },
+                         {
+                             "name":  "action_queue",
+                             "scope":  "global",
+                             "status":  "success",
+                             "message":  "",
+                             "outputs":  [
+                                             "action-queue.json",
+                                             "action-queue.md"
+                                         ]
+                         },
+                         {
+                             "name":  "readme_refresh",
+                             "scope":  "global",
+                             "status":  "success",
+                             "message":  "",
+                             "outputs":  [
+                                             "README.md"
+                                         ]
+                         }
+                     ],
+    "repositories":  [
+                         {
+                             "repository":  "grafana/grafana",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-grafana-grafana.json",
+                             "review_sla_file":  "review-sla-grafana.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "grafana/grafana",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/grafana/grafana",
+                                               "outputs":  [
+                                                               "latest-status-grafana-grafana.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "grafana/grafana",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/grafana/grafana/pulls/119212",
+                                               "outputs":  [
+                                                               "review-sla-grafana.json",
+                                                               "review-sla-grafana.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/grafana/grafana",
+                                            "HTTP 403 from https://api.github.com/repos/grafana/grafana/pulls/119212"
+                                        ]
+                         },
+                         {
+                             "repository":  "lingdojo/kana-dojo",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-lingdojo-kana-dojo.json",
+                             "review_sla_file":  "review-sla-kana-dojo.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "lingdojo/kana-dojo",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/lingdojo/kana-dojo",
+                                               "outputs":  [
+                                                               "latest-status-lingdojo-kana-dojo.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "lingdojo/kana-dojo",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/lingdojo/kana-dojo/pulls/6309",
+                                               "outputs":  [
+                                                               "review-sla-kana-dojo.json",
+                                                               "review-sla-kana-dojo.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/lingdojo/kana-dojo",
+                                            "HTTP 403 from https://api.github.com/repos/lingdojo/kana-dojo/pulls/6309"
+                                        ]
+                         },
+                         {
+                             "repository":  "kylefox/jquery-modal",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-kylefox-jquery-modal.json",
+                             "review_sla_file":  "review-sla.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "kylefox/jquery-modal",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/kylefox/jquery-modal",
+                                               "outputs":  [
+                                                               "latest-status-kylefox-jquery-modal.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "kylefox/jquery-modal",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/kylefox/jquery-modal/pulls/315",
+                                               "outputs":  [
+                                                               "review-sla.json",
+                                                               "review-sla.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/kylefox/jquery-modal",
+                                            "HTTP 403 from https://api.github.com/repos/kylefox/jquery-modal/pulls/315"
+                                        ]
+                         },
+                         {
+                             "repository":  "kylefox/jquery-tablesort",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-kylefox-jquery-tablesort.json",
+                             "review_sla_file":  "review-sla-tablesort.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "kylefox/jquery-tablesort",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/kylefox/jquery-tablesort",
+                                               "outputs":  [
+                                                               "latest-status-kylefox-jquery-tablesort.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "kylefox/jquery-tablesort",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/kylefox/jquery-tablesort/pulls/49",
+                                               "outputs":  [
+                                                               "review-sla-tablesort.json",
+                                                               "review-sla-tablesort.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/kylefox/jquery-tablesort",
+                                            "HTTP 403 from https://api.github.com/repos/kylefox/jquery-tablesort/pulls/49"
+                                        ]
+                         },
+                         {
+                             "repository":  "extrabacon/python-shell",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-extrabacon-python-shell.json",
+                             "review_sla_file":  "review-sla-python-shell.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "extrabacon/python-shell",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/extrabacon/python-shell",
+                                               "outputs":  [
+                                                               "latest-status-extrabacon-python-shell.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "extrabacon/python-shell",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/extrabacon/python-shell/pulls/320",
+                                               "outputs":  [
+                                                               "review-sla-python-shell.json",
+                                                               "review-sla-python-shell.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/extrabacon/python-shell",
+                                            "HTTP 403 from https://api.github.com/repos/extrabacon/python-shell/pulls/320"
+                                        ]
+                         },
+                         {
+                             "repository":  "jkbrzt/rrule",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-jkbrzt-rrule.json",
+                             "review_sla_file":  "review-sla-rrule.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "jkbrzt/rrule",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/jkbrzt/rrule",
+                                               "outputs":  [
+                                                               "latest-status-jkbrzt-rrule.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "jkbrzt/rrule",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/jkbrzt/rrule/pulls/664",
+                                               "outputs":  [
+                                                               "review-sla-rrule.json",
+                                                               "review-sla-rrule.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/jkbrzt/rrule",
+                                            "HTTP 403 from https://api.github.com/repos/jkbrzt/rrule/pulls/664"
+                                        ]
+                         },
+                         {
+                             "repository":  "Hellenic/react-hexgrid",
+                             "status":  "failed",
+                             "latest_snapshot_file":  "latest-status-Hellenic-react-hexgrid.json",
+                             "review_sla_file":  "review-sla-react-hexgrid.json",
+                             "steps":  [
+                                           {
+                                               "name":  "repository_snapshot",
+                                               "scope":  "Hellenic/react-hexgrid",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/Hellenic/react-hexgrid",
+                                               "outputs":  [
+                                                               "latest-status-Hellenic-react-hexgrid.json"
+                                                           ]
+                                           },
+                                           {
+                                               "name":  "review_sla",
+                                               "scope":  "Hellenic/react-hexgrid",
+                                               "status":  "failed",
+                                               "message":  "HTTP 403 from https://api.github.com/repos/Hellenic/react-hexgrid/pulls/123",
+                                               "outputs":  [
+                                                               "review-sla-react-hexgrid.json",
+                                                               "review-sla-react-hexgrid.md"
+                                                           ]
+                                           }
+                                       ],
+                             "errors":  [
+                                            "HTTP 403 from https://api.github.com/repos/Hellenic/react-hexgrid",
+                                            "HTTP 403 from https://api.github.com/repos/Hellenic/react-hexgrid/pulls/123"
+                                        ]
+                         }
+                     ]
+}

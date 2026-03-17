@@ -1,0 +1,97 @@
+# Data Model
+
+## Configuration
+
+`config/tracked-repositories.json` defines:
+
+- repository owner and name
+- optional npm package name
+- status label used in README and dashboards
+- maintainer-needed signal text
+- tracked upstream PR numbers
+- per-repo SLA output base name
+
+## Generated Outputs
+
+### `evidence/ecosystem-status.json`
+
+Aggregated snapshot across all tracked repositories.
+
+Key fields:
+
+- `generated_at_utc`
+- `summary.tracked_repositories`
+- `summary.tracked_packages`
+- `summary.tracked_prs_total`
+- `summary.tracked_prs_open`
+- `summary.total_stars`
+- `summary.total_forks`
+- `summary.total_npm_downloads_last_week`
+- `projects[]`
+
+### `evidence/latest-status-*.json`
+
+Latest detailed snapshot per tracked repository.
+
+Key fields:
+
+- `repo`
+- `npm`
+- `tracked_prs[]`
+
+### `evidence/status-*.json`
+
+Historical per-repository snapshots with timestamped filenames.
+
+### `evidence/review-sla*.json`
+
+Per-repository review-response tracking.
+
+Key fields:
+
+- `summary.tracked_open_prs`
+- `summary.needs_response_count`
+- `summary.overdue_count`
+- `items[]`
+
+### `evidence/action-queue.json`
+
+Cross-repo prioritized queue built from SLA outputs.
+
+Key fields:
+
+- `generated_at_utc`
+- `open_actions`
+- `urgent_actions`
+- `items[]`
+
+### `evidence/manifest.json`
+
+Run-level truth file for refresh health.
+
+Key fields:
+
+- `run_status`
+- `run_started_at_utc`
+- `run_completed_at_utc`
+- `summary.successful_steps`
+- `summary.failed_steps`
+- `summary.skipped_steps`
+- `summary.fresh_repositories`
+- `summary.partial_repositories`
+- `summary.failed_repositories`
+- `global_steps[]`
+- `repositories[]`
+
+## README Contract
+
+`README.md` contains marker-delimited generated sections:
+
+- `TAGLINE`
+- `STATS`
+- `TRACKED_PROJECTS`
+- `CONTRIBUTIONS_MERGED`
+- `CONTRIBUTIONS_OPEN`
+- `LIVE_DATA`
+
+Do not remove or rename these markers without updating validation and regeneration logic.

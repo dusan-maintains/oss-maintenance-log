@@ -1,5 +1,5 @@
 name: "OSS Maintenance Evidence Log"
-description: "Automatically track OSS package health, PR SLA, and npm stats. Commits machine-readable evidence snapshots every run."
+description: "Automatically track OSS package health, PR SLA, health scores, and npm stats. Config-driven — just edit tracked-repositories.json."
 author: "dusan-maintains"
 
 branding:
@@ -10,24 +10,35 @@ inputs:
   github-token:
     description: "GitHub token for API access (use secrets.GITHUB_TOKEN)"
     required: true
+  config-file:
+    description: "Path to tracked-repositories.json config file"
+    required: false
+    default: "config/tracked-repositories.json"
   evidence-dir:
     description: "Directory to write evidence files into"
     required: false
     default: "evidence"
+  compute-health-scores:
+    description: "Whether to compute health scores after evidence collection"
+    required: false
+    default: "true"
 
 runs:
   using: "composite"
   steps:
-    - name: Update Evidence Snapshot
+    - name: Update All Evidence
       shell: pwsh
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
       run: |
         $dir = "${{ inputs.evidence-dir }}"
-        ./scripts/update-evidence.ps1 -OutDir $dir
-        ./scripts/update-ecosystem-status.ps1 -OutDir $dir
-        ./scripts/update-review-sla.ps1 -OutDir $dir
-        ./scripts/update-action-queue.ps1 -OutDir $dir
-        if (Test-Path "./scripts/update-readme-stats.ps1") {
-          ./scripts/update-readme-stats.ps1
-        }
+        $cfg = "${{ inputs.config-file }}"
+        ./scripts/update-all-evidence.ps1 -OutDir $dir -ConfigPath $cfg
+
+    - name: Compute Health Scores
+      if: ${{ inputs.compute-health-scores == 'true' }}
+      shell: pwsh
+      run: |
+        $dir = "${{ inputs.evidence-dir }}"
+        $cfg = "${{ inputs.config-file }}"
+        ./scripts/compute-health-scores.ps1 -OutDir $dir -ConfigPath $cfg

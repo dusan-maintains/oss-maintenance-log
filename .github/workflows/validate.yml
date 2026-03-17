@@ -1,0 +1,20 @@
+name: Validate Repository
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate configuration and scripts
+        shell: pwsh
+        run: |
+          ./scripts/validate-repo.ps1

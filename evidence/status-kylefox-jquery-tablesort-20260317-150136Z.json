@@ -1,0 +1,40 @@
+﻿{
+    "generated_at_utc":  "2026-03-17T15:01:36Z",
+    "repo":  {
+                 "owner":  "kylefox",
+                 "name":  "jquery-tablesort",
+                 "html_url":  "https://github.com/kylefox/jquery-tablesort",
+                 "stars":  258,
+                 "forks":  96,
+                 "open_issues":  15,
+                 "pushed_at":  "2022-01-14T13:52:41Z"
+             },
+    "npm":  {
+                "package":  "jquery-tablesort",
+                "downloads_last_week":  3823,
+                "start":  "2026-03-10",
+                "end":  "2026-03-16"
+            },
+    "tracked_prs":  [
+                        {
+                            "number":  49,
+                            "title":  "Fix stale tablesort.$th reference after header clicks",
+                            "state":  "open",
+                            "html_url":  "https://github.com/kylefox/jquery-tablesort/pull/49",
+                            "head_label":  "dusan-maintains:maintenance/update-sorted-column-ref",
+                            "head_sha":  "d5a5aae333d5305a5dd372f9be2d202238ce1161",
+                            "base_ref":  "master",
+                            "draft":  false,
+                            "mergeable_state":  "clean",
+                            "updated_at":  "2026-02-27T07:05:04Z",
+                            "created_at":  "2026-02-27T06:54:15Z",
+                            "merged_at":  null,
+                            "comments":  0,
+                            "review_comments":  0,
+                            "commits":  1,
+                            "additions":  2,
+                            "deletions":  1,
+                            "changed_files":  2
+                        }
+                    ]
+}

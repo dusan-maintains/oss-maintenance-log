@@ -1,0 +1,40 @@
+﻿{
+    "generated_at_utc":  "2026-03-17T15:01:37Z",
+    "repo":  {
+                 "owner":  "extrabacon",
+                 "name":  "python-shell",
+                 "html_url":  "https://github.com/extrabacon/python-shell",
+                 "stars":  2166,
+                 "forks":  223,
+                 "open_issues":  63,
+                 "pushed_at":  "2026-03-01T07:51:54Z"
+             },
+    "npm":  {
+                "package":  "python-shell",
+                "downloads_last_week":  175041,
+                "start":  "2026-03-10",
+                "end":  "2026-03-16"
+            },
+    "tracked_prs":  [
+                        {
+                            "number":  320,
+                            "title":  "Fix runString temp path to use tmpdir() and add regression test",
+                            "state":  "open",
+                            "html_url":  "https://github.com/extrabacon/python-shell/pull/320",
+                            "head_label":  "dusan-maintains:maintenance/fix-runstring-temp-path",
+                            "head_sha":  "1520d01cd15d9463022608e86b1919f95444116f",
+                            "base_ref":  "master",
+                            "draft":  false,
+                            "mergeable_state":  "clean",
+                            "updated_at":  "2026-02-27T07:19:49Z",
+                            "created_at":  "2026-02-27T07:19:49Z",
+                            "merged_at":  null,
+                            "comments":  0,
+                            "review_comments":  0,
+                            "commits":  1,
+                            "additions":  33,
+                            "deletions":  2,
+                            "changed_files":  2
+                        }
+                    ]
+}

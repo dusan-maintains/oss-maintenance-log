@@ -4,111 +4,362 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OSS Maintenance Log — Live Dashboard</title>
-<meta name="description" content="One maintainer keeping 1.6M npm downloads/week alive. Public, auto-updating evidence log for OSS maintenance work across 7 packages.">
-<meta property="og:title" content="OSS Maintenance Log — 1.6M npm downloads/week kept alive">
-<meta property="og:description" content="Automated public evidence log: forks, PRs, SLA tracking across 7 abandoned-but-critical packages. Self-updates every 6 hours via GitHub Actions.">
+<meta name="description" content="Automated OSS health monitor. Tracks package health scores, SLA compliance, and npm download trends across abandoned-but-critical open source packages.">
+<meta property="og:title" content="OSS Maintenance Log — Package Health Dashboard">
+<meta property="og:description" content="Interactive health scores, SLA tracking, and download trends for maintained open-source packages. Self-updates every 6 hours.">
 <meta property="og:url" content="https://dusan-maintains.github.io/oss-maintenance-log">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OSS Maintenance Log — 1.6M npm downloads/week kept alive">
-<meta name="twitter:description" content="Automated public evidence log: forks, PRs, SLA tracking across 7 abandoned-but-critical packages. Self-updates every 6 hours via GitHub Actions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --green: #3fb950;
-    --yellow: #d29922;
-    --red: #f85149;
-    --blue: #58a6ff;
-    --purple: #bc8cff;
+    --bg: #0a0e17;
+    --surface: #111827;
+    --card: #1a2332;
+    --border: #1e2d3d;
+    --border-glow: rgba(88,166,255,0.15);
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --green: #22c55e;
+    --green-dim: rgba(34,197,94,0.12);
+    --yellow: #eab308;
+    --yellow-dim: rgba(234,179,8,0.12);
+    --red: #ef4444;
+    --red-dim: rgba(239,68,68,0.12);
+    --blue: #3b82f6;
+    --blue-dim: rgba(59,130,246,0.12);
+    --purple: #a855f7;
+    --purple-dim: rgba(168,85,247,0.12);
+    --cyan: #06b6d4;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
-  a { color: var(--blue); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--blue); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--cyan); }
 
-  header { border-bottom: 1px solid var(--border); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  header h1 { font-size: 1.25rem; font-weight: 600; }
-  header .subtitle { color: var(--muted); font-size: 0.875rem; }
-  .gh-link { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.875rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
-  .gh-link:hover { background: var(--border); text-decoration: none; }
+  /* ── Header ────────────────────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: linear-gradient(180deg, rgba(59,130,246,0.04) 0%, transparent 100%);
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 800; color: #fff;
+  }
+  header h1 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--muted); font-size: 0.8rem; }
+  .gh-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .gh-btn:hover {
+    background: var(--card);
+    border-color: var(--blue);
+    box-shadow: 0 0 20px rgba(59,130,246,0.1);
+    text-decoration: none;
+  }
 
-  main { max-width: 1100px; margin: 0 auto; padding: 32px; }
+  /* ── Main ──────────────────────────────────────────────── */
+  main { max-width: 1200px; margin: 0 auto; padding: 32px; }
 
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 40px; }
-  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
-  .stat-card .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-  .stat-card .value { font-size: 1.75rem; font-weight: 700; }
-  .stat-card .value.green { color: var(--green); }
-  .stat-card .value.blue { color: var(--blue); }
-  .stat-card .value.purple { color: var(--purple); }
-  .stat-card .value.yellow { color: var(--yellow); }
+  /* ── Stats Strip ───────────────────────────────────────── */
+  .stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 12px 12px 0 0;
+  }
+  .stat:nth-child(1)::before { background: linear-gradient(90deg, var(--blue), var(--cyan)); }
+  .stat:nth-child(2)::before { background: linear-gradient(90deg, var(--green), #10b981); }
+  .stat:nth-child(3)::before { background: linear-gradient(90deg, var(--yellow), #f59e0b); }
+  .stat:nth-child(4)::before { background: linear-gradient(90deg, var(--purple), #c084fc); }
+  .stat:nth-child(5)::before { background: linear-gradient(90deg, var(--cyan), var(--blue)); }
+  .stat:hover { border-color: var(--border-glow); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .stat .label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .stat .value { font-size: 1.6rem; font-weight: 800; margin-top: 4px; letter-spacing: -0.02em; }
+  .stat .value.blue { color: var(--blue); }
+  .stat .value.green { color: var(--green); }
+  .stat .value.yellow { color: var(--yellow); }
+  .stat .value.purple { color: var(--purple); }
+  .stat .value.cyan { color: var(--cyan); }
 
-  section { margin-bottom: 40px; }
-  section h2 { font-size: 1rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  /* ── Section ───────────────────────────────────────────── */
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-size: 0.8rem; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  section h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-  th { text-align: left; padding: 10px 12px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); }
-  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  /* ── Health Cards Grid ─────────────────────────────────── */
+  .health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+  .health-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .health-card:hover {
+    border-color: var(--border-glow);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+  .health-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .health-card .pkg-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .health-card .pkg-owner {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  /* ── Score Circle ──────────────────────────────────────── */
+  .score-circle {
+    width: 56px; height: 56px;
+    position: relative;
+  }
+  .score-circle svg { transform: rotate(-90deg); }
+  .score-circle .score-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  /* ── Breakdown Bars ────────────────────────────────────── */
+  .breakdown { margin-top: 14px; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .bar-label { width: 80px; text-align: right; flex-shrink: 0; }
+  .bar-track {
+    flex: 1; height: 6px; background: rgba(255,255,255,0.05);
+    border-radius: 3px; overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease-out;
+  }
+  .bar-value { width: 28px; text-align: right; font-variant-numeric: tabular-nums; }
+
+  .card-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .card-meta span { display: flex; align-items: center; gap: 4px; }
+  .card-meta .val { color: var(--text); font-weight: 600; }
+
+  /* ── Badge ─────────────────────────────────────────────── */
+  .risk-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 10px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .risk-badge.critical { background: var(--red-dim); color: var(--red); }
+  .risk-badge.warning { background: var(--yellow-dim); color: var(--yellow); }
+  .risk-badge.healthy { background: var(--green-dim); color: var(--green); }
+
+  /* ── Charts ────────────────────────────────────────────── */
+  .chart-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .chart-wrapper { position: relative; height: 280px; }
+
+  /* ── Table ──────────────────────────────────────────────── */
+  .data-table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  th {
+    text-align: left; padding: 12px 16px; color: var(--muted);
+    font-weight: 500; font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(255,255,255,0.02); }
-
-  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
-  .badge.merged { background: rgba(63,185,80,0.15); color: var(--green); }
-  .badge.open { background: rgba(88,166,255,0.15); color: var(--blue); }
-  .badge.wanted { background: rgba(210,153,34,0.15); color: var(--yellow); }
-  .badge.gap { background: rgba(248,81,73,0.15); color: var(--red); }
-
   .num { font-variant-numeric: tabular-nums; }
-  .updated { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
 
-  .loading { color: var(--muted); font-size: 0.875rem; padding: 20px 0; }
-  .error { color: var(--red); font-size: 0.875rem; padding: 20px 0; }
+  /* ── Footer ────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
 
-  footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 0.8rem; }
+  .loading { color: var(--muted); font-size: 0.85rem; padding: 24px; text-align: center; }
+  .error { color: var(--red); font-size: 0.85rem; padding: 24px; }
+
+  /* ── Animations ────────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-in {
+    animation: fadeUp 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  @media (max-width: 640px) {
+    main { padding: 16px; }
+    header { padding: 16px; }
+    .health-grid { grid-template-columns: 1fr; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>OSS Maintenance Log</h1>
-    <div class="subtitle">Live dashboard — auto-updated every 6 hours</div>
+  <div class="logo">
+    <div class="logo-icon">M</div>
+    <div>
+      <h1>OSS Maintenance Log</h1>
+      <div class="subtitle">Package health monitor • auto-updated every 6h</div>
+    </div>
   </div>
-  <a class="gh-link" href="https://github.com/dusan-maintains/oss-maintenance-log" target="_blank">
+  <a class="gh-btn" href="https://github.com/dusan-maintains/oss-maintenance-log" target="_blank">
     ★ Star on GitHub
   </a>
 </header>
 
 <main>
-  <div class="stats-grid" id="stats">
-    <div class="stat-card"><div class="label">Packages Tracked</div><div class="value blue" id="s-packages">—</div></div>
-    <div class="stat-card"><div class="label">npm Downloads / Week</div><div class="value green" id="s-downloads">—</div></div>
-    <div class="stat-card"><div class="label">Combined Stars</div><div class="value yellow" id="s-stars">—</div></div>
-    <div class="stat-card"><div class="label">Open PRs</div><div class="value purple" id="s-prs">—</div></div>
+  <!-- Stats Strip -->
+  <div class="stats-strip" id="stats">
+    <div class="stat"><div class="label">Packages</div><div class="value blue" id="s-pkgs">—</div></div>
+    <div class="stat"><div class="label">Avg Health</div><div class="value green" id="s-health">—</div></div>
+    <div class="stat"><div class="label">npm / week</div><div class="value cyan" id="s-downloads">—</div></div>
+    <div class="stat"><div class="label">Stars</div><div class="value yellow" id="s-stars">—</div></div>
+    <div class="stat"><div class="label">Open PRs</div><div class="value purple" id="s-prs">—</div></div>
   </div>
 
+  <!-- Health Score Cards -->
   <section>
-    <h2>Tracked Packages</h2>
-    <div id="packages-table"><div class="loading">Loading...</div></div>
+    <h2>Package Health Scores</h2>
+    <div class="health-grid" id="health-cards"><div class="loading">Loading health data...</div></div>
   </section>
 
+  <!-- Downloads Chart -->
+  <section>
+    <h2>npm Downloads Distribution</h2>
+    <div class="chart-container">
+      <div class="chart-wrapper"><canvas id="downloads-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Health Breakdown Chart -->
+  <section>
+    <h2>Health Score Breakdown</h2>
+    <div class="chart-container">
+      <div class="chart-wrapper"><canvas id="health-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Action Queue -->
   <section>
     <h2>Action Queue</h2>
-    <div id="queue-table"><div class="loading">Loading...</div></div>
+    <div class="data-table-wrap" id="queue-wrap"><div class="loading">Loading...</div></div>
   </section>
 </main>
 
 <footer>
-  Data sourced from <a href="https://github.com/dusan-maintains/oss-maintenance-log/tree/main/evidence">evidence/</a> — updated automatically via GitHub Actions.
-  <div class="updated" id="last-updated"></div>
+  Data from <a href="https://github.com/dusan-maintains/oss-maintenance-log/tree/main/evidence">evidence/</a> — updated via GitHub Actions
+  <div id="last-updated" style="margin-top: 4px;"></div>
 </footer>
 
 <script>
 const RAW = 'https://raw.githubusercontent.com/dusan-maintains/oss-maintenance-log/main/evidence/';
+const COLORS = {
+  blue: '#3b82f6', green: '#22c55e', yellow: '#eab308',
+  red: '#ef4444', purple: '#a855f7', cyan: '#06b6d4',
+  palette: ['#3b82f6','#22c55e','#eab308','#a855f7','#06b6d4','#f97316','#ec4899']
+};
 
 function fmt(n) {
   if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
@@ -116,70 +367,210 @@ function fmt(n) {
   return String(n);
 }
 
-function statusBadge(s) {
-  if (!s) return '';
-  const sl = s.toLowerCase();
-  if (sl.includes('merged')) return '<span class="badge merged">✓ Merged</span>';
-  if (sl.includes('wanted')) return '<span class="badge wanted">⚠ Maintainers Wanted</span>';
-  if (sl.includes('gap') || sl.includes('backlog')) return '<span class="badge gap">✗ Maintainer Gap</span>';
-  return '<span class="badge open">● Open</span>';
+function scoreColor(score) {
+  if (score < 30) return COLORS.red;
+  if (score < 60) return COLORS.yellow;
+  return COLORS.green;
+}
+
+function riskBadge(level) {
+  return `<span class="risk-badge ${level}">${level}</span>`;
+}
+
+function scoreCircle(score, color) {
+  const r = 22, c = 2 * Math.PI * r;
+  const pct = score / 100;
+  const dash = c * pct;
+  return `<div class="score-circle">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <circle cx="28" cy="28" r="${r}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="4"/>
+      <circle cx="28" cy="28" r="${r}" fill="none" stroke="${color}" stroke-width="4"
+              stroke-dasharray="${dash} ${c - dash}" stroke-linecap="round"/>
+    </svg>
+    <span class="score-text" style="color:${color}">${score}</span>
+  </div>`;
+}
+
+function barRow(label, score, color) {
+  const pct = Math.min(score / 10 * 100, 100);
+  return `<div class="bar-row">
+    <span class="bar-label">${label}</span>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color}"></div></div>
+    <span class="bar-value">${score}</span>
+  </div>`;
+}
+
+function healthCard(s, i) {
+  const color = scoreColor(s.health_score);
+  const b = s.breakdown;
+  return `<div class="health-card animate-in" style="animation-delay:${i * 0.08}s">
+    <div class="card-header">
+      <div>
+        <div class="pkg-owner">${s.owner}</div>
+        <div class="pkg-name"><a href="${s.repo_url}" target="_blank">${s.repo}</a></div>
+        ${riskBadge(s.risk_level)}
+      </div>
+      ${scoreCircle(s.health_score, color)}
+    </div>
+    <div class="breakdown">
+      ${barRow('Maintenance', b.maintenance.score, COLORS.blue)}
+      ${barRow('Community', b.community.score, COLORS.purple)}
+      ${barRow('Popularity', b.popularity.score, COLORS.cyan)}
+      ${barRow('Risk', b.risk.score, COLORS.green)}
+    </div>
+    <div class="card-meta">
+      <span>⭐ <span class="val">${fmt(s.stars)}</span></span>
+      <span>📦 <span class="val">${fmt(s.npm_downloads_last_week)}/wk</span></span>
+      ${s.status_label ? `<span>🏷️ <span class="val">${s.status_label}</span></span>` : ''}
+    </div>
+  </div>`;
 }
 
 async function load() {
   try {
-    const [eco, queue] = await Promise.all([
+    const [eco, health, queue] = await Promise.all([
       fetch(RAW + 'ecosystem-status.json').then(r => r.json()),
+      fetch(RAW + 'health-scores.json').then(r => r.json()).catch(() => null),
       fetch(RAW + 'action-queue.json').then(r => r.json()).catch(() => null)
     ]);
 
-    // Real JSON shape: eco.projects, eco.summary, eco.generated_at_utc
-    const repos = eco.projects || [];
-    const s = eco.summary || {};
+    const sm = eco.summary || {};
 
-    document.getElementById('s-packages').textContent = s.tracked_projects || repos.length;
-    document.getElementById('s-downloads').textContent = fmt(s.total_npm_downloads_last_week || 0);
-    document.getElementById('s-stars').textContent = fmt(s.total_stars || 0);
-    document.getElementById('s-prs').textContent = s.tracked_prs_open || 0;
+    // Stats strip
+    document.getElementById('s-pkgs').textContent = sm.tracked_projects || eco.projects.length;
+    document.getElementById('s-downloads').textContent = fmt(sm.total_npm_downloads_last_week || 0);
+    document.getElementById('s-stars').textContent = fmt(sm.total_stars || 0);
+    document.getElementById('s-prs').textContent = sm.tracked_prs_open || 0;
 
-    if (eco.generated_at_utc) {
-      document.getElementById('last-updated').textContent = 'Last updated: ' + new Date(eco.generated_at_utc).toUTCString();
+    if (health && health.summary) {
+      document.getElementById('s-health').textContent = health.summary.average_health_score + '/100';
     }
 
-    // Packages table
-    const pkgHtml = `<table>
-      <thead><tr><th>Package</th><th>Stars</th><th>npm/week</th><th>Open Issues</th><th>Last Push</th><th>Open PRs</th></tr></thead>
-      <tbody>${repos.map(r => `<tr>
-        <td><a href="${r.repo_url || 'https://github.com/' + r.owner + '/' + r.repo}" target="_blank">${r.owner}/${r.repo}</a></td>
-        <td class="num">${fmt(r.stars || 0)}</td>
-        <td class="num">${fmt(r.npm_downloads_last_week || 0)}</td>
-        <td class="num">${r.open_issues || 0}</td>
-        <td>${r.pushed_at ? r.pushed_at.slice(0,10) : '—'}</td>
-        <td class="num">${r.tracked_prs_open || 0}</td>
-      </tr>`).join('')}</tbody>
-    </table>`;
-    document.getElementById('packages-table').innerHTML = pkgHtml;
+    if (eco.generated_at_utc) {
+      document.getElementById('last-updated').textContent =
+        'Last updated: ' + new Date(eco.generated_at_utc).toUTCString();
+    }
 
-    // Queue — action-queue.json: items can be object or array
-    const rawItems = queue && queue.items ? queue.items : queue;
-    const items = Array.isArray(rawItems) ? rawItems : (rawItems && typeof rawItems === 'object' && rawItems.pr_number ? [rawItems] : []);
-    if (items.length) {
-      const qHtml = `<table>
-        <thead><tr><th>Repository</th><th>PR</th><th>Priority</th><th>Hours Since Feedback</th><th>Overdue</th></tr></thead>
+    // Health cards
+    if (health && health.scores) {
+      const sorted = [...health.scores].sort((a,b) => a.health_score - b.health_score);
+      document.getElementById('health-cards').innerHTML =
+        sorted.map((s, i) => healthCard(s, i)).join('');
+    } else {
+      // Fallback: show ecosystem data without health scores
+      document.getElementById('health-cards').innerHTML =
+        '<div class="loading">Health scores not yet computed. Run compute-health-scores.ps1</div>';
+    }
+
+    // Downloads chart
+    const repos = eco.projects || [];
+    const npmRepos = repos.filter(r => r.npm_downloads_last_week > 0);
+    if (npmRepos.length > 0) {
+      new Chart(document.getElementById('downloads-chart'), {
+        type: 'bar',
+        data: {
+          labels: npmRepos.map(r => r.repo),
+          datasets: [{
+            label: 'npm downloads/week',
+            data: npmRepos.map(r => r.npm_downloads_last_week),
+            backgroundColor: npmRepos.map((_, i) => COLORS.palette[i % COLORS.palette.length] + '99'),
+            borderColor: npmRepos.map((_, i) => COLORS.palette[i % COLORS.palette.length]),
+            borderWidth: 1,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: { label: ctx => fmt(ctx.raw) + ' downloads' }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { color: '#64748b', callback: v => fmt(v) },
+              grid: { color: 'rgba(255,255,255,0.04)' }
+            },
+            x: {
+              ticks: { color: '#64748b' },
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    }
+
+    // Health breakdown radar chart
+    if (health && health.scores) {
+      const hs = health.scores;
+      new Chart(document.getElementById('health-chart'), {
+        type: 'radar',
+        data: {
+          labels: ['Maintenance', 'Community', 'Popularity', 'Risk'],
+          datasets: hs.map((s, i) => ({
+            label: s.repo,
+            data: [
+              s.breakdown.maintenance.score,
+              s.breakdown.community.score,
+              s.breakdown.popularity.score,
+              s.breakdown.risk.score
+            ],
+            borderColor: COLORS.palette[i % COLORS.palette.length],
+            backgroundColor: COLORS.palette[i % COLORS.palette.length] + '18',
+            pointBackgroundColor: COLORS.palette[i % COLORS.palette.length],
+            borderWidth: 2,
+            pointRadius: 3
+          }))
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: '#e2e8f0', font: { size: 11 } },
+              position: 'bottom'
+            }
+          },
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 10,
+              ticks: { color: '#64748b', backdropColor: 'transparent', stepSize: 2 },
+              grid: { color: 'rgba(255,255,255,0.06)' },
+              angleLines: { color: 'rgba(255,255,255,0.06)' },
+              pointLabels: { color: '#94a3b8', font: { size: 12 } }
+            }
+          }
+        }
+      });
+    }
+
+    // Action queue table
+    const rawItems = queue && queue.items ? queue.items : [];
+    const items = Array.isArray(rawItems) ? rawItems : [];
+    if (items.length > 0) {
+      document.getElementById('queue-wrap').innerHTML = `<table>
+        <thead><tr><th>Repository</th><th>PR</th><th>Priority</th><th>Hours Waiting</th><th>Status</th></tr></thead>
         <tbody>${items.map(q => `<tr>
-          <td>${q.repository || q.repo || '—'}</td>
-          <td>${q.pr_number ? `<a href="${q.pr_url || '#'}" target="_blank">#${q.pr_number}</a>` : '—'}</td>
-          <td>${q.priority || '—'}</td>
+          <td>${q.repository || '—'}</td>
+          <td>${q.pr_number ? `<a href="${q.pr_url}" target="_blank">#${q.pr_number}</a>` : '—'}</td>
+          <td><span class="risk-badge ${q.priority === 'urgent' ? 'critical' : 'healthy'}">${q.priority}</span></td>
           <td class="num">${q.hours_since_last_external != null ? q.hours_since_last_external.toFixed(1) + 'h' : '—'}</td>
-          <td>${q.overdue_sla ? '<span class="badge gap">Overdue</span>' : '<span class="badge open">OK</span>'}</td>
+          <td>${q.overdue_sla ? '<span class="risk-badge critical">Overdue</span>' : '<span class="risk-badge healthy">On time</span>'}</td>
         </tr>`).join('')}</tbody>
       </table>`;
-      document.getElementById('queue-table').innerHTML = qHtml;
     } else {
-      document.getElementById('queue-table').innerHTML = '<div class="loading">No pending actions.</div>';
+      document.getElementById('queue-wrap').innerHTML =
+        '<div class="loading" style="padding:24px">✅ No pending actions. All SLAs met.</div>';
     }
 
   } catch (e) {
-    document.getElementById('packages-table').innerHTML = '<div class="error">Failed to load data. ' + e.message + '</div>';
+    console.error(e);
+    document.getElementById('health-cards').innerHTML =
+      '<div class="error">Failed to load data: ' + e.message + '</div>';
   }
 }
 

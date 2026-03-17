@@ -1,0 +1,35 @@
+﻿{
+    "generated_at_utc":  "2026-03-17T15:22:33Z",
+    "repo":  {
+                 "owner":  "lingdojo",
+                 "name":  "kana-dojo",
+                 "html_url":  "https://github.com/lingdojo/kana-dojo",
+                 "stars":  1881,
+                 "forks":  1124,
+                 "open_issues":  56,
+                 "pushed_at":  "2026-03-17T15:15:38Z"
+             },
+    "npm":  null,
+    "tracked_prs":  [
+                        {
+                            "number":  6309,
+                            "title":  "content: add new japanese idiom",
+                            "state":  "closed",
+                            "html_url":  "https://github.com/lingdojo/kana-dojo/pull/6309",
+                            "head_label":  "dusan-maintains:maintenance/add-idiom-6305",
+                            "head_sha":  "af134fa313f4f9ef888afe06711207552021d373",
+                            "base_ref":  "main",
+                            "draft":  false,
+                            "mergeable_state":  "unknown",
+                            "updated_at":  "2026-02-27T09:12:37Z",
+                            "created_at":  "2026-02-27T09:06:20Z",
+                            "merged_at":  "2026-02-27T09:12:36Z",
+                            "comments":  1,
+                            "review_comments":  0,
+                            "commits":  1,
+                            "additions":  10,
+                            "deletions":  4,
+                            "changed_files":  1
+                        }
+                    ]
+}
