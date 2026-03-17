@@ -1,83 +1,96 @@
 ---
-title: "I built an automated public log to prove I'm actively maintaining OSS packages"
+title: "npm audit catches CVEs. Nothing catches abandoned packages. So I built a scanner."
 published: false
-description: "How I track 1.6M npm downloads/week across 7 abandoned packages using GitHub Actions, machine-readable evidence snapshots, and zero manual updates."
-tags: opensource, github, automation, devops
+description: "A zero-dependency CLI that scans package.json and scores every dependency 0-100 for maintenance health. Plus the full automated monitoring system behind it."
+tags: opensource, javascript, node, npm
 cover_image:
 ---
 
-There's a problem nobody talks about: thousands of npm packages are effectively abandoned while still serving millions of downloads per week. Maintainers disappear. Issues pile up. Security patches sit unmerged. And downstream teams have no way to know.
+## The problem nobody talks about
 
-I maintain 5 of these packages. The challenge: how do you *prove* ongoing maintenance work to upstream maintainers, grant committees, or employers — without private context?
+Thousands of npm packages are effectively abandoned while serving millions of downloads per week. Maintainers disappear. Issues pile up. Security patches sit unmerged. And `npm audit` won't tell you.
 
-So I built this: **[oss-maintenance-log](https://github.com/dusan-maintains/oss-maintenance-log)**
+I maintain 7 of these packages — combined 1.4M npm downloads/week. After getting burned by unmaintained transitive dependencies in my own projects, I built a scanner.
 
-## What it does
+## One command
 
-Every 6 hours, a GitHub Actions workflow:
-
-1. Polls the GitHub API for repo metadata (stars, forks, open issues, last push date)
-2. Pulls npm download counts (weekly rolling window)
-3. Tracks PR states, mergeability, and diff stats
-4. Monitors review SLA — flags when maintainer feedback has gone unanswered
-5. Generates a prioritized action queue
-6. Commits machine-readable JSON + human-readable Markdown snapshots
-7. Auto-updates README stats from the fresh data
-
-Zero manual updates. Everything is public and auditable.
-
-## The packages
-
-Right now I'm tracking:
-
-| Package | npm/week | Why it needs help |
-|---|---|---|
-| `rrule` | 1,374,236 | 210 open issues, last push 2024 |
-| `python-shell` | 194,847 | Maintainer publicly looking for help |
-| `jquery-modal` | 24,399 | "Maintainers Wanted" in README |
-| `jquery-tablesort` | 1,667 | "Maintainers Wanted" in README |
-| `react-hexgrid` | 1,702 | Maintainer-needed signal in issues |
-
-Combined: **1,596,851 npm downloads/week** across packages that would otherwise have no active maintenance.
-
-## Why public?
-
-Accountability. Anyone can verify the work without trusting me. The evidence files are auditable JSON — no private context required.
-
-It also creates a paper trail. When I open a PR to a package with 200 open issues, I can link to the evidence log to show I'm not a drive-by contributor.
-
-## The architecture
-
-```
-scripts/
-  update-evidence.ps1          # Per-repo PR tracking + npm stats
-  update-ecosystem-status.ps1  # Multi-repo aggregated health snapshot
-  update-review-sla.ps1        # Review response time monitoring
-  update-action-queue.ps1      # Prioritized action queue from SLA data
-  update-readme-stats.ps1      # Patches README with fresh numbers
-evidence/
-  *.json                       # Machine-readable snapshots
-  *.md                         # Human-readable reports
-.github/workflows/
-  evidence-daily.yml           # Cron: every 6 hours
+```bash
+npx github:dusan-maintains/oss-maintenance-log express lodash moment request
 ```
 
-PowerShell + GitHub Actions. Runs on both Windows and Linux (pwsh). No external dependencies beyond the GitHub and npm APIs.
+```
+  OSS Health Scan Results
+  ──────────────────────────────────────────────────
+  Scanned: 3 packages
+  Average health: 40.8/100
+  ● Critical: 0  ● Warning: 3  ● Healthy: 0
 
-## Use it yourself
+   🟡 WARNING
 
-The repo is marked as a template. Fork it, update the package list in 3 scripts, push — done. MIT licensed.
-
-```powershell
-# Run locally
-./scripts/update-evidence.ps1
-./scripts/update-ecosystem-status.ps1
-./scripts/update-review-sla.ps1
-./scripts/update-action-queue.ps1
+  react-hexgrid     ███████░░░░░░░░░░░░░ 35.1/100  last push 594d ago
+  jquery-modal      ████████░░░░░░░░░░░░ 40.5/100  last push 699d ago
+  rrule             █████████░░░░░░░░░░░ 46.8/100  last push 628d ago
 ```
 
-Live dashboard: https://dusan-maintains.github.io/oss-maintenance-log
+## How the scoring works
+
+Each package gets a weighted health score (0–100):
+
+| Dimension | Weight | What it measures |
+|-----------|--------|-----------------|
+| **Maintenance** | 40% | Last push (exponential decay, 180-day half-life), last npm publish (365-day half-life), open issues ratio |
+| **Community** | 25% | Stars and forks (log₁₀ scaled — 100 stars matters more than the difference between 10k and 11k) |
+| **Popularity** | 20% | npm weekly downloads (log₁₀ scaled) |
+| **Risk** | 15% | Penalty-based: >365 days since push (-4), >100 open issues (-3), >2 years since publish (-2) |
+
+Instant flags: `DEPRECATED` → 5/100, `ARCHIVED` → 8/100.
+
+The algorithm handles edge cases:
+- High-download packages with no maintainer score high on Popularity but get crushed on Maintenance and Risk
+- Boutique packages with active maintainers score high on Maintenance despite low download counts
+- Mega-repos like Grafana score moderately because their massive issue counts penalize the ratio
+
+## Zero dependencies — on purpose
+
+The tool uses only Node.js built-ins (`https`, `fs`, `path`). A dependency health scanner that itself depends on abandoned packages would be... ironic.
+
+## CI integration
+
+```yaml
+# .github/workflows/health-check.yml
+name: Dependency Health Check
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npx github:dusan-maintains/oss-maintenance-log --threshold 30
+```
+
+Exits with code 1 if any critical packages found — works as a PR gate.
+
+## The full monitoring system
+
+The CLI is part of a bigger project. I also built:
+
+- **Health trend engine** — 180-day rolling history with 7-day and 30-day deltas. Detects packages that are improving or declining.
+- **Alert system** — Auto-creates GitHub Issues when packages drop below critical threshold.
+- **Review SLA tracker** — Flags when maintainer feedback has gone stale on your PRs.
+- **Interactive dashboard** — Dark-mode Chart.js dashboard with health gauges, radar charts, download distributions.
+
+![Dashboard](https://raw.githubusercontent.com/dusan-maintains/oss-maintenance-log/main/docs/dashboard-preview.png)
+
+Everything runs on GitHub Actions every 6 hours. Config-driven — just edit one JSON file with your packages.
+
+**Repo:** [github.com/dusan-maintains/oss-maintenance-log](https://github.com/dusan-maintains/oss-maintenance-log)
+**Live dashboard:** [dusan-maintains.github.io/oss-maintenance-log](https://dusan-maintains.github.io/oss-maintenance-log)
 
 ---
 
-Curious if others have built similar systems. Is there prior art I missed? And if you maintain packages that need help — open an issue, I'm actively looking for the next ones to adopt.
+What tools do you use to monitor dependency health? I'm curious about existing solutions I might have missed.

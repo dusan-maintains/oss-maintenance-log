@@ -1,26 +1,31 @@
-# Show HN: I built an automated public log to prove I'm actively maintaining OSS packages
+# Show HN: oss-health-scan — find abandoned npm dependencies before they become risks
 
-**Title:** Show HN: Automated public evidence log for OSS maintenance — self-updates every 6h via GitHub Actions
+**Title:** Show HN: Scan your package.json for abandoned npm packages — health scores 0-100
 
 ---
 
-I maintain 5 npm packages that were effectively abandoned but still serve ~1.6M downloads/week combined. The problem: there's no standard way to prove ongoing maintenance work to upstream maintainers, grant committees, or employers.
+21% of the top 50k npm packages depend on deprecated packages. npm audit catches security vulnerabilities, but not abandoned dependencies.
 
-So I built this: https://github.com/dusan-maintains/oss-maintenance-log
+I built a zero-dependency Node.js CLI that scores every dependency 0–100:
 
-Every 6 hours, GitHub Actions polls the GitHub API and npm, tracks PR states and review SLA, and commits machine-readable JSON + Markdown snapshots. Zero manual updates. The README stats update automatically too.
+    npx github:dusan-maintains/oss-maintenance-log lodash moment request
 
-**What it tracks:**
-- `rrule` — 1.37M npm downloads/week, 210 open issues, my PR fixing WeekdayStr serialization
-- `python-shell` — 195k downloads/week, maintainer publicly looking for help
-- `jquery-modal` / `jquery-tablesort` — both have "Maintainers Wanted" in their READMEs
-- `react-hexgrid` — maintainer-needed signal in issues
-- `grafana` — large-repo signal PR (privacy hardening for email templates)
+It checks:
+- When the repo was last pushed to
+- When the package was last published to npm
+- Open issues ratio
+- GitHub stars and forks (log-scaled)
+- npm download trends
+- Deprecated/archived flags (instant critical score)
 
-**Why public?** Accountability. Anyone can verify the work without private context. The evidence files are auditable JSON.
+Scored using a weighted model: Maintenance 40%, Community 25%, Popularity 20%, Risk 15%. Exponential decay for time-based metrics, logarithmic scaling for count-based ones.
 
-**Use as template:** It's marked as a template repo. Fork it, update the package list in 3 scripts, push — done.
+The tool is part of a larger system I built to track my own OSS maintenance work — I actively maintain 7 abandoned npm packages with 1.4M combined weekly downloads. The full system includes automated evidence collection, review SLA tracking, health trend analysis (180-day rolling window), and auto-alerts via GitHub Issues.
 
-Live dashboard: https://dusan-maintains.github.io/oss-maintenance-log
+Zero external npm dependencies — a health scanner shouldn't be a supply chain risk.
 
-Curious if others have built similar systems, or if there's prior art I missed.
+Repo: https://github.com/dusan-maintains/oss-maintenance-log
+Dashboard: https://dusan-maintains.github.io/oss-maintenance-log
+CLI README: https://github.com/dusan-maintains/oss-maintenance-log/tree/main/cli
+
+Curious about prior art in this space. I know about socket.dev (supply chain) and Snyk (CVEs), but I haven't found anything that specifically scores maintenance health of npm packages.
