@@ -2,10 +2,13 @@
 
 > <!-- TAGLINE:START -->One maintainer. 7 packages. **1.4M npm downloads/week** kept alive.<!-- TAGLINE:END -->
 
+<!-- RUN_STATUS:START -->
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
+[![Validate](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/validate.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/validate.yml)
+<!-- RUN_STATUS:END -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
-[![Weekly npm Downloads](https://img.shields.io/badge/npm%20downloads%2Fweek-1.6M%2B-brightgreen.svg)](#-live-data)
+[![Weekly npm Downloads](https://img.shields.io/badge/npm%20downloads%2Fweek-1.4M%2B-brightgreen.svg)](#-live-data)
 [![Open PRs](https://img.shields.io/badge/upstream%20PRs-8%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
@@ -25,40 +28,47 @@ Thousands of packages are effectively abandoned while still receiving hundreds o
 
 ## What This Does
 
-A set of PowerShell scripts + GitHub Actions workflow that automatically:
+A config-driven set of PowerShell scripts + GitHub Actions that automatically:
 
 - Polls GitHub API for repo metadata (stars, forks, open issues, last push date)
 - Pulls npm download counts (weekly rolling window)
 - Tracks PR states, mergeability, and diff stats for any contributions you submit
 - Monitors review SLA — flags when maintainer feedback has gone unanswered past a configurable threshold
+- **Computes weighted health scores (0–100)** per package with SVG badges
 - Generates a prioritized action queue from all tracked repos
 - Commits machine-readable JSON + human-readable Markdown snapshots every 6 hours
 - Prunes old snapshots automatically (configurable retention)
+- Renders an **interactive dark-mode dashboard** on GitHub Pages with Chart.js
 
 All data is public, auditable, and requires zero manual updates after initial setup.
 
 ## Currently Tracked Projects
 
-| Project | Stars | npm/week | Status | My PRs |
-|---------|-------|----------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 72,000+ | — | 🟢 Open | [#119212](https://github.com/grafana/grafana/pull/119212) |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1,657 | — | ✅ **Merged** | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2,614 | 24,399 | 🟡 Maintainers Wanted | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 1,667 | 🟡 Maintainers Wanted | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2,163 | 194,847 | 🔴 Maintainer Gap | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3,681 | 1,374,236 | 🔴 Open Backlog | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+<!-- TRACKED_PROJECTS:START -->
+| Project | Stars | npm/week | Status | Health | My PRs |
+|---------|-------|----------|--------|--------|--------|
+| [grafana/grafana](https://github.com/grafana/grafana) | 72,000+ | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1,657 | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2,614 | 24,399 | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 1,667 | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2,163 | 194,847 | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3,681 | 1,374,236 | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+<!-- TRACKED_PROJECTS:END -->
 
-**Combined footprint: <!-- STATS:START -->83.7k stars · 1.4M npm downloads/week<!-- STATS:END -->**
+**Combined footprint: <!-- STATS:START -->9.1k stars · 1.4M npm downloads/week<!-- STATS:END -->**
 
 ## Contributions
 
 ### Merged
 
+<!-- CONTRIBUTIONS_MERGED:START -->
 - **kana-dojo [#6309](https://github.com/lingdojo/kana-dojo/pull/6309)** — Content contribution. Merged 2026-02-27. Closed issue [#6305](https://github.com/lingdojo/kana-dojo/issues/6305).
+<!-- CONTRIBUTIONS_MERGED:END -->
 
 ### Open
 
+<!-- CONTRIBUTIONS_OPEN:START -->
 - **grafana [#119212](https://github.com/grafana/grafana/pull/119212)** — Remove external Google Fonts loading and external logo URL from email templates; replace with inline SVG data URI. Privacy/security hardening for self-hosted Grafana instances.
 - **jquery-modal #315** — Render `closeText` as plain text instead of HTML; modernize ESC-key handling
 - **jquery-modal #316** — Scope AJAX callbacks to originating modal instance to prevent race conditions
@@ -67,6 +77,7 @@ All data is public, auditable, and requires zero manual updates after initial se
 - **python-shell #320** — Fix `runString()` temp-path generation with regression test
 - **rrule #664** — Fix `WeekdayStr[]` serialization for `BYDAY` output (issue #648)
 - **react-hexgrid #123** — Add tests for `GridGenerator.ring()` and `GridGenerator.spiral()`
+<!-- CONTRIBUTIONS_OPEN:END -->
 
 <details>
 <summary><strong>Full contribution log with commits and branches (25 entries)</strong></summary>
@@ -107,39 +118,77 @@ All data is public, auditable, and requires zero manual updates after initial se
 This repo is a reusable template. To track your own set of packages:
 
 1. Fork this repository
-2. Edit the target list in `scripts/update-ecosystem-status.ps1`
-3. Update PR numbers in `scripts/update-evidence.ps1` and `scripts/update-review-sla.ps1`
-4. Push — the GitHub Actions workflow runs every 6 hours automatically
-5. Your `evidence/` directory will populate with JSON + Markdown snapshots
+2. Edit `config/tracked-repositories.json` — add your packages, PR numbers, SLA settings
+3. Push — the GitHub Actions workflow runs every 6 hours automatically
+4. Your `evidence/` directory will populate with JSON + Markdown snapshots
+5. Health scores and SVG badges auto-generate in `evidence/badges/`
+
+```json
+// config/tracked-repositories.json — add your packages here
+{
+  "version": 1,
+  "contributor": "your-github-username",
+  "default_sla_hours": 24,
+  "repositories": [
+    {
+      "owner": "org",
+      "repo": "package-name",
+      "package": "npm-package-name",
+      "status_label": "Open",
+      "maintainer_needed_signal": "Description of why this needs maintenance",
+      "tracked_pr_numbers": [42],
+      "review_sla_base_name": "review-sla-package-name"
+    }
+  ]
+}
+```
 
 ```powershell
 # Run locally
-./scripts/update-evidence.ps1
-./scripts/update-ecosystem-status.ps1
-./scripts/update-review-sla.ps1
-./scripts/update-action-queue.ps1
+./scripts/update-all-evidence.ps1
+./scripts/compute-health-scores.ps1
 ```
 
+<!-- LIVE_DATA:START -->
 ## 📊 Live Data
 
+- [📊 Interactive Dashboard](https://dusan-maintains.github.io/oss-maintenance-log) — health scores, charts, action queue
+- [Health Scores](./evidence/health-scores.md) — weighted 0-100 scores per package
 - [Ecosystem status (JSON)](./evidence/ecosystem-status.json)
 - [Ecosystem status (Markdown)](./evidence/ecosystem-status.md)
 - [Action queue](./evidence/action-queue.md)
 - Per-repo SLA: [grafana](./evidence/review-sla-grafana.md) · [kana-dojo](./evidence/review-sla-kana-dojo.md) · [jquery-modal](./evidence/review-sla.md) · [tablesort](./evidence/review-sla-tablesort.md) · [python-shell](./evidence/review-sla-python-shell.md) · [rrule](./evidence/review-sla-rrule.md) · [react-hexgrid](./evidence/review-sla-react-hexgrid.md)
+<!-- LIVE_DATA:END -->
 
 ## Project Structure
 
 ```
+config/
+  tracked-repositories.json    # All configuration in one file
 scripts/
-  update-evidence.ps1          # Per-repo PR tracking + npm stats
-  update-ecosystem-status.ps1  # Multi-repo aggregated health snapshot
-  update-review-sla.ps1        # Review response time monitoring
-  update-action-queue.ps1      # Prioritized action queue from SLA data
+  common.ps1                   # Shared functions (DRY module)
+  update-all-evidence.ps1      # Orchestrator — runs everything
+  update-evidence.ps1           # Per-repo PR tracking + npm stats
+  update-ecosystem-status.ps1   # Multi-repo aggregated snapshot
+  update-review-sla.ps1         # Review response time monitoring
+  update-action-queue.ps1       # Prioritized action queue
+  compute-health-scores.ps1     # Health scoring engine (0-100)
+  validate-repo.ps1             # CI validation checks
 evidence/
-  *.json                       # Machine-readable snapshots
-  *.md                         # Human-readable reports
+  *.json                        # Machine-readable snapshots
+  *.md                          # Human-readable reports
+  badges/*.svg                  # Health score badges
+tests/
+  common.Tests.ps1              # Pester tests for shared module
+  health-score.Tests.ps1        # Pester tests for scoring logic
+docs/
+  ARCHITECTURE.md               # System design
+  DATA_MODEL.md                 # JSON schema docs
+  OPERATIONS.md                 # Operational runbook
+  ROADMAP.md                    # Feature roadmap
 .github/workflows/
-  evidence-daily.yml           # Cron: every 6 hours
+  evidence-daily.yml            # Cron: every 6 hours
+  validate.yml                  # CI: config + script validation
 ```
 
 ## License
