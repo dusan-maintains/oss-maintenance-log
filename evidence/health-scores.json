@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-18T08:06:57Z",
+  "generated_at_utc": "2026-03-18T16:17:35Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3876,
+          "open_issues": 3884,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72688,
+      "stars": 72698,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 699.0,
+          "days_since_push": 700.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -195,7 +195,7 @@
           "weight": 0.15,
           "score": 2.5,
           "days_since_push": 629.0,
-          "open_issues": 210,
+          "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
@@ -208,7 +208,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 61.2,
+      "health_score": 61.3,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
@@ -220,9 +220,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.72,
+          "score": 8.74,
           "stars_score": 8.19,
-          "forks_score": 9.26
+          "forks_score": 9.28
         },
         "popularity": {
           "weight": 0.2,
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 8.5,
           "days_since_push": 0.0,
-          "open_issues": 84,
+          "open_issues": 72,
           "open_tracked_prs": 0
         }
       },
-      "stars": 1888,
+      "stars": 1894,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.46,
-          "push_recency": 9.37,
+          "score": 6.45,
+          "push_recency": 9.35,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
