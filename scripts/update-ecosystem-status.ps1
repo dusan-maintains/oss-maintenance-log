@@ -34,6 +34,7 @@ foreach ($t in $targets) {
       state = $pr.state
       html_url = $pr.html_url
       updated_at = $pr.updated_at
+      merged_at = $pr.merged_at
       mergeable_state = $pr.mergeable_state
       comments = $pr.comments
       review_comments = $pr.review_comments

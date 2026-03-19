@@ -1,50 +1,72 @@
 # Roadmap
 
+## Completed
+
+### Rate-Limit Resilience (partial)
+- ✅ 403 errors now fall through to Python fallback (bypasses proxy/rate-limit)
+- ✅ CLI retry logic with exponential backoff for transient failures
+- Remaining: ETag caching, request-budget telemetry, GraphQL batching
+
+### Freshness UX (partial)
+- ✅ README STATS line includes last refresh date from manifest
+- ✅ Manifest tracks all pipeline steps including health scores, trends, alerts
+- Remaining: per-repo freshness badges, stale-data warnings on dashboard
+
+### Pipeline Consolidation
+- ✅ Full pipeline in single orchestrator (ecosystem → snapshots → SLA → health scores → trends → alerts → manifest → README)
+- ✅ All steps tracked in manifest with success/failed/skipped status
+- ✅ README fully auto-generated from data (TRACKED_PROJECTS, CONTRIBUTIONS_MERGED, CONTRIBUTIONS_OPEN)
+- ✅ Workflow simplified to single orchestrator call + commit
+
+### CI Improvements
+- ✅ Pester tests added to validate workflow
+- ✅ CLI unit tests and smoke test in CI
+- ✅ Structural validation (config, markers, scripts, docs)
+
 ## Next High-Impact Engineering Moves
 
-### 1. Rate-Limit Resilience
+### 1. ETag Caching and Request Efficiency
 
-Current bottleneck: GitHub API polling can hit `403 rate limit exceeded` during local refreshes.
-
-Best next steps:
-
-- add request-budget telemetry
-- cache responses with ETags where practical
-- reduce duplicate REST calls
-- move hot paths to batched GraphQL where it materially cuts request count
-
-### 2. Freshness And Staleness UX
-
-Current state: the repo now writes a run manifest, but the consumer surfaces still only expose a thin layer of freshness state.
+Current bottleneck: every refresh makes ~30 GitHub API calls (7 repos × 4 endpoints + PR details). Most data doesn't change between runs.
 
 Best next steps:
 
-- mark stale and partial data more aggressively in the dashboard
-- expose per-repository freshness badges
-- link directly from surfaced warnings to failing steps and files
+- store ETags from GitHub API responses alongside evidence files
+- send `If-None-Match` headers to skip unchanged data (304 responses don't count toward rate limit)
+- reduce API calls by ~60% for stable repositories
 
-### 3. Schema Contracts
+### 2. Schema Contracts
 
 Current gap: outputs are validated structurally by scripts and markers, but not by formal JSON schemas.
 
 Best next steps:
 
-- add JSON Schema for each output family
-- validate generated evidence in CI
-- keep backward compatibility explicit
+- add JSON Schema for each output family (ecosystem-status, health-scores, manifest)
+- validate generated evidence in CI before commit
+- keep backward compatibility explicit with schema versioning
 
-### 4. Dashboard and Consumer API
+### 3. Dashboard Freshness
 
-Current gap: dashboard is simple and useful, but not yet a strong consumer surface for downstream tooling.
+Current gap: dashboard consumes evidence JSON but doesn't surface staleness or partial-failure state.
 
 Best next steps:
 
-- consume a manifest instead of assuming all files are fresh
-- add explicit freshness and error badges
-- expose per-repo detail pages or drill-down links
+- consume manifest.json to show per-repo freshness status
+- add visual indicators for stale data (>12h since last refresh)
+- expose failing steps and link to manifest details
+
+### 4. GraphQL Migration
+
+Current state: all GitHub API calls use REST v3. Each PR requires a separate API call.
+
+Best next steps:
+
+- batch repository metadata + PR details in a single GraphQL query per repo
+- reduce total API calls from ~30 to ~7 (one per repo)
+- materially improve rate-limit headroom
 
 ## What Not To Prioritize
 
-- more marketing copy before reliability hardening
-- new tracked repositories before request-efficiency work
-- cosmetic README churn that does not improve trust or reuse
+- more tracked repositories before request-efficiency work (each repo adds ~4 API calls)
+- cosmetic README changes that don't improve trust or reuse
+- new features before the existing pipeline has ETag caching

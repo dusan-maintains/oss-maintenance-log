@@ -1,6 +1,6 @@
 {
   "name": "oss-health-scan",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Scan npm dependencies for abandoned/unhealthy packages. Get health scores (0-100).",
   "bin": {

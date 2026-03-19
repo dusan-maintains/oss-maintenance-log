@@ -1,6 +1,6 @@
 # OSS Maintenance Log
 
-> <!-- TAGLINE:START -->One maintainer. 7 packages. **1.4M npm downloads/week** kept alive.<!-- TAGLINE:END -->
+> <!-- TAGLINE:START -->Contributing to 7 open-source packages — **1.4M npm downloads/week** across tracked ecosystem.<!-- TAGLINE:END -->
 
 [![⭐ Star if useful](https://img.shields.io/badge/⭐-Star_if_useful-ffd700?style=for-the-badge)](https://github.com/dusan-maintains/oss-maintenance-log/stargazers)
 [![npm](https://img.shields.io/npm/v/oss-health-scan?style=for-the-badge&color=cb3837&label=npm)](https://www.npmjs.com/package/oss-health-scan)
@@ -11,7 +11,7 @@
 <!-- RUN_STATUS:END -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
-[![Weekly npm Downloads](https://img.shields.io/badge/npm%20downloads%2Fweek-1.4M%2B-brightgreen.svg)](#-live-data)
+[![Tracked Ecosystem](https://img.shields.io/badge/tracked%20ecosystem-1.4M%2B-brightgreen.svg)](#-live-data)
 [![Open PRs](https://img.shields.io/badge/upstream%20PRs-8%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
@@ -103,7 +103,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-**Combined: <!-- STATS:START -->83.7k stars · 1.4M npm downloads/week<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->83.7k stars · 1.4M downloads/week across tracked projects<!-- STATS:END -->**
 
 ## Health Scoring
 
@@ -138,26 +138,6 @@ Each package gets a **weighted health score (0–100)**:
 - **rrule #664** — Fix `WeekdayStr[]` serialization for `BYDAY` output
 - **react-hexgrid #123** — Add tests for `GridGenerator.ring()` and `GridGenerator.spiral()`
 <!-- CONTRIBUTIONS_OPEN:END -->
-
-<details>
-<summary><strong>Full contribution log (25 entries)</strong></summary>
-
-| Date (UTC) | Project | Type | Link | Status |
-|---|---|---|---|---|
-| 2026-02-27 | jquery-modal | Fork | [dusan-maintains/jquery-modal](https://github.com/dusan-maintains/jquery-modal) | Active |
-| 2026-02-27 | jquery-modal | PR | [#315](https://github.com/kylefox/jquery-modal/pull/315) | Open |
-| 2026-02-27 | jquery-modal | PR | [#316](https://github.com/kylefox/jquery-modal/pull/316) | Open |
-| 2026-02-27 | jquery-modal | PR | [#317](https://github.com/kylefox/jquery-modal/pull/317) | Open |
-| 2026-02-27 | jquery-tablesort | Fork | [dusan-maintains/jquery-tablesort](https://github.com/dusan-maintains/jquery-tablesort) | Active |
-| 2026-02-27 | jquery-tablesort | PR | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) | Open |
-| 2026-02-27 | python-shell | Fork | [dusan-maintains/python-shell](https://github.com/dusan-maintains/python-shell) | Active |
-| 2026-02-27 | python-shell | PR | [#320](https://github.com/extrabacon/python-shell/pull/320) | Open |
-| 2026-02-27 | rrule | Fork | [dusan-maintains/rrule](https://github.com/dusan-maintains/rrule) | Active |
-| 2026-02-27 | rrule | PR | [#664](https://github.com/jkbrzt/rrule/pull/664) | Open |
-| 2026-02-27 | react-hexgrid | Fork | [dusan-maintains/react-hexgrid](https://github.com/dusan-maintains/react-hexgrid) | Active |
-| 2026-02-27 | react-hexgrid | PR | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) | Open |
-
-</details>
 
 ## Use It Yourself
 
@@ -226,10 +206,11 @@ jobs:
 config/tracked-repositories.json     ← All configuration
 scripts/
   common.ps1                        ← Shared functions (DRY)
-  update-all-evidence.ps1            ← Orchestrator
+  update-all-evidence.ps1            ← Single orchestrator (full pipeline)
   compute-health-scores.ps1          ← Health scoring (0-100)
   compute-trends.ps1                 ← 180-day trend engine
   check-alerts.ps1                   ← Auto GitHub Issues
+  update-readme-stats.ps1            ← Auto-regenerates all README sections
 cli/
   bin/scan.js                        ← CLI entry point
   lib/scoring.js                     ← JS health algorithm
@@ -241,9 +222,9 @@ tests/
   common.Tests.ps1                   ← Pester tests (21 passing)
   health-score.Tests.ps1
 .github/workflows/
-  evidence-daily.yml                 ← Cron: every 6 hours
-  validate.yml                       ← CI: config validation
-  publish-cli.yml                    ← Auto-publish on release
+  evidence-daily.yml                 ← Cron: full pipeline every 6 hours
+  validate.yml                       ← CI: config + Pester + CLI tests
+  publish-cli.yml                    ← Publish to npm on release
 ```
 
 ## License

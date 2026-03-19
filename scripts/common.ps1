@@ -82,7 +82,8 @@ function Get-JsonWithFallback {
       $statusCode = [int]$_.Exception.Response.StatusCode
     }
 
-    if ($null -ne $statusCode -and $statusCode -ge 400 -and $statusCode -lt 500) {
+    # 403 may be rate-limit or proxy issue — let Python fallback try
+    if ($null -ne $statusCode -and $statusCode -ge 400 -and $statusCode -lt 500 -and $statusCode -ne 403) {
       throw ("HTTP {0} from {1}" -f $statusCode, $Uri)
     }
 

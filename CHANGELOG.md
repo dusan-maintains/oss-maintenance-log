@@ -2,10 +2,27 @@
 
 All notable changes to this project will be documented here.
 
+## [1.1.0] — 2026-03-17
+
+### Added
+- CLI: retry logic with exponential backoff for transient HTTP failures
+- CLI: comprehensive unit tests for scoring algorithm (15 test cases)
+- CI: CLI unit tests and smoke test in validate workflow
+- GitHub Action (`action.yml`) as composite reusable action for other repos
+
+### Fixed
+- CLI: correct rate-limit header extraction from GitHub API responses
+- CLI: handle missing/null fields gracefully in score computation
+
+### Changed
+- Bumped `actions/checkout` from v4 to v6 in all workflows
+- README reframed for honest contribution scope (removed inflated aggregate claims)
+- CONTRIBUTING.md updated to reference config-driven workflow
+
 ## [1.0.0] — 2026-02-27
 
 ### Added
-- Automated health tracking for 7 OSS packages (9,066 combined stars, 1.6M npm downloads/week)
+- Automated health tracking for 7 OSS packages across the tracked ecosystem
 - GitHub Actions workflow running every 6 hours — zero manual updates required
 - Machine-readable JSON evidence snapshots in `evidence/`
 - Human-readable Markdown SLA reports per tracked repo

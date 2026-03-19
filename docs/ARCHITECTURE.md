@@ -17,20 +17,35 @@ OSS Maintenance Log is a public evidence system for open-source maintenance work
 
 ## Refresh Flow
 
+Single orchestrator (`update-all-evidence.ps1`) runs the full pipeline:
+
 1. Load tracked repositories from the config.
 2. Generate `evidence/ecosystem-status.json` and `.md`.
 3. Generate per-repository detailed snapshots.
 4. Generate per-repository review SLA reports.
 5. Generate the cross-repo action queue.
-6. Write a refresh manifest with global and per-repository status.
-7. Regenerate marker-based sections in `README.md`.
+6. Compute health scores (0–100) with SVG badges.
+7. Compute 180-day trends (7d/30d deltas).
+8. Check alert thresholds and auto-create GitHub Issues.
+9. Write preliminary manifest (so README generator can read freshness data).
+10. Regenerate ALL marker-based sections in `README.md`:
+    - `TAGLINE` and `STATS` (inline) from ecosystem summary + manifest freshness.
+    - `TRACKED_PROJECTS` table from config + ecosystem + health data.
+    - `CONTRIBUTIONS_MERGED` from ecosystem PR details (merged_at).
+    - `CONTRIBUTIONS_OPEN` from ecosystem PR details (state = open).
+    - Badge URLs (tracked packages count, open PRs, ecosystem downloads).
+11. Write final manifest including all step results.
+
+Every step is wrapped in `Invoke-RefreshStep` — failures are caught, logged, and tracked in the manifest. Downstream steps check for required inputs and skip gracefully if dependencies failed.
 
 ## Automation
 
 - `.github/workflows/evidence-daily.yml`
-  Scheduled refresh every 6 hours.
+  Scheduled refresh every 6 hours. Single orchestrator call + commit.
 - `.github/workflows/validate.yml`
-  Validation on push and pull request.
+  Validation on push and PR: config validation, Pester tests, CLI unit tests.
+- `.github/workflows/publish-cli.yml`
+  Publish CLI to npm on release.
 - `action.yml`
   Composite action for reuse in other repositories.
 

@@ -22,33 +22,15 @@ jobs:
           git config user.name "dusan-maintains-bot"
           git config user.email "action@users.noreply.github.com"
 
-      - name: Update All Evidence
+      - name: Full Refresh
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          ./scripts/update-all-evidence.ps1
-
-      - name: Compute Health Scores
-        shell: pwsh
-        run: |
-          ./scripts/compute-health-scores.ps1
-
-      - name: Compute Trends
-        shell: pwsh
-        run: |
-          ./scripts/compute-trends.ps1
-
-      - name: Check Alerts
-        shell: pwsh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          ./scripts/check-alerts.ps1
+        run: ./scripts/update-all-evidence.ps1
 
       - name: Commit and Push Changes
         run: |
-          git add evidence/*.json evidence/*.md evidence/badges/*.svg README.md
+          git add evidence/ README.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

@@ -8,10 +8,10 @@ An automated health tracker for open-source packages that need maintenance. The 
 
 ### Add a new tracked package
 
-1. Add the target definition in `scripts/update-ecosystem-status.ps1`
-2. Add a corresponding `update-review-sla.ps1` call in `.github/workflows/evidence-daily.yml`
-3. Run all scripts locally to verify output
-4. Submit a PR with the script changes + generated evidence files
+1. Add the repository definition to `config/tracked-repositories.json` — this is the single source of truth
+2. Run `./scripts/validate-repo.ps1` to check the config
+3. Run `./scripts/update-all-evidence.ps1` to generate evidence files
+4. Submit a PR with the config change + generated evidence files
 
 ### Improve the scripts
 
@@ -22,10 +22,15 @@ An automated health tracker for open-source packages that need maintenance. The 
 ## Running Locally
 
 ```powershell
-./scripts/update-evidence.ps1
-./scripts/update-ecosystem-status.ps1
-./scripts/update-review-sla.ps1
-./scripts/update-action-queue.ps1
+# Validate config and structure
+./scripts/validate-repo.ps1
+
+# Full refresh (runs all steps)
+./scripts/update-all-evidence.ps1
+
+# Health scores + trends (after evidence refresh)
+./scripts/compute-health-scores.ps1
+./scripts/compute-trends.ps1
 ```
 
 Set `GITHUB_TOKEN` for higher API rate limits:

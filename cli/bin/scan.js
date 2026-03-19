@@ -179,6 +179,7 @@ async function main() {
 
     for (const info of infos) {
       if (info.error) {
+        if (!flags.json) process.stderr.write(`  ⚠ ${info.name}: ${info.error}\n`);
         results.push({ name: info.name, health_score: null, error: info.error });
         continue;
       }
