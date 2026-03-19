@@ -2,6 +2,9 @@
 
 > <!-- TAGLINE:START -->One maintainer. 7 packages. **1.4M npm downloads/week** kept alive.<!-- TAGLINE:END -->
 
+[![⭐ Star if useful](https://img.shields.io/badge/⭐-Star_if_useful-ffd700?style=for-the-badge)](https://github.com/dusan-maintains/oss-maintenance-log/stargazers)
+[![npm](https://img.shields.io/npm/v/oss-health-scan?style=for-the-badge&color=cb3837&label=npm)](https://www.npmjs.com/package/oss-health-scan)
+
 <!-- RUN_STATUS:START -->
 [![Evidence Daily Update](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml)
 [![Validate](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/validate.yml/badge.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/validate.yml)
@@ -17,27 +20,30 @@
 ## 🔬 Scan Your Dependencies — In One Command
 
 ```bash
-npx oss-health-scan lodash moment request express
+npx oss-health-scan express lodash moment react
 ```
+
+<img src="docs/cli-demo.png" alt="CLI scan of express, lodash, moment, react showing health scores" width="100%">
 
 ```
   OSS Health Scan Results
   ──────────────────────────────────────────────────
-  Scanned: 3 packages
-  Average health: 40.8/100
-  ● Critical: 0  ● Warning: 3  ● Healthy: 0
+  Scanned: 4 packages
+  Average health: 72.5/100
+  ● Critical: 0  ● Warning: 1  ● Healthy: 3
 
    🟡 WARNING
+  moment                              ██████████░░░░░░░░░░ 50.8/100  last push 582d ago  25.8M/wk
 
-  react-hexgrid                       ███████░░░░░░░░░░░░░ 35.1/100  last push 594d ago  1.5k/wk
-  jquery-modal                        ████████░░░░░░░░░░░░ 40.5/100  last push 699d ago  21.1k/wk
-  rrule                               █████████░░░░░░░░░░░ 46.8/100  last push 628d ago  1.2M/wk
-
-  ──────────────────────────────────────────────────
-  Tip: set GITHUB_TOKEN env for higher API rate limits
+   🟢 HEALTHY
+  react                               ████████████████░░░░ 80.9/100  81.0M/wk
+  lodash                              ████████████████░░░░ 79.6/100  102.7M/wk
+  express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies.** Scans any package, scores 0–100, exits with code 1 on critical findings (CI-friendly).
+**Zero dependencies. v1.1.0.** Scans any npm package, scores 0–100, auto-retries on failures, exits with code 1 on critical findings. CI-ready.
+
+`npm audit` finds CVEs. **This finds abandoned packages.**
 
 <details>
 <summary><strong>CLI flags</strong></summary>
