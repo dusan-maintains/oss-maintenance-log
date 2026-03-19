@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-19T19:11:56Z",
+  "generated_at_utc": "2026-03-19T19:59:05Z",
   "summary": {
     "tracked_projects": 7,
     "tracked_prs_total": 9,
@@ -16,7 +16,7 @@
       "stars": 72719,
       "forks": 13566,
       "open_issues": 3918,
-      "pushed_at": "2026-03-19T19:00:32Z",
+      "pushed_at": "2026-03-19T19:51:19Z",
       "package": null,
       "npm_downloads_last_week": 0,
       "npm_start": null,
@@ -48,8 +48,8 @@
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "stars": 1915,
       "forks": 1181,
-      "open_issues": 74,
-      "pushed_at": "2026-03-19T19:00:47Z",
+      "open_issues": 73,
+      "pushed_at": "2026-03-19T19:45:35Z",
       "package": null,
       "npm_downloads_last_week": 0,
       "npm_start": null,
