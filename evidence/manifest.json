@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "run_started_at_utc": "2026-03-19T15:08:50Z",
-  "run_completed_at_utc": "2026-03-19T15:09:26Z",
+  "run_started_at_utc": "2026-03-19T19:11:46Z",
+  "run_completed_at_utc": "2026-03-19T19:12:17Z",
   "run_status": "success",
   "config_version": 1,
   "summary": {
-    "total_steps": 17,
-    "successful_steps": 17,
+    "total_steps": 20,
+    "successful_steps": 20,
     "failed_steps": 0,
     "skipped_steps": 0,
     "tracked_repositories": 7,
@@ -33,6 +33,38 @@
       "outputs": [
         "action-queue.json",
         "action-queue.md"
+      ]
+    },
+    {
+      "name": "health_scores",
+      "scope": "global",
+      "status": "success",
+      "message": "",
+      "outputs": [
+        "health-scores.json",
+        "health-scores.md",
+        "badges/"
+      ]
+    },
+    {
+      "name": "trends",
+      "scope": "global",
+      "status": "success",
+      "message": "",
+      "outputs": [
+        "health-trends.json",
+        "health-trends.md",
+        "health-history.json"
+      ]
+    },
+    {
+      "name": "alerts",
+      "scope": "global",
+      "status": "success",
+      "message": "",
+      "outputs": [
+        "alerts.json",
+        "alerts.md"
       ]
     },
     {

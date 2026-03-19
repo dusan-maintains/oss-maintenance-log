@@ -94,16 +94,16 @@ Config-driven PowerShell + GitHub Actions that automatically:
 <!-- TRACKED_PROJECTS:START -->
 | Project | Stars | npm/week | Status | Health | My PRs |
 |---------|-------|----------|--------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 72,000+ | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1,657 | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2,614 | 24,399 | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 1,667 | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2,163 | 194,847 | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3,681 | 1,374,236 | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 350 | 1,702 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| [grafana/grafana](https://github.com/grafana/grafana) | 72.7k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1.9k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 21.1k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 3.8k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 175k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 1.2M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1.5k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->83.7k stars · 1.4M downloads/week across tracked projects<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->83.7k stars · 1.4M downloads/week across tracked projects · refreshed 03/19/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
@@ -123,20 +123,20 @@ Each package gets a **weighted health score (0–100)**:
 ### Merged
 
 <!-- CONTRIBUTIONS_MERGED:START -->
-- **kana-dojo [#6309](https://github.com/lingdojo/kana-dojo/pull/6309)** — Content contribution. Merged 2026-02-27.
+- **kana-dojo [#6309](https://github.com/lingdojo/kana-dojo/pull/6309)** — content: add new japanese idiom. Merged 02/27/2026.
 <!-- CONTRIBUTIONS_MERGED:END -->
 
 ### Open
 
 <!-- CONTRIBUTIONS_OPEN:START -->
-- **grafana [#119212](https://github.com/grafana/grafana/pull/119212)** — Remove external Google Fonts + logo URL from email templates; inline SVG data URI
-- **jquery-modal #315** — Render `closeText` as plain text; modernize ESC-key handling
-- **jquery-modal #316** — Scope AJAX callbacks to originating modal instance
-- **jquery-modal #317** — Idempotent initialization guard for duplicate imports
-- **jquery-tablesort #49** — Sync `tablesort.$th` with active sorted header
-- **python-shell #320** — Fix `runString()` temp-path generation with regression test
-- **rrule #664** — Fix `WeekdayStr[]` serialization for `BYDAY` output
-- **react-hexgrid #123** — Add tests for `GridGenerator.ring()` and `GridGenerator.spiral()`
+- **grafana [#119212](https://github.com/grafana/grafana/pull/119212)** — Emails: Remove external Google Fonts and logo URL from email templates
+- **jquery-modal [#315](https://github.com/kylefox/jquery-modal/pull/315)** — fix: harden close button rendering and refresh docs/examples
+- **jquery-modal [#316](https://github.com/kylefox/jquery-modal/pull/316)** — fix: keep ajax callbacks scoped to their originating modal
+- **jquery-modal [#317](https://github.com/kylefox/jquery-modal/pull/317)** — fix: make plugin initialization idempotent for multiple imports
+- **jquery-tablesort [#49](https://github.com/kylefox/jquery-tablesort/pull/49)** — Fix stale tablesort.$th reference after header clicks
+- **python-shell [#320](https://github.com/extrabacon/python-shell/pull/320)** — Fix runString temp path to use tmpdir() and add regression test
+- **rrule [#664](https://github.com/jkbrzt/rrule/pull/664)** — fix: handle WeekdayStr arrays when serializing BYDAY
+- **react-hexgrid [#123](https://github.com/Hellenic/react-hexgrid/pull/123)** — test: add coverage for GridGenerator.ring and .spiral
 <!-- CONTRIBUTIONS_OPEN:END -->
 
 ## Use It Yourself

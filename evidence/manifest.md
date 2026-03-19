@@ -1,10 +1,10 @@
 # Refresh Manifest
 
 - Run status: success
-- Started: 2026-03-19T15:08:50Z
-- Completed: 2026-03-19T15:09:26Z
-- Total steps: 17
-- Successful steps: 17
+- Started: 2026-03-19T19:11:46Z
+- Completed: 2026-03-19T19:12:17Z
+- Total steps: 20
+- Successful steps: 20
 - Failed steps: 0
 - Skipped steps: 0
 - Fresh repositories: 7
@@ -16,6 +16,9 @@
 |---|---|---|
 | ecosystem_status | success | - |
 | action_queue | success | - |
+| health_scores | success | - |
+| trends | success | - |
+| alerts | success | - |
 | readme_refresh | success | - |
 
 ## Repository Status
