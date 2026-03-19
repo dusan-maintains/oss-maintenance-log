@@ -6,6 +6,7 @@ const fs = require('fs');
 const { fetchJson } = require('../lib/fetcher');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
+const { version } = require('../package.json');
 
 const HELP = `
   oss-health-scan — scan dependencies for abandoned/unhealthy packages
@@ -21,11 +22,13 @@ const HELP = `
     --threshold N   Only show packages below health score N (default: show all)
     --dev           Include devDependencies
     --no-color      Disable colored output
+    -v, --version   Show version
     -h, --help      Show this help
 `;
 
-async function resolvePackages(args) {
-  const flags = { json: false, ci: false, threshold: 0, dev: false, color: true, packages: [] };
+function resolvePackages(args) {
+  const flags = { json: false, ci: false, threshold: 0, dev: false, color: true, dir: null };
+  const positional = [];
 
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
@@ -33,16 +36,33 @@ async function resolvePackages(args) {
     else if (a === '--ci') flags.ci = true;
     else if (a === '--dev') flags.dev = true;
     else if (a === '--no-color') flags.color = false;
+    else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
     else if (a === '--threshold') { flags.threshold = parseInt(args[++i]) || 0; }
-    else flags.packages.push(a);
+    else positional.push(a);
   }
 
-  if (flags.packages.length > 0) {
-    return { packages: flags.packages, flags };
+  // Check if first positional arg is a directory containing package.json
+  if (positional.length === 1) {
+    const maybeDir = path.resolve(positional[0]);
+    try {
+      if (fs.statSync(maybeDir).isDirectory()) {
+        flags.dir = maybeDir;
+        return readPackageJson(flags.dir, flags);
+      }
+    } catch (e) { /* not a directory, treat as package name */ }
   }
 
-  const dir = flags.packages[0] || '.';
+  // If positional args exist, treat them as package names
+  if (positional.length > 0) {
+    return { packages: positional, flags };
+  }
+
+  // Default: scan ./package.json
+  return readPackageJson('.', flags);
+}
+
+function readPackageJson(dir, flags) {
   const pkgPath = path.resolve(dir, 'package.json');
   if (!fs.existsSync(pkgPath)) {
     process.stderr.write(`Error: ${pkgPath} not found\n`);
@@ -52,7 +72,14 @@ async function resolvePackages(args) {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
   const deps = Object.keys(pkg.dependencies || {});
   const devDeps = flags.dev ? Object.keys(pkg.devDependencies || {}) : [];
-  return { packages: [...deps, ...devDeps], flags, pkgName: pkg.name };
+  const packages = [...deps, ...devDeps];
+
+  if (packages.length === 0) {
+    process.stderr.write(`No dependencies found in ${pkgPath}\n`);
+    process.exit(1);
+  }
+
+  return { packages, flags, pkgName: pkg.name };
 }
 
 async function getPackageInfo(name) {
@@ -86,11 +113,21 @@ async function getPackageInfo(name) {
     let ghData = null;
     if (owner && repoName) {
       try {
-        ghData = await fetchJson(`https://api.github.com/repos/${owner}/${repoName}`, {
-          'User-Agent': 'oss-health-scan',
-          ...(process.env.GITHUB_TOKEN ? { 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}` } : {})
-        });
-      } catch (e) { /* no gh data */ }
+        const ghHeaders = { 'User-Agent': 'oss-health-scan' };
+        if (process.env.GITHUB_TOKEN) ghHeaders['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
+        const ghResponse = await fetchJson(`https://api.github.com/repos/${owner}/${repoName}`, ghHeaders);
+        ghData = ghResponse.data || ghResponse;
+
+        // Check rate limit
+        if (ghResponse.rateLimit && ghResponse.rateLimit.remaining === 0) {
+          const resetTime = new Date(ghResponse.rateLimit.reset * 1000).toLocaleTimeString();
+          process.stderr.write(`  ⚠ GitHub API rate limit hit. Resets at ${resetTime}. Set GITHUB_TOKEN for 5000 req/hr.\n`);
+        }
+      } catch (e) {
+        if (e.message && e.message.includes('403')) {
+          process.stderr.write(`  ⚠ GitHub API rate-limited for ${owner}/${repoName}. Set GITHUB_TOKEN env var.\n`);
+        }
+      }
     }
 
     const lastPublish = time[latest] || time.modified;
@@ -121,7 +158,7 @@ async function getPackageInfo(name) {
 }
 
 async function main() {
-  const { packages, flags, pkgName } = await resolvePackages(process.argv.slice(2));
+  const { packages, flags, pkgName } = resolvePackages(process.argv.slice(2));
 
   if (packages.length === 0) {
     process.stderr.write('No packages to scan.\n');
