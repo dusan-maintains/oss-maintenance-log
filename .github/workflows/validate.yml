@@ -25,10 +25,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install Pester 5
+        shell: pwsh
+        run: |
+          Install-Module -Name Pester -MinimumVersion 5.0 -Force -Scope CurrentUser -SkipPublisherCheck
+
       - name: Run Pester tests
         shell: pwsh
         run: |
-          $results = Invoke-Pester tests/ -PassThru
+          Import-Module Pester -MinimumVersion 5.0
+          $config = New-PesterConfiguration
+          $config.Run.Path = "tests/"
+          $config.Run.PassThru = $true
+          $config.Output.Verbosity = "Detailed"
+          $results = Invoke-Pester -Configuration $config
           if ($results.FailedCount -gt 0) { exit 1 }
 
   test-cli:
