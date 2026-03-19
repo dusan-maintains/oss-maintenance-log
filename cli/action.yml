@@ -1,0 +1,83 @@
+name: "OSS Health Scan"
+description: "Scan your dependencies for abandoned, unmaintained, or unhealthy npm packages. Get health scores (0-100) for every dependency."
+author: "dusan-maintains"
+
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  path:
+    description: "Path to directory containing package.json (default: repo root)"
+    required: false
+    default: "."
+  threshold:
+    description: "Fail if any package scores below this threshold (0-100)"
+    required: false
+    default: "0"
+  include-dev:
+    description: "Include devDependencies in scan"
+    required: false
+    default: "false"
+  github-token:
+    description: "GitHub token for higher API rate limits (recommended)"
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  results:
+    description: "JSON scan results"
+    value: ${{ steps.scan.outputs.results }}
+  average-score:
+    description: "Average health score across all dependencies"
+    value: ${{ steps.scan.outputs.average }}
+  critical-count:
+    description: "Number of packages with critical health scores"
+    value: ${{ steps.scan.outputs.critical }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install oss-health-scan
+      shell: bash
+      run: npm install -g oss-health-scan@latest
+
+    - name: Run health scan
+      id: scan
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        FLAGS=""
+        if [ "${{ inputs.include-dev }}" = "true" ]; then
+          FLAGS="$FLAGS --dev"
+        fi
+        if [ "${{ inputs.threshold }}" != "0" ]; then
+          FLAGS="$FLAGS --threshold ${{ inputs.threshold }}"
+        fi
+
+        # Run JSON scan for outputs
+        RESULTS=$(oss-health-scan ${{ inputs.path }} --json $FLAGS 2>/dev/null || true)
+        echo "results<<EOF" >> $GITHUB_OUTPUT
+        echo "$RESULTS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+        # Extract stats
+        AVG=$(echo "$RESULTS" | node -e "const d=require('fs').readFileSync(0,'utf8');try{const j=JSON.parse(d);const s=j.results.filter(r=>r.health_score!=null);console.log((s.reduce((a,r)=>a+r.health_score,0)/s.length).toFixed(1))}catch{console.log('N/A')}")
+        CRIT=$(echo "$RESULTS" | node -e "const d=require('fs').readFileSync(0,'utf8');try{const j=JSON.parse(d);console.log(j.results.filter(r=>r.risk_level==='critical').length)}catch{console.log(0)}")
+        echo "average=$AVG" >> $GITHUB_OUTPUT
+        echo "critical=$CRIT" >> $GITHUB_OUTPUT
+
+        # Print human-readable report
+        oss-health-scan ${{ inputs.path }} $FLAGS --ci || true
+
+        # Fail if critical packages found and threshold > 0
+        if [ "${{ inputs.threshold }}" != "0" ] && [ "$CRIT" -gt 0 ]; then
+          echo "::error::$CRIT package(s) scored below threshold ${{ inputs.threshold }}"
+          exit 1
+        fi

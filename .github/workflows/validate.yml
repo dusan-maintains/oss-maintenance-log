@@ -12,9 +12,29 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Validate configuration and scripts
         shell: pwsh
         run: |
           ./scripts/validate-repo.ps1
+
+  test-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run CLI unit tests
+        working-directory: cli
+        run: npm test
+
+      - name: Verify CLI runs
+        working-directory: cli
+        run: node bin/scan.js --version
