@@ -26,6 +26,35 @@ const HELP = `
     -h, --help      Show this help
 `;
 
+// Parse requirements.txt and extract package names
+function parseRequirementsTxt(content) {
+  const packages = [];
+  const lines = content.split("\n");
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("-")) continue;
+    const match = trimmed.match(/^([a-zA-Z0-9_-]+)/);
+    if (match) packages.push(match[1]);
+  }
+  return packages;
+}
+
+// Parse pyproject.toml and extract dependencies
+function parsePyprojectToml(content) {
+  const packages = [];
+  const depMatch = content.match(/dependencies\s*=\s*\[([^\]]+)\]/s);
+  if (depMatch) {
+    const deps = depMatch[1];
+    const matches = deps.match(/"([a-zA-Z0-9_-]+)/g);
+    if (matches) {
+      for (const m of matches) {
+        packages.push(m.replace(/^"/, ""));
+      }
+    }
+  }
+  return packages;
+}
+
 function resolvePackages(args) {
   const flags = { json: false, ci: false, threshold: 0, dev: false, color: true, dir: null };
   const positional = [];
@@ -64,8 +93,20 @@ function resolvePackages(args) {
 
 function readPackageJson(dir, flags) {
   const pkgPath = path.resolve(dir, 'package.json');
+  const reqPath = path.resolve(dir, 'requirements.txt');
+  const pyprojectPath = path.resolve(dir, 'pyproject.toml');
+  
+  // Check for Python project files first
+  if (fs.existsSync(reqPath)) {
+    return readRequirementsTxt(dir, flags, reqPath);
+  }
+  if (fs.existsSync(pyprojectPath)) {
+    return readPyprojectToml(dir, flags, pyprojectPath);
+  }
+  
+  // Fall back to package.json
   if (!fs.existsSync(pkgPath)) {
-    process.stderr.write(`Error: ${pkgPath} not found\n`);
+    process.stderr.write(`Error: No package.json, requirements.txt, or pyproject.toml found in ${dir}\n`);
     process.exit(1);
   }
 
@@ -81,6 +122,31 @@ function readPackageJson(dir, flags) {
 
   return { packages, flags, pkgName: pkg.name };
 }
+
+function readRequirementsTxt(dir, flags, reqPath) {
+  const content = fs.readFileSync(reqPath, 'utf8');
+  const packages = parseRequirementsTxt(content);
+
+  if (packages.length === 0) {
+    process.stderr.write(`No dependencies found in ${reqPath}\n`);
+    process.exit(1);
+  }
+
+  return { packages, flags, pkgName: path.basename(dir) };
+}
+
+function readPyprojectToml(dir, flags, pyprojectPath) {
+  const content = fs.readFileSync(pyprojectPath, 'utf8');
+  const packages = parsePyprojectToml(content);
+
+  if (packages.length === 0) {
+    process.stderr.write(`No dependencies found in ${pyprojectPath}\n`);
+    process.exit(1);
+  }
+
+  return { packages, flags, pkgName: path.basename(dir) };
+}
+
 
 async function getPackageInfo(name) {
   try {
