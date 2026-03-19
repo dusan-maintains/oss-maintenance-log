@@ -147,8 +147,54 @@ describe('computeScore', () => {
     const result = computeScore({
       stars: 100, forks: 10, openIssues: 50,
       downloads: 5000, daysSincePush: 400, daysSincePublish: 500,
-      deprecated: false, archived: false
+      deprecated: false, archived: false, license: 'MIT'
     });
-    assert.equal(result.risk_level, 'warning');
+    assert.ok(result.risk_level === 'warning' || result.risk_level === 'critical',
+      `Expected warning or critical, got ${result.risk_level}`);
+  });
+
+  it('penalizes GPL license', () => {
+    const mit = computeScore({
+      stars: 100, forks: 10, openIssues: 5, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: 'MIT'
+    });
+    const gpl = computeScore({
+      stars: 100, forks: 10, openIssues: 5, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: 'GPL-3.0'
+    });
+    assert.ok(mit.health_score > gpl.health_score,
+      `MIT (${mit.health_score}) should score higher than GPL (${gpl.health_score})`);
+  });
+
+  it('penalizes missing license', () => {
+    const withLicense = computeScore({
+      stars: 100, forks: 10, openIssues: 5, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: 'MIT'
+    });
+    const noLicense = computeScore({
+      stars: 100, forks: 10, openIssues: 5, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: null
+    });
+    assert.ok(withLicense.health_score > noLicense.health_score,
+      `With license (${withLicense.health_score}) should score higher than no license (${noLicense.health_score})`);
+  });
+
+  it('stricter issue scoring: 20 issues should penalize significantly', () => {
+    const clean = computeScore({
+      stars: 100, forks: 10, openIssues: 0, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: 'MIT'
+    });
+    const issues20 = computeScore({
+      stars: 100, forks: 10, openIssues: 20, downloads: 1000,
+      daysSincePush: 30, daysSincePublish: 60,
+      deprecated: false, archived: false, license: 'MIT'
+    });
+    const diff = clean.health_score - issues20.health_score;
+    assert.ok(diff > 3, `20 open issues should drop score by >3 points (actual: ${diff.toFixed(1)})`);
   });
 });

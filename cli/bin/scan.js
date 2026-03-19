@@ -3,9 +3,10 @@
 
 const path = require('path');
 const fs = require('fs');
-const { fetchJson } = require('../lib/fetcher');
+const { scanPackages, scanPackageJson } = require('../lib/api');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
+const { toSarif } = require('../lib/sarif');
 const { version } = require('../package.json');
 
 const HELP = `
@@ -18,21 +19,52 @@ const HELP = `
 
   Options:
     --json          Output raw JSON instead of terminal report
+    --sarif         Output SARIF 2.1.0 for GitHub Code Scanning
     --ci            Output GitHub Actions annotations (::warning::, ::error::)
     --threshold N   Only show packages below health score N (default: show all)
     --dev           Include devDependencies
     --no-color      Disable colored output
     -v, --version   Show version
     -h, --help      Show this help
+
+  Config:
+    Add "oss-health-scan" field to package.json or create .oss-health-scanrc.json:
+    { "threshold": 40, "exclude": ["moment"], "dev": true }
 `;
 
-function resolvePackages(args) {
-  const flags = { json: false, ci: false, threshold: 0, dev: false, color: true, dir: null };
+function loadConfig(dir) {
+  const defaults = { threshold: 0, dev: false, exclude: [] };
+
+  // .oss-health-scanrc.json
+  const rcPath = path.resolve(dir || '.', '.oss-health-scanrc.json');
+  if (fs.existsSync(rcPath)) {
+    try {
+      return { ...defaults, ...JSON.parse(fs.readFileSync(rcPath, 'utf8')) };
+    } catch (e) { /* invalid rc file, ignore */ }
+  }
+
+  // package.json "oss-health-scan" field
+  const pkgPath = path.resolve(dir || '.', 'package.json');
+  if (fs.existsSync(pkgPath)) {
+    try {
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+      if (pkg['oss-health-scan']) {
+        return { ...defaults, ...pkg['oss-health-scan'] };
+      }
+    } catch (e) { /* invalid package.json, ignore */ }
+  }
+
+  return defaults;
+}
+
+function parseArgs(args) {
+  const flags = { json: false, sarif: false, ci: false, threshold: 0, dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
     if (a === '--json') flags.json = true;
+    else if (a === '--sarif') flags.sarif = true;
     else if (a === '--ci') flags.ci = true;
     else if (a === '--dev') flags.dev = true;
     else if (a === '--no-color') flags.color = false;
@@ -42,27 +74,29 @@ function resolvePackages(args) {
     else positional.push(a);
   }
 
+  return { flags, positional };
+}
+
+function resolvePackages(positional, flags) {
   // Check if first positional arg is a directory containing package.json
   if (positional.length === 1) {
     const maybeDir = path.resolve(positional[0]);
     try {
       if (fs.statSync(maybeDir).isDirectory()) {
         flags.dir = maybeDir;
-        return readPackageJson(flags.dir, flags);
+        return readDeps(maybeDir, flags);
       }
     } catch (e) { /* not a directory, treat as package name */ }
   }
 
-  // If positional args exist, treat them as package names
   if (positional.length > 0) {
     return { packages: positional, flags };
   }
 
-  // Default: scan ./package.json
-  return readPackageJson('.', flags);
+  return readDeps('.', flags);
 }
 
-function readPackageJson(dir, flags) {
+function readDeps(dir, flags) {
   const pkgPath = path.resolve(dir, 'package.json');
   if (!fs.existsSync(pkgPath)) {
     process.stderr.write(`Error: ${pkgPath} not found\n`);
@@ -72,7 +106,13 @@ function readPackageJson(dir, flags) {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
   const deps = Object.keys(pkg.dependencies || {});
   const devDeps = flags.dev ? Object.keys(pkg.devDependencies || {}) : [];
-  const packages = [...deps, ...devDeps];
+  let packages = [...deps, ...devDeps];
+
+  // Apply exclusions from config
+  if (flags.exclude && flags.exclude.length > 0) {
+    const excludeSet = new Set(flags.exclude);
+    packages = packages.filter(p => !excludeSet.has(p));
+  }
 
   if (packages.length === 0) {
     process.stderr.write(`No dependencies found in ${pkgPath}\n`);
@@ -82,83 +122,17 @@ function readPackageJson(dir, flags) {
   return { packages, flags, pkgName: pkg.name };
 }
 
-async function getPackageInfo(name) {
-  try {
-    const registry = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`);
-    const latest = registry['dist-tags'] && registry['dist-tags'].latest;
-    const latestMeta = latest && registry.versions && registry.versions[latest];
-    const time = registry.time || {};
-
-    let repoUrl = null;
-    const repo = registry.repository || (latestMeta && latestMeta.repository);
-    if (repo) {
-      const url = typeof repo === 'string' ? repo : repo.url;
-      if (url) {
-        repoUrl = url.replace(/^git\+/, '').replace(/\.git$/, '').replace(/^ssh:\/\/git@github\.com/, 'https://github.com');
-      }
-    }
-
-    let owner = null, repoName = null;
-    if (repoUrl) {
-      const m = repoUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
-      if (m) { owner = m[1]; repoName = m[2]; }
-    }
-
-    let downloads = 0;
-    try {
-      const dl = await fetchJson(`https://api.npmjs.org/downloads/point/last-week/${encodeURIComponent(name)}`);
-      downloads = dl.downloads || 0;
-    } catch (e) { /* no downloads data */ }
-
-    let ghData = null;
-    if (owner && repoName) {
-      try {
-        const ghHeaders = { 'User-Agent': 'oss-health-scan' };
-        if (process.env.GITHUB_TOKEN) ghHeaders['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
-        const ghResponse = await fetchJson(`https://api.github.com/repos/${owner}/${repoName}`, ghHeaders);
-        ghData = ghResponse.data || ghResponse;
-
-        // Check rate limit
-        if (ghResponse.rateLimit && ghResponse.rateLimit.remaining === 0) {
-          const resetTime = new Date(ghResponse.rateLimit.reset * 1000).toLocaleTimeString();
-          process.stderr.write(`  ⚠ GitHub API rate limit hit. Resets at ${resetTime}. Set GITHUB_TOKEN for 5000 req/hr.\n`);
-        }
-      } catch (e) {
-        if (e.message && e.message.includes('403')) {
-          process.stderr.write(`  ⚠ GitHub API rate-limited for ${owner}/${repoName}. Set GITHUB_TOKEN env var.\n`);
-        }
-      }
-    }
-
-    const lastPublish = time[latest] || time.modified;
-    const deprecated = !!(latestMeta && latestMeta.deprecated) || !!(registry.deprecated);
-
-    return {
-      name,
-      latest,
-      deprecated,
-      deprecatedMsg: (latestMeta && latestMeta.deprecated) || null,
-      lastPublish,
-      daysSincePublish: lastPublish ? Math.round((Date.now() - new Date(lastPublish).getTime()) / 86400000) : null,
-      downloads,
-      owner,
-      repo: repoName,
-      repoUrl,
-      stars: ghData ? ghData.stargazers_count : null,
-      forks: ghData ? ghData.forks_count : null,
-      openIssues: ghData ? ghData.open_issues_count : null,
-      pushedAt: ghData ? ghData.pushed_at : null,
-      daysSincePush: ghData && ghData.pushed_at ? Math.round((Date.now() - new Date(ghData.pushed_at).getTime()) / 86400000) : null,
-      archived: ghData ? ghData.archived : false,
-      license: (latestMeta && latestMeta.license) || registry.license || null
-    };
-  } catch (e) {
-    return { name, error: e.message };
-  }
-}
-
 async function main() {
-  const { packages, flags, pkgName } = resolvePackages(process.argv.slice(2));
+  const { flags, positional } = parseArgs(process.argv.slice(2));
+
+  // Load config file and merge (CLI flags override config)
+  const dir = positional.length === 1 && fs.existsSync(path.resolve(positional[0])) ? positional[0] : '.';
+  const config = loadConfig(dir);
+  if (!flags.threshold && config.threshold) flags.threshold = config.threshold;
+  if (!flags.dev && config.dev) flags.dev = config.dev;
+  if (config.exclude) flags.exclude = config.exclude;
+
+  const { packages, pkgName } = resolvePackages(positional, flags);
 
   if (packages.length === 0) {
     process.stderr.write('No packages to scan.\n');
@@ -168,41 +142,17 @@ async function main() {
   const header = pkgName
     ? `\n  Scanning ${packages.length} dependencies of ${pkgName}...\n`
     : `\n  Scanning ${packages.length} package(s)...\n`;
-  if (!flags.json) process.stderr.write(header);
+  if (!flags.json && !flags.sarif) process.stderr.write(header);
 
-  const concurrency = process.env.GITHUB_TOKEN ? 5 : 2;
-  const results = [];
+  const { results } = await scanPackages(packages, { threshold: flags.threshold });
 
-  for (let i = 0; i < packages.length; i += concurrency) {
-    const batch = packages.slice(i, i + concurrency);
-    const infos = await Promise.all(batch.map(p => getPackageInfo(p)));
-
-    for (const info of infos) {
-      if (info.error) {
-        if (!flags.json) process.stderr.write(`  ⚠ ${info.name}: ${info.error}\n`);
-        results.push({ name: info.name, health_score: null, error: info.error });
-        continue;
-      }
-      const score = computeScore(info);
-      results.push({ ...info, ...score });
-    }
-
-    if (!flags.json) {
-      const done = Math.min(i + concurrency, packages.length);
-      process.stderr.write(`  [${done}/${packages.length}]\r`);
-    }
-  }
-
-  if (!flags.json) process.stderr.write('\n');
-
-  const filtered = flags.threshold > 0
-    ? results.filter(r => r.health_score !== null && r.health_score < flags.threshold)
-    : results;
-
-  if (flags.json) {
-    process.stdout.write(JSON.stringify({ scanned: packages.length, results: filtered }, null, 2) + '\n');
+  if (flags.sarif) {
+    const sarif = toSarif(results, pkgName ? `${dir}/package.json` : 'package.json');
+    process.stdout.write(JSON.stringify(sarif, null, 2) + '\n');
+  } else if (flags.json) {
+    process.stdout.write(JSON.stringify({ scanned: packages.length, results }, null, 2) + '\n');
   } else if (flags.ci) {
-    for (const r of filtered) {
+    for (const r of results) {
       if (r.error) continue;
       const level = r.risk_level === 'critical' ? 'error' : r.risk_level === 'warning' ? 'warning' : 'notice';
       const msg = `${r.name}@${r.latest || '?'}: health ${r.health_score}/100` +
@@ -210,9 +160,9 @@ async function main() {
         (r.daysSincePush ? ` (last push ${r.daysSincePush}d ago)` : '');
       process.stdout.write(`::${level}::${msg}\n`);
     }
-    printReport(filtered, flags.color);
+    printReport(results, flags.color);
   } else {
-    printReport(filtered, flags.color);
+    printReport(results, flags.color);
   }
 
   const critical = results.filter(r => r.risk_level === 'critical').length;

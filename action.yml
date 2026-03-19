@@ -23,10 +23,25 @@ inputs:
     required: false
     default: "true"
 
+outputs:
+  health-json:
+    description: "Path to generated health-scores.json"
+    value: ${{ steps.evidence.outputs.health-json }}
+  manifest-json:
+    description: "Path to generated manifest.json"
+    value: ${{ steps.evidence.outputs.manifest-json }}
+  critical-count:
+    description: "Number of packages with critical health scores (<30)"
+    value: ${{ steps.evidence.outputs.critical-count }}
+  avg-health:
+    description: "Average health score across all tracked packages"
+    value: ${{ steps.evidence.outputs.avg-health }}
+
 runs:
   using: "composite"
   steps:
     - name: Update All Evidence
+      id: evidence
       shell: pwsh
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
@@ -35,27 +50,24 @@ runs:
         $cfg = "${{ inputs.config-file }}"
         ./scripts/update-all-evidence.ps1 -OutDir $dir -ConfigPath $cfg
 
-    - name: Compute Health Scores
-      if: ${{ inputs.compute-health-scores == 'true' }}
-      shell: pwsh
-      run: |
-        $dir = "${{ inputs.evidence-dir }}"
-        $cfg = "${{ inputs.config-file }}"
-        ./scripts/compute-health-scores.ps1 -OutDir $dir -ConfigPath $cfg
+        # Export outputs for downstream steps
+        $healthPath = Join-Path $dir "health-scores.json"
+        $manifestPath = Join-Path $dir "manifest.json"
 
-    - name: Compute Trends
-      if: ${{ inputs.compute-health-scores == 'true' }}
-      shell: pwsh
-      run: |
-        $dir = "${{ inputs.evidence-dir }}"
-        ./scripts/compute-trends.ps1 -OutDir $dir
+        "health-json=$healthPath" >> $env:GITHUB_OUTPUT
+        "manifest-json=$manifestPath" >> $env:GITHUB_OUTPUT
 
-    - name: Check Alerts
-      if: ${{ inputs.compute-health-scores == 'true' }}
-      shell: pwsh
-      env:
-        GITHUB_TOKEN: ${{ inputs.github-token }}
-      run: |
-        $dir = "${{ inputs.evidence-dir }}"
-        ./scripts/check-alerts.ps1 -OutDir $dir
+        if (Test-Path $healthPath) {
+          $health = Get-Content $healthPath -Raw | ConvertFrom-Json
+          $scores = @($health.packages | Where-Object { $null -ne $_.health_score })
+          $critical = @($scores | Where-Object { $_.health_score -lt 30 }).Count
+          $avg = if ($scores.Count -gt 0) {
+            [math]::Round(($scores | Measure-Object -Property health_score -Average).Average, 1)
+          } else { 0 }
 
+          "critical-count=$critical" >> $env:GITHUB_OUTPUT
+          "avg-health=$avg" >> $env:GITHUB_OUTPUT
+        } else {
+          "critical-count=0" >> $env:GITHUB_OUTPUT
+          "avg-health=0" >> $env:GITHUB_OUTPUT
+        }

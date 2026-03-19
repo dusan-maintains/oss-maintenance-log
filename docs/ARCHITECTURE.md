@@ -49,6 +49,30 @@ Every step is wrapped in `Invoke-RefreshStep` — failures are caught, logged, a
 - `action.yml`
   Composite action for reuse in other repositories.
 
+## CLI Architecture
+
+The `cli/` directory is a standalone zero-dependency npm package (`oss-health-scan`).
+
+- `lib/api.js` — programmatic API: `scanPackages()`, `scanPackageJson()`, `getPackageInfo()`
+- `lib/scoring.js` — health scoring algorithm (maintenance 40%, community 25%, popularity 20%, risk 15%)
+- `lib/sarif.js` — SARIF 2.1.0 output generator for GitHub Code Scanning
+- `lib/fetcher.js` — HTTP client with retry logic, 429/5xx handling, redirect following
+- `lib/reporter.js` — colored terminal output with score bars
+- `bin/scan.js` — CLI entry point, config file loading, flag parsing
+
+Package exports:
+- `require('oss-health-scan')` → `lib/api.js` (scanPackages, scanPackageJson)
+- `require('oss-health-scan/scoring')` → `lib/scoring.js`
+- `require('oss-health-scan/sarif')` → `lib/sarif.js`
+
+## GitHub Action
+
+`action.yml` is a composite action with outputs:
+- `health-json` — path to generated health-scores.json
+- `manifest-json` — path to generated manifest.json
+- `critical-count` — number of packages below score 30
+- `avg-health` — average health score across tracked packages
+
 ## Design Principles
 
 - One source of truth for tracked repositories.

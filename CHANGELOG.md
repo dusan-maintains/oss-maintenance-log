@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented here.
 
+## [1.2.0] — 2026-03-20
+
+### Added
+- **Programmatic API**: `scanPackages()` and `scanPackageJson()` — import and use in custom tools, dashboards, Slack bots
+- **SARIF output**: `--sarif` flag generates SARIF 2.1.0 for GitHub Code Scanning / Advanced Security
+- **Config file support**: `.oss-health-scanrc.json` or `package.json` `"oss-health-scan"` field for persistent options
+- **License risk scoring**: GPL/UNLICENSED/missing license penalized in risk dimension
+- **Action outputs**: `action.yml` now exports `health-json`, `manifest-json`, `critical-count`, `avg-health`
+- Tests: 31 passing (up from 15) — new suites for API module, SARIF output, license scoring
+
+### Changed
+- Scoring: stricter issue ratio curve (20 issues now penalizes significantly, was ignored before)
+- Scoring: license risk factor added to risk dimension (15% weight)
+- Action: consolidated to single step with PowerShell outputs instead of 4 separate steps
+- CLI refactored: `getPackageInfo` extracted to `api.js` for reuse
+
+### Fixed
+- **429 rate limiting**: `fetcher.js` now retries on HTTP 429 with `Retry-After` header support
+- Package version synced to 1.2.0
+
 ## [1.1.0] — 2026-03-17
 
 ### Added

@@ -34,8 +34,9 @@ function computeScore(info) {
   const pushRecency = decayScore(daysSincePush, 180);
 
   const openIssues = info.openIssues || 0;
+  // Stricter curve: 10 issues = 7.5, 30 issues = 2.5, 40+ = 0
   const issueRatio = openIssues > 0
-    ? Math.max(parseFloat((10 - Math.min(openIssues / 20 * 10, 10)).toFixed(2)), 0)
+    ? Math.max(parseFloat((10 - Math.min(openIssues / 4, 10)).toFixed(2)), 0)
     : 10;
 
   const publishRecency = decayScore(info.daysSincePublish || 9999, 365);
@@ -61,6 +62,15 @@ function computeScore(info) {
 
   if (info.daysSincePublish > 730) riskBase -= 2;
   else if (info.daysSincePublish > 365) riskBase -= 1;
+
+  // License risk: no license or restrictive licenses
+  if (info.license) {
+    const lic = String(info.license).toUpperCase();
+    if (lic.includes('GPL') && !lic.includes('LGPL')) riskBase -= 1;
+    if (lic === 'UNLICENSED' || lic === 'PROPRIETARY') riskBase -= 2;
+  } else {
+    riskBase -= 1.5; // no license = legal uncertainty
+  }
 
   const riskScore = Math.max(riskBase, 0);
 

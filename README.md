@@ -41,7 +41,7 @@ npx oss-health-scan express lodash moment react
   express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies. v1.1.0.** Scans any npm package, scores 0–100, auto-retries on failures, exits with code 1 on critical findings. CI-ready.
+**Zero dependencies. v1.2.0.** Scans any npm package, scores 0–100, auto-retries on failures, exits with code 1 on critical findings. SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
 `npm audit` finds CVEs. **This finds abandoned packages.**
 
@@ -53,7 +53,53 @@ npx oss-health-scan            # Scan ./package.json
 npx oss-health-scan pkg1 pkg2   # Scan specific packages
 npx oss-health-scan --dev       # Include devDependencies
 npx oss-health-scan --json      # JSON output for CI
+npx oss-health-scan --sarif     # SARIF 2.1.0 for GitHub Code Scanning
 npx oss-health-scan --threshold 40  # Only unhealthy
+```
+</details>
+
+<details>
+<summary><strong>Programmatic API</strong></summary>
+
+```javascript
+const { scanPackages, scanPackageJson } = require('oss-health-scan');
+
+// Scan specific packages
+const { results } = await scanPackages(['react', 'lodash', 'moment']);
+for (const r of results) {
+  console.log(`${r.name}: ${r.health_score}/100 [${r.risk_level}]`);
+}
+
+// Scan a project's package.json
+const { results, pkgName } = await scanPackageJson('.', { dev: true });
+```
+</details>
+
+<details>
+<summary><strong>Config file</strong></summary>
+
+Add to `package.json` or create `.oss-health-scanrc.json`:
+```json
+{
+  "oss-health-scan": {
+    "threshold": 40,
+    "exclude": ["moment"],
+    "dev": true
+  }
+}
+```
+</details>
+
+<details>
+<summary><strong>GitHub Code Scanning (SARIF)</strong></summary>
+
+```yaml
+- name: Scan dependency health
+  run: npx oss-health-scan --sarif > health.sarif
+
+- uses: github/codeql-action/upload-sarif@v3
+  with:
+    sarif_file: health.sarif
 ```
 </details>
 
@@ -114,7 +160,7 @@ Each package gets a **weighted health score (0–100)**:
 | **Maintenance** | 40% | Last push recency (exponential decay), last npm publish, open issues ratio |
 | **Community** | 25% | GitHub stars (log-scaled), forks |
 | **Popularity** | 20% | npm downloads/week (log-scaled) |
-| **Risk** | 15% | Inactivity penalty, issue backlog, stale publish |
+| **Risk** | 15% | Inactivity penalty, issue backlog, stale publish, license risk |
 
 **Instant flags:** DEPRECATED → 5/100, ARCHIVED → 8/100.
 
@@ -188,6 +234,35 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
       - run: npx oss-health-scan --threshold 30
+
+  # Optional: upload to GitHub Code Scanning
+  sarif:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npx oss-health-scan --sarif > health.sarif
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: health.sarif
+```
+
+### GitHub Action (reusable)
+
+```yaml
+- uses: dusan-maintains/oss-maintenance-log@main
+  id: health
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+
+- name: Fail on critical
+  if: steps.health.outputs.critical-count > 0
+  run: |
+    echo "Found ${{ steps.health.outputs.critical-count }} critical packages"
+    echo "Average health: ${{ steps.health.outputs.avg-health }}"
+    exit 1
 ```
 
 <!-- LIVE_DATA:START -->
@@ -213,7 +288,10 @@ scripts/
   update-readme-stats.ps1            ← Auto-regenerates all README sections
 cli/
   bin/scan.js                        ← CLI entry point
+  lib/api.js                         ← Programmatic API (scanPackages, scanPackageJson)
   lib/scoring.js                     ← JS health algorithm
+  lib/sarif.js                       ← SARIF 2.1.0 output for GitHub Code Scanning
+  lib/fetcher.js                     ← HTTP client with retry + 429 handling
   lib/reporter.js                    ← Colored terminal output
 evidence/
   *.json, *.md                       ← Machine + human snapshots

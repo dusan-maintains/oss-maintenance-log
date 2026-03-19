@@ -1,7 +1,13 @@
 {
   "name": "oss-health-scan",
-  "version": "1.1.0",
-  "description": "Scan your package.json for abandoned, unmaintained, or unhealthy npm dependencies. Get health scores (0-100) for every dependency. Zero external dependencies.",
+  "version": "1.2.0",
+  "description": "Scan your package.json for abandoned, unmaintained, or unhealthy npm dependencies. Get health scores (0-100) for every dependency. SARIF output for GitHub Code Scanning. Zero external dependencies.",
+  "main": "./lib/api.js",
+  "exports": {
+    ".": "./lib/api.js",
+    "./scoring": "./lib/scoring.js",
+    "./sarif": "./lib/sarif.js"
+  },
   "bin": {
     "oss-health-scan": "./bin/scan.js"
   },

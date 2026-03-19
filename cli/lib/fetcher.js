@@ -39,6 +39,15 @@ function fetchJson(url, extraHeaders, _attempt) {
           }, RETRY_DELAY_MS * _attempt);
         }
 
+        // Retry on 429 (rate limit) with Retry-After or exponential backoff
+        if (res.statusCode === 429 && _attempt <= MAX_RETRIES) {
+          const retryAfter = parseInt(res.headers['retry-after'] || '0') * 1000;
+          const delay = retryAfter > 0 ? retryAfter : RETRY_DELAY_MS * Math.pow(2, _attempt);
+          return setTimeout(() => {
+            fetchJson(url, extraHeaders, _attempt + 1).then(resolve, reject);
+          }, delay);
+        }
+
         if (res.statusCode >= 400) {
           return reject(new Error(`HTTP ${res.statusCode} from ${url}`));
         }
