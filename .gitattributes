@@ -1,0 +1,4 @@
+# Linguist overrides — make GitHub show JavaScript, not PowerShell
+*.ps1 linguist-detectable=false
+*.psm1 linguist-detectable=false
+cli/**/*.js linguist-detectable=true
