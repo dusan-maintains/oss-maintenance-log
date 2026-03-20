@@ -7,6 +7,7 @@ const { scanPackages, scanPackageJson } = require('../lib/api');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
 const { toSarif } = require('../lib/sarif');
+const { detectUnused } = require('../lib/unused');
 const { version } = require('../package.json');
 
 const HELP = `
@@ -24,6 +25,7 @@ const HELP = `
     --ci            Output GitHub Actions annotations (::warning::, ::error::)
     --outdated      Show installed vs latest versions with libyear metric
     --vulns         Check OSV.dev for known vulnerabilities (CVEs)
+    --unused        Detect dependencies not imported in source code
     --threshold N   Only show packages below health score N (default: show all)
     --sort FIELD    Sort by: score (default), name, downloads, risk
     --dev           Include devDependencies
@@ -62,7 +64,7 @@ function loadConfig(dir) {
 }
 
 function parseArgs(args) {
-  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
+  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -74,6 +76,7 @@ function parseArgs(args) {
     else if (a === '--dev') flags.dev = true;
     else if (a === '--outdated') flags.outdated = true;
     else if (a === '--vulns') flags.vulns = true;
+    else if (a === '--unused') flags.unused = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -259,12 +262,19 @@ async function main() {
   }
   results = [...validResults, ...errorResults];
 
+  // Unused detection
+  let unusedResult = null;
+  if (flags.unused && (flags.dir || pkgName)) {
+    unusedResult = detectUnused(scanDir, { dev: flags.dev });
+  }
+
   if (flags.sarif) {
     const sarif = toSarif(results, pkgName ? `${dir}/package.json` : 'package.json');
     process.stdout.write(JSON.stringify(sarif, null, 2) + '\n');
   } else if (flags.json) {
     const output = { scanned: packages.length, results };
     if (outdatedSummary) output.outdatedSummary = outdatedSummary;
+    if (unusedResult) output.unused = unusedResult;
     process.stdout.write(JSON.stringify(output, null, 2) + '\n');
   } else if (flags.markdown) {
     printMarkdown(results, packages.length, flags);
@@ -280,6 +290,16 @@ async function main() {
     printReport(results, flags.color);
   } else {
     printReport(results, flags.color);
+  }
+
+  // Print unused deps
+  if (unusedResult && unusedResult.unused.length > 0 && !flags.json && !flags.sarif) {
+    const c = flags.color ? { yellow: '\x1b[33m', dim: '\x1b[2m', reset: '\x1b[0m', bold: '\x1b[1m' } : { yellow: '', dim: '', reset: '', bold: '' };
+    process.stdout.write(`\n  ${c.yellow}${c.bold}📦 Potentially unused dependencies (${unusedResult.unused.length}):${c.reset}\n`);
+    for (const dep of unusedResult.unused) {
+      process.stdout.write(`  ${c.dim}  - ${dep}${c.reset}\n`);
+    }
+    process.stdout.write(`  ${c.dim}(scanned ${unusedResult.scanned} source files)${c.reset}\n`);
   }
 
   const critical = results.filter(r => r.risk_level === 'critical').length;

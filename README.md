@@ -41,7 +41,7 @@ npx oss-health-scan express lodash moment react
   express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies. v1.3.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
+**Zero dependencies. v1.4.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
 `npm audit` finds CVEs. **This finds abandoned packages, outdated deps, AND vulnerabilities — in one command.**
 
@@ -54,6 +54,7 @@ npx oss-health-scan pkg1 pkg2   # Scan specific packages
 npx oss-health-scan --dev       # Include devDependencies
 npx oss-health-scan --outdated  # Show installed vs latest + libyear metric
 npx oss-health-scan --vulns     # Check OSV.dev for known CVEs
+npx oss-health-scan --unused    # Detect unused dependencies
 npx oss-health-scan --json      # JSON output for CI
 npx oss-health-scan --sarif     # SARIF 2.1.0 for GitHub Code Scanning
 npx oss-health-scan --markdown  # Markdown table for PR comments
@@ -297,6 +298,7 @@ cli/
   lib/sarif.js                       ← SARIF 2.1.0 output for GitHub Code Scanning
   lib/outdated.js                    ← Libyear metric + drift classification
   lib/osv.js                         ← CVE check via OSV.dev API
+  lib/unused.js                      ← Unused dependency detection
   lib/fetcher.js                     ← HTTP client with retry + 429 handling
   lib/reporter.js                    ← Colored terminal output
 evidence/
@@ -306,7 +308,7 @@ tests/
   common.Tests.ps1                   ← Pester v5 tests (21 passing)
   health-score.Tests.ps1
 cli/test/
-  *.test.js                          ← 55 JS tests (scoring, api, sarif, outdated, osv)
+  *.test.js                          ← 68 JS tests
 .github/workflows/
   evidence-daily.yml                 ← Cron: full pipeline every 6 hours
   validate.yml                       ← CI: config + Pester + CLI tests

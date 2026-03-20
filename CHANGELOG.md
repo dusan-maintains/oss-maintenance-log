@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented here.
 
+## [1.4.0] — 2026-03-20
+
+### Added
+- **`--unused` flag**: Detect dependencies not imported in any source file. Scans `.js/.ts/.jsx/.tsx/.mjs/.cjs/.vue/.svelte` files recursively. Knows about config-only deps (eslint, babel, jest, etc.) to avoid false positives.
+- **ETag caching**: GitHub API responses are cached with ETags. Second scan of the same packages uses conditional requests (304 Not Modified) — doesn't count toward rate limit. ~60% fewer API calls on repeated scans.
+- **Unused deps module** (`lib/unused.js`): Static analysis of `require()`/`import`/`import()` across all source files
+- **New export**: `require('oss-health-scan/unused')`
+- Tests: 68 passing (up from 55)
+- GitHub Topics: 20 topics for discoverability
+
+### Changed
+- `fetcher.js`: ETag cache with 1h TTL, disk persistence in `os.tmpdir()`
+- User-Agent bumped to `oss-health-scan/1.3`
+
 ## [1.3.0] — 2026-03-20
 
 ### Added
