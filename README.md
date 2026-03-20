@@ -41,7 +41,7 @@ npx oss-health-scan express lodash moment react
   express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies. v1.4.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
+**Zero dependencies. v1.5.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
 `npm audit` finds CVEs. **This finds abandoned packages, outdated deps, AND vulnerabilities — in one command.**
 
@@ -299,7 +299,8 @@ cli/
   lib/outdated.js                    ← Libyear metric + drift classification
   lib/osv.js                         ← CVE check via OSV.dev API
   lib/unused.js                      ← Unused dependency detection
-  lib/fetcher.js                     ← HTTP client with retry + 429 handling
+  lib/github-graphql.js              ← GitHub GraphQL batch API (1 query for N repos)
+  lib/fetcher.js                     ← HTTP client with retry + 429 handling + ETag cache
   lib/reporter.js                    ← Colored terminal output
 evidence/
   *.json, *.md                       ← Machine + human snapshots
@@ -308,7 +309,7 @@ tests/
   common.Tests.ps1                   ← Pester v5 tests (21 passing)
   health-score.Tests.ps1
 cli/test/
-  *.test.js                          ← 68 JS tests
+  *.test.js                          ← 71 JS tests
 .github/workflows/
   evidence-daily.yml                 ← Cron: full pipeline every 6 hours
   validate.yml                       ← CI: config + Pester + CLI tests

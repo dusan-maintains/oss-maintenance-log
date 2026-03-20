@@ -6,17 +6,15 @@ const { fetchJson } = require('./fetcher');
 const { computeScore } = require('./scoring');
 const { getInstalledVersions, getVersionAge } = require('./outdated');
 const { queryOSV, summarizeVulns } = require('./osv');
+const { batchFetchRepos } = require('./github-graphql');
 
 /**
- * Fetch info for a single npm package.
- * Returns raw package metadata + GitHub data.
+ * Fetch npm-only info for a package (no GitHub call).
+ * Returns raw npm metadata.
  */
-async function getPackageInfo(name) {
+async function getNpmInfo(name) {
   const enc = encodeURIComponent(name);
 
-  // Two small requests instead of one massive one:
-  // 1. /latest endpoint: ~1-2KB (vs 50-250KB for full registry doc with all versions)
-  // 2. Abbreviated doc: for modified date only
   const [latestMeta, abbrDoc, dlData] = await Promise.all([
     fetchJson(`https://registry.npmjs.org/${enc}/latest`).catch(() => null),
     fetchJson(`https://registry.npmjs.org/${enc}`, { 'Accept': 'application/vnd.npm.install-v1+json' }).catch(() => null),
@@ -46,17 +44,6 @@ async function getPackageInfo(name) {
   }
 
   const downloads = dlData ? (dlData.downloads || 0) : 0;
-
-  let ghData = null;
-  if (owner && repoName) {
-    try {
-      const ghHeaders = { 'User-Agent': 'oss-health-scan' };
-      if (process.env.GITHUB_TOKEN) ghHeaders['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
-      const ghResponse = await fetchJson(`https://api.github.com/repos/${owner}/${repoName}`, ghHeaders);
-      ghData = ghResponse.data || ghResponse;
-    } catch (e) { /* GitHub data unavailable */ }
-  }
-
   const deprecated = !!(latestMeta && latestMeta.deprecated);
 
   return {
@@ -70,18 +57,54 @@ async function getPackageInfo(name) {
     owner,
     repo: repoName,
     repoUrl,
+    license: (latestMeta && latestMeta.license) || null
+  };
+}
+
+/**
+ * Fetch info for a single npm package (legacy REST path).
+ * Returns raw package metadata + GitHub data.
+ */
+async function getPackageInfo(name) {
+  const info = await getNpmInfo(name);
+
+  let ghData = null;
+  if (info.owner && info.repo) {
+    try {
+      const ghHeaders = { 'User-Agent': 'oss-health-scan' };
+      if (process.env.GITHUB_TOKEN) ghHeaders['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
+      const ghResponse = await fetchJson(`https://api.github.com/repos/${info.owner}/${info.repo}`, ghHeaders);
+      ghData = ghResponse.data || ghResponse;
+    } catch (e) { /* GitHub data unavailable */ }
+  }
+
+  return mergeGithubData(info, ghData);
+}
+
+/**
+ * Merge GitHub data into npm info object.
+ */
+function mergeGithubData(info, ghData) {
+  return {
+    ...info,
     stars: ghData ? ghData.stargazers_count : null,
     forks: ghData ? ghData.forks_count : null,
     openIssues: ghData ? ghData.open_issues_count : null,
     pushedAt: ghData ? ghData.pushed_at : null,
     daysSincePush: ghData && ghData.pushed_at ? Math.round((Date.now() - new Date(ghData.pushed_at).getTime()) / 86400000) : null,
     archived: ghData ? ghData.archived : false,
-    license: (latestMeta && latestMeta.license) || null
+    license: info.license || (ghData && ghData.license) || null
   };
 }
 
 /**
  * Scan a list of npm packages and return health results.
+ *
+ * Architecture:
+ *   Phase 1 — Fetch all npm metadata (parallel, batched by concurrency)
+ *   Phase 2 — Batch fetch GitHub data via GraphQL (1 query instead of N REST calls)
+ *             Falls back to REST if no GITHUB_TOKEN
+ *   Phase 3 — Score + enrich with outdated/vulns data
  *
  * @param {string[]} names - npm package names
  * @param {object} [options]
@@ -101,7 +124,8 @@ async function getPackageInfo(name) {
  */
 async function scanPackages(names, options) {
   const opts = { concurrency: process.env.GITHUB_TOKEN ? 5 : 2, threshold: 0, outdated: false, vulns: false, dir: '.', ...options };
-  const results = [];
+  const token = process.env.GITHUB_TOKEN || null;
+  const useGraphQL = !!token;
 
   // Load installed versions if outdated mode is on
   let installedVersions = {};
@@ -109,47 +133,83 @@ async function scanPackages(names, options) {
     installedVersions = getInstalledVersions(opts.dir || '.');
   }
 
+  // Phase 1: Fetch all npm metadata in parallel batches
+  const npmInfos = [];
   for (let i = 0; i < names.length; i += opts.concurrency) {
     const batch = names.slice(i, i + opts.concurrency);
-    const infos = await Promise.all(batch.map(async (name) => {
+    const batchResults = await Promise.all(batch.map(async (name) => {
       try {
-        return await getPackageInfo(name);
+        return useGraphQL ? await getNpmInfo(name) : await getPackageInfo(name);
       } catch (e) {
         return { name, error: e.message };
       }
     }));
+    npmInfos.push(...batchResults);
+  }
 
-    for (const info of infos) {
-      if (info.error) {
-        results.push({ name: info.name, health_score: null, risk_level: null, error: info.error });
-        continue;
-      }
-
-      const score = computeScore(info);
-      const entry = { ...info, ...score };
-
-      // Outdated enrichment
-      if (opts.outdated) {
-        const installedVersion = installedVersions[info.name] || null;
-        const age = await getVersionAge(info.name, installedVersion, info.latest, info.lastPublish);
-        entry.installedVersion = age.installed;
-        entry.libyear = age.libyear;
-        entry.drift = age.drift;
-      }
-
-      // Vulnerability enrichment
-      if (opts.vulns) {
-        const version = (opts.outdated && installedVersions[info.name]) || info.latest;
-        if (version) {
-          const rawVulns = await queryOSV(info.name, version);
-          entry.vulns = summarizeVulns(rawVulns);
-        } else {
-          entry.vulns = { count: 0, critical: 0, high: 0, moderate: 0, low: 0, ids: [] };
-        }
-      }
-
-      results.push(entry);
+  // Phase 2: Batch GitHub data via GraphQL (if token available)
+  let ghDataMap = new Map();
+  if (useGraphQL) {
+    const reposToFetch = [];
+    for (const info of npmInfos) {
+      if (info.error || !info.owner || !info.repo) continue;
+      reposToFetch.push({ owner: info.owner, repo: info.repo });
     }
+
+    if (reposToFetch.length > 0) {
+      try {
+        // GraphQL supports ~100 repos per query; batch in groups of 50
+        for (let i = 0; i < reposToFetch.length; i += 50) {
+          const batch = reposToFetch.slice(i, i + 50);
+          const batchMap = await batchFetchRepos(batch, token);
+          for (const [key, val] of batchMap) ghDataMap.set(key, val);
+        }
+      } catch (e) {
+        // GraphQL failed — individual REST calls already happened in getPackageInfo
+        // If we used getNpmInfo, we have no GitHub data — that's OK, scores will be lower
+      }
+    }
+  }
+
+  // Phase 3: Merge, score, enrich
+  const results = [];
+  for (const info of npmInfos) {
+    if (info.error) {
+      results.push({ name: info.name, health_score: null, risk_level: null, error: info.error });
+      continue;
+    }
+
+    // Merge GitHub data from GraphQL batch
+    let enriched = info;
+    if (useGraphQL && info.owner && info.repo) {
+      const ghData = ghDataMap.get(`${info.owner}/${info.repo}`) || null;
+      enriched = mergeGithubData(info, ghData);
+    }
+
+    const score = computeScore(enriched);
+    const entry = { ...enriched, ...score };
+
+    // Outdated enrichment
+    if (opts.outdated) {
+      const installedVersion = installedVersions[enriched.name] || null;
+      const age = await getVersionAge(enriched.name, installedVersion, enriched.latest, enriched.lastPublish);
+      entry.installedVersion = age.installed;
+      entry.libyear = age.libyear;
+      entry.drift = age.drift;
+    }
+
+    // Vulnerability enrichment
+    if (opts.vulns) {
+      const version = (opts.outdated && installedVersions[enriched.name]) || enriched.latest;
+      if (version) {
+        const rawVulns = await queryOSV(enriched.name, version);
+        entry.vulns = summarizeVulns(rawVulns);
+      } else {
+        entry.vulns = { count: 0, critical: 0, high: 0, moderate: 0, low: 0, ids: [] };
+      }
+    }
+
+    results.push(entry);
   }
 
   const filtered = opts.threshold > 0

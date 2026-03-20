@@ -53,13 +53,14 @@ Every step is wrapped in `Invoke-RefreshStep` — failures are caught, logged, a
 
 The `cli/` directory is a standalone zero-dependency npm package (`oss-health-scan`).
 
-- `lib/api.js` — programmatic API: `scanPackages()`, `scanPackageJson()`, `getPackageInfo()`
+- `lib/api.js` — programmatic API: `scanPackages()`, `scanPackageJson()`, `getPackageInfo()`. 3-phase architecture: npm metadata → GitHub GraphQL batch → score/enrich
+- `lib/github-graphql.js` — GitHub GraphQL batch client: fetches up to 50 repos in a single query (stargazers, forks, issues, push date, archive status, license)
 - `lib/scoring.js` — health scoring algorithm (maintenance 40%, community 25%, popularity 20%, risk 15%)
 - `lib/sarif.js` — SARIF 2.1.0 output generator for GitHub Code Scanning
 - `lib/outdated.js` — libyear metric: reads package-lock.json, computes version drift
 - `lib/osv.js` — CVE check via OSV.dev API (zero deps, raw HTTPS POST)
 - `lib/unused.js` — unused dependency detection via static import analysis
-- `lib/fetcher.js` — HTTP client with retry logic, 429/5xx handling, redirect following
+- `lib/fetcher.js` — HTTP client with retry logic, 429/5xx handling, redirect following, ETag caching
 - `lib/reporter.js` — colored terminal output with score bars, drift/vuln info
 - `bin/scan.js` — CLI entry point, config file loading, flag parsing
 

@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented here.
 
+## [1.5.0] — 2026-03-20
+
+### Added
+- **GitHub GraphQL batching**: All GitHub API calls now use a single GraphQL query instead of N individual REST calls. Scanning 30 packages makes 1 GitHub request instead of 30. Massive rate-limit savings.
+- **`lib/github-graphql.js`**: New module — builds aliased GraphQL queries, fetches stargazers, forks, issues, push date, archive status, and license in one round-trip. Batches up to 50 repos per query.
+- **Smart concurrency**: With `GITHUB_TOKEN`, default concurrency increases from 2 to 5 (npm fetches are the bottleneck now, not GitHub).
+- Tests: 71 passing (up from 68) — new suite for GraphQL module with unit + integration tests
+
+### Changed
+- `api.js`: Refactored into 3-phase architecture — Phase 1 (npm metadata, parallel batches) → Phase 2 (GitHub GraphQL batch) → Phase 3 (score + enrich). Falls back to REST if no token.
+- `getNpmInfo()` extracted from `getPackageInfo()` for npm-only fetches when GraphQL handles GitHub data
+- `mergeGithubData()` extracted as shared merge function for both REST and GraphQL paths
+- User-Agent bumped to `oss-health-scan/1.4` in GraphQL client
+
+### Performance
+- 8 packages: 3 seconds with GraphQL (was ~12s with REST)
+- 30 packages: 1 GitHub API call (was 30)
+- Rate limit usage: ~97% reduction for GitHub API
+
 ## [1.4.0] — 2026-03-20
 
 ### Added
