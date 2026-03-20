@@ -10,13 +10,26 @@ const { computeScore } = require('./scoring');
  * Returns raw package metadata + GitHub data.
  */
 async function getPackageInfo(name) {
-  const registry = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`);
-  const latest = registry['dist-tags'] && registry['dist-tags'].latest;
-  const latestMeta = latest && registry.versions && registry.versions[latest];
-  const time = registry.time || {};
+  const enc = encodeURIComponent(name);
+
+  // Two small requests instead of one massive one:
+  // 1. /latest endpoint: ~1-2KB (vs 50-250KB for full registry doc with all versions)
+  // 2. Abbreviated doc: for modified date only
+  const [latestMeta, abbrDoc, dlData] = await Promise.all([
+    fetchJson(`https://registry.npmjs.org/${enc}/latest`).catch(() => null),
+    fetchJson(`https://registry.npmjs.org/${enc}`, { 'Accept': 'application/vnd.npm.install-v1+json' }).catch(() => null),
+    fetchJson(`https://api.npmjs.org/downloads/point/last-week/${enc}`).catch(() => null)
+  ]);
+
+  if (!latestMeta && !abbrDoc) {
+    throw new Error(`Package "${name}" not found on npm`);
+  }
+
+  const latest = latestMeta ? latestMeta.version : (abbrDoc && abbrDoc['dist-tags'] && abbrDoc['dist-tags'].latest);
+  const lastPublish = abbrDoc ? abbrDoc.modified : null;
 
   let repoUrl = null;
-  const repo = registry.repository || (latestMeta && latestMeta.repository);
+  const repo = latestMeta && latestMeta.repository;
   if (repo) {
     const url = typeof repo === 'string' ? repo : repo.url;
     if (url) {
@@ -30,11 +43,7 @@ async function getPackageInfo(name) {
     if (m) { owner = m[1]; repoName = m[2]; }
   }
 
-  let downloads = 0;
-  try {
-    const dl = await fetchJson(`https://api.npmjs.org/downloads/point/last-week/${encodeURIComponent(name)}`);
-    downloads = dl.downloads || 0;
-  } catch (e) { /* no downloads data */ }
+  const downloads = dlData ? (dlData.downloads || 0) : 0;
 
   let ghData = null;
   if (owner && repoName) {
@@ -46,8 +55,7 @@ async function getPackageInfo(name) {
     } catch (e) { /* GitHub data unavailable */ }
   }
 
-  const lastPublish = time[latest] || time.modified;
-  const deprecated = !!(latestMeta && latestMeta.deprecated) || !!(registry.deprecated);
+  const deprecated = !!(latestMeta && latestMeta.deprecated);
 
   return {
     name,
@@ -66,7 +74,7 @@ async function getPackageInfo(name) {
     pushedAt: ghData ? ghData.pushed_at : null,
     daysSincePush: ghData && ghData.pushed_at ? Math.round((Date.now() - new Date(ghData.pushed_at).getTime()) / 86400000) : null,
     archived: ghData ? ghData.archived : false,
-    license: (latestMeta && latestMeta.license) || registry.license || null
+    license: (latestMeta && latestMeta.license) || null
   };
 }
 
