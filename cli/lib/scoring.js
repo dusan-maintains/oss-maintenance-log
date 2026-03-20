@@ -34,10 +34,21 @@ function computeScore(info) {
   const pushRecency = decayScore(daysSincePush, 180);
 
   const openIssues = info.openIssues || 0;
-  // Stricter curve: 10 issues = 7.5, 30 issues = 2.5, 40+ = 0
-  const issueRatio = openIssues > 0
-    ? Math.max(parseFloat((10 - Math.min(openIssues / 4, 10)).toFixed(2)), 0)
-    : 10;
+  const stars = info.stars || 0;
+  // Ratio-based: issues relative to community size (stars).
+  // React (200 issues / 230k stars = 0.0009 ratio) = healthy.
+  // Small lib (200 issues / 50 stars = 4.0 ratio) = abandoned.
+  // Ratio > 0.1 starts penalizing, > 1.0 = zero score.
+  let issueRatio;
+  if (openIssues === 0) {
+    issueRatio = 10;
+  } else if (stars > 0) {
+    const ratio = openIssues / stars;
+    issueRatio = Math.max(parseFloat((10 - Math.min(ratio / 0.1 * 10, 10)).toFixed(2)), 0);
+  } else {
+    // No stars data — fall back to absolute count (lenient curve)
+    issueRatio = Math.max(parseFloat((10 - Math.min(openIssues / 10, 10)).toFixed(2)), 0);
+  }
 
   const publishRecency = decayScore(info.daysSincePublish || 9999, 365);
 
@@ -57,8 +68,10 @@ function computeScore(info) {
   if (daysSincePush > 365) riskBase -= 4;
   else if (daysSincePush > 180) riskBase -= 2;
 
-  if (openIssues > 100) riskBase -= 3;
-  else if (openIssues > 50) riskBase -= 1.5;
+  // Issue backlog risk: ratio-based (issues / max(stars, 1))
+  const issueBacklogRatio = openIssues / Math.max(stars, 1);
+  if (issueBacklogRatio > 1.0) riskBase -= 3;
+  else if (issueBacklogRatio > 0.5) riskBase -= 1.5;
 
   if (info.daysSincePublish > 730) riskBase -= 2;
   else if (info.daysSincePublish > 365) riskBase -= 1;

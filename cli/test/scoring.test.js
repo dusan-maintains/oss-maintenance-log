@@ -183,18 +183,30 @@ describe('computeScore', () => {
       `With license (${withLicense.health_score}) should score higher than no license (${noLicense.health_score})`);
   });
 
-  it('stricter issue scoring: 20 issues should penalize significantly', () => {
+  it('ratio-based issue scoring: small project with many issues penalized', () => {
     const clean = computeScore({
-      stars: 100, forks: 10, openIssues: 0, downloads: 1000,
+      stars: 50, forks: 5, openIssues: 0, downloads: 1000,
       daysSincePush: 30, daysSincePublish: 60,
       deprecated: false, archived: false, license: 'MIT'
     });
-    const issues20 = computeScore({
-      stars: 100, forks: 10, openIssues: 20, downloads: 1000,
+    const overloaded = computeScore({
+      stars: 50, forks: 5, openIssues: 50, downloads: 1000,
       daysSincePush: 30, daysSincePublish: 60,
       deprecated: false, archived: false, license: 'MIT'
     });
-    const diff = clean.health_score - issues20.health_score;
-    assert.ok(diff > 3, `20 open issues should drop score by >3 points (actual: ${diff.toFixed(1)})`);
+    const diff = clean.health_score - overloaded.health_score;
+    assert.ok(diff > 3, `50 issues on 50-star project should penalize (actual: ${diff.toFixed(1)})`);
+  });
+
+  it('ratio-based issue scoring: popular project with many issues not penalized', () => {
+    // React-like: 200k stars, 1000 issues = ratio 0.005 = healthy
+    const result = computeScore({
+      stars: 200000, forks: 40000, openIssues: 1000, downloads: 50000000,
+      daysSincePush: 1, daysSincePublish: 7,
+      deprecated: false, archived: false, license: 'MIT'
+    });
+    assert.ok(result.health_score >= 70,
+      `Popular project with 1000 issues should still score 70+ (got ${result.health_score})`);
+    assert.equal(result.risk_level, 'healthy');
   });
 });
