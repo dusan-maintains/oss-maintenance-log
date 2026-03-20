@@ -80,6 +80,17 @@ Package exports:
 - `critical-count` — number of packages below score 30
 - `avg-health` — average health score across tracked packages
 
+## Schema Contracts
+
+JSON Schema (draft-07) files in `schemas/` validate evidence output structure:
+
+- `schemas/ecosystem-status.schema.json` — aggregated ecosystem snapshot
+- `schemas/health-scores.schema.json` — per-package health scoring with breakdown
+- `schemas/manifest.schema.json` — pipeline run health (steps, per-repo status)
+- `schemas/action-queue.schema.json` — prioritized SLA action items
+
+Validated in CI by `scripts/validate-evidence.js` (zero dependencies, handles PowerShell BOM).
+
 ## Design Principles
 
 - One source of truth for tracked repositories.

@@ -25,27 +25,20 @@
 - ✅ CLI unit tests and smoke test in CI
 - ✅ Structural validation (config, markers, scripts, docs)
 
+### Schema Contracts
+- ✅ JSON Schema (draft-07) for all evidence output families: ecosystem-status, health-scores, manifest, action-queue
+- ✅ Zero-dep Node.js validator (`scripts/validate-evidence.js`) — runs in CI, strips BOM, validates types/required/enum/ranges
+- ✅ CI step `validate-evidence` in validate.yml workflow
+- ✅ PowerShell single-item quirk documented in action-queue schema (object | array)
+
+### Dashboard Freshness
+- ✅ Freshness banner: pipeline status badge (success/partial/failed), relative time, step counts
+- ✅ Stale data warning: orange banner when data >12h old with link to Actions
+- ✅ Per-repo freshness dots on health cards (green = fresh, yellow = partial, red = failed)
+- ✅ Trend arrows on health cards from health-trends.json (↑ improving, → stable, ↓ declining with 7d delta)
+- ✅ manifest.json + health-trends.json fetched alongside existing data
+
 ## Next High-Impact Engineering Moves
-
-### 1. Schema Contracts
-
-Current gap: outputs are validated structurally by scripts and markers, but not by formal JSON schemas.
-
-Best next steps:
-
-- add JSON Schema for each output family (ecosystem-status, health-scores, manifest)
-- validate generated evidence in CI before commit
-- keep backward compatibility explicit with schema versioning
-
-### 2. Dashboard Freshness
-
-Current gap: dashboard consumes evidence JSON but doesn't surface staleness or partial-failure state.
-
-Best next steps:
-
-- consume manifest.json to show per-repo freshness status
-- add visual indicators for stale data (>12h since last refresh)
-- expose failing steps and link to manifest details
 
 ## What Not To Prioritize
 

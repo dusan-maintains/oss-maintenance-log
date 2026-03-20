@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented here.
 
+## [1.6.0] — 2026-03-20
+
+### Added
+- **JSON Schema contracts**: Draft-07 schemas for all evidence output files — `ecosystem-status`, `health-scores`, `manifest`, `action-queue`. Machine-readable structure definitions in `schemas/` directory.
+- **Evidence validator**: Zero-dep Node.js script (`scripts/validate-evidence.js`) validates evidence JSON against schemas in CI. Handles PowerShell BOM, validates types/required/enum/ranges, first 5 items per array.
+- **CI validation step**: New `validate-evidence` job in `validate.yml` catches schema violations before merge.
+- **Dashboard freshness banner**: Pipeline status badge (success/partial/failed), relative time since last refresh ("2h ago"), step counts ("8/8 steps"). Stale data warning (orange banner) when data >12h old with link to GitHub Actions.
+- **Per-repo freshness dots**: Green/yellow/red dots on health cards showing per-repository pipeline status from `manifest.json`.
+- **Trend arrows on health cards**: ↑ improving, → stable, ↓ declining with 7-day delta from `health-trends.json`.
+- Dashboard now fetches `manifest.json` + `health-trends.json` alongside existing data (5 parallel fetches).
+
 ## [1.5.0] — 2026-03-20
 
 ### Added

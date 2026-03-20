@@ -273,6 +273,60 @@
     font-size: 0.75rem;
   }
 
+  /* ── Freshness Banner ──────────────────────────────────── */
+  .freshness-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+  .freshness-left { display: flex; align-items: center; gap: 10px; }
+  .pipe-badge {
+    padding: 3px 10px; border-radius: 20px;
+    font-size: 0.68rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .pipe-badge.success { background: var(--green-dim); color: var(--green); }
+  .pipe-badge.partial { background: var(--yellow-dim); color: var(--yellow); }
+  .pipe-badge.failed { background: var(--red-dim); color: var(--red); }
+  .freshness-right { color: var(--muted); font-size: 0.72rem; }
+
+  .stale-banner {
+    background: rgba(234,179,8,0.08);
+    border: 1px solid rgba(234,179,8,0.25);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    color: var(--yellow);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  /* ── Trend & Freshness on Cards ──────────────────────── */
+  .trend-tag {
+    font-size: 0.68rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 2px 8px; border-radius: 10px;
+    margin-top: 6px;
+  }
+  .trend-tag.up { background: var(--green-dim); color: var(--green); }
+  .trend-tag.down { background: var(--red-dim); color: var(--red); }
+  .trend-tag.stable { background: rgba(100,116,139,0.12); color: var(--muted); }
+  .repo-status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    display: inline-block; margin-right: 4px; flex-shrink: 0;
+  }
+  .repo-status-dot.fresh { background: var(--green); }
+  .repo-status-dot.partial { background: var(--yellow); }
+  .repo-status-dot.failed { background: var(--red); }
+
   .loading { color: var(--muted); font-size: 0.85rem; padding: 24px; text-align: center; }
   .error { color: var(--red); font-size: 0.85rem; padding: 24px; }
 
@@ -318,6 +372,9 @@
     <div class="stat"><div class="label">Stars</div><div class="value yellow" id="s-stars">—</div></div>
     <div class="stat"><div class="label">Open PRs</div><div class="value purple" id="s-prs">—</div></div>
   </div>
+
+  <!-- Freshness Banner -->
+  <div id="freshness-wrap"></div>
 
   <!-- Health Score Cards -->
   <section>
@@ -367,6 +424,16 @@ function fmt(n) {
   return String(n);
 }
 
+function relTime(dateStr) {
+  const ms = Date.now() - new Date(dateStr).getTime();
+  const m = Math.floor(ms / 60000);
+  if (m < 1) return 'just now';
+  if (m < 60) return m + 'm ago';
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + 'h ago';
+  return Math.floor(h / 24) + 'd ago';
+}
+
 function scoreColor(score) {
   if (score < 30) return COLORS.red;
   if (score < 60) return COLORS.yellow;
@@ -400,15 +467,30 @@ function barRow(label, score, color) {
   </div>`;
 }
 
-function healthCard(s, i) {
+function trendTag(trend) {
+  if (!trend) return '';
+  const t = trend.trend || 'stable';
+  const d7 = trend.delta_7d;
+  const arrow = t === 'improving' ? '↑' : t === 'declining' ? '↓' : '→';
+  const cls = t === 'improving' ? 'up' : t === 'declining' ? 'down' : 'stable';
+  const delta = d7 != null ? ` ${d7 > 0 ? '+' : ''}${d7.toFixed(1)}` : '';
+  return `<span class="trend-tag ${cls}">${arrow}${delta}</span>`;
+}
+
+function healthCard(s, i, trendMap, repoStatusMap) {
   const color = scoreColor(s.health_score);
   const b = s.breakdown;
+  const key = s.owner + '/' + s.repo;
+  const trend = trendMap && trendMap[key];
+  const repoStatus = repoStatusMap && repoStatusMap[key];
+  const dot = repoStatus ? `<span class="repo-status-dot ${repoStatus}" title="${repoStatus}"></span>` : '';
   return `<div class="health-card animate-in" style="animation-delay:${i * 0.08}s">
     <div class="card-header">
       <div>
-        <div class="pkg-owner">${s.owner}</div>
+        <div class="pkg-owner">${dot}${s.owner}</div>
         <div class="pkg-name"><a href="${s.repo_url}" target="_blank">${s.repo}</a></div>
         ${riskBadge(s.risk_level)}
+        ${trendTag(trend)}
       </div>
       ${scoreCircle(s.health_score, color)}
     </div>
@@ -428,10 +510,12 @@ function healthCard(s, i) {
 
 async function load() {
   try {
-    const [eco, health, queue] = await Promise.all([
+    const [eco, health, queue, manifest, trends] = await Promise.all([
       fetch(RAW + 'ecosystem-status.json').then(r => r.json()),
       fetch(RAW + 'health-scores.json').then(r => r.json()).catch(() => null),
-      fetch(RAW + 'action-queue.json').then(r => r.json()).catch(() => null)
+      fetch(RAW + 'action-queue.json').then(r => r.json()).catch(() => null),
+      fetch(RAW + 'manifest.json').then(r => r.json()).catch(() => null),
+      fetch(RAW + 'health-trends.json').then(r => r.json()).catch(() => null)
     ]);
 
     const sm = eco.summary || {};
@@ -451,11 +535,46 @@ async function load() {
         'Last updated: ' + new Date(eco.generated_at_utc).toUTCString();
     }
 
+    // Freshness banner
+    const fw = document.getElementById('freshness-wrap');
+    if (manifest) {
+      const ts = manifest.run_completed_at_utc || manifest.run_started_at_utc;
+      const ms = manifest.summary || {};
+      const status = manifest.run_status || 'unknown';
+      const stepsInfo = ms.total_steps ? `${ms.successful_steps}/${ms.total_steps} steps` : '';
+      const failInfo = ms.failed_steps > 0 ? `, ${ms.failed_steps} failed` : '';
+      const ageMs = ts ? Date.now() - new Date(ts).getTime() : 0;
+      const stale = ageMs > 12 * 3600 * 1000;
+
+      let html = '';
+      if (stale) {
+        html += `<div class="stale-banner">Data is ${relTime(ts)} old — pipeline may not be running. <a href="https://github.com/dusan-maintains/oss-maintenance-log/actions/workflows/evidence-daily.yml">Check Actions</a></div>`;
+      }
+      html += `<div class="freshness-banner">
+        <div class="freshness-left">
+          <span class="pipe-badge ${status}">${status}</span>
+          <span style="color:var(--text)">Pipeline refreshed ${ts ? relTime(ts) : '—'}</span>
+        </div>
+        <div class="freshness-right">${stepsInfo}${failInfo}</div>
+      </div>`;
+      fw.innerHTML = html;
+    }
+
+    // Build trend + repo-status maps
+    const trendMap = {};
+    if (trends && trends.trends) {
+      for (const t of trends.trends) trendMap[t.repo] = t;
+    }
+    const repoStatusMap = {};
+    if (manifest && manifest.repositories) {
+      for (const r of manifest.repositories) repoStatusMap[r.repository] = r.status;
+    }
+
     // Health cards
     if (health && health.scores) {
       const sorted = [...health.scores].sort((a,b) => a.health_score - b.health_score);
       document.getElementById('health-cards').innerHTML =
-        sorted.map((s, i) => healthCard(s, i)).join('');
+        sorted.map((s, i) => healthCard(s, i, trendMap, repoStatusMap)).join('');
     } else {
       // Fallback: show ecosystem data without health scores
       document.getElementById('health-cards').innerHTML =
