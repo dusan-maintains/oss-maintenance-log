@@ -4,6 +4,8 @@ const path = require('path');
 const fs = require('fs');
 const { fetchJson } = require('./fetcher');
 const { computeScore } = require('./scoring');
+const { getInstalledVersions, getVersionAge } = require('./outdated');
+const { queryOSV, summarizeVulns } = require('./osv');
 
 /**
  * Fetch info for a single npm package.
@@ -85,7 +87,10 @@ async function getPackageInfo(name) {
  * @param {object} [options]
  * @param {number} [options.concurrency=2] - parallel fetch limit
  * @param {number} [options.threshold=0] - filter results below this score (0 = show all)
- * @returns {Promise<{scanned: number, results: object[]}>}
+ * @param {boolean} [options.outdated=false] - include libyear/drift data (requires dir)
+ * @param {boolean} [options.vulns=false] - check OSV.dev for known vulnerabilities
+ * @param {string} [options.dir='.'] - project directory (for reading package-lock.json)
+ * @returns {Promise<{scanned: number, results: object[], outdatedSummary?: object}>}
  *
  * @example
  *   const { scanPackages } = require('oss-health-scan');
@@ -95,8 +100,14 @@ async function getPackageInfo(name) {
  *   }
  */
 async function scanPackages(names, options) {
-  const opts = { concurrency: process.env.GITHUB_TOKEN ? 5 : 2, threshold: 0, ...options };
+  const opts = { concurrency: process.env.GITHUB_TOKEN ? 5 : 2, threshold: 0, outdated: false, vulns: false, dir: '.', ...options };
   const results = [];
+
+  // Load installed versions if outdated mode is on
+  let installedVersions = {};
+  if (opts.outdated) {
+    installedVersions = getInstalledVersions(opts.dir || '.');
+  }
 
   for (let i = 0; i < names.length; i += opts.concurrency) {
     const batch = names.slice(i, i + opts.concurrency);
@@ -113,8 +124,31 @@ async function scanPackages(names, options) {
         results.push({ name: info.name, health_score: null, risk_level: null, error: info.error });
         continue;
       }
+
       const score = computeScore(info);
-      results.push({ ...info, ...score });
+      const entry = { ...info, ...score };
+
+      // Outdated enrichment
+      if (opts.outdated) {
+        const installedVersion = installedVersions[info.name] || null;
+        const age = await getVersionAge(info.name, installedVersion, info.latest, info.lastPublish);
+        entry.installedVersion = age.installed;
+        entry.libyear = age.libyear;
+        entry.drift = age.drift;
+      }
+
+      // Vulnerability enrichment
+      if (opts.vulns) {
+        const version = (opts.outdated && installedVersions[info.name]) || info.latest;
+        if (version) {
+          const rawVulns = await queryOSV(info.name, version);
+          entry.vulns = summarizeVulns(rawVulns);
+        } else {
+          entry.vulns = { count: 0, critical: 0, high: 0, moderate: 0, low: 0, ids: [] };
+        }
+      }
+
+      results.push(entry);
     }
   }
 
@@ -122,7 +156,21 @@ async function scanPackages(names, options) {
     ? results.filter(r => r.health_score !== null && r.health_score < opts.threshold)
     : results;
 
-  return { scanned: names.length, results: filtered };
+  // Outdated summary
+  let outdatedSummary = null;
+  if (opts.outdated) {
+    const withDrift = filtered.filter(r => r.drift && r.drift !== 'up-to-date');
+    const totalLibyear = filtered.reduce((s, r) => s + (r.libyear || 0), 0);
+    outdatedSummary = {
+      totalLibyear: parseFloat(totalLibyear.toFixed(1)),
+      outdatedCount: withDrift.length,
+      majorDrift: withDrift.filter(r => r.drift === 'major').length,
+      minorDrift: withDrift.filter(r => r.drift === 'minor').length,
+      patchDrift: withDrift.filter(r => r.drift === 'patch').length
+    };
+  }
+
+  return { scanned: names.length, results: filtered, ...(outdatedSummary ? { outdatedSummary } : {}) };
 }
 
 /**

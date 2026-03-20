@@ -22,6 +22,8 @@ const HELP = `
     --sarif         Output SARIF 2.1.0 for GitHub Code Scanning
     --markdown      Output Markdown table (for PR comments)
     --ci            Output GitHub Actions annotations (::warning::, ::error::)
+    --outdated      Show installed vs latest versions with libyear metric
+    --vulns         Check OSV.dev for known vulnerabilities (CVEs)
     --threshold N   Only show packages below health score N (default: show all)
     --sort FIELD    Sort by: score (default), name, downloads, risk
     --dev           Include devDependencies
@@ -60,7 +62,7 @@ function loadConfig(dir) {
 }
 
 function parseArgs(args) {
-  const flags = { json: false, sarif: false, markdown: false, ci: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
+  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -70,6 +72,8 @@ function parseArgs(args) {
     else if (a === '--markdown') flags.markdown = true;
     else if (a === '--ci') flags.ci = true;
     else if (a === '--dev') flags.dev = true;
+    else if (a === '--outdated') flags.outdated = true;
+    else if (a === '--vulns') flags.vulns = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -138,20 +142,41 @@ function riskIcon(level) {
   return ':green_circle:';
 }
 
-function printMarkdown(results, total) {
+function printMarkdown(results, total, flags) {
   const valid = results.filter(r => r.health_score != null);
   const critical = valid.filter(r => r.risk_level === 'critical').length;
   const warning = valid.filter(r => r.risk_level === 'warning').length;
   const healthy = valid.filter(r => r.risk_level === 'healthy').length;
   const avg = valid.length > 0 ? (valid.reduce((s, r) => s + r.health_score, 0) / valid.length).toFixed(1) : '0';
 
+  const hasOutdated = flags && flags.outdated;
+  const hasVulns = flags && flags.vulns;
+
   const lines = [];
   lines.push(`### Dependency Health Scan`);
   lines.push('');
-  lines.push(`**${total}** packages scanned | avg health: **${avg}/100** | :red_circle: ${critical} critical | :yellow_circle: ${warning} warning | :green_circle: ${healthy} healthy`);
+
+  let summary = `**${total}** packages scanned | avg health: **${avg}/100** | :red_circle: ${critical} critical | :yellow_circle: ${warning} warning | :green_circle: ${healthy} healthy`;
+  if (hasVulns) {
+    const totalVulns = valid.reduce((s, r) => s + (r.vulns ? r.vulns.count : 0), 0);
+    if (totalVulns > 0) summary += ` | :rotating_light: ${totalVulns} vulnerabilities`;
+  }
+  lines.push(summary);
   lines.push('');
-  lines.push('| Package | Score | Risk | Downloads | Last Push | License |');
-  lines.push('|---------|-------|------|-----------|-----------|---------|');
+
+  // Build header
+  let header = '| Package | Score | Risk | Downloads | Last Push | License |';
+  let separator = '|---------|-------|------|-----------|-----------|---------|';
+  if (hasOutdated) {
+    header += ' Installed | Latest | Drift |';
+    separator += '-----------|--------|-------|';
+  }
+  if (hasVulns) {
+    header += ' CVEs |';
+    separator += '------|';
+  }
+  lines.push(header);
+  lines.push(separator);
 
   for (const r of valid) {
     const icon = riskIcon(r.risk_level);
@@ -160,7 +185,32 @@ function printMarkdown(results, total) {
     const push = r.daysSincePush != null ? r.daysSincePush + 'd ago' : '—';
     const lic = r.license || '—';
     const reason = r.reason ? ` ${r.reason}` : '';
-    lines.push(`| ${r.name} | ${score} | ${icon}${reason} | ${dl} | ${push} | ${lic} |`);
+    let row = `| ${r.name} | ${score} | ${icon}${reason} | ${dl} | ${push} | ${lic} |`;
+
+    if (hasOutdated) {
+      const inst = r.installedVersion || '—';
+      const lat = r.latest || '—';
+      const drift = r.drift === 'major' ? ':red_circle: major'
+                   : r.drift === 'minor' ? ':yellow_circle: minor'
+                   : r.drift === 'patch' ? ':green_circle: patch'
+                   : ':white_check_mark:';
+      row += ` ${inst} | ${lat} | ${drift} |`;
+    }
+
+    if (hasVulns) {
+      if (r.vulns && r.vulns.count > 0) {
+        const parts = [];
+        if (r.vulns.critical > 0) parts.push(`${r.vulns.critical}C`);
+        if (r.vulns.high > 0) parts.push(`${r.vulns.high}H`);
+        if (r.vulns.moderate > 0) parts.push(`${r.vulns.moderate}M`);
+        if (r.vulns.low > 0) parts.push(`${r.vulns.low}L`);
+        row += ` :rotating_light: ${parts.join('/')} |`;
+      } else {
+        row += ` :white_check_mark: |`;
+      }
+    }
+
+    lines.push(row);
   }
 
   lines.push('');
@@ -190,7 +240,13 @@ async function main() {
     : `\n  Scanning ${packages.length} package(s)...\n`;
   if (!flags.json && !flags.sarif && !flags.markdown) process.stderr.write(header);
 
-  let { results } = await scanPackages(packages, { threshold: flags.threshold });
+  const scanDir = flags.dir || dir;
+  let { results, outdatedSummary } = await scanPackages(packages, {
+    threshold: flags.threshold,
+    outdated: flags.outdated,
+    vulns: flags.vulns,
+    dir: scanDir
+  });
 
   // Sort results
   const validResults = results.filter(r => r.health_score != null);
@@ -207,9 +263,11 @@ async function main() {
     const sarif = toSarif(results, pkgName ? `${dir}/package.json` : 'package.json');
     process.stdout.write(JSON.stringify(sarif, null, 2) + '\n');
   } else if (flags.json) {
-    process.stdout.write(JSON.stringify({ scanned: packages.length, results }, null, 2) + '\n');
+    const output = { scanned: packages.length, results };
+    if (outdatedSummary) output.outdatedSummary = outdatedSummary;
+    process.stdout.write(JSON.stringify(output, null, 2) + '\n');
   } else if (flags.markdown) {
-    printMarkdown(results, packages.length);
+    printMarkdown(results, packages.length, flags);
   } else if (flags.ci) {
     for (const r of results) {
       if (r.error) continue;

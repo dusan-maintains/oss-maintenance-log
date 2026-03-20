@@ -56,14 +56,18 @@ The `cli/` directory is a standalone zero-dependency npm package (`oss-health-sc
 - `lib/api.js` — programmatic API: `scanPackages()`, `scanPackageJson()`, `getPackageInfo()`
 - `lib/scoring.js` — health scoring algorithm (maintenance 40%, community 25%, popularity 20%, risk 15%)
 - `lib/sarif.js` — SARIF 2.1.0 output generator for GitHub Code Scanning
+- `lib/outdated.js` — libyear metric: reads package-lock.json, computes version drift
+- `lib/osv.js` — CVE check via OSV.dev API (zero deps, raw HTTPS POST)
 - `lib/fetcher.js` — HTTP client with retry logic, 429/5xx handling, redirect following
-- `lib/reporter.js` — colored terminal output with score bars
+- `lib/reporter.js` — colored terminal output with score bars, drift/vuln info
 - `bin/scan.js` — CLI entry point, config file loading, flag parsing
 
 Package exports:
 - `require('oss-health-scan')` → `lib/api.js` (scanPackages, scanPackageJson)
 - `require('oss-health-scan/scoring')` → `lib/scoring.js`
 - `require('oss-health-scan/sarif')` → `lib/sarif.js`
+- `require('oss-health-scan/outdated')` → `lib/outdated.js`
+- `require('oss-health-scan/osv')` → `lib/osv.js`
 
 ## GitHub Action
 

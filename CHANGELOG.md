@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented here.
 
+## [1.3.0] — 2026-03-20
+
+### Added
+- **`--outdated` flag**: Shows installed vs latest versions with libyear metric and drift classification (major/minor/patch)
+- **`--vulns` flag**: Checks OSV.dev for known vulnerabilities (CVEs) per package — zero dependencies
+- **OSV.dev integration** (`lib/osv.js`): POST to `api.osv.dev/v1/query`, CVSS v3 severity parsing, vulnerability summarization
+- **Libyear metric** (`lib/outdated.js`): Reads `package-lock.json` (v6 + v7+), parses semver, estimates version age
+- **Enhanced terminal report**: Per-package drift info, vulnerability counts with severity breakdown
+- **Enhanced Markdown output**: Conditional Installed/Latest/Drift columns, CVE column with severity counts
+- **New exports**: `require('oss-health-scan/outdated')`, `require('oss-health-scan/osv')`
+- Tests: 55 passing (up from 31) — new suites for outdated, OSV, severity parsing
+
+### Changed
+- `scanPackages()` API accepts `outdated`, `vulns`, `dir` options
+- JSON output includes `outdatedSummary` when `--outdated` is used
+- Terminal report shows outdated/vulnerability summary in header
+- Description updated to reflect CVE + outdated capabilities
+
 ## [1.2.0] — 2026-03-20
 
 ### Added

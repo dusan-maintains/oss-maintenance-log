@@ -35,6 +35,29 @@ function scoreBar(score, c) {
   return color + '█'.repeat(filled) + c.dim + '░'.repeat(empty) + c.reset;
 }
 
+function printExtras(r, c) {
+  // Drift line
+  if (r.drift && r.drift !== 'up-to-date' && r.installedVersion) {
+    const driftColor = r.drift === 'major' ? c.red : r.drift === 'minor' ? c.yellow : c.dim;
+    process.stdout.write(`  ${' '.repeat(35)} ${c.dim}installed: ${r.installedVersion} → latest: ${r.latest}${c.reset} ${driftColor}[${r.drift}]${c.reset}`);
+    if (r.libyear > 0) process.stdout.write(` ${c.dim}~${r.libyear} libyear${c.reset}`);
+    process.stdout.write('\n');
+  }
+  // Vulnerability line
+  if (r.vulns && r.vulns.count > 0) {
+    const parts = [];
+    if (r.vulns.critical > 0) parts.push(`${c.bgRed}${c.white} ${r.vulns.critical} CRITICAL ${c.reset}`);
+    if (r.vulns.high > 0) parts.push(`${c.red}${r.vulns.high} HIGH${c.reset}`);
+    if (r.vulns.moderate > 0) parts.push(`${c.yellow}${r.vulns.moderate} MODERATE${c.reset}`);
+    if (r.vulns.low > 0) parts.push(`${c.dim}${r.vulns.low} LOW${c.reset}`);
+    process.stdout.write(`  ${' '.repeat(35)} ${c.red}🛡️  ${r.vulns.count} vuln(s):${c.reset} ${parts.join(' ')}`);
+    if (r.vulns.ids.length > 0 && r.vulns.ids.length <= 3) {
+      process.stdout.write(` ${c.dim}${r.vulns.ids.join(', ')}${c.reset}`);
+    }
+    process.stdout.write('\n');
+  }
+}
+
 function printReport(results, useColor) {
   const c = useColor ? C : new Proxy({}, { get: () => '' });
 
@@ -60,6 +83,32 @@ function printReport(results, useColor) {
     process.stdout.write(`  ${c.dim}● Errors: ${errors.length}${c.reset}\n`);
   }
 
+  // Outdated summary
+  const outdatedPkgs = results.filter(r => r.drift && r.drift !== 'up-to-date');
+  if (outdatedPkgs.length > 0) {
+    const totalLibyear = results.reduce((s, r) => s + (r.libyear || 0), 0);
+    const majorCount = outdatedPkgs.filter(r => r.drift === 'major').length;
+    const minorCount = outdatedPkgs.filter(r => r.drift === 'minor').length;
+    const patchCount = outdatedPkgs.filter(r => r.drift === 'patch').length;
+    process.stdout.write(`  ${c.cyan}⏳ Outdated: ${outdatedPkgs.length}${c.reset}`);
+    if (majorCount) process.stdout.write(` ${c.red}(${majorCount} major)${c.reset}`);
+    if (minorCount) process.stdout.write(` ${c.yellow}(${minorCount} minor)${c.reset}`);
+    if (patchCount) process.stdout.write(` ${c.dim}(${patchCount} patch)${c.reset}`);
+    process.stdout.write(`  ${c.dim}total libyear: ${totalLibyear.toFixed(1)}${c.reset}\n`);
+  }
+
+  // Vulnerability summary
+  const vulnPkgs = results.filter(r => r.vulns && r.vulns.count > 0);
+  if (vulnPkgs.length > 0) {
+    const totalVulns = vulnPkgs.reduce((s, r) => s + r.vulns.count, 0);
+    const critVulns = vulnPkgs.reduce((s, r) => s + r.vulns.critical, 0);
+    const highVulns = vulnPkgs.reduce((s, r) => s + r.vulns.high, 0);
+    process.stdout.write(`  ${c.red}🛡️  Vulnerabilities: ${totalVulns} in ${vulnPkgs.length} packages${c.reset}`);
+    if (critVulns) process.stdout.write(` ${c.bgRed}${c.white} ${critVulns} CRITICAL ${c.reset}`);
+    if (highVulns) process.stdout.write(` ${c.red} ${highVulns} HIGH${c.reset}`);
+    process.stdout.write('\n');
+  }
+
   // Critical section
   if (critical.length > 0) {
     process.stdout.write(`\n  ${c.bgRed}${c.white}${c.bold} 🔴 CRITICAL ${c.reset}\n\n`);
@@ -70,6 +119,7 @@ function printReport(results, useColor) {
       else if (r.daysSincePush) process.stdout.write(`  ${c.dim}last push ${r.daysSincePush}d ago${c.reset}`);
       if (r.downloads) process.stdout.write(`  ${c.dim}${fmt(r.downloads)}/wk${c.reset}`);
       process.stdout.write('\n');
+      printExtras(r, c);
     }
   }
 
@@ -82,6 +132,7 @@ function printReport(results, useColor) {
       if (r.daysSincePush) process.stdout.write(`  ${c.dim}last push ${r.daysSincePush}d ago${c.reset}`);
       if (r.downloads) process.stdout.write(`  ${c.dim}${fmt(r.downloads)}/wk${c.reset}`);
       process.stdout.write('\n');
+      printExtras(r, c);
     }
   }
 
@@ -92,6 +143,7 @@ function printReport(results, useColor) {
       process.stdout.write(`  ${pad(r.name, 35)} ${scoreBar(r.health_score, c)} ${c.green}${pad(String(r.health_score), 3)}/100${c.reset}`);
       if (r.downloads) process.stdout.write(`  ${c.dim}${fmt(r.downloads)}/wk${c.reset}`);
       process.stdout.write('\n');
+      printExtras(r, c);
     }
   }
 

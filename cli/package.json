@@ -1,12 +1,14 @@
 {
   "name": "oss-health-scan",
-  "version": "1.2.0",
-  "description": "Scan your package.json for abandoned, unmaintained, or unhealthy npm dependencies. Get health scores (0-100) for every dependency. SARIF output for GitHub Code Scanning. Zero external dependencies.",
+  "version": "1.3.0",
+  "description": "Scan npm dependencies for abandoned packages, outdated versions (libyear), and known CVEs (OSV.dev). Health scores 0-100, SARIF for GitHub Code Scanning, zero dependencies.",
   "main": "./lib/api.js",
   "exports": {
     ".": "./lib/api.js",
     "./scoring": "./lib/scoring.js",
-    "./sarif": "./lib/sarif.js"
+    "./sarif": "./lib/sarif.js",
+    "./outdated": "./lib/outdated.js",
+    "./osv": "./lib/osv.js"
   },
   "bin": {
     "oss-health-scan": "./bin/scan.js"
@@ -24,7 +26,12 @@
     "scanner",
     "supply-chain",
     "deprecated",
-    "dead-packages"
+    "dead-packages",
+    "outdated",
+    "libyear",
+    "cve",
+    "osv",
+    "vulnerability"
   ],
   "author": "dusan-maintains",
   "license": "MIT",
