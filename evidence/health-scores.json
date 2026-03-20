@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-19T19:59:26Z",
+  "generated_at_utc": "2026-03-20T05:09:35Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3918,
+          "open_issues": 3938,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72719,
+      "stars": 72741,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1525.0,
+          "days_since_push": 1526.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -199,7 +199,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3685,
+      "stars": 3686,
       "npm_downloads_last_week": 1188607,
       "status_label": "Open Backlog"
     },
@@ -222,7 +222,7 @@
           "weight": 0.25,
           "score": 8.76,
           "stars_score": 8.21,
-          "forks_score": 9.31
+          "forks_score": 9.32
         },
         "popularity": {
           "weight": 0.2,
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 8.5,
           "days_since_push": 0.0,
-          "open_issues": 73,
+          "open_issues": 83,
           "open_tracked_prs": 0
         }
       },
-      "stars": 1915,
+      "stars": 1919,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.6,
+      "health_score": 74.5,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.44,
-          "push_recency": 9.31,
+          "score": 6.43,
+          "push_recency": 9.3,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
