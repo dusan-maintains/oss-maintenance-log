@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-21T19:14:29Z",
+  "generated_at_utc": "2026-03-22T05:14:26Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 56.7,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.33,
-          "push_recency": 10.0,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3937,
+          "open_issues": 3924,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72777,
+      "stars": 72782,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -72,7 +72,7 @@
           "weight": 0.2,
           "score": 4.76,
           "download_score": 4.76,
-          "downloads_last_week": 713
+          "downloads_last_week": 719
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 713,
+      "npm_downloads_last_week": 719,
       "status_label": "Maintainer Needed"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 51.0,
+      "health_score": 51.1,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,20 +109,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.48,
-          "download_score": 5.48,
-          "downloads_last_week": 1933
+          "score": 5.52,
+          "download_score": 5.52,
+          "downloads_last_week": 2053
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1527.0,
+          "days_since_push": 1528.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 1933,
+      "npm_downloads_last_week": 2053,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.75,
-          "download_score": 6.75,
-          "downloads_last_week": 11294
+          "score": 6.76,
+          "download_score": 6.76,
+          "downloads_last_week": 11361
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2613,
-      "npm_downloads_last_week": 11294,
+      "npm_downloads_last_week": 11361,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -187,9 +187,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.68,
-          "download_score": 9.68,
-          "downloads_last_week": 644642
+          "score": 9.67,
+          "download_score": 9.67,
+          "downloads_last_week": 637611
         },
         "risk": {
           "weight": 0.15,
@@ -200,7 +200,7 @@
         }
       },
       "stars": 3686,
-      "npm_downloads_last_week": 644642,
+      "npm_downloads_last_week": 637611,
       "status_label": "Open Backlog"
     },
     {
@@ -234,7 +234,7 @@
           "weight": 0.15,
           "score": 8.5,
           "days_since_push": 0.0,
-          "open_issues": 75,
+          "open_issues": 74,
           "open_tracked_prs": 0
         }
       },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.41,
-          "push_recency": 9.24,
+          "push_recency": 9.23,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,20 +265,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 8.38,
-          "download_score": 8.38,
-          "downloads_last_week": 106428
+          "score": 8.36,
+          "download_score": 8.36,
+          "downloads_last_week": 104033
         },
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 20.0,
+          "days_since_push": 21.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
       },
-      "stars": 2166,
-      "npm_downloads_last_week": 106428,
+      "stars": 2167,
+      "npm_downloads_last_week": 104033,
       "status_label": "Maintainer Gap"
     }
   ]

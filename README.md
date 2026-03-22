@@ -1,6 +1,6 @@
 # OSS Maintenance Log
 
-> <!-- TAGLINE:START -->Contributing to 7 open-source packages — **765k npm downloads/week** across tracked ecosystem.<!-- TAGLINE:END -->
+> <!-- TAGLINE:START -->Contributing to 7 open-source packages — **755.8k npm downloads/week** across tracked ecosystem.<!-- TAGLINE:END -->
 
 [![⭐ Star if useful](https://img.shields.io/badge/⭐-Star_if_useful-ffd700?style=for-the-badge)](https://github.com/dusan-maintains/oss-maintenance-log/stargazers)
 [![npm](https://img.shields.io/npm/v/oss-health-scan?style=for-the-badge&color=cb3837&label=npm)](https://www.npmjs.com/package/oss-health-scan)
@@ -11,7 +11,7 @@
 <!-- RUN_STATUS:END -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
-[![Tracked Ecosystem](https://img.shields.io/badge/tracked%20ecosystem-765k%2B-brightgreen.svg)](#-live-data)
+[![Tracked Ecosystem](https://img.shields.io/badge/tracked%20ecosystem-755.8k%2B-brightgreen.svg)](#-live-data)
 [![Open PRs](https://img.shields.io/badge/upstream%20PRs-8%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
@@ -147,14 +147,14 @@ Config-driven PowerShell + GitHub Actions that automatically:
 |---------|-------|----------|--------|--------|--------|
 | [grafana/grafana](https://github.com/grafana/grafana) | 72.8k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 1.9k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 11.3k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 1.9k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 106.4k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 644.6k | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 713 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 11.4k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 2.1k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 104k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 637.6k | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 719 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->83.8k stars · 765k downloads/week across tracked projects · refreshed 03/21/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->83.8k stars · 755.8k downloads/week across tracked projects · refreshed 03/22/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
