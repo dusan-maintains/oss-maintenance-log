@@ -1,68 +1,68 @@
 {
-  "generated_at_utc": "2026-03-24T05:26:42Z",
-  "data_points": 27,
+  "generated_at_utc": "2026-03-24T08:09:21Z",
+  "data_points": 28,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
-      "current_score": 74.1,
-      "score_7d_ago": null,
+      "current_score": 74.7,
+      "score_7d_ago": 74.6,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 0.10000000000000853,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "grafana/grafana",
       "current_score": 48.1,
-      "score_7d_ago": null,
+      "score_7d_ago": 48.1,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 0.0,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "Hellenic/react-hexgrid",
-      "current_score": 49.0,
-      "score_7d_ago": null,
+      "current_score": 49.7,
+      "score_7d_ago": 49.6,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 0.10000000000000142,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "jkbrzt/rrule",
-      "current_score": 59.6,
-      "score_7d_ago": null,
+      "current_score": 59.8,
+      "score_7d_ago": 59.8,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 0.0,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "kylefox/jquery-modal",
-      "current_score": 55.7,
-      "score_7d_ago": null,
+      "current_score": 56.3,
+      "score_7d_ago": 56.0,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 0.29999999999999716,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "kylefox/jquery-tablesort",
-      "current_score": 51.5,
-      "score_7d_ago": null,
+      "current_score": 53.4,
+      "score_7d_ago": 52.0,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": 1.3999999999999986,
       "delta_30d": null,
       "trend": "stable"
     },
     {
       "repo": "lingdojo/kana-dojo",
       "current_score": 59.2,
-      "score_7d_ago": null,
+      "score_7d_ago": 61.2,
       "score_30d_ago": null,
-      "delta_7d": null,
+      "delta_7d": -2.0,
       "delta_30d": null,
       "trend": "stable"
     }
