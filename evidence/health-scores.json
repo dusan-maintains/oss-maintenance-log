@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-03-23T20:03:19Z",
+  "generated_at_utc": "2026-03-24T05:26:42Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 56.7,
     "critical": 0,
-    "warning": 5,
-    "healthy": 2
+    "warning": 6,
+    "healthy": 1
   },
   "scores": [
     {
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3932,
+          "open_issues": 3931,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72809,
+      "stars": 72780,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -52,7 +52,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 48.5,
+      "health_score": 49.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 4.78,
-          "download_score": 4.78,
-          "downloads_last_week": 737
+          "score": 5.0,
+          "download_score": 5.0,
+          "downloads_last_week": 1001
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 737,
+      "npm_downloads_last_week": 1001,
       "status_label": "Maintainer Needed"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 51.0,
+      "health_score": 51.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,20 +109,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.49,
-          "download_score": 5.49,
-          "downloads_last_week": 1967
+          "score": 5.75,
+          "download_score": 5.75,
+          "downloads_last_week": 2834
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1529.0,
+          "days_since_push": 1530.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 1967,
+      "npm_downloads_last_week": 2834,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -130,7 +130,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 55.1,
+      "health_score": 55.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.76,
-          "download_score": 6.76,
-          "downloads_last_week": 11359
+          "score": 7.08,
+          "download_score": 7.08,
+          "downloads_last_week": 17697
         },
         "risk": {
           "weight": 0.15,
@@ -161,15 +161,54 @@
         }
       },
       "stars": 2613,
-      "npm_downloads_last_week": 11359,
+      "npm_downloads_last_week": 17697,
       "status_label": "Maintainers Wanted"
+    },
+    {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "package": null,
+      "health_score": 59.2,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.82,
+          "stars_score": 8.24,
+          "forks_score": 9.41
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 7.0,
+          "days_since_push": 0.0,
+          "open_issues": 109,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 1975,
+      "npm_downloads_last_week": 0,
+      "status_label": "Merged"
     },
     {
       "owner": "jkbrzt",
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.1,
+      "health_score": 59.6,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -187,9 +226,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.67,
-          "download_score": 9.67,
-          "downloads_last_week": 630456
+          "score": 9.93,
+          "download_score": 9.93,
+          "downloads_last_week": 912635
         },
         "risk": {
           "weight": 0.15,
@@ -200,60 +239,21 @@
         }
       },
       "stars": 3687,
-      "npm_downloads_last_week": 630456,
+      "npm_downloads_last_week": 912635,
       "status_label": "Open Backlog"
-    },
-    {
-      "owner": "lingdojo",
-      "repo": "kana-dojo",
-      "repo_url": "https://github.com/lingdojo/kana-dojo",
-      "package": null,
-      "health_score": 61.5,
-      "risk_level": "healthy",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 8.82,
-          "stars_score": 8.24,
-          "forks_score": 9.4
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 8.5,
-          "days_since_push": 0.0,
-          "open_issues": 69,
-          "open_tracked_prs": 0
-        }
-      },
-      "stars": 1971,
-      "npm_downloads_last_week": 0,
-      "status_label": "Merged"
     },
     {
       "owner": "extrabacon",
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 73.7,
+      "health_score": 74.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.39,
-          "push_recency": 9.17,
+          "push_recency": 9.16,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 8.39,
-          "download_score": 8.39,
-          "downloads_last_week": 108421
+          "score": 8.62,
+          "download_score": 8.62,
+          "downloads_last_week": 149503
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2167,
-      "npm_downloads_last_week": 108421,
+      "npm_downloads_last_week": 149503,
       "status_label": "Maintainer Gap"
     }
   ]
