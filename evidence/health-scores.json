@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-25T08:08:32Z",
+  "generated_at_utc": "2026-03-25T16:21:45Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3925,
+          "open_issues": 3924,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72797,
+      "stars": 72801,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 706.0,
+          "days_since_push": 707.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.84,
+          "score": 8.85,
           "stars_score": 8.25,
-          "forks_score": 9.43
+          "forks_score": 9.45
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 122,
+          "open_issues": 114,
           "open_tracked_prs": 0
         }
       },
-      "stars": 1991,
+      "stars": 1997,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -208,13 +208,13 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.8,
+      "health_score": 59.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.62,
-          "push_recency": 0.87,
+          "push_recency": 0.86,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -228,7 +228,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1433741
+          "downloads_last_week": 1441684
         },
         "risk": {
           "weight": 0.15,
@@ -239,7 +239,7 @@
         }
       },
       "stars": 3687,
-      "npm_downloads_last_week": 1433741,
+      "npm_downloads_last_week": 1441684,
       "status_label": "Open Backlog"
     },
     {
@@ -253,21 +253,21 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.37,
-          "push_recency": 9.12,
+          "push_recency": 9.1,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
         "community": {
           "weight": 0.25,
-          "score": 7.73,
+          "score": 7.74,
           "stars_score": 8.34,
-          "forks_score": 7.12
+          "forks_score": 7.13
         },
         "popularity": {
           "weight": 0.2,
-          "score": 8.91,
-          "download_score": 8.91,
-          "downloads_last_week": 222042
+          "score": 8.9,
+          "download_score": 8.9,
+          "downloads_last_week": 220290
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2167,
-      "npm_downloads_last_week": 222042,
+      "npm_downloads_last_week": 220290,
       "status_label": "Maintainer Gap"
     }
   ]
