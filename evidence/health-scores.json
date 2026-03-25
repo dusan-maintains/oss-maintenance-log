@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-24T20:03:42Z",
+  "generated_at_utc": "2026-03-25T05:26:38Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3928,
+          "open_issues": 3925,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72791,
+      "stars": 72795,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1530.0,
+          "days_since_push": 1531.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -169,7 +169,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 59.2,
+      "health_score": 59.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.83,
-          "stars_score": 8.24,
-          "forks_score": 9.42
+          "score": 8.84,
+          "stars_score": 8.25,
+          "forks_score": 9.43
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 113,
+          "open_issues": 114,
           "open_tracked_prs": 0
         }
       },
-      "stars": 1984,
+      "stars": 1989,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.7,
+      "health_score": 74.6,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.38,
-          "push_recency": 9.13,
+          "score": 6.37,
+          "push_recency": 9.12,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
