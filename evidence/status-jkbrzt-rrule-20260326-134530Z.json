@@ -1,0 +1,40 @@
+﻿{
+    "generated_at_utc":  "2026-03-26T13:45:30Z",
+    "repo":  {
+                 "owner":  "jkbrzt",
+                 "name":  "rrule",
+                 "html_url":  "https://github.com/jkbrzt/rrule",
+                 "stars":  3689,
+                 "forks":  545,
+                 "open_issues":  211,
+                 "pushed_at":  "2024-06-27T17:52:15Z"
+             },
+    "npm":  {
+                "package":  "rrule",
+                "downloads_last_week":  1456871,
+                "start":  "2026-03-19",
+                "end":  "2026-03-25"
+            },
+    "tracked_prs":  [
+                        {
+                            "number":  664,
+                            "title":  "fix: handle WeekdayStr arrays when serializing BYDAY",
+                            "state":  "open",
+                            "html_url":  "https://github.com/jkbrzt/rrule/pull/664",
+                            "head_label":  "dusan-maintains:maintenance/fix-weekdaystr-serialization",
+                            "head_sha":  "c5ae606993a60b1ee43047b4ccbc07e60b5ac59a",
+                            "base_ref":  "master",
+                            "draft":  false,
+                            "mergeable_state":  "unstable",
+                            "updated_at":  "2026-02-27T08:06:27Z",
+                            "created_at":  "2026-02-27T07:52:51Z",
+                            "merged_at":  null,
+                            "comments":  1,
+                            "review_comments":  0,
+                            "commits":  1,
+                            "additions":  34,
+                            "deletions":  5,
+                            "changed_files":  2
+                        }
+                    ]
+}

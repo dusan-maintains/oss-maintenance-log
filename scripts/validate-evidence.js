@@ -50,8 +50,7 @@ function validate(data, schema, keyPath) {
 
   // Array items (recursive)
   if (schema.items && Array.isArray(data)) {
-    const limit = Math.min(data.length, 5); // validate first 5 items to keep output manageable
-    for (let i = 0; i < limit; i++) {
+    for (let i = 0; i < data.length; i++) {
       errors.push(...validate(data[i], schema.items, `${keyPath}[${i}]`));
     }
   }

@@ -7,6 +7,12 @@ param(
 . (Join-Path $PSScriptRoot "common.ps1")
 Ensure-Directory -Path $OutDir
 
+$trendUp = Get-UiGlyph -Name "trend-up"
+$trendDown = Get-UiGlyph -Name "trend-down"
+$trendFlat = Get-UiGlyph -Name "trend-flat"
+$delta = Get-UiGlyph -Name "delta"
+$emDash = Get-UiGlyph -Name "emdash"
+
 $healthPath = Join-Path $OutDir "health-scores.json"
 if (-not (Test-Path $healthPath)) {
   Write-Warning "health-scores.json not found. Run compute-health-scores.ps1 first."
@@ -19,7 +25,10 @@ $historyPath = Join-Path $OutDir "health-history.json"
 # Load existing history
 $history = @()
 if (Test-Path $historyPath) {
-  $history = @(Get-Content $historyPath -Raw | ConvertFrom-Json)
+  $historyRaw = Get-Content $historyPath -Raw | ConvertFrom-Json
+  if ($null -ne $historyRaw) {
+    $history = @($historyRaw | ForEach-Object { $_ })
+  }
 }
 
 # Append current snapshot
@@ -41,12 +50,14 @@ $history += $entry
 $cutoff = ([DateTimeOffset]::UtcNow).AddDays(-$MaxHistoryDays).UtcDateTime
 $history = @($history | Where-Object {
   try {
-    $ts = (Convert-StringToUtcDateTime -Value $_.timestamp)
+    $ts = (Convert-StringToUtcDateTime -Value ([string]$_.timestamp))
     return $ts -ge $cutoff
   } catch {
     return $true
   }
 })
+
+$historyByTime = @($history | Sort-Object -Property { Convert-StringToUtcDateTime -Value ([string]$_.timestamp) })
 
 # Compute trends (compare latest to 7-day-ago and 30-day-ago snapshots)
 $now = ([DateTimeOffset]::UtcNow).UtcDateTime
@@ -60,8 +71,8 @@ foreach ($repo in $repos) {
   $score7d = $null
   $score30d = $null
 
-  foreach ($h in ($history | Sort-Object { Convert-StringToUtcDateTime -Value $_.timestamp } -Descending)) {
-    $ts = Convert-StringToUtcDateTime -Value $h.timestamp
+  foreach ($h in ($historyByTime | Sort-Object -Property { Convert-StringToUtcDateTime -Value ([string]$_.timestamp) } -Descending)) {
+    $ts = Convert-StringToUtcDateTime -Value ([string]$h.timestamp)
     $daysAgo = ($now - $ts).TotalDays
 
     $repoEntry = $h.scores | Where-Object { $_.repo -eq $repo } | Select-Object -First 1
@@ -102,7 +113,7 @@ Set-Content -Path $historyPath -Value ($history | ConvertTo-Json -Depth 10) -Enc
 $trendOutput = [PSCustomObject]@{
   generated_at_utc = $now.ToString("yyyy-MM-ddTHH:mm:ssZ")
   data_points = $history.Count
-  oldest_snapshot = if ($history.Count -gt 0) { $history[0].timestamp } else { $null }
+  oldest_snapshot = if ($historyByTime.Count -gt 0) { $historyByTime[0].timestamp } else { $null }
   trends = $trends
 }
 
@@ -116,19 +127,23 @@ $lines += ""
 $lines += "Generated: $($trendOutput.generated_at_utc)"
 $lines += "Data points: $($trendOutput.data_points) (oldest: $($trendOutput.oldest_snapshot))"
 $lines += ""
-$lines += "| Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |"
+$lines += "| Package | Current | 7d ago | $delta 7d | 30d ago | $delta 30d | Trend |"
 $lines += "|---|---|---|---|---|---|---|"
 
 foreach ($t in ($trends | Sort-Object current_score)) {
   $icon = switch ($t.trend) {
-    "improving" { "📈" }
-    "declining" { "📉" }
-    "stable"    { "➡️" }
+    "improving" { $trendUp }
+    "declining" { $trendDown }
+    "stable"    { $trendFlat }
   }
-  $d7 = if ($null -ne $t.delta_7d) { "{0:+0.0;-0.0;0}" -f $t.delta_7d } else { "—" }
-  $d30 = if ($null -ne $t.delta_30d) { "{0:+0.0;-0.0;0}" -f $t.delta_30d } else { "—" }
-  $s7 = if ($null -ne $t.score_7d_ago) { $t.score_7d_ago } else { "—" }
-  $s30 = if ($null -ne $t.score_30d_ago) { $t.score_30d_ago } else { "—" }
+  $d7 = if ($null -ne $t.delta_7d) {
+    [string]::Format([System.Globalization.CultureInfo]::InvariantCulture, "{0:+0.0;-0.0;0}", [double]$t.delta_7d)
+  } else { $emDash }
+  $d30 = if ($null -ne $t.delta_30d) {
+    [string]::Format([System.Globalization.CultureInfo]::InvariantCulture, "{0:+0.0;-0.0;0}", [double]$t.delta_30d)
+  } else { $emDash }
+  $s7 = if ($null -ne $t.score_7d_ago) { $t.score_7d_ago } else { $emDash }
+  $s30 = if ($null -ne $t.score_30d_ago) { $t.score_30d_ago } else { $emDash }
   $lines += "| $($t.repo) | **$($t.current_score)** | $s7 | $d7 | $s30 | $d30 | $icon $($t.trend) |"
 }
 

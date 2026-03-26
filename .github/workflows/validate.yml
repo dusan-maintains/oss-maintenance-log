@@ -18,6 +18,17 @@ jobs:
         shell: pwsh
         run: ./scripts/validate-repo.ps1
 
+  validate-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate configuration and scripts in Windows PowerShell
+        shell: powershell
+        run: ./scripts/validate-repo.ps1
+
   test-pester:
     runs-on: ubuntu-latest
 

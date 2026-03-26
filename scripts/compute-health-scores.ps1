@@ -6,13 +6,17 @@ param(
 . (Join-Path $PSScriptRoot "common.ps1")
 Ensure-Directory -Path $OutDir
 
-# ── Scoring weights ──────────────────────────────────────────────
+$redCircle = Get-UiGlyph -Name "red-circle"
+$yellowCircle = Get-UiGlyph -Name "yellow-circle"
+$greenCircle = Get-UiGlyph -Name "green-circle"
+
+# -- Scoring weights ----------------------------------------------
 $W_MAINTENANCE = 0.40
 $W_COMMUNITY   = 0.25
 $W_POPULARITY  = 0.20
 $W_RISK        = 0.15
 
-# ── Helper: log-scaled score 0-10 ────────────────────────────────
+# -- Helper: log-scaled score 0-10 --------------------------------
 function Get-LogScore {
   param([double]$Value, [double]$Scale = 1000)
   if ($Value -le 0) { return 0 }
@@ -20,7 +24,7 @@ function Get-LogScore {
   return [Math]::Min([Math]::Round($raw, 2), 10)
 }
 
-# ── Helper: linear decay 0-10, higher is better ─────────────────
+# -- Helper: linear decay 0-10, higher is better ------------------
 function Get-DecayScore {
   param([double]$DaysSinceEvent, [double]$HalfLifeDays = 180)
   if ($DaysSinceEvent -le 0) { return 10 }
@@ -28,7 +32,7 @@ function Get-DecayScore {
   return [Math]::Round([Math]::Max($score, 0), 2)
 }
 
-# ── Load ecosystem data ──────────────────────────────────────────
+# -- Load ecosystem data ------------------------------------------
 $ecoPath = Join-Path $OutDir "ecosystem-status.json"
 if (-not (Test-Path $ecoPath)) {
   Write-Warning "ecosystem-status.json not found. Run update-ecosystem-status.ps1 first."
@@ -37,7 +41,7 @@ if (-not (Test-Path $ecoPath)) {
 $eco = Get-Content $ecoPath -Raw | ConvertFrom-Json
 $now = ([DateTimeOffset]::UtcNow).UtcDateTime
 
-# ── Load SLA data ────────────────────────────────────────────────
+# -- Load SLA data ------------------------------------------------
 $slaFiles = Get-ChildItem -Path $OutDir -Filter "review-sla*.json" -ErrorAction SilentlyContinue
 $slaByRepo = @{}
 foreach ($f in $slaFiles) {
@@ -47,12 +51,12 @@ foreach ($f in $slaFiles) {
   } catch { continue }
 }
 
-# ── Compute per-project scores ───────────────────────────────────
+# -- Compute per-project scores -----------------------------------
 $scores = @()
 foreach ($p in $eco.projects) {
   $repoKey = "$($p.owner)/$($p.repo)"
 
-  # ── MAINTENANCE (40%) ──────────────────────────────────────────
+  # -- MAINTENANCE (40%) -----------------------------------------
   $daysSincePush = 9999
   if ($p.pushed_at) {
     try {
@@ -80,17 +84,17 @@ foreach ($p in $eco.projects) {
 
   $maintenanceScore = ($pushRecency + $issueRatio + $prResponseScore) / 3
 
-  # ── COMMUNITY (25%) ────────────────────────────────────────────
+  # -- COMMUNITY (25%) -------------------------------------------
   $starsScore = Get-LogScore -Value ([int]$p.stars) -Scale 10000
   $forksScore = Get-LogScore -Value ([int]$p.forks) -Scale 2000
   $communityScore = ($starsScore + $forksScore) / 2
 
-  # ── POPULARITY (20%) ───────────────────────────────────────────
+  # -- POPULARITY (20%) ------------------------------------------
   $downloads = [int]($p.npm_downloads_last_week)
   $downloadScore = Get-LogScore -Value $downloads -Scale 1000000
   $popularityScore = $downloadScore
 
-  # ── RISK (15%) — penalty-based ─────────────────────────────────
+  # -- RISK (15%) - penalty-based --------------------------------
   $riskBase = 10
 
   # Penalize long inactivity
@@ -108,7 +112,7 @@ foreach ($p in $eco.projects) {
 
   $riskScore = [Math]::Max($riskBase, 0)
 
-  # ── FINAL WEIGHTED SCORE ───────────────────────────────────────
+  # -- FINAL WEIGHTED SCORE --------------------------------------
   $raw = ($maintenanceScore * $W_MAINTENANCE +
           $communityScore   * $W_COMMUNITY +
           $popularityScore  * $W_POPULARITY +
@@ -161,7 +165,7 @@ foreach ($p in $eco.projects) {
   }
 }
 
-# ── Aggregate ────────────────────────────────────────────────────
+# -- Aggregate ----------------------------------------------------
 $avgScore = if ($scores.Count -gt 0) {
   [Math]::Round(($scores | ForEach-Object { $_.health_score } | Measure-Object -Average).Average, 1)
 } else { 0 }
@@ -182,11 +186,11 @@ $output = [PSCustomObject]@{
   scores = ($scores | Sort-Object health_score)
 }
 
-# ── Write JSON ───────────────────────────────────────────────────
+# -- Write JSON ---------------------------------------------------
 $jsonPath = Join-Path $OutDir "health-scores.json"
 Set-Content -Path $jsonPath -Value ($output | ConvertTo-Json -Depth 10) -Encoding utf8
 
-# ── Write Markdown ───────────────────────────────────────────────
+# -- Write Markdown -----------------------------------------------
 $lines = @()
 $lines += "# Package Health Scores"
 $lines += ""
@@ -204,9 +208,9 @@ $lines += "|---|---|---|---|---|---|---|---|"
 
 foreach ($s in ($scores | Sort-Object health_score)) {
   $icon = switch ($s.risk_level) {
-    "critical" { "🔴" }
-    "warning"  { "🟡" }
-    "healthy"  { "🟢" }
+    "critical" { $redCircle }
+    "warning"  { $yellowCircle }
+    "healthy"  { $greenCircle }
   }
   $lines += "| [$($s.owner)/$($s.repo)]($($s.repo_url)) | $icon **$($s.health_score)** | $($s.risk_level) | $($s.breakdown.maintenance.score) | $($s.breakdown.community.score) | $($s.breakdown.popularity.score) | $($s.npm_downloads_last_week) | $($s.stars) |"
 }
@@ -223,7 +227,7 @@ $lines += "| Risk | 15% | Inactivity penalties, issue backlog, unmerged PRs |"
 $mdPath = Join-Path $OutDir "health-scores.md"
 Set-Content -Path $mdPath -Value ($lines -join "`r`n") -Encoding utf8
 
-# ── Write SVG badges ─────────────────────────────────────────────
+# -- Write SVG badges ---------------------------------------------
 $badgeDir = Join-Path $OutDir "badges"
 Ensure-Directory -Path $badgeDir
 

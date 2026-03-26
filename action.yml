@@ -11,11 +11,11 @@ inputs:
     description: "GitHub token for API access (use secrets.GITHUB_TOKEN)"
     required: true
   config-file:
-    description: "Path to tracked-repositories.json config file"
+    description: "Workspace-relative path to tracked-repositories.json config file"
     required: false
     default: "config/tracked-repositories.json"
   evidence-dir:
-    description: "Directory to write evidence files into"
+    description: "Workspace-relative directory to write evidence files into"
     required: false
     default: "evidence"
   compute-health-scores:
@@ -45,10 +45,38 @@ runs:
       shell: pwsh
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
+        OSS_MAINTENANCE_LOG_WORKSPACE_ROOT: ${{ github.workspace }}
       run: |
-        $dir = "${{ inputs.evidence-dir }}"
-        $cfg = "${{ inputs.config-file }}"
-        ./scripts/update-all-evidence.ps1 -OutDir $dir -ConfigPath $cfg
+        $actionRoot = "${{ github.action_path }}"
+        $workspaceRoot = "${{ github.workspace }}"
+
+        $evidenceDirInput = "${{ inputs.evidence-dir }}"
+        $configFileInput = "${{ inputs.config-file }}"
+
+        if ([System.IO.Path]::IsPathRooted($evidenceDirInput)) {
+          throw "evidence-dir must be workspace-relative so generated README links stay valid."
+        }
+
+        $dir = Join-Path $workspaceRoot $evidenceDirInput
+
+        $cfg = if ([System.IO.Path]::IsPathRooted($configFileInput)) {
+          $configFileInput
+        } else {
+          Join-Path $workspaceRoot $configFileInput
+        }
+
+        $scriptArgs = @(
+          "-OutDir", $dir,
+          "-ConfigPath", $cfg,
+          "-ReadmePath", "README.md",
+          "-EvidencePathPrefix", $evidenceDirInput
+        )
+
+        if ("${{ inputs.compute-health-scores }}" -eq "false") {
+          $scriptArgs += "-SkipHealthScoring"
+        }
+
+        & (Join-Path $actionRoot "scripts/update-all-evidence.ps1") @scriptArgs
 
         # Export outputs for downstream steps
         $healthPath = Join-Path $dir "health-scores.json"
@@ -59,7 +87,7 @@ runs:
 
         if (Test-Path $healthPath) {
           $health = Get-Content $healthPath -Raw | ConvertFrom-Json
-          $scores = @($health.packages | Where-Object { $null -ne $_.health_score })
+          $scores = @($health.scores | Where-Object { $null -ne $_.health_score })
           $critical = @($scores | Where-Object { $_.health_score -lt 30 }).Count
           $avg = if ($scores.Count -gt 0) {
             [math]::Round(($scores | Measure-Object -Property health_score -Average).Average, 1)

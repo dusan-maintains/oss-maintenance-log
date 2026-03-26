@@ -1,5 +1,5 @@
 BeforeAll {
-  . (Join-Path $PSScriptRoot ".." "scripts" "common.ps1")
+  . (Join-Path (Join-Path (Join-Path $PSScriptRoot "..") "scripts") "common.ps1")
 }
 
 Describe "New-GitHubHeaders" {
@@ -29,6 +29,19 @@ Describe "Get-RepoRoot" {
     $root = Get-RepoRoot
     $root | Should -Not -BeNullOrEmpty
     (Test-Path (Join-Path $root "scripts")) | Should -Be $true
+  }
+
+  It "prefers OSS_MAINTENANCE_LOG_WORKSPACE_ROOT when set" {
+    $testRoot = Join-Path ([System.IO.Path]::GetTempPath()) "oss-root-$(Get-Random)"
+    New-Item -ItemType Directory -Path $testRoot | Out-Null
+
+    try {
+      $env:OSS_MAINTENANCE_LOG_WORKSPACE_ROOT = $testRoot
+      (Get-RepoRoot) | Should -Be $testRoot
+    } finally {
+      $env:OSS_MAINTENANCE_LOG_WORKSPACE_ROOT = ""
+      Remove-Item $testRoot -Recurse -Force
+    }
   }
 }
 
@@ -106,5 +119,16 @@ Describe "Convert-StringToUtcDateTime" {
 
   It "throws on invalid input" {
     { Convert-StringToUtcDateTime -Value "not-a-date" } | Should -Throw
+  }
+}
+
+Describe "Get-UiGlyph" {
+
+  It "returns the expected em dash glyph" {
+    (Get-UiGlyph -Name "emdash") | Should -Be ([char]::ConvertFromUtf32(0x2014))
+  }
+
+  It "returns the expected green circle glyph" {
+    (Get-UiGlyph -Name "green-circle") | Should -Be ([char]::ConvertFromUtf32(0x1F7E2))
   }
 }

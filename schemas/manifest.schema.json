@@ -8,7 +8,7 @@
     "schema_version": { "type": "number" },
     "run_started_at_utc": { "type": "string" },
     "run_completed_at_utc": { "type": "string" },
-    "run_status": { "type": "string", "enum": ["success", "partial", "failed"] },
+    "run_status": { "type": "string", "enum": ["success", "partial", "partial_success", "failed"] },
     "config_version": { "type": "number" },
     "summary": {
       "type": "object",

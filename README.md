@@ -257,10 +257,14 @@ jobs:
 ### GitHub Action (reusable)
 
 ```yaml
+- uses: actions/checkout@v4
+
 - uses: dusan-maintains/oss-maintenance-log@main
   id: health
   with:
-    github-token: ${{ secrets.GITHUB_TOKEN }}
+    github-token: ${{ github.token }}
+    config-file: config/tracked-repositories.json
+    evidence-dir: evidence
 
 - name: Fail on critical
   if: steps.health.outputs.critical-count > 0
@@ -277,7 +281,7 @@ jobs:
 - [Health Scores](./evidence/health-scores.md) — weighted 0-100 per package
 - [Ecosystem Status](./evidence/ecosystem-status.md) — aggregated snapshot
 - [Action Queue](./evidence/action-queue.md) — prioritized tasks
-- Per-repo SLA: [grafana](./evidence/review-sla-grafana.md) · [kana-dojo](./evidence/review-sla-kana-dojo.md) · [jquery-modal](./evidence/review-sla.md) · [tablesort](./evidence/review-sla-tablesort.md) · [python-shell](./evidence/review-sla-python-shell.md) · [rrule](./evidence/review-sla-rrule.md) · [react-hexgrid](./evidence/review-sla-react-hexgrid.md)
+- Per-repo SLA: [grafana](./evidence/review-sla-grafana.md) · [kana-dojo](./evidence/review-sla-kana-dojo.md) · [jquery-modal](./evidence/review-sla.md) · [jquery-tablesort](./evidence/review-sla-tablesort.md) · [python-shell](./evidence/review-sla-python-shell.md) · [rrule](./evidence/review-sla-rrule.md) · [react-hexgrid](./evidence/review-sla-react-hexgrid.md)
 <!-- LIVE_DATA:END -->
 
 ## Project Structure

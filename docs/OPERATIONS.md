@@ -8,6 +8,8 @@ Validation:
 ./scripts/validate-repo.ps1
 ```
 
+On Linux or macOS, run the same command under `pwsh`.
+
 Full refresh:
 
 ```powershell
@@ -21,6 +23,7 @@ Full refresh:
 
 ## Runtime Constraints
 
+- PowerShell source files are kept ASCII-safe so the scripts parse in Windows PowerShell 5.1 and PowerShell 7+.
 - Unauthenticated or lightly authenticated local runs can hit GitHub API rate limits.
 - The current refresh pipeline is polling-based and depends on public GitHub and npm APIs.
 - Generated JSON files are written with UTF-8 BOM because they are produced by PowerShell `Set-Content -Encoding utf8`.

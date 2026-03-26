@@ -2,6 +2,11 @@ $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 function Get-RepoRoot {
+  $override = $env:OSS_MAINTENANCE_LOG_WORKSPACE_ROOT
+  if (-not [string]::IsNullOrWhiteSpace($override) -and (Test-Path $override)) {
+    return (Resolve-Path -Path $override).Path
+  }
+
   return (Split-Path $PSScriptRoot -Parent)
 }
 
@@ -82,7 +87,7 @@ function Get-JsonWithFallback {
       $statusCode = [int]$_.Exception.Response.StatusCode
     }
 
-    # 403 may be rate-limit or proxy issue — let Python fallback try
+    # 403 may be rate-limit or proxy issue - let Python fallback try
     if ($null -ne $statusCode -and $statusCode -ge 400 -and $statusCode -lt 500 -and $statusCode -ne 403) {
       throw ("HTTP {0} from {1}" -f $statusCode, $Uri)
     }
@@ -184,4 +189,61 @@ function Convert-StringToUtcDateTime {
   )
 
   return ([DateTimeOffset]::Parse($Value)).UtcDateTime
+}
+
+function Get-UnicodeText {
+  param(
+    [Parameter(Mandatory = $true)]
+    [int[]]$CodePoints
+  )
+
+  return (-join ($CodePoints | ForEach-Object { [char]::ConvertFromUtf32($_) }))
+}
+
+function Get-UiGlyph {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Name
+  )
+
+  switch ($Name) {
+    "emdash"       { return (Get-UnicodeText -CodePoints @(0x2014)) }
+    "middot"       { return (Get-UnicodeText -CodePoints @(0x00B7)) }
+    "star"         { return (Get-UnicodeText -CodePoints @(0x2B50)) }
+    "microscope"   { return (Get-UnicodeText -CodePoints @(0x1F52C)) }
+    "chart"        { return (Get-UnicodeText -CodePoints @(0x1F4CA)) }
+    "arrow-right"  { return (Get-UnicodeText -CodePoints @(0x279C)) }
+    "warning"      { return (Get-UnicodeText -CodePoints @(0x26A0, 0xFE0F)) }
+    "check"        { return (Get-UnicodeText -CodePoints @(0x2705)) }
+    "green-circle" { return (Get-UnicodeText -CodePoints @(0x1F7E2)) }
+    "yellow-circle"{ return (Get-UnicodeText -CodePoints @(0x1F7E1)) }
+    "red-circle"   { return (Get-UnicodeText -CodePoints @(0x1F534)) }
+    "trend-up"     { return (Get-UnicodeText -CodePoints @(0x1F4C8)) }
+    "trend-down"   { return (Get-UnicodeText -CodePoints @(0x1F4C9)) }
+    "trend-flat"   { return (Get-UnicodeText -CodePoints @(0x27A1, 0xFE0F)) }
+    "delta"        { return (Get-UnicodeText -CodePoints @(0x0394)) }
+    default {
+      throw ("Unknown UI glyph '{0}'." -f $Name)
+    }
+  }
+}
+
+function Format-InvariantDate {
+  param(
+    [Parameter(Mandatory = $true)]
+    [datetime]$Value,
+    [string]$Format = "MM'/'dd'/'yyyy"
+  )
+
+  return $Value.ToString($Format, [System.Globalization.CultureInfo]::InvariantCulture)
+}
+
+function Format-InvariantNumber {
+  param(
+    [Parameter(Mandatory = $true)]
+    [double]$Value,
+    [string]$Format = "0.0"
+  )
+
+  return $Value.ToString($Format, [System.Globalization.CultureInfo]::InvariantCulture)
 }

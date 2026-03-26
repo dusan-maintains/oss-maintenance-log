@@ -1,5 +1,5 @@
 BeforeAll {
-  . (Join-Path $PSScriptRoot ".." "scripts" "common.ps1")
+  . (Join-Path (Join-Path (Join-Path $PSScriptRoot "..") "scripts") "common.ps1")
 
   function Get-LogScore {
     param([double]$Value, [double]$Scale = 1000)

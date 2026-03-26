@@ -1,10 +1,21 @@
 param(
   [string]$OutDir = "evidence",
-  [string]$ConfigPath = "config/tracked-repositories.json"
+  [string]$ConfigPath = "config/tracked-repositories.json",
+  [string]$ReadmePath = "README.md",
+  [string]$EvidencePathPrefix = "",
+  [switch]$SkipHealthScoring
 )
 
 $ErrorActionPreference = "Stop"
 . (Join-Path $PSScriptRoot "common.ps1")
+
+if ([string]::IsNullOrWhiteSpace($EvidencePathPrefix)) {
+  if ([System.IO.Path]::IsPathRooted($OutDir)) {
+    $EvidencePathPrefix = "evidence"
+  } else {
+    $EvidencePathPrefix = $OutDir
+  }
+}
 
 function New-StepResult {
   param(
@@ -220,11 +231,13 @@ $stepResults += Invoke-RefreshStep -Name "action_queue" -Scope "global" -Outputs
   & (Join-Path $PSScriptRoot "update-action-queue.ps1") -OutDir $OutDir
 }
 
-# ── Health scoring pipeline (depends on ecosystem data) ──────────
+# -- Health scoring pipeline (depends on ecosystem data) ----------
 
 $ecoJsonPath = Join-Path $OutDir "ecosystem-status.json"
 
-if (Test-Path $ecoJsonPath) {
+if ($SkipHealthScoring) {
+  $stepResults += New-StepResult -Name "health_scores" -Scope "global" -Status "skipped" -Message "Skipped because compute-health-scores is disabled."
+} elseif (Test-Path $ecoJsonPath) {
   $stepResults += Invoke-RefreshStep -Name "health_scores" -Scope "global" -Outputs @("health-scores.json", "health-scores.md", "badges/") -Action {
     & (Join-Path $PSScriptRoot "compute-health-scores.ps1") -OutDir $OutDir -ConfigPath $ConfigPath
   }
@@ -246,23 +259,30 @@ $stepResults += Invoke-RefreshStep -Name "alerts" -Scope "global" -Outputs @("al
   & (Join-Path $PSScriptRoot "check-alerts.ps1") -OutDir $OutDir
 }
 
-# ── README regeneration (depends on ecosystem + health + manifest) ─
+# -- README regeneration (depends on ecosystem + health + manifest) -
 
 # Write preliminary manifest so readme-stats can read freshness data
 $manifest = Write-Manifest -OutDir $OutDir -Config $config -RunStartedAtUtc $runStartedAtUtc -StepResults $stepResults
 
 if (Test-Path $ecoJsonPath) {
-  $stepResults += Invoke-RefreshStep -Name "readme_refresh" -Scope "global" -Outputs @("README.md") -Action {
-    & (Join-Path $PSScriptRoot "update-readme-stats.ps1") -EcoJson $ecoJsonPath -HealthJson $healthJsonPath -ManifestJson (Join-Path $OutDir "manifest.json") -ConfigPath $ConfigPath -ReadmePath "README.md"
+  $stepResults += Invoke-RefreshStep -Name "readme_refresh" -Scope "global" -Outputs @($ReadmePath) -Action {
+    & (Join-Path $PSScriptRoot "update-readme-stats.ps1") `
+      -EcoJson $ecoJsonPath `
+      -HealthJson $healthJsonPath `
+      -ManifestJson (Join-Path $OutDir "manifest.json") `
+      -ConfigPath $ConfigPath `
+      -ReadmePath $ReadmePath `
+      -EvidencePathPrefix $EvidencePathPrefix
   }
 } else {
   $stepResults += New-StepResult -Name "readme_refresh" -Scope "global" -Status "skipped" -Message "Skipped because ecosystem-status.json is unavailable."
 }
 
-# ── Final manifest (includes all steps) ──────────────────────────
+# -- Final manifest (includes all steps) --------------------------
 
 $manifest = Write-Manifest -OutDir $OutDir -Config $config -RunStartedAtUtc $runStartedAtUtc -StepResults $stepResults
 
 if ($manifest.run_status -ne "success") {
-  Write-Warning ("Refresh completed with status '{0}'. See evidence/manifest.json for details." -f $manifest.run_status)
+  $manifestPath = Join-Path $OutDir "manifest.json"
+  Write-Warning ("Refresh completed with status '{0}'. See {1} for details." -f $manifest.run_status, $manifestPath)
 }

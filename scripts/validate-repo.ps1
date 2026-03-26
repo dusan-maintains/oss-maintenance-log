@@ -32,6 +32,21 @@ $requiredDocs = @(
   "docs/ROADMAP.md"
 )
 
+$portabilityFailures = @()
+Get-ChildItem $PSScriptRoot -Filter "*.ps1" | ForEach-Object {
+  $lineNumber = 0
+  foreach ($line in (Get-Content $_.FullName)) {
+    $lineNumber++
+    if ($line -match '[^\x00-\x7F]') {
+      $portabilityFailures += "{0}:{1}: contains non-ASCII source text; keep PowerShell scripts ASCII-safe for Windows PowerShell 5.1 compatibility." -f $_.FullName, $lineNumber
+    }
+  }
+}
+
+if ($portabilityFailures.Count -gt 0) {
+  throw ("PowerShell portability validation failed:`n{0}" -f ($portabilityFailures -join "`n"))
+}
+
 $parseFailures = @()
 Get-ChildItem $PSScriptRoot -Filter "*.ps1" | ForEach-Object {
   $parseErrors = $null
@@ -96,7 +111,26 @@ $actionText = Get-Content $actionPath -Raw
 if ($actionText -notmatch "update-all-evidence\.ps1") {
   throw "action.yml must call update-all-evidence.ps1."
 }
+if ($actionText -notmatch "github\.action_path") {
+  throw "action.yml must resolve the orchestrator via github.action_path so the reusable action works from consumer repositories."
+}
+if ($actionText -match "health\.packages") {
+  throw "action.yml must not read health.packages; health-scores.json exposes the scores array."
+}
+if ($actionText -notmatch "health\.scores") {
+  throw "action.yml must derive outputs from health.scores."
+}
+if ($actionText -notmatch "OSS_MAINTENANCE_LOG_WORKSPACE_ROOT") {
+  throw "action.yml must set OSS_MAINTENANCE_LOG_WORKSPACE_ROOT for consumer-relative config and README resolution."
+}
+
+$validateWorkflowPath = Resolve-RepoPath -Path ".github/workflows/validate.yml"
+$validateWorkflowText = Get-Content $validateWorkflowPath -Raw
+if ($validateWorkflowText -notmatch "windows-latest") {
+  throw "validate.yml must include a windows-latest lane for PowerShell portability checks."
+}
 
 Write-Host ("Validated {0} repository definitions." -f $repositories.Count)
+Write-Host "PowerShell scripts are ASCII-safe for Windows PowerShell 5.1."
 Write-Host "All PowerShell scripts parsed successfully."
 Write-Host "README markers, workflow entrypoints, and required docs are aligned."
