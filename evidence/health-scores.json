@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-26T16:39:34Z",
+  "generated_at_utc": "2026-03-26T20:02:04Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,7 +39,7 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3921,
+          "open_issues": 3927,
           "open_tracked_prs": 1
         }
       },
@@ -169,7 +169,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 59.3,
+      "health_score": 59.4,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.87,
+          "score": 8.88,
           "stars_score": 8.26,
-          "forks_score": 9.48
+          "forks_score": 9.49
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 132,
+          "open_issues": 134,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2012,
+      "stars": 2017,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3689,
+      "stars": 3690,
       "npm_downloads_last_week": 1456871,
       "status_label": "Open Backlog"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.36,
-          "push_recency": 9.07,
+          "score": 6.35,
+          "push_recency": 9.06,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 25.0,
+          "days_since_push": 26.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
