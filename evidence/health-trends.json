@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-03-25T20:01:15Z",
-  "data_points": 34,
+  "generated_at_utc": "2026-03-26T05:53:57Z",
+  "data_points": 35,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -59,10 +59,10 @@
     },
     {
       "repo": "lingdojo/kana-dojo",
-      "current_score": 61.6,
+      "current_score": 59.3,
       "score_7d_ago": 61.3,
       "score_30d_ago": null,
-      "delta_7d": 0.30000000000000426,
+      "delta_7d": -2.0,
       "delta_30d": null,
       "trend": "stable"
     }
