@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-26T20:02:04Z",
+  "generated_at_utc": "2026-03-27T05:54:16Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3927,
+          "open_issues": 3937,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72819,
+      "stars": 72823,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1532.0,
+          "days_since_push": 1533.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -130,13 +130,13 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 56.3,
+      "health_score": 56.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.55,
-          "push_recency": 0.66,
+          "push_recency": 0.65,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 8.88,
           "stars_score": 8.26,
-          "forks_score": 9.49
+          "forks_score": 9.5
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 134,
+          "open_issues": 161,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2017,
+      "stars": 2022,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -233,7 +233,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 637.0,
+          "days_since_push": 638.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.6,
+      "health_score": 74.5,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.35,
-          "push_recency": 9.06,
+          "push_recency": 9.05,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
