@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-28T14:05:33Z",
+  "generated_at_utc": "2026-03-28T19:47:29Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.33,
-          "push_recency": 10.0,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3969,
+          "open_issues": 3972,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72827,
+      "stars": 72830,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 709.0,
+          "days_since_push": 710.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -169,7 +169,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 59.4,
+      "health_score": 59.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 8.91,
           "stars_score": 8.28,
-          "forks_score": 9.54
+          "forks_score": 9.55
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 132,
+          "open_issues": 137,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2051,
+      "stars": 2053,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
