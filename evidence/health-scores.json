@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-28T05:21:00Z",
+  "generated_at_utc": "2026-03-28T07:59:42Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.33,
-          "push_recency": 9.99,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3969,
+          "open_issues": 3968,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72822,
+      "stars": 72823,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -70,20 +70,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.52,
-          "download_score": 5.52,
-          "downloads_last_week": 2054
+          "score": 5.51,
+          "download_score": 5.51,
+          "downloads_last_week": 2011
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 604.0,
+          "days_since_push": 605.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 2054,
+      "npm_downloads_last_week": 2011,
       "status_label": "Maintainer Needed"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.71,
-          "download_score": 6.71,
-          "downloads_last_week": 10689
+          "score": 6.7,
+          "download_score": 6.7,
+          "downloads_last_week": 10495
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 10689,
+      "npm_downloads_last_week": 10495,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 150,
+          "open_issues": 147,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2042,
+      "stars": 2044,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -228,18 +228,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1444727
+          "downloads_last_week": 1463190
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 638.0,
+          "days_since_push": 639.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
       "stars": 3690,
-      "npm_downloads_last_week": 1444727,
+      "npm_downloads_last_week": 1463190,
       "status_label": "Open Backlog"
     },
     {
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.5,
+      "health_score": 74.4,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.34,
-          "push_recency": 9.02,
+          "push_recency": 9.01,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 8.89,
-          "download_score": 8.89,
-          "downloads_last_week": 215417
+          "score": 8.88,
+          "download_score": 8.88,
+          "downloads_last_week": 213927
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2167,
-      "npm_downloads_last_week": 215417,
+      "npm_downloads_last_week": 213927,
       "status_label": "Maintainer Gap"
     }
   ]
