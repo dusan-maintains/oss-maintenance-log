@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-28T07:59:42Z",
+  "generated_at_utc": "2026-03-28T14:05:33Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.3,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3968,
+          "open_issues": 3969,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72823,
+      "stars": 72827,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -52,13 +52,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 50.0,
+      "health_score": 49.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.66,
-          "push_recency": 0.98,
+          "push_recency": 0.97,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -130,7 +130,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 56.2,
+      "health_score": 56.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.35,
-          "download_score": 7.35,
-          "downloads_last_week": 25611
+          "score": 7.37,
+          "download_score": 7.37,
+          "downloads_last_week": 26288
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2614,
-      "npm_downloads_last_week": 25611,
+      "npm_downloads_last_week": 26288,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.9,
+          "score": 8.91,
           "stars_score": 8.28,
-          "forks_score": 9.53
+          "forks_score": 9.54
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 147,
+          "open_issues": 132,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2044,
+      "stars": 2051,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -214,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.62,
-          "push_recency": 0.86,
+          "push_recency": 0.85,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.34,
-          "push_recency": 9.01,
+          "score": 6.33,
+          "push_recency": 9.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
