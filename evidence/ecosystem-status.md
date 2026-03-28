@@ -1,20 +1,20 @@
 # Ecosystem Status
 
-Generated: 2026-03-27T19:55:01Z
+Generated: 2026-03-28T05:20:50Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 8
-- Total stars: 83951
-- Total forks: 16654
+- Total stars: 83944
+- Total forks: 16663
 - Total npm downloads last week: 1698498
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | Open | 72834 | 13612 | 0 | 1 | 1 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2037 | 1389 | 0 | 1 | 0 |
+| [grafana/grafana](https://github.com/grafana/grafana) | Open | 72822 | 13613 | 0 | 1 | 1 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2042 | 1397 | 0 | 1 | 0 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2614 | 652 | 25611 | 3 | 3 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 10689 | 1 | 1 |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2167 | 224 | 215417 | 1 | 1 |
