@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-18T16:17:33Z",
+  "generated_at_utc": "2026-03-29T13:21:14Z",
   "repo": {
     "owner": "Hellenic",
     "name": "react-hexgrid",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "react-hexgrid",
-    "downloads_last_week": 1492,
-    "start": "2026-03-10",
-    "end": "2026-03-16"
+    "downloads_last_week": 1998,
+    "start": "2026-03-22",
+    "end": "2026-03-28"
   },
   "tracked_prs": [
     {
@@ -25,7 +25,7 @@
       "head_sha": "cbfcc509f95f45d6f9a7060f599301996436adbe",
       "base_ref": "master",
       "draft": false,
-      "mergeable_state": "unstable",
+      "mergeable_state": "clean",
       "updated_at": "2026-02-27T08:14:45Z",
       "created_at": "2026-02-27T08:14:45Z",
       "merged_at": null,
