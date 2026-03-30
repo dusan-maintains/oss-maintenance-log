@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-03-30T08:01:25Z",
+  "generated_at_utc": "2026-03-30T14:03:29Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 59.2,
+    "average_health_score": 59.6,
     "critical": 0,
-    "warning": 5,
-    "healthy": 2
+    "warning": 4,
+    "healthy": 3
   },
   "scores": [
     {
@@ -126,45 +126,6 @@
       "status_label": "Maintainers Wanted"
     },
     {
-      "owner": "lingdojo",
-      "repo": "kana-dojo",
-      "repo_url": "https://github.com/lingdojo/kana-dojo",
-      "package": null,
-      "health_score": 59.6,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 8.96,
-          "stars_score": 8.31,
-          "forks_score": 9.62
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 7.0,
-          "days_since_push": 0.0,
-          "open_issues": 105,
-          "open_tracked_prs": 0
-        }
-      },
-      "stars": 2108,
-      "npm_downloads_last_week": 0,
-      "status_label": "Merged"
-    },
-    {
       "owner": "jkbrzt",
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
@@ -234,26 +195,65 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3939,
+          "open_issues": 3936,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72841,
+      "stars": 72845,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
+    },
+    {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "package": null,
+      "health_score": 61.9,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.98,
+          "stars_score": 8.32,
+          "forks_score": 9.65
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 8.5,
+          "days_since_push": 0.0,
+          "open_issues": 95,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 2133,
+      "npm_downloads_last_week": 0,
+      "status_label": "Merged"
     },
     {
       "owner": "extrabacon",
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.4,
+      "health_score": 74.3,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.31,
-          "push_recency": 8.94,
+          "push_recency": 8.93,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
