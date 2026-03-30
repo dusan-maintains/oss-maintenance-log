@@ -145,8 +145,8 @@ Config-driven PowerShell + GitHub Actions that automatically:
 <!-- TRACKED_PROJECTS:START -->
 | Project | Stars | npm/week | Status | Health | My PRs |
 |---------|-------|----------|--------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 72.8k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 2.1k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
+| [grafana/grafana](https://github.com/grafana/grafana) | 72.9k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 2.2k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 26.9k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 10.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 211.8k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
