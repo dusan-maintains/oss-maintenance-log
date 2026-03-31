@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-03-31T03:29:59Z
+Generated: 2026-03-31T07:44:58Z
 
 ## Summary
 - Average health score: **57.3 / 100**
@@ -11,13 +11,13 @@ Generated: 2026-03-31T03:29:59Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟡 **48.1** | warning | 3.33 | 10 | 0 | 0 | 72856 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟡 **48.1** | warning | 3.33 | 10 | 0 | 0 | 72859 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **49.9** | warning | 3.65 | 6.42 | 5.5 | 2006 | 351 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.4** | warning | 4.18 | 6.02 | 6.7 | 10499 | 258 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **56.3** | warning | 3.55 | 8.54 | 7.38 | 26900 | 2614 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟡 **59.7** | warning | 6.67 | 9.01 | 0 | 0 | 2156 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟡 **59.7** | warning | 6.67 | 9.02 | 0 | 0 | 2159 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.7** | warning | 3.62 | 8.6 | 10 | 1478541 | 3691 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟢 **74.3** | healthy | 6.31 | 7.74 | 8.88 | 211764 | 2165 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟢 **74.3** | healthy | 6.30 | 7.74 | 8.88 | 211764 | 2165 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
