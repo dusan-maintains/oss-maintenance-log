@@ -1,13 +1,52 @@
 {
-  "generated_at_utc": "2026-03-30T19:19:43Z",
+  "generated_at_utc": "2026-03-31T03:29:59Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 59.2,
+    "average_health_score": 57.3,
     "critical": 0,
-    "warning": 5,
-    "healthy": 2
+    "warning": 6,
+    "healthy": 1
   },
   "scores": [
+    {
+      "owner": "grafana",
+      "repo": "grafana",
+      "repo_url": "https://github.com/grafana/grafana",
+      "package": null,
+      "health_score": 48.1,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.33,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 0.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 10.0,
+          "stars_score": 10.0,
+          "forks_score": 10.0
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.5,
+          "days_since_push": 0.0,
+          "open_issues": 3944,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 72856,
+      "npm_downloads_last_week": 0,
+      "status_label": "Open"
+    },
     {
       "owner": "Hellenic",
       "repo": "react-hexgrid",
@@ -18,8 +57,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.66,
-          "push_recency": 0.97,
+          "score": 3.65,
+          "push_recency": 0.96,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -77,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1536.0,
+          "days_since_push": 1537.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -97,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.55,
-          "push_recency": 0.65,
+          "push_recency": 0.64,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -156,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 103,
+          "open_issues": 122,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2154,
+      "stars": 2156,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -204,45 +243,6 @@
       "status_label": "Open Backlog"
     },
     {
-      "owner": "grafana",
-      "repo": "grafana",
-      "repo_url": "https://github.com/grafana/grafana",
-      "package": null,
-      "health_score": 61.4,
-      "risk_level": "healthy",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 10.0,
-          "stars_score": 10.0,
-          "forks_score": 10.0
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 6.5,
-          "days_since_push": 0.0,
-          "open_issues": 3947,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 72854,
-      "npm_downloads_last_week": 0,
-      "status_label": "Open"
-    },
-    {
       "owner": "extrabacon",
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.31,
-          "push_recency": 8.93,
+          "push_recency": 8.92,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 29.0,
+          "days_since_push": 30.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
