@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-04-01T14:05:10Z",
-  "data_points": 61,
+  "generated_at_utc": "2026-04-01T19:32:06Z",
+  "data_points": 62,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
-      "current_score": 74.3,
+      "current_score": 74.2,
       "score_7d_ago": 74.6,
       "score_30d_ago": null,
-      "delta_7d": -0.29999999999999716,
+      "delta_7d": -0.3999999999999915,
       "delta_30d": null,
       "trend": "stable"
     },
@@ -60,9 +60,9 @@
     {
       "repo": "lingdojo/kana-dojo",
       "current_score": 59.7,
-      "score_7d_ago": 61.6,
+      "score_7d_ago": 59.3,
       "score_30d_ago": null,
-      "delta_7d": -1.8999999999999986,
+      "delta_7d": 0.4000000000000057,
       "delta_30d": null,
       "trend": "stable"
     }

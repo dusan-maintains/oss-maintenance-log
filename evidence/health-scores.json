@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-01T14:05:10Z",
+  "generated_at_utc": "2026-04-01T19:32:06Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.2,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3939,
+          "open_issues": 3916,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72880,
+      "stars": 72896,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 713.0,
+          "days_since_push": 714.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.01,
+          "score": 9.02,
           "stars_score": 8.33,
-          "forks_score": 9.69
+          "forks_score": 9.7
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 116,
+          "open_issues": 114,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2152,
+      "stars": 2155,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3691,
+      "stars": 3690,
       "npm_downloads_last_week": 1491503,
       "status_label": "Open Backlog"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.3,
+      "health_score": 74.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.29,
-          "push_recency": 8.87,
+          "push_recency": 8.86,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },

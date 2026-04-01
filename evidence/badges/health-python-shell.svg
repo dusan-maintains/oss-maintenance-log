@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="154" height="20" role="img" aria-label="python-shell: 74.3/100">
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="20" role="img" aria-label="python-shell: 74.2/100">
   <linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>
   <clipPath id="r"><rect width="154" height="20" rx="3" fill="#fff"/></clipPath>
   <g clip-path="url(#r)">
@@ -8,6 +8,6 @@
   </g>
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="11">
     <text x="44" y="14">python-shell</text>
-    <text x="121" y="14">74.3/100</text>
+    <text x="121" y="14">74.2/100</text>
   </g>
 </svg>
