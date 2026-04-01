@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-03-31T19:20:04Z",
+  "generated_at_utc": "2026-04-01T03:46:04Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 57.6,
+    "average_health_score": 57.2,
     "critical": 0,
-    "warning": 5,
-    "healthy": 2
+    "warning": 6,
+    "healthy": 1
   },
   "scores": [
     {
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3945,
+          "open_issues": 3949,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72866,
+      "stars": 72871,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1537.0,
+          "days_since_push": 1538.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -165,6 +165,45 @@
       "status_label": "Maintainers Wanted"
     },
     {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "package": null,
+      "health_score": 59.7,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 9.01,
+          "stars_score": 8.33,
+          "forks_score": 9.69
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 7.0,
+          "days_since_push": 0.0,
+          "open_issues": 108,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 2152,
+      "npm_downloads_last_week": 0,
+      "status_label": "Merged"
+    },
+    {
       "owner": "jkbrzt",
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
@@ -204,45 +243,6 @@
       "status_label": "Open Backlog"
     },
     {
-      "owner": "lingdojo",
-      "repo": "kana-dojo",
-      "repo_url": "https://github.com/lingdojo/kana-dojo",
-      "package": null,
-      "health_score": 62.0,
-      "risk_level": "healthy",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 9.02,
-          "stars_score": 8.34,
-          "forks_score": 9.7
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 8.5,
-          "days_since_push": 0.0,
-          "open_issues": 99,
-          "open_tracked_prs": 0
-        }
-      },
-      "stars": 2165,
-      "npm_downloads_last_week": 0,
-      "status_label": "Merged"
-    },
-    {
       "owner": "extrabacon",
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.30,
-          "push_recency": 8.89,
+          "score": 6.29,
+          "push_recency": 8.88,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 30.0,
+          "days_since_push": 31.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
