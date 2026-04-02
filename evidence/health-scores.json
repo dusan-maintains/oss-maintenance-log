@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-04-02T07:41:53Z",
+  "generated_at_utc": "2026-04-02T13:57:35Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 57.2,
+    "average_health_score": 57.6,
     "critical": 0,
-    "warning": 6,
-    "healthy": 1
+    "warning": 5,
+    "healthy": 2
   },
   "scores": [
     {
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3932,
+          "open_issues": 3934,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72924,
+      "stars": 72930,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -52,7 +52,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 50.0,
+      "health_score": 49.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.53,
-          "download_score": 5.53,
-          "downloads_last_week": 2092
+          "score": 5.48,
+          "download_score": 5.48,
+          "downloads_last_week": 1931
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 2092,
+      "npm_downloads_last_week": 1931,
       "status_label": "Maintainer Needed"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.5,
+      "health_score": 52.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.26,
-          "download_score": 6.26,
-          "downloads_last_week": 5713
+          "score": 6.45,
+          "download_score": 6.45,
+          "downloads_last_week": 7448
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 5713,
+      "npm_downloads_last_week": 7448,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.4,
-          "download_score": 7.4,
-          "downloads_last_week": 27675
+          "score": 7.37,
+          "download_score": 7.37,
+          "downloads_last_week": 26565
         },
         "risk": {
           "weight": 0.15,
@@ -161,47 +161,8 @@
         }
       },
       "stars": 2615,
-      "npm_downloads_last_week": 27675,
+      "npm_downloads_last_week": 26565,
       "status_label": "Maintainers Wanted"
-    },
-    {
-      "owner": "lingdojo",
-      "repo": "kana-dojo",
-      "repo_url": "https://github.com/lingdojo/kana-dojo",
-      "package": null,
-      "health_score": 59.7,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 9.02,
-          "stars_score": 8.34,
-          "forks_score": 9.7
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 7.0,
-          "days_since_push": 0.0,
-          "open_issues": 111,
-          "open_tracked_prs": 0
-        }
-      },
-      "stars": 2163,
-      "npm_downloads_last_week": 0,
-      "status_label": "Merged"
     },
     {
       "owner": "jkbrzt",
@@ -228,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1491503
+          "downloads_last_week": 1484594
         },
         "risk": {
           "weight": 0.15,
@@ -239,8 +200,47 @@
         }
       },
       "stars": 3690,
-      "npm_downloads_last_week": 1491503,
+      "npm_downloads_last_week": 1484594,
       "status_label": "Open Backlog"
+    },
+    {
+      "owner": "lingdojo",
+      "repo": "kana-dojo",
+      "repo_url": "https://github.com/lingdojo/kana-dojo",
+      "package": null,
+      "health_score": 62.0,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 9.02,
+          "stars_score": 8.34,
+          "forks_score": 9.71
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 8.5,
+          "days_since_push": 0.0,
+          "open_issues": 99,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 2162,
+      "npm_downloads_last_week": 0,
+      "status_label": "Merged"
     },
     {
       "owner": "extrabacon",
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.28,
-          "push_recency": 8.84,
+          "push_recency": 8.83,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 8.88,
-          "download_score": 8.88,
-          "downloads_last_week": 213301
+          "score": 8.89,
+          "download_score": 8.89,
+          "downloads_last_week": 215678
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2165,
-      "npm_downloads_last_week": 213301,
+      "npm_downloads_last_week": 215678,
       "status_label": "Maintainer Gap"
     }
   ]
