@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-03-22T19:37:05Z",
+  "generated_at_utc": "2026-04-02T19:15:39Z",
   "repo": {
     "owner": "extrabacon",
     "name": "python-shell",
     "html_url": "https://github.com/extrabacon/python-shell",
-    "stars": 2167,
-    "forks": 223,
+    "stars": 2166,
+    "forks": 224,
     "open_issues": 63,
     "pushed_at": "2026-03-01T07:51:54Z"
   },
   "npm": {
     "package": "python-shell",
-    "downloads_last_week": 104033,
-    "start": "2026-03-15",
-    "end": "2026-03-21"
+    "downloads_last_week": 215678,
+    "start": "2026-03-26",
+    "end": "2026-04-01"
   },
   "tracked_prs": [
     {
