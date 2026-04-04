@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-04-04T07:17:35Z
+Generated: 2026-04-04T13:20:41Z
 
 ## Summary
 - Average health score: **57.2 / 100**
@@ -11,7 +11,7 @@ Generated: 2026-04-04T07:17:35Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟡 **48.1** | warning | 3.33 | 10 | 0 | 0 | 72958 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟡 **48.1** | warning | 3.33 | 10 | 0 | 0 | 72966 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **49.8** | warning | 3.65 | 6.42 | 5.45 | 1867 | 351 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.1** | warning | 4.18 | 6.02 | 6.52 | 8132 | 258 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **56.1** | warning | 3.54 | 8.54 | 7.31 | 24228 | 2614 |
