@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-05T13:30:37Z",
+  "generated_at_utc": "2026-04-05T19:03:52Z",
   "repository": "grafana/grafana",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
@@ -23,7 +23,7 @@
       "last_external_url": "https://github.com/grafana/grafana/pull/119212#issuecomment-4151715939",
       "last_own_after_external_at": null,
       "needs_response": true,
-      "hours_since_last_external": 155.15,
+      "hours_since_last_external": 160.7,
       "overdue_sla": true
     }
   ]

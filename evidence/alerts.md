@@ -1,6 +1,8 @@
 # Health Alerts
 
-Generated: 2026-04-05T13:30:54Z
-Total: 0 (🔴 0 critical, 🟡 0 warning)
+Generated: 2026-04-05T19:04:02Z
+Total: 1 (🔴 0 critical, 🟡 1 warning)
 
-✅ No alerts. All packages are within healthy thresholds.
+| Severity | Package | Score | Alert | Details |
+|---|---|---|---|---|
+| 🟡 warning | grafana/grafana | 48.1/100 | Health score dropped by 13.3 points in 7 days (61.4 -> 48.1). | Trend: declining. 30d delta:  |

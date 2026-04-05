@@ -1,7 +1,16 @@
 {
-  "generated_at_utc": "2026-04-05T13:30:54Z",
-  "total_alerts": 0,
+  "generated_at_utc": "2026-04-05T19:04:02Z",
+  "total_alerts": 1,
   "critical_alerts": 0,
-  "warning_alerts": 0,
-  "alerts": []
+  "warning_alerts": 1,
+  "alerts": [
+    {
+      "type": "score_drop",
+      "severity": "warning",
+      "repo": "grafana/grafana",
+      "score": 48.1,
+      "message": "Health score dropped by 13.3 points in 7 days (61.4 -> 48.1).",
+      "details": "Trend: declining. 30d delta: "
+    }
+  ]
 }
