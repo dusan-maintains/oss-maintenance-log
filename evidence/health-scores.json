@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-05T19:04:02Z",
+  "generated_at_utc": "2026-04-06T03:41:36Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.2,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.33,
-          "push_recency": 9.99,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3909,
+          "open_issues": 3902,
           "open_tracked_prs": 1
         }
       },
-      "stars": 72980,
+      "stars": 72985,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1542.0,
+          "days_since_push": 1543.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -220,8 +220,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.04,
-          "stars_score": 8.35,
+          "score": 9.05,
+          "stars_score": 8.36,
           "forks_score": 9.74
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 153,
+          "open_issues": 167,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2194,
+      "stars": 2199,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 74.1,
+      "health_score": 74.0,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.24,
-          "push_recency": 8.72,
+          "push_recency": 8.71,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 35.0,
+          "days_since_push": 36.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
