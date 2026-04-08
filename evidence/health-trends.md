@@ -1,7 +1,7 @@
 # Health Score Trends
 
-Generated: 2026-04-07T19:32:16Z
-Data points: 86 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-04-08T03:32:49Z
+Data points: 87 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
@@ -11,4 +11,4 @@ Data points: 86 (oldest: 03/17/2026 20:04:19)
 | kylefox/jquery-modal | **56.1** | 56.3 | -0.2 | — | — | ➡️ stable |
 | jkbrzt/rrule | **59.7** | 59.7 | 0 | — | — | ➡️ stable |
 | lingdojo/kana-dojo | **59.8** | 59.7 | +0.1 | — | — | ➡️ stable |
-| extrabacon/python-shell | **74** | 74.3 | -0.3 | — | — | ➡️ stable |
+| extrabacon/python-shell | **73.9** | 74.3 | -0.4 | — | — | ➡️ stable |
