@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-09T03:28:39Z",
+  "generated_at_utc": "2026-04-09T07:55:29Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.2,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3898,
+          "open_issues": 3905,
           "open_tracked_prs": 1
         }
       },
-      "stars": 73074,
+      "stars": 73082,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -70,20 +70,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.39,
-          "download_score": 5.39,
-          "downloads_last_week": 1713
+          "score": 5.38,
+          "download_score": 5.38,
+          "downloads_last_week": 1699
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 616.0,
+          "days_since_push": 617.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
       },
       "stars": 350,
-      "npm_downloads_last_week": 1713,
+      "npm_downloads_last_week": 1699,
       "status_label": "Maintainer Needed"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 53.1,
+      "health_score": 53.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.56,
-          "download_score": 6.56,
-          "downloads_last_week": 8650
+          "score": 6.51,
+          "download_score": 6.51,
+          "downloads_last_week": 8102
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 8650,
+      "npm_downloads_last_week": 8102,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.31,
-          "download_score": 7.31,
-          "downloads_last_week": 24282
+          "score": 7.32,
+          "download_score": 7.32,
+          "downloads_last_week": 24648
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2615,
-      "npm_downloads_last_week": 24282,
+      "npm_downloads_last_week": 24648,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 650.0,
+          "days_since_push": 651.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -221,7 +221,7 @@
         "community": {
           "weight": 0.25,
           "score": 9.06,
-          "stars_score": 8.37,
+          "stars_score": 8.36,
           "forks_score": 9.76
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 185,
+          "open_issues": 183,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2227,
+      "stars": 2209,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
