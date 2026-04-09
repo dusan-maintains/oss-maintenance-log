@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-03-28T19:47:19Z",
+  "generated_at_utc": "2026-04-09T03:28:25Z",
   "repo": {
     "owner": "grafana",
     "name": "grafana",
     "html_url": "https://github.com/grafana/grafana",
-    "stars": 72830,
-    "forks": 13613,
-    "open_issues": 3972,
-    "pushed_at": "2026-03-28T16:19:34Z"
+    "stars": 73074,
+    "forks": 13693,
+    "open_issues": 3898,
+    "pushed_at": "2026-04-09T02:19:23Z"
   },
   "npm": null,
   "tracked_prs": [
@@ -21,10 +21,10 @@
       "base_ref": "main",
       "draft": false,
       "mergeable_state": "dirty",
-      "updated_at": "2026-02-27T10:11:22Z",
+      "updated_at": "2026-03-30T02:21:37Z",
       "created_at": "2026-02-27T09:50:58Z",
       "merged_at": null,
-      "comments": 1,
+      "comments": 2,
       "review_comments": 0,
       "commits": 1,
       "additions": 126,
