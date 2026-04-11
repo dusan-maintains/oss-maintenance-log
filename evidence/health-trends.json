@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-10T19:12:10Z",
-  "data_points": 98,
+  "generated_at_utc": "2026-04-11T03:19:50Z",
+  "data_points": 99,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -42,9 +42,9 @@
     {
       "repo": "kylefox/jquery-modal",
       "current_score": 56.2,
-      "score_7d_ago": 56.2,
+      "score_7d_ago": 56.1,
       "score_30d_ago": null,
-      "delta_7d": 0.0,
+      "delta_7d": 0.10000000000000142,
       "delta_30d": null,
       "trend": "stable"
     },

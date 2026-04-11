@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-10T19:12:10Z",
+  "generated_at_utc": "2026-04-11T03:19:50Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.2,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3892,
+          "open_issues": 3888,
           "open_tracked_prs": 1
         }
       },
-      "stars": 73142,
+      "stars": 73139,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -58,7 +58,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.64,
-          "push_recency": 0.93,
+          "push_recency": 0.92,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1547.0,
+          "days_since_push": 1548.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -234,7 +234,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 132,
+          "open_issues": 152,
           "open_tracked_prs": 0
         }
       },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.19,
-          "push_recency": 8.56,
+          "score": 6.18,
+          "push_recency": 8.55,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 40.0,
+          "days_since_push": 41.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
