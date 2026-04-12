@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-04-11T19:05:03Z
+Generated: 2026-04-12T03:46:09Z
 Repository: `grafana/grafana`
 Contributor: `dusan-maintains`
 SLA: `24` hours
@@ -13,4 +13,4 @@ SLA: `24` hours
 ## Details
 | PR | State | Needs response | Hours since external feedback | Overdue | Last external author | Last external at | Link |
 |---|---|---|---|---|---|---|---|
-| #119212 | open | yes | 304.72 | yes | github-actions[bot] | 03/30/2026 02:21:36 | [link](https://github.com/grafana/grafana/pull/119212) |
+| #119212 | open | yes | 313.41 | yes | github-actions[bot] | 03/30/2026 02:21:36 | [link](https://github.com/grafana/grafana/pull/119212) |
