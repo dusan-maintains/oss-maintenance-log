@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-14T08:03:54Z",
+  "generated_at_utc": "2026-04-14T14:13:33Z",
   "open_actions": 1,
   "urgent_actions": 1,
   "items": {
@@ -9,7 +9,7 @@
     "pr_url": "https://github.com/grafana/grafana/pull/119212",
     "last_external_author": "github-actions[bot]",
     "last_external_at": "03/30/2026 02:21:36",
-    "hours_since_last_external": 365.7,
+    "hours_since_last_external": 371.86,
     "overdue_sla": true,
     "priority": "urgent",
     "source_report": "review-sla-grafana.json"
