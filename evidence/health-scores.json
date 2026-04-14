@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-13T19:38:45Z",
+  "generated_at_utc": "2026-04-14T03:42:34Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.2,
@@ -39,11 +39,11 @@
           "weight": 0.15,
           "score": 6.5,
           "days_since_push": 0.0,
-          "open_issues": 3899,
+          "open_issues": 3886,
           "open_tracked_prs": 1
         }
       },
-      "stars": 73177,
+      "stars": 73182,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -52,13 +52,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.4,
+      "health_score": 49.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.64,
-          "push_recency": 0.92,
+          "push_recency": 0.91,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1550.0,
+          "days_since_push": 1551.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -220,8 +220,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.07,
-          "stars_score": 8.37,
+          "score": 9.08,
+          "stars_score": 8.38,
           "forks_score": 9.78
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 180,
+          "open_issues": 195,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2235,
+      "stars": 2238,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.15,
-          "push_recency": 8.46,
+          "push_recency": 8.45,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 43.0,
+          "days_since_push": 44.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
