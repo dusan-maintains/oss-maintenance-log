@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-14T19:41:39Z",
-  "data_points": 114,
+  "generated_at_utc": "2026-04-15T03:40:58Z",
+  "data_points": 115,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -14,19 +14,19 @@
     },
     {
       "repo": "grafana/grafana",
-      "current_score": 48.1,
+      "current_score": 62.2,
       "score_7d_ago": 48.1,
       "score_30d_ago": null,
-      "delta_7d": 0.0,
+      "delta_7d": 14.100000000000001,
       "delta_30d": null,
-      "trend": "stable"
+      "trend": "improving"
     },
     {
       "repo": "Hellenic/react-hexgrid",
       "current_score": 49.2,
-      "score_7d_ago": 49.8,
+      "score_7d_ago": 49.6,
       "score_30d_ago": null,
-      "delta_7d": -0.5999999999999943,
+      "delta_7d": -0.3999999999999986,
       "delta_30d": null,
       "trend": "stable"
     },

@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
 [![Tracked Ecosystem](https://img.shields.io/badge/tracked%20ecosystem-1.9M%2B-brightgreen.svg)](#-live-data)
-[![Open PRs](https://img.shields.io/badge/upstream%20PRs-8%20open-orange.svg)](#contributions)
+[![Open PRs](https://img.shields.io/badge/upstream%20PRs-7%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
 ---
@@ -154,7 +154,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1.3k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->84.5k stars · 1.9M downloads/week across tracked projects · refreshed 04/14/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->84.5k stars · 1.9M downloads/week across tracked projects · refreshed 04/15/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
@@ -180,7 +180,6 @@ Each package gets a **weighted health score (0–100)**:
 ### Open
 
 <!-- CONTRIBUTIONS_OPEN:START -->
-- **grafana [#119212](https://github.com/grafana/grafana/pull/119212)** — Emails: Remove external Google Fonts and logo URL from email templates
 - **jquery-modal [#315](https://github.com/kylefox/jquery-modal/pull/315)** — fix: harden close button rendering and refresh docs/examples
 - **jquery-modal [#316](https://github.com/kylefox/jquery-modal/pull/316)** — fix: keep ajax callbacks scoped to their originating modal
 - **jquery-modal [#317](https://github.com/kylefox/jquery-modal/pull/317)** — fix: make plugin initialization idempotent for multiple imports

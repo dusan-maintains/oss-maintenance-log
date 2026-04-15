@@ -1,30 +1,30 @@
 {
-  "generated_at_utc": "2026-04-14T19:41:20Z",
+  "generated_at_utc": "2026-04-15T03:40:48Z",
   "repository": "grafana/grafana",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
   "summary": {
-    "tracked_open_prs": 1,
-    "needs_response_count": 1,
-    "overdue_count": 1
+    "tracked_open_prs": 0,
+    "needs_response_count": 0,
+    "overdue_count": 0
   },
   "items": [
     {
       "pr_number": 119212,
       "pr_title": "Emails: Remove external Google Fonts and logo URL from email templates",
-      "pr_state": "open",
+      "pr_state": "closed",
       "pr_url": "https://github.com/grafana/grafana/pull/119212",
-      "updated_at": "2026-03-30T02:21:37Z",
-      "external_feedback_count": 2,
+      "updated_at": "2026-04-15T02:21:37Z",
+      "external_feedback_count": 3,
       "own_followups_count": 0,
       "last_external_type": "issue_comment",
       "last_external_author": "github-actions[bot]",
-      "last_external_at": "03/30/2026 02:21:36",
-      "last_external_url": "https://github.com/grafana/grafana/pull/119212#issuecomment-4151715939",
+      "last_external_at": "04/15/2026 02:21:36",
+      "last_external_url": "https://github.com/grafana/grafana/pull/119212#issuecomment-4248674499",
       "last_own_after_external_at": null,
-      "needs_response": true,
-      "hours_since_last_external": 377.33,
-      "overdue_sla": true
+      "needs_response": false,
+      "hours_since_last_external": 1.32,
+      "overdue_sla": false
     }
   ]
 }

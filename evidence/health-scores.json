@@ -1,52 +1,13 @@
 {
-  "generated_at_utc": "2026-04-14T19:41:39Z",
+  "generated_at_utc": "2026-04-15T03:40:58Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 57.2,
+    "average_health_score": 59.2,
     "critical": 0,
-    "warning": 6,
-    "healthy": 1
+    "warning": 5,
+    "healthy": 2
   },
   "scores": [
-    {
-      "owner": "grafana",
-      "repo": "grafana",
-      "repo_url": "https://github.com/grafana/grafana",
-      "package": null,
-      "health_score": 48.1,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 3.33,
-          "push_recency": 10.0,
-          "issue_ratio": 0.0,
-          "pr_response": 0.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 10.0,
-          "stars_score": 10.0,
-          "forks_score": 10.0
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 0.0,
-          "download_score": 0,
-          "downloads_last_week": 0
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 6.5,
-          "days_since_push": 0.0,
-          "open_issues": 3887,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 73190,
-      "npm_downloads_last_week": 0,
-      "status_label": "Open"
-    },
     {
       "owner": "Hellenic",
       "repo": "react-hexgrid",
@@ -116,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1551.0,
+          "days_since_push": 1552.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -234,13 +195,52 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 206,
+          "open_issues": 217,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2246,
+      "stars": 2247,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
+    },
+    {
+      "owner": "grafana",
+      "repo": "grafana",
+      "repo_url": "https://github.com/grafana/grafana",
+      "package": null,
+      "health_score": 62.2,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.67,
+          "push_recency": 10.0,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 10.0,
+          "stars_score": 10.0,
+          "forks_score": 10.0
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 0.0,
+          "download_score": 0,
+          "downloads_last_week": 0
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 7.0,
+          "days_since_push": 0.0,
+          "open_issues": 3895,
+          "open_tracked_prs": 0
+        }
+      },
+      "stars": 73194,
+      "npm_downloads_last_week": 0,
+      "status_label": "Open"
     },
     {
       "owner": "extrabacon",
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.14,
-          "push_recency": 8.43,
+          "push_recency": 8.41,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 44.0,
+          "days_since_push": 45.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
