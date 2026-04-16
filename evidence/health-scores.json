@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-04-16T08:02:43Z",
+  "generated_at_utc": "2026-04-16T14:14:17Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 59.2,
+    "average_health_score": 59.1,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -126,6 +126,45 @@
       "status_label": "Maintainers Wanted"
     },
     {
+      "owner": "jkbrzt",
+      "repo": "rrule",
+      "repo_url": "https://github.com/jkbrzt/rrule",
+      "package": "rrule",
+      "health_score": 59.6,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 3.60,
+          "push_recency": 0.79,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.6,
+          "stars_score": 8.92,
+          "forks_score": 8.29
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 10.0,
+          "download_score": 10.0,
+          "downloads_last_week": 1648074
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 2.5,
+          "days_since_push": 658.0,
+          "open_issues": 211,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 3692,
+      "npm_downloads_last_week": 1648074,
+      "status_label": "Open Backlog"
+    },
+    {
       "owner": "lingdojo",
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
@@ -156,52 +195,13 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 232,
+          "open_issues": 231,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2069,
+      "stars": 2071,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
-    },
-    {
-      "owner": "jkbrzt",
-      "repo": "rrule",
-      "repo_url": "https://github.com/jkbrzt/rrule",
-      "package": "rrule",
-      "health_score": 59.7,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 3.6,
-          "push_recency": 0.8,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 8.6,
-          "stars_score": 8.92,
-          "forks_score": 8.29
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 10.0,
-          "download_score": 10.0,
-          "downloads_last_week": 1639221
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 2.5,
-          "days_since_push": 658.0,
-          "open_issues": 211,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 3692,
-      "npm_downloads_last_week": 1639221,
-      "status_label": "Open Backlog"
     },
     {
       "owner": "grafana",
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3904,
+          "open_issues": 3900,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73233,
+      "stars": 73237,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.13,
-          "push_recency": 8.38,
+          "score": 6.12,
+          "push_recency": 8.37,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
