@@ -40,7 +40,39 @@
 
 ## Next High-Impact Engineering Moves
 
+### Security audit cadence per tracked package
+Scheduled Opus-assisted security audits on each of the 5 abandoned-but-critical packages every 90 days. Output: published audit report in `evidence/audits/` with CVE scan, static analysis findings, and remediation PRs drafted against upstream. This converts the current reactive posture (PRs when a specific bug surfaces) into proactive coverage for the full 1.9M weekly-download surface area.
+
+### Downstream dependency graph
+Reverse-dependency analysis: for each tracked package, compute and publish the top 100 npm packages that depend on it, weighted by their own download counts. This makes blast radius of abandonment concrete and quantifiable, rather than handwaving "critical infrastructure". New evidence file: `evidence/downstream-impact.json`.
+
+### Supply-chain provenance on evidence snapshots
+Sign evidence-commit bundles with Sigstore `cosign` keyless signing on every 6-hour refresh. Publish verification instructions. The evidence log becomes cryptographically attestable rather than "trust the bot". This matters for downstream consumers who want to cite maintenance status in their own compliance reports.
+
+### Per-package automated PR drafter
+When a tracked package crosses a health threshold or receives a new CVE match, auto-draft a remediation PR against the upstream repo. The drafter uses the existing GraphQL batching to find affected modules, generates a minimal diff, and files the PR with full disclosure of automation involvement. Gated on maintainer review before auto-submit.
+
+### Public "adopt this package" opt-in endpoint
+A simple JSON endpoint other maintainers can POST to in order to add their package to community tracking. Rate-limited, validated against the schema contract, and published on the dashboard with an "adopted on" timestamp. Lowers the contribution barrier from "fork the repo and edit config" to "one API call".
+
+### OpenSSF Scorecard cross-reference
+For each tracked package, pull the corresponding OpenSSF Scorecard score and publish side-by-side with the native health score. When the two diverge significantly, surface the specific signal driving the gap in a per-package diagnostic report. Helps distinguish "abandoned but safe" from "abandoned and risky".
+
+### Request-budget telemetry
+Finish the rate-limit resilience work: emit per-run telemetry on GitHub API calls consumed, remaining budget, and fallback paths exercised. Surface in `evidence/manifest.json` so operators can detect budget exhaustion before pipeline failures cascade.
+
+### Per-repo freshness badges in README
+Extend the manifest-driven freshness dots from the dashboard into the `TRACKED_PROJECTS` README table. A stale repo should visibly mark itself stale in the repo's own README without waiting for dashboard rendering.
+
+### Contributor onboarding playbook
+Document the end-to-end flow for a new maintainer to adopt an abandoned package through this tracker: tracking config addition, SLA baseline, first remediation PR, handoff criteria. Lowers the barrier for community contributors to use this as a template for their own maintenance work rather than just watching the dashboard.
+
+### Dashboard: historical health chart per package
+Line-chart view over the 180-day health history already stored in `evidence/health-history.json`. Currently the trend delta is surfaced as an arrow; visible history would let a viewer see whether a package is slowly degrading, stable, or recovering.
+
 ## What Not To Prioritize
 
 - cosmetic README changes that don't improve trust or reuse
 - new features before schema contracts are in place
+- integrations with AI models or proprietary APIs in the core refresh pipeline — keep the evidence log deterministic and reproducible from public data sources only
+- marketing outreach, sponsorship badges, or "stars please" campaigns — evidence quality is the growth strategy

@@ -125,6 +125,16 @@ Dark-mode dashboard with Chart.js — health score gauges, npm download distribu
 
 Thousands of packages are effectively abandoned while still receiving hundreds of thousands of weekly downloads. Issue trackers fill up, security patches go unmerged, and downstream teams inherit silent risk. `npm audit` catches CVEs — but **not abandoned packages**.
 
+## About This Project
+
+This is a public evidence log for ongoing maintenance work on a curated set of abandoned-but-critical npm packages. Five of the seven tracked repositories carry active "maintainers wanted" signals from their original authors and together move close to two million weekly downloads through the ecosystem.
+
+The work here is not dramatic. Most of it is the quiet kind: reading old code, writing the regression test nobody got around to, re-opening a five-year-old issue with a tested patch, answering the "is this still maintained?" question that sits unanswered on the issue tracker.
+
+The evidence log exists so that the work is verifiable rather than self-reported — every claim is machine-derived from the GitHub and npm APIs, timestamped in `evidence/`, and regenerated on a six-hour cadence by the pipeline in `scripts/`. The accompanying `oss-health-scan` CLI ships the same detection logic as a standalone tool for anyone who wants to audit their own dependency graph.
+
+For the full reach numbers, methodology, and per-package deep dives see [docs/IMPACT.md](./docs/IMPACT.md) and [docs/CASE_STUDIES.md](./docs/CASE_STUDIES.md). For the underlying philosophy see [docs/MAINTAINER_PLAYBOOK.md](./docs/MAINTAINER_PLAYBOOK.md).
+
 ## What This Does
 
 Config-driven PowerShell + GitHub Actions that automatically:
@@ -294,6 +304,7 @@ scripts/
   compute-trends.ps1                 ← 180-day trend engine
   check-alerts.ps1                   ← Auto GitHub Issues
   update-readme-stats.ps1            ← Auto-regenerates all README sections
+  validate-evidence.js               ← JSON Schema validator for evidence outputs
 cli/
   bin/scan.js                        ← CLI entry point
   lib/api.js                         ← Programmatic API (scanPackages, scanPackageJson)
@@ -305,6 +316,8 @@ cli/
   lib/github-graphql.js              ← GitHub GraphQL batch API (1 query for N repos)
   lib/fetcher.js                     ← HTTP client with retry + 429 handling + ETag cache
   lib/reporter.js                    ← Colored terminal output
+schemas/
+  *.schema.json                      ← JSON Schema (draft-07) contracts for evidence outputs
 evidence/
   *.json, *.md                       ← Machine + human snapshots
   badges/*.svg                       ← Health badges
@@ -313,11 +326,32 @@ tests/
   health-score.Tests.ps1
 cli/test/
   *.test.js                          ← 71 JS tests
+docs/
+  ARCHITECTURE.md                    ← System layout and control flow
+  DATA_MODEL.md                      ← Config + evidence output contracts
+  OPERATIONS.md                      ← Local commands and runtime constraints
+  ROADMAP.md                         ← Engineering priorities
+  IMPACT.md                          ← Measured reach and methodology
+  CASE_STUDIES.md                    ← Per-package maintenance deep dives
+  MAINTAINER_PLAYBOOK.md             ← Operational principles and decision trees
 .github/workflows/
   evidence-daily.yml                 ← Cron: full pipeline every 6 hours
-  validate.yml                       ← CI: config + Pester + CLI tests
+  validate.yml                       ← CI: config + Pester + CLI tests + schema validation
   publish-cli.yml                    ← Publish to npm on release
 ```
+
+## Documentation
+
+- [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) — system layout and control flow
+- [`docs/DATA_MODEL.md`](./docs/DATA_MODEL.md) — config and evidence output contracts
+- [`docs/OPERATIONS.md`](./docs/OPERATIONS.md) — local commands and runtime constraints
+- [`docs/ROADMAP.md`](./docs/ROADMAP.md) — engineering priorities
+- [`docs/IMPACT.md`](./docs/IMPACT.md) — measured reach, methodology, and ecosystem effect
+- [`docs/CASE_STUDIES.md`](./docs/CASE_STUDIES.md) — per-package maintenance deep dives
+- [`docs/MAINTAINER_PLAYBOOK.md`](./docs/MAINTAINER_PLAYBOOK.md) — operational principles and decision trees
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — how to add tracked packages or propose changes
+- [`SECURITY.md`](./SECURITY.md) — vulnerability reporting and supply-chain posture
+- [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) — community standards
 
 ## License
 
