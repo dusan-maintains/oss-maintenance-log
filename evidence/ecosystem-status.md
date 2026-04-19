@@ -1,21 +1,21 @@
 # Ecosystem Status
 
-Generated: 2026-04-19T07:46:10Z
+Generated: 2026-04-19T13:34:38Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 7
-- Total stars: 84473
-- Total forks: 17050
+- Total stars: 84476
+- Total forks: 17056
 - Total npm downloads last week: 1926683
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
 | [grafana/grafana](https://github.com/grafana/grafana) | Open | 73292 | 13762 | 0 | 1 | 0 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2097 | 1637 | 0 | 1 | 0 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2615 | 650 | 25802 | 3 | 3 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2101 | 1643 | 0 | 1 | 0 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2614 | 650 | 25802 | 3 | 3 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 6000 | 1 | 1 |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2169 | 224 | 247288 | 1 | 1 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3691 | 545 | 1645752 | 1 | 1 |
