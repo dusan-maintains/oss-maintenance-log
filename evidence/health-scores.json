@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-23T08:10:58Z",
+  "generated_at_utc": "2026-04-23T14:11:44Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.7,
+      "health_score": 49.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.45,
-          "download_score": 5.45,
-          "downloads_last_week": 1866
+          "score": 5.37,
+          "download_score": 5.37,
+          "downloads_last_week": 1665
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1866,
+      "npm_downloads_last_week": 1665,
       "status_label": "Maintainer Needed"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 240,
+          "open_issues": 245,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2138,
+      "stars": 2139,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3852,
+          "open_issues": 3827,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73378,
+      "stars": 73380,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -277,7 +277,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 2169,
+      "stars": 2168,
       "npm_downloads_last_week": 269915,
       "status_label": "Maintainer Gap"
     }
