@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-24T03:50:50Z",
+  "generated_at_utc": "2026-04-24T08:22:57Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.5,
+      "health_score": 49.4,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,20 +31,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.37,
-          "download_score": 5.37,
-          "downloads_last_week": 1665
+          "score": 5.3,
+          "download_score": 5.3,
+          "downloads_last_week": 1520
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 631.0,
+          "days_since_push": 632.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1665,
+      "npm_downloads_last_week": 1520,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.5,
+      "health_score": 52.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.26,
-          "download_score": 6.26,
-          "downloads_last_week": 5706
+          "score": 6.46,
+          "download_score": 6.46,
+          "downloads_last_week": 7502
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 5706,
+      "npm_downloads_last_week": 7502,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 56.2,
+      "health_score": 56.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.39,
-          "download_score": 7.39,
-          "downloads_last_week": 27247
+          "score": 7.42,
+          "download_score": 7.42,
+          "downloads_last_week": 28409
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2614,
-      "npm_downloads_last_week": 27247,
+      "npm_downloads_last_week": 28409,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,18 +150,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1638734
+          "downloads_last_week": 1638156
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 665.0,
+          "days_since_push": 666.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
       "stars": 3692,
-      "npm_downloads_last_week": 1638734,
+      "npm_downloads_last_week": 1638156,
       "status_label": "Open Backlog"
     },
     {
@@ -175,7 +175,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.99,
+          "push_recency": 9.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 242,
+          "open_issues": 247,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2143,
+      "stars": 2144,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3803,
+          "open_issues": 3801,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73395,
+      "stars": 73397,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.04,
-          "push_recency": 8.13,
+          "push_recency": 8.12,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.05,
-          "download_score": 9.05,
-          "downloads_last_week": 269915
+          "score": 9.07,
+          "download_score": 9.07,
+          "downloads_last_week": 277031
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2168,
-      "npm_downloads_last_week": 269915,
+      "npm_downloads_last_week": 277031,
       "status_label": "Maintainer Gap"
     }
   ]
