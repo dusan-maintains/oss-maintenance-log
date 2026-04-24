@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-04-24T08:22:57Z
+Generated: 2026-04-24T14:07:36Z
 
 ## Summary
 - Average health score: **59.1 / 100**
@@ -15,8 +15,8 @@ Generated: 2026-04-24T08:22:57Z
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.9** | warning | 4.17 | 6.02 | 6.46 | 7502 | 258 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **56.3** | warning | 3.53 | 8.53 | 7.42 | 28409 | 2614 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.6** | warning | 3.59 | 8.6 | 10 | 1638156 | 3692 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟡 **59.8** | warning | 6.66 | 9.06 | 0 | 0 | 2144 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 73397 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟡 **59.8** | warning | 6.67 | 9.06 | 0 | 0 | 2146 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 73401 |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟢 **73.6** | healthy | 6.04 | 7.74 | 9.07 | 277031 | 2168 |
 
 ### Scoring Methodology
