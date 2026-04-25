@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-25T03:32:15Z",
+  "generated_at_utc": "2026-04-25T07:45:24Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 632.0,
+          "days_since_push": 633.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 666.0,
+          "days_since_push": 667.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 9.06,
           "stars_score": 8.33,
-          "forks_score": 9.78
+          "forks_score": 9.79
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 239,
+          "open_issues": 240,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2149,
+      "stars": 2154,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3803,
+          "open_issues": 3804,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73413,
+      "stars": 73414,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.03,
-          "push_recency": 8.1,
+          "push_recency": 8.09,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
