@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-26T03:56:06Z",
+  "generated_at_utc": "2026-04-26T07:54:54Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.4,
+      "health_score": 49.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,20 +31,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.3,
-          "download_score": 5.3,
-          "downloads_last_week": 1520
+          "score": 5.21,
+          "download_score": 5.21,
+          "downloads_last_week": 1337
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 633.0,
+          "days_since_push": 634.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1520,
+      "npm_downloads_last_week": 1337,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.9,
+      "health_score": 52.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.46,
-          "download_score": 6.46,
-          "downloads_last_week": 7502
+          "score": 6.36,
+          "download_score": 6.36,
+          "downloads_last_week": 6529
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 7502,
+      "npm_downloads_last_week": 6529,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.42,
-          "download_score": 7.42,
-          "downloads_last_week": 28409
+          "score": 7.44,
+          "download_score": 7.44,
+          "downloads_last_week": 28974
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2614,
-      "npm_downloads_last_week": 28409,
+      "npm_downloads_last_week": 28974,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,18 +150,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1638156
+          "downloads_last_week": 1638641
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 667.0,
+          "days_since_push": 668.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
       "stars": 3692,
-      "npm_downloads_last_week": 1638156,
+      "npm_downloads_last_week": 1638641,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 266,
+          "open_issues": 278,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2160,
+      "stars": 2161,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -208,13 +208,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.2,
+      "health_score": 62.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.99,
+          "push_recency": 9.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3804,
+          "open_issues": 3805,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73423,
+      "stars": 73426,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 73.6,
+      "health_score": 73.7,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.02,
-          "push_recency": 8.07,
+          "push_recency": 8.06,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.07,
-          "download_score": 9.07,
-          "downloads_last_week": 277031
+          "score": 9.13,
+          "download_score": 9.13,
+          "downloads_last_week": 299014
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2168,
-      "npm_downloads_last_week": 277031,
+      "npm_downloads_last_week": 299014,
       "status_label": "Maintainer Gap"
     }
   ]
