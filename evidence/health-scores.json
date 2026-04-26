@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-26T07:54:54Z",
+  "generated_at_utc": "2026-04-26T13:41:25Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.59,
-          "push_recency": 0.77,
+          "push_recency": 0.76,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.06,
+          "score": 9.07,
           "stars_score": 8.34,
-          "forks_score": 9.79
+          "forks_score": 9.8
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 278,
+          "open_issues": 317,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2161,
+      "stars": 2167,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -208,13 +208,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.1,
+      "health_score": 62.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.98,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3805,
+          "open_issues": 3806,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73426,
+      "stars": 73429,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.02,
-          "push_recency": 8.06,
+          "push_recency": 8.05,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
