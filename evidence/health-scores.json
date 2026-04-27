@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-26T19:13:59Z",
+  "generated_at_utc": "2026-04-27T04:00:05Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1563.0,
+          "days_since_push": 1564.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -160,7 +160,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3692,
+      "stars": 3693,
       "npm_downloads_last_week": 1638641,
       "status_label": "Open Backlog"
     },
@@ -169,7 +169,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 59.8,
+      "health_score": 59.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 9.07,
           "stars_score": 8.34,
-          "forks_score": 9.8
+          "forks_score": 9.81
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 332,
+          "open_issues": 344,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2168,
+      "stars": 2171,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3809,
+          "open_issues": 3785,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73434,
+      "stars": 73445,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 73.7,
+      "health_score": 73.6,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.02,
-          "push_recency": 8.05,
+          "score": 6.01,
+          "push_recency": 8.03,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 56.0,
+          "days_since_push": 57.0,
           "open_issues": 63,
           "open_tracked_prs": 1
         }
