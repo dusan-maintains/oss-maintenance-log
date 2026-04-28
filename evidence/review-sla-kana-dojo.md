@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-04-27T19:48:30Z
+Generated: 2026-04-28T04:06:08Z
 Repository: `lingdojo/kana-dojo`
 Contributor: `dusan-maintains`
 SLA: `24` hours
@@ -13,4 +13,4 @@ SLA: `24` hours
 ## Details
 | PR | State | Needs response | Hours since external feedback | Overdue | Last external author | Last external at | Link |
 |---|---|---|---|---|---|---|---|
-| #6309 | closed | no | 1426.7 | no | github-actions[bot] | 02/27/2026 09:06:31 | [link](https://github.com/lingdojo/kana-dojo/pull/6309) |
+| #6309 | closed | no | 1434.99 | no | github-actions[bot] | 02/27/2026 09:06:31 | [link](https://github.com/lingdojo/kana-dojo/pull/6309) |

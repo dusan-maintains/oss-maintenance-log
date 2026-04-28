@@ -1,14 +1,14 @@
 # Health Score Trends
 
-Generated: 2026-04-27T19:48:47Z
-Data points: 166 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-04-28T04:06:19Z
+Data points: 167 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
 | Hellenic/react-hexgrid | **49.4** | 49.7 | -0.3 | 49.9 | -0.5 | ➡️ stable |
-| kylefox/jquery-tablesort | **52.8** | 52.6 | +0.2 | 53.4 | -0.6 | ➡️ stable |
-| kylefox/jquery-modal | **56.3** | 56.1 | +0.2 | 56.3 | 0 | ➡️ stable |
+| kylefox/jquery-tablesort | **52.8** | 52.5 | +0.3 | 53.4 | -0.6 | ➡️ stable |
+| kylefox/jquery-modal | **56.3** | 56.2 | +0.1 | 56.3 | 0 | ➡️ stable |
 | jkbrzt/rrule | **59.6** | 59.6 | 0 | 59.7 | -0.1 | ➡️ stable |
 | lingdojo/kana-dojo | **59.9** | 59.8 | +0.1 | 59.5 | +0.4 | ➡️ stable |
 | grafana/grafana | **62.2** | 62.2 | 0 | 48.1 | +14.1 | ➡️ stable |
-| extrabacon/python-shell | **73.7** | 73.6 | +0.1 | 74.4 | -0.7 | ➡️ stable |
+| extrabacon/python-shell | **73.6** | 73.6 | 0 | 74.4 | -0.8 | ➡️ stable |
