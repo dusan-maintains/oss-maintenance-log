@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-28T14:42:14Z",
-  "data_points": 169,
+  "generated_at_utc": "2026-04-28T19:56:55Z",
+  "data_points": 170,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -16,9 +16,9 @@
       "repo": "grafana/grafana",
       "current_score": 62.2,
       "score_7d_ago": 62.2,
-      "score_30d_ago": 48.1,
+      "score_30d_ago": 61.4,
       "delta_7d": 0.0,
-      "delta_30d": 14.100000000000001,
+      "delta_30d": 0.8000000000000043,
       "trend": "stable"
     },
     {
@@ -61,9 +61,9 @@
       "repo": "lingdojo/kana-dojo",
       "current_score": 59.9,
       "score_7d_ago": 59.8,
-      "score_30d_ago": 61.8,
+      "score_30d_ago": 59.6,
       "delta_7d": 0.10000000000000142,
-      "delta_30d": -1.8999999999999986,
+      "delta_30d": 0.29999999999999716,
       "trend": "stable"
     }
   ]

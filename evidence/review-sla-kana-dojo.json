@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-28T14:41:54Z",
+  "generated_at_utc": "2026-04-28T19:56:39Z",
   "repository": "lingdojo/kana-dojo",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
@@ -23,7 +23,7 @@
       "last_external_url": "https://github.com/lingdojo/kana-dojo/pull/6309#issuecomment-3971687542",
       "last_own_after_external_at": null,
       "needs_response": false,
-      "hours_since_last_external": 1445.59,
+      "hours_since_last_external": 1450.84,
       "overdue_sla": false
     }
   ]
