@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-29T19:54:32Z",
+  "generated_at_utc": "2026-04-30T04:04:17Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1566.0,
+          "days_since_push": 1567.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -96,8 +96,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.53,
-          "push_recency": 0.58,
+          "score": 3.52,
+          "push_recency": 0.57,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -160,7 +160,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3694,
+      "stars": 3695,
       "npm_downloads_last_week": 1677178,
       "status_label": "Open Backlog"
     },
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.09,
-          "stars_score": 8.35,
-          "forks_score": 9.83
+          "score": 9.1,
+          "stars_score": 8.36,
+          "forks_score": 9.84
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 357,
+          "open_issues": 371,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2194,
+      "stars": 2198,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3821,
+          "open_issues": 3823,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73501,
+      "stars": 73502,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.98,
-          "push_recency": 7.95,
+          "push_recency": 7.94,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
