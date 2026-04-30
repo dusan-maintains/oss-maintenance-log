@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-30T14:24:28Z",
+  "generated_at_utc": "2026-04-30T19:50:17Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 742.0,
+          "days_since_push": 743.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 9.1,
           "stars_score": 8.36,
-          "forks_score": 9.84
+          "forks_score": 9.85
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 368,
+          "open_issues": 364,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2207,
+      "stars": 2206,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3822,
+          "open_issues": 3809,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73513,
+      "stars": 73514,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 5.98,
-          "push_recency": 7.93,
+          "score": 5.97,
+          "push_recency": 7.92,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -277,7 +277,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 2167,
+      "stars": 2168,
       "npm_downloads_last_week": 314849,
       "status_label": "Maintainer Gap"
     }
