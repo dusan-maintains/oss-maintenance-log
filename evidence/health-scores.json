@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-03T13:49:26Z",
+  "generated_at_utc": "2026-05-03T19:18:32Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 745.0,
+          "days_since_push": 746.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.12,
+          "score": 9.13,
           "stars_score": 8.38,
-          "forks_score": 9.87
+          "forks_score": 9.88
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 385,
+          "open_issues": 386,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2240,
+      "stars": 2242,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -208,13 +208,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.1,
+      "health_score": 62.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.98,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3785,
+          "open_issues": 3788,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73559,
+      "stars": 73560,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 5.95,
-          "push_recency": 7.84,
+          "score": 5.94,
+          "push_recency": 7.83,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
