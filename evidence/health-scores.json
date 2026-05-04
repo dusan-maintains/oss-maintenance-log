@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-04T08:42:31Z",
+  "generated_at_utc": "2026-05-04T14:31:08Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -18,8 +18,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.62,
-          "push_recency": 0.85,
+          "score": 3.61,
+          "push_recency": 0.84,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -91,13 +91,13 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 56.0,
+      "health_score": 55.9,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.52,
-          "push_recency": 0.57,
+          "push_recency": 0.56,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.13,
+          "score": 9.14,
           "stars_score": 8.38,
-          "forks_score": 9.88
+          "forks_score": 9.89
         },
         "popularity": {
           "weight": 0.2,
@@ -195,7 +195,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 409,
+          "open_issues": 406,
           "open_tracked_prs": 0
         }
       },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3782,
+          "open_issues": 3785,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73569,
+      "stars": 73576,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.94,
-          "push_recency": 7.82,
+          "push_recency": 7.81,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
