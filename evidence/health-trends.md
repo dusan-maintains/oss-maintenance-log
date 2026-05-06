@@ -1,12 +1,12 @@
 # Health Score Trends
 
-Generated: 2026-05-05T19:52:41Z
-Data points: 198 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-05-06T04:05:41Z
+Data points: 199 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
 | Hellenic/react-hexgrid | **49.6** | 49.5 | +0.1 | 49.8 | -0.2 | ➡️ stable |
-| kylefox/jquery-tablesort | **52.7** | 52.7 | 0 | 53.1 | -0.4 | ➡️ stable |
+| kylefox/jquery-tablesort | **52.7** | 52.8 | -0.1 | 53.1 | -0.4 | ➡️ stable |
 | kylefox/jquery-modal | **56** | 56.2 | -0.2 | 56.1 | -0.1 | ➡️ stable |
 | jkbrzt/rrule | **59.6** | 59.6 | 0 | 59.7 | -0.1 | ➡️ stable |
 | lingdojo/kana-dojo | **60** | 59.9 | +0.1 | 59.8 | +0.2 | ➡️ stable |
