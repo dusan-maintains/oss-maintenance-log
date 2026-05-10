@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-09T19:33:36Z",
+  "generated_at_utc": "2026-05-10T04:15:09Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1576.0,
+          "days_since_push": 1577.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.16,
-          "stars_score": 8.4,
-          "forks_score": 9.92
+          "score": 9.17,
+          "stars_score": 8.41,
+          "forks_score": 9.93
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 413,
+          "open_issues": 419,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2298,
+      "stars": 2303,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3672,
+          "open_issues": 3658,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73646,
+      "stars": 73649,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 73.2,
+      "health_score": 73.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.88,
-          "push_recency": 7.65,
+          "push_recency": 7.64,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 69.0,
+          "days_since_push": 70.0,
           "open_issues": 64,
           "open_tracked_prs": 1
         }
