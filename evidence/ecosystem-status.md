@@ -1,22 +1,22 @@
 # Ecosystem Status
 
-Generated: 2026-05-11T04:36:19Z
+Generated: 2026-05-11T09:59:17Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 7
-- Total stars: 85063
-- Total forks: 17409
+- Total stars: 85067
+- Total forks: 17411
 - Total npm downloads last week: 2210410
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | Open | 73664 | 13856 | 0 | 1 | 0 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2309 | 1898 | 0 | 1 | 0 |
+| [grafana/grafana](https://github.com/grafana/grafana) | Open | 73668 | 13858 | 0 | 1 | 0 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2308 | 1898 | 0 | 1 | 0 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2614 | 650 | 24896 | 3 | 3 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 9863 | 1 | 1 |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2167 | 225 | 295390 | 1 | 1 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3700 | 548 | 1879001 | 1 | 1 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3701 | 548 | 1879001 | 1 | 1 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | Maintainer Needed | 351 | 136 | 1260 | 1 | 1 |
