@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-17T13:57:18Z",
+  "generated_at_utc": "2026-05-17T19:36:21Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.0,
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 759.0,
+          "days_since_push": 760.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -130,13 +130,13 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.6,
+      "health_score": 59.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.57,
-          "push_recency": 0.71,
+          "push_recency": 0.7,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -183,7 +183,7 @@
           "weight": 0.25,
           "score": 9.2,
           "stars_score": 8.43,
-          "forks_score": 9.97
+          "forks_score": 9.98
         },
         "popularity": {
           "weight": 0.2,
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 298,
+          "open_issues": 295,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2356,
+      "stars": 2360,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.97,
+          "score": 6.65,
+          "push_recency": 9.96,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 73823,
+      "stars": 73831,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.81,
-          "push_recency": 7.43,
+          "push_recency": 7.42,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
