@@ -1,22 +1,22 @@
 # Ecosystem Status
 
-Generated: 2026-05-18T04:41:33Z
+Generated: 2026-05-18T10:40:51Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 7
-- Total stars: 85294
-- Total forks: 17526
-- Total npm downloads last week: 2339305
+- Total stars: 85304
+- Total forks: 17531
+- Total npm downloads last week: 2360302
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | Open | 73834 | 13900 | 0 | 1 | 0 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2367 | 1970 | 0 | 1 | 0 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2613 | 650 | 23566 | 3 | 3 |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 9025 | 1 | 1 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2167 | 225 | 295760 | 1 | 1 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3704 | 549 | 2009386 | 1 | 1 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | Maintainer Needed | 351 | 136 | 1568 | 1 | 1 |
+| [grafana/grafana](https://github.com/grafana/grafana) | Open | 73841 | 13901 | 0 | 1 | 0 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2370 | 1975 | 0 | 1 | 0 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2613 | 649 | 23697 | 3 | 3 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 9115 | 1 | 1 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2167 | 225 | 305817 | 1 | 1 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3704 | 549 | 2020081 | 1 | 1 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | Maintainer Needed | 351 | 136 | 1592 | 1 | 1 |

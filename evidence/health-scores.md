@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-05-18T04:41:45Z
+Generated: 2026-05-18T10:41:05Z
 
 ## Summary
 - Average health score: **59 / 100**
@@ -11,13 +11,13 @@ Generated: 2026-05-18T04:41:45Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **49.4** | warning | 3.6 | 6.42 | 5.33 | 1568 | 351 |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.2** | warning | 4.17 | 6.02 | 6.59 | 9025 | 258 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **56.0** | warning | 3.51 | 8.53 | 7.29 | 23566 | 2613 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.5** | warning | 3.57 | 8.61 | 10 | 2009386 | 3704 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.2** | healthy | 6.67 | 9.21 | 0 | 0 | 2367 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 73834 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟢 **72.8** | healthy | 5.80 | 7.74 | 9.12 | 295760 | 2167 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **49.4** | warning | 3.6 | 6.42 | 5.34 | 1592 | 351 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.2** | warning | 4.17 | 6.02 | 6.6 | 9115 | 258 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **56.0** | warning | 3.51 | 8.53 | 7.29 | 23697 | 2613 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.5** | warning | 3.57 | 8.61 | 10 | 2020081 | 3704 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.2** | healthy | 6.67 | 9.21 | 0 | 0 | 2370 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 73841 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟢 **72.8** | healthy | 5.8 | 7.74 | 9.14 | 305817 | 2167 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
