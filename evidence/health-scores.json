@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-19T04:33:36Z",
+  "generated_at_utc": "2026-05-19T10:07:37Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.0,
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.4,
+      "health_score": 49.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,20 +31,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.34,
-          "download_score": 5.34,
-          "downloads_last_week": 1592
+          "score": 5.27,
+          "download_score": 5.27,
+          "downloads_last_week": 1461
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 656.0,
+          "days_since_push": 657.0,
           "open_issues": 33,
           "open_tracked_prs": 1
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1592,
+      "npm_downloads_last_week": 1461,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 53.2,
+      "health_score": 53.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.6,
-          "download_score": 6.6,
-          "downloads_last_week": 9115
+          "score": 6.49,
+          "download_score": 6.49,
+          "downloads_last_week": 7811
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 9115,
+      "npm_downloads_last_week": 7811,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 55.9,
+      "health_score": 56.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.29,
-          "download_score": 7.29,
-          "downloads_last_week": 23697
+          "score": 7.31,
+          "download_score": 7.31,
+          "downloads_last_week": 24157
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2612,
-      "npm_downloads_last_week": 23697,
+      "npm_downloads_last_week": 24157,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,18 +150,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2020081
+          "downloads_last_week": 2037192
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 690.0,
+          "days_since_push": 691.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
       "stars": 3704,
-      "npm_downloads_last_week": 2020081,
+      "npm_downloads_last_week": 2037192,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 314,
+          "open_issues": 307,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2377,
+      "stars": 2382,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3612,
+          "open_issues": 3616,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73860,
+      "stars": 73864,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 72.8,
+      "health_score": 72.9,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.79,
-          "push_recency": 7.38,
+          "push_recency": 7.37,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.14,
-          "download_score": 9.14,
-          "downloads_last_week": 305817
+          "score": 9.19,
+          "download_score": 9.19,
+          "downloads_last_week": 324401
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 2167,
-      "npm_downloads_last_week": 305817,
+      "npm_downloads_last_week": 324401,
       "status_label": "Maintainer Gap"
     }
   ]
