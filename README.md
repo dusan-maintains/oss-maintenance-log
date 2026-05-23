@@ -164,7 +164,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1.2k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->85.4k stars · 2.5M downloads/week across tracked projects · refreshed 05/22/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->85.5k stars · 2.5M downloads/week across tracked projects · refreshed 05/23/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
