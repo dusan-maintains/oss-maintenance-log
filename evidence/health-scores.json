@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-24T13:59:53Z",
+  "generated_at_utc": "2026-05-24T19:40:16Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.9,
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 766.0,
+          "days_since_push": 767.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -169,7 +169,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 60.2,
+      "health_score": 60.3,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
@@ -181,8 +181,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.23,
-          "stars_score": 8.46,
+          "score": 9.24,
+          "stars_score": 8.47,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 377,
+          "open_issues": 304,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2429,
+      "stars": 2432,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -214,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.98,
+          "push_recency": 9.97,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 1.0,
-          "open_issues": 3621,
+          "open_issues": 3624,
           "open_tracked_prs": 0
         }
       },
-      "stars": 73971,
+      "stars": 73973,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.74,
-          "push_recency": 7.23,
+          "push_recency": 7.22,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
