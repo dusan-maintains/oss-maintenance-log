@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-05-28T16:34:09Z",
-  "data_points": 288,
+  "generated_at_utc": "2026-05-28T20:37:20Z",
+  "data_points": 289,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
       "current_score": 72.6,
-      "score_7d_ago": 73.2,
+      "score_7d_ago": 73.1,
       "score_30d_ago": 73.6,
-      "delta_7d": -0.6000000000000085,
+      "delta_7d": -0.5,
       "delta_30d": -1.0,
       "trend": "stable"
     },
@@ -52,9 +52,9 @@
       "repo": "kylefox/jquery-tablesort",
       "current_score": 52.5,
       "score_7d_ago": 52.6,
-      "score_30d_ago": 52.7,
+      "score_30d_ago": 52.8,
       "delta_7d": -0.10000000000000142,
-      "delta_30d": -0.20000000000000284,
+      "delta_30d": -0.29999999999999716,
       "trend": "stable"
     },
     {
