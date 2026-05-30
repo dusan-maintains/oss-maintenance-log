@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-30T08:40:24Z",
+  "generated_at_utc": "2026-05-30T14:04:57Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.8,
@@ -13,13 +13,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 49.1,
+      "health_score": 49.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.59,
-          "push_recency": 0.77,
+          "push_recency": 0.76,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -160,7 +160,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3706,
+      "stars": 3708,
       "npm_downloads_last_week": 1874741,
       "status_label": "Open Backlog"
     },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 331,
+          "open_issues": 326,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2486,
+      "stars": 2490,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3631,
+          "open_issues": 3630,
           "open_tracked_prs": 0
         }
       },
-      "stars": 74046,
+      "stars": 74045,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 72.6,
+      "health_score": 72.5,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.69,
-          "push_recency": 7.07,
+          "push_recency": 7.06,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
