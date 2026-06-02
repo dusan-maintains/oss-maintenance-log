@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-06-02T05:00:27Z",
+  "generated_at_utc": "2026-06-02T10:54:34Z",
   "repository": "Hellenic/react-hexgrid",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
   "summary": {
     "tracked_open_prs": 1,
-    "needs_response_count": 0,
+    "needs_response_count": 1,
     "overdue_count": 0
   },
   "items": [
@@ -14,16 +14,16 @@
       "pr_title": "test: add coverage for GridGenerator.ring and .spiral",
       "pr_state": "open",
       "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
-      "updated_at": "2026-02-27T08:14:45Z",
-      "external_feedback_count": 0,
+      "updated_at": "2026-06-02T06:10:07Z",
+      "external_feedback_count": 1,
       "own_followups_count": 0,
-      "last_external_type": null,
-      "last_external_author": null,
-      "last_external_at": null,
-      "last_external_url": null,
+      "last_external_type": "review_commented",
+      "last_external_author": "StantonMatt",
+      "last_external_at": "06/02/2026 06:10:07",
+      "last_external_url": "https://github.com/Hellenic/react-hexgrid/pull/123#pullrequestreview-4407001544",
       "last_own_after_external_at": null,
-      "needs_response": false,
-      "hours_since_last_external": null,
+      "needs_response": true,
+      "hours_since_last_external": 4.74,
       "overdue_sla": false
     }
   ]

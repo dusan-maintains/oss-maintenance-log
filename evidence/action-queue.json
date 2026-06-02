@@ -1,6 +1,31 @@
 {
-  "generated_at_utc": "2026-06-02T05:00:28Z",
-  "open_actions": 0,
+  "generated_at_utc": "2026-06-02T10:54:35Z",
+  "open_actions": 2,
   "urgent_actions": 0,
-  "items": null
+  "items": [
+    {
+      "repository": "Hellenic/react-hexgrid",
+      "pr_number": 123,
+      "pr_title": "test: add coverage for GridGenerator.ring and .spiral",
+      "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
+      "last_external_author": "StantonMatt",
+      "last_external_at": "06/02/2026 06:10:07",
+      "hours_since_last_external": 4.74,
+      "overdue_sla": false,
+      "priority": "normal",
+      "source_report": "review-sla-react-hexgrid.json"
+    },
+    {
+      "repository": "extrabacon/python-shell",
+      "pr_number": 320,
+      "pr_title": "Fix runString temp path to use tmpdir() and add regression test",
+      "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
+      "last_external_author": "StantonMatt",
+      "last_external_at": "06/02/2026 06:38:44",
+      "hours_since_last_external": 4.26,
+      "overdue_sla": false,
+      "priority": "normal",
+      "source_report": "review-sla-python-shell.json"
+    }
+  ]
 }
