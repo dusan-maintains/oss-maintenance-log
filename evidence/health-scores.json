@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-02T10:54:35Z",
+  "generated_at_utc": "2026-06-02T16:54:55Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.8,
@@ -91,13 +91,13 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 55.8,
+      "health_score": 55.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.50,
-          "push_recency": 0.51,
+          "score": 3.5,
+          "push_recency": 0.5,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 775.0,
+          "days_since_push": 776.0,
           "open_issues": 75,
           "open_tracked_prs": 3
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 389,
+          "open_issues": 381,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2531,
+      "stars": 2533,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 74083,
+      "stars": 74095,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 72.5,
+      "health_score": 72.4,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.66,
-          "push_recency": 6.99,
+          "push_recency": 6.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
