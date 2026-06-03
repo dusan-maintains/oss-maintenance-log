@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-06-03T05:16:33Z",
+  "generated_at_utc": "2026-06-03T11:22:38Z",
   "open_actions": 2,
-  "urgent_actions": 0,
+  "urgent_actions": 2,
   "items": [
     {
       "repository": "Hellenic/react-hexgrid",
@@ -10,9 +10,9 @@
       "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
       "last_external_author": "StantonMatt",
       "last_external_at": "06/02/2026 06:10:07",
-      "hours_since_last_external": 23.11,
-      "overdue_sla": false,
-      "priority": "normal",
+      "hours_since_last_external": 29.21,
+      "overdue_sla": true,
+      "priority": "urgent",
       "source_report": "review-sla-react-hexgrid.json"
     },
     {
@@ -22,9 +22,9 @@
       "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
       "last_external_author": "StantonMatt",
       "last_external_at": "06/02/2026 06:38:44",
-      "hours_since_last_external": 22.63,
-      "overdue_sla": false,
-      "priority": "normal",
+      "hours_since_last_external": 28.73,
+      "overdue_sla": true,
+      "priority": "urgent",
       "source_report": "review-sla-python-shell.json"
     }
   ]

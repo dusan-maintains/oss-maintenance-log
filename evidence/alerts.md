@@ -1,6 +1,9 @@
 # Health Alerts
 
-Generated: 2026-06-03T05:16:34Z
-Total: 0 (🔴 0 critical, 🟡 0 warning)
+Generated: 2026-06-03T11:22:39Z
+Total: 2 (🔴 0 critical, 🟡 2 warning)
 
-✅ No alerts. All packages are within healthy thresholds.
+| Severity | Package | Score | Alert | Details |
+|---|---|---|---|---|
+| 🟡 warning | extrabacon/python-shell | 59.2/100 | Health score dropped by 13.5 points in 7 days (72.7 -> 59.2). | Trend: declining. 30d delta: -14.2 |
+| 🟡 warning | Hellenic/react-hexgrid | 35.7/100 | Health score dropped by 13.2 points in 7 days (48.9 -> 35.7). | Trend: declining. 30d delta: -14 |
