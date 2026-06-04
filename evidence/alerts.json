@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-04T15:43:30Z",
+  "generated_at_utc": "2026-06-04T20:24:17Z",
   "total_alerts": 2,
   "critical_alerts": 0,
   "warning_alerts": 2,
@@ -8,9 +8,9 @@
       "type": "score_drop",
       "severity": "warning",
       "repo": "extrabacon/python-shell",
-      "score": 59.2,
-      "message": "Health score dropped by 13.4 points in 7 days (72.6 -> 59.2).",
-      "details": "Trend: declining. 30d delta: -14.1"
+      "score": 59.1,
+      "message": "Health score dropped by 13.5 points in 7 days (72.6 -> 59.1).",
+      "details": "Trend: declining. 30d delta: -14.2"
     },
     {
       "type": "score_drop",
