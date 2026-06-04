@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-06-04T05:04:14Z",
+  "generated_at_utc": "2026-06-04T10:11:51Z",
   "repo": {
     "owner": "lingdojo",
     "name": "kana-dojo",
     "html_url": "https://github.com/lingdojo/kana-dojo",
-    "stars": 2560,
-    "forks": 2179,
-    "open_issues": 391,
-    "pushed_at": "2026-06-04T05:00:55Z"
+    "stars": 2562,
+    "forks": 2185,
+    "open_issues": 396,
+    "pushed_at": "2026-06-04T10:01:11Z"
   },
   "npm": null,
   "tracked_prs": [
