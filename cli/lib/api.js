@@ -43,7 +43,9 @@ async function getNpmInfo(name) {
     if (m) { owner = m[1]; repoName = m[2]; }
   }
 
-  const downloads = dlData ? (dlData.downloads || 0) : 0;
+  // null = downloads fetch failed (transient npm rate-limit), distinct from a genuine 0.
+  // Callers can tell "unresolved" apart from "really zero"; reporter guards on falsy so it renders fine.
+  const downloads = dlData ? (dlData.downloads || 0) : null;
   const deprecated = !!(latestMeta && latestMeta.deprecated);
 
   return {

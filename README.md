@@ -16,7 +16,7 @@
 
 ---
 
-> 📊 **Featured study — [State of npm Abandonment 2026](docs/STATE_OF_NPM_ABANDONMENT.md):** we pointed this scanner at 50 of npm's most iconic packages. **8 are deprecated or archived yet still pull ~46M downloads/week** (`request`, `har-validator`, `q`, `left-pad` …) — the rot `npm audit` never mentions.
+> 📊 **Featured study — [State of npm Abandonment 2026](docs/STATE_OF_NPM_ABANDONMENT.md):** we pointed this scanner at 58 of npm's most-used packages. **14 are deprecated yet still pull ~52.7M downloads/week** (`request`, `har-validator`, `q`, `tslint`, `left-pad` …) — the rot `npm audit` never mentions.
 
 ## 🔬 Scan Your Dependencies — In One Command
 
