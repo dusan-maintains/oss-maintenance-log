@@ -2,7 +2,6 @@
 
 > <!-- TAGLINE:START -->Contributing to 7 open-source packages — **2.4M npm downloads/week** across tracked ecosystem.<!-- TAGLINE:END -->
 
-[![⭐ Star if useful](https://img.shields.io/badge/⭐-Star_if_useful-ffd700?style=for-the-badge)](https://github.com/dusan-maintains/oss-maintenance-log/stargazers)
 [![npm](https://img.shields.io/npm/v/oss-health-scan?style=for-the-badge&color=cb3837&label=npm)](https://www.npmjs.com/package/oss-health-scan)
 
 <!-- RUN_STATUS:START -->
