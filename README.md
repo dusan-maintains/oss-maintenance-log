@@ -16,6 +16,8 @@
 
 ---
 
+> 📊 **Featured study — [State of npm Abandonment 2026](docs/STATE_OF_NPM_ABANDONMENT.md):** we pointed this scanner at 50 of npm's most iconic packages. **8 are deprecated or archived yet still pull ~46M downloads/week** (`request`, `har-validator`, `q`, `left-pad` …) — the rot `npm audit` never mentions.
+
 ## 🔬 Scan Your Dependencies — In One Command
 
 ```bash
@@ -40,7 +42,7 @@ npx oss-health-scan express lodash moment react
   express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies. v1.5.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
+**Zero dependencies. v1.6.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
 `npm audit` finds CVEs. **This finds abandoned packages, outdated deps, AND vulnerabilities — in one command.**
 
