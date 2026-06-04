@@ -25,9 +25,11 @@ const { getPackageInfo } = require('../cli/lib/api');
 const { computeScore } = require('../cli/lib/scoring');
 const { queryOSV, summarizeVulns } = require('../cli/lib/osv');
 
-// Curated probe: household-name packages + known-deprecated legends.
-// With GITHUB_TOKEN set, replace/extend this with a real most-depended-on list.
+// Census set: household-name packages, known-deprecated legends, and the
+// most-depended-on micro-utility layer (where abandonment quietly concentrates).
+// With GITHUB_TOKEN set this resolves push age / archived / cold for all of them.
 const PACKAGES = [
+  // household names + known-deprecated legends
   'moment', 'request', 'underscore', 'q', 'bluebird', 'async', 'mkdirp', 'rimraf',
   'colors', 'gulp', 'grunt', 'bower', 'coffee-script', 'jade', 'through2', 'left-pad',
   'har-validator', 'node-sass', 'optimist', 'faker', 'is-odd', 'tslint', 'protractor',
@@ -35,7 +37,20 @@ const PACKAGES = [
   'react', 'express', 'lodash', 'vue', 'axios', 'chalk', 'commander', 'typescript',
   'eslint', 'prettier', 'webpack', 'jest', 'vite', 'next', 'zod', 'dayjs', 'dotenv',
   'uuid', 'semver', 'glob', 'yargs', 'debug', 'body-parser', 'cors', 'ejs',
-  'handlebars', 'inquirer', 'minimist', 'jquery'
+  'handlebars', 'inquirer', 'minimist', 'jquery',
+  // most-depended-on micro-utility layer
+  'inflight', 'inherits', 'safe-buffer', 'readable-stream', 'string_decoder',
+  'util-deprecate', 'once', 'wrappy', 'core-util-is', 'process-nextick-args',
+  'isarray', 'ms', 'minimatch', 'concat-map', 'balanced-match', 'brace-expansion',
+  'path-is-absolute', 'fs.realpath', 'graceful-fs', 'lru-cache', 'tslib', 'kind-of',
+  'is-buffer', 'extend', 'qs', 'object-assign', 'ansi-styles', 'supports-color',
+  'color-convert', 'color-name', 'escape-string-regexp', 'strip-ansi', 'ansi-regex',
+  'tough-cookie', 'form-data', 'mime-types', 'mime-db', 'node-fetch', 'cross-spawn',
+  'which', 'isexe', 'path-key', 'npmlog', 'gauge', 'are-we-there-yet', 'aproba',
+  'has-unicode', 'set-blocking', 'console-control-strings', 'wide-align', 'object-keys',
+  'define-properties', 'function-bind', 'get-intrinsic', 'call-bind', 'side-channel',
+  'fsevents', 'nan', 'node-gyp', 'shelljs', 'del', 'globby', 'chokidar', 'find-up',
+  'make-dir'
 ];
 
 const args = process.argv.slice(2);
