@@ -6,6 +6,7 @@ const fs = require('fs');
 const { scanPackages, scanPackageJson } = require('../lib/api');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
+const { printParanoid } = require('../lib/paranoid');
 const { toSarif } = require('../lib/sarif');
 const { detectUnused } = require('../lib/unused');
 const { version } = require('../package.json');
@@ -26,6 +27,7 @@ const HELP = `
     --outdated      Show installed vs latest versions with libyear metric
     --vulns         Check OSV.dev for known vulnerabilities (CVEs)
     --unused        Detect dependencies not imported in source code
+    --paranoid      Supply-chain risk report: blast radius, why-it-matters, fixes
     --threshold N   Only show packages below health score N (default: show all)
     --sort FIELD    Sort by: score (default), name, downloads, risk
     --dev           Include devDependencies
@@ -64,7 +66,7 @@ function loadConfig(dir) {
 }
 
 function parseArgs(args) {
-  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
+  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, paranoid: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -77,6 +79,7 @@ function parseArgs(args) {
     else if (a === '--outdated') flags.outdated = true;
     else if (a === '--vulns') flags.vulns = true;
     else if (a === '--unused') flags.unused = true;
+    else if (a === '--paranoid') flags.paranoid = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -288,6 +291,8 @@ async function main() {
       process.stdout.write(`::${level}::${msg}\n`);
     }
     printReport(results, flags.color);
+  } else if (flags.paranoid) {
+    printParanoid(results, packages.length, pkgName, flags);
   } else {
     printReport(results, flags.color);
   }

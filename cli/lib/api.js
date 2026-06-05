@@ -7,6 +7,7 @@ const { computeScore } = require('./scoring');
 const { getInstalledVersions, getVersionAge } = require('./outdated');
 const { queryOSV, summarizeVulns } = require('./osv');
 const { batchFetchRepos } = require('./github-graphql');
+const { computeBlastRadius } = require('./blast');
 
 /**
  * Fetch npm-only info for a package (no GitHub call).
@@ -47,6 +48,9 @@ async function getNpmInfo(name) {
   // Callers can tell "unresolved" apart from "really zero"; reporter guards on falsy so it renders fine.
   const downloads = dlData ? (dlData.downloads || 0) : null;
   const deprecated = !!(latestMeta && latestMeta.deprecated);
+  const scriptsMeta = (latestMeta && latestMeta.scripts) || {};
+  const hasInstallScripts = !!(scriptsMeta.install || scriptsMeta.preinstall || scriptsMeta.postinstall);
+  const maintainerCount = latestMeta && Array.isArray(latestMeta.maintainers) ? latestMeta.maintainers.length : null;
 
   return {
     name,
@@ -59,7 +63,9 @@ async function getNpmInfo(name) {
     owner,
     repo: repoName,
     repoUrl,
-    license: (latestMeta && latestMeta.license) || null
+    license: (latestMeta && latestMeta.license) || null,
+    hasInstallScripts,
+    maintainerCount
   };
 }
 
@@ -210,6 +216,8 @@ async function scanPackages(names, options) {
         entry.vulns = { count: 0, critical: 0, high: 0, moderate: 0, low: 0, ids: [] };
       }
     }
+
+    entry.blast = computeBlastRadius(entry);
 
     results.push(entry);
   }
