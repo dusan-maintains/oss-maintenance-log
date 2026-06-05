@@ -10,6 +10,7 @@ const { printParanoid } = require('../lib/paranoid');
 const { readLockfile } = require('../lib/lockfile');
 const { toHtml } = require('../lib/html');
 const { runDiff } = require('../lib/diff');
+const { toIssuesMarkdown } = require('../lib/issues');
 const { toSarif } = require('../lib/sarif');
 const { detectUnused } = require('../lib/unused');
 const { version } = require('../package.json');
@@ -35,6 +36,7 @@ const HELP = `
     --transitive    Scan the whole dependency tree from the lockfile
     --prod-only     Exclude devDependencies
     --html          Write a self-contained HTML report (oss-health-report.html)
+    --create-issues Draft markdown issues for abandoned deps (oss-health-issues.md)
     --threshold N   Only show packages below health score N (default: show all)
     --sort FIELD    Sort by: score (default), name, downloads, risk
     --dev           Include devDependencies
@@ -73,7 +75,7 @@ function loadConfig(dir) {
 }
 
 function parseArgs(args) {
-  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, paranoid: false, transitive: false, prodOnly: false, html: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
+  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, paranoid: false, transitive: false, prodOnly: false, html: false, createIssues: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -90,6 +92,7 @@ function parseArgs(args) {
     else if (a === '--transitive') flags.transitive = true;
     else if (a === '--prod-only') flags.prodOnly = true;
     else if (a === '--html') flags.html = true;
+    else if (a === '--create-issues') flags.createIssues = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -374,6 +377,10 @@ async function main() {
     const outPath = path.resolve('oss-health-report.html');
     fs.writeFileSync(outPath, toHtml(results, { project: pkgName, scanned: packages.length, generated: new Date().toISOString() }));
     process.stdout.write(`  Report written to ${outPath}\n`);
+  } else if (flags.createIssues) {
+    const issuesPath = path.resolve('oss-health-issues.md');
+    fs.writeFileSync(issuesPath, toIssuesMarkdown(results));
+    process.stdout.write(`  Issue drafts written to ${issuesPath}\n`);
   } else {
     printReport(results, flags.color);
   }
