@@ -298,7 +298,7 @@ async function main() {
     const sarif = toSarif(results, pkgName ? `${dir}/package.json` : 'package.json');
     process.stdout.write(JSON.stringify(sarif, null, 2) + '\n');
   } else if (flags.json) {
-    const output = { scanned: packages.length, results };
+    const output = { format: 'oss-health-manifest/v1', generated_at: new Date().toISOString(), scanned: packages.length, results };
     if (outdatedSummary) output.outdatedSummary = outdatedSummary;
     if (unusedResult) output.unused = unusedResult;
     process.stdout.write(JSON.stringify(output, null, 2) + '\n');

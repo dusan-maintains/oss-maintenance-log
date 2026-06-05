@@ -87,6 +87,18 @@ npx oss-health-scan core-js node-sass request left-pad express moment --paranoid
 
 Every flagged package gets a **blast-radius** rating (*how much pain if it's compromised* — reach × install-scripts × single-maintainer × abandonment × CVEs), a plain-English *why this matters*, and a suggested replacement. The full breakdown is machine-readable via `--json` (an **OSS Health Manifest**) and `--sarif`.
 
+### How it compares
+
+|  | `npm audit` | Dependabot | Snyk | **oss-health-scan** |
+|---|:--:|:--:|:--:|:--:|
+| Known CVEs | ✅ | ✅ | ✅ | ✅ |
+| Abandoned / deprecated detection | ❌ | partial | partial | ✅ |
+| Maintenance health score (0–100) | ❌ | ❌ | partial | ✅ |
+| Blast-radius rating | ❌ | ❌ | ❌ | ✅ |
+| Zero-dep · no account · one command | ❌ | n/a | ❌ | ✅ |
+
+*Complementary, not a replacement — run it alongside `npm audit`. The `--json` output is a stable **OSS Health Manifest** (`format: "oss-health-manifest/v1"`) for CI, dashboards, and audit evidence.*
+
 <details>
 <summary><strong>CLI flags</strong></summary>
 
