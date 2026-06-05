@@ -25,4 +25,18 @@ function securityPosture(r) {
   };
 }
 
-module.exports = { maintainerRisk, securityPosture };
+// Lightweight suspicious-release heuristic from metadata (deep version is v2):
+// a fresh npm publish on an otherwise-cold repo, amplified by install scripts
+// or a single maintainer — the shape of a takeover / hijack republish.
+function suspiciousRelease(r) {
+  const reasons = [];
+  const freshPublishColdRepo = r.daysSincePublish != null && r.daysSincePublish <= 30 &&
+    r.daysSincePush != null && r.daysSincePush > 365;
+  if (freshPublishColdRepo) reasons.push('recent npm release on an otherwise-inactive repository');
+  if (r.hasInstallScripts) reasons.push('runs install scripts');
+  if (r.maintainerCount != null && r.maintainerCount <= 1) reasons.push('single maintainer');
+  const flagged = freshPublishColdRepo && (r.hasInstallScripts || (r.maintainerCount != null && r.maintainerCount <= 1));
+  return { flagged, reasons };
+}
+
+module.exports = { maintainerRisk, securityPosture, suspiciousRelease };

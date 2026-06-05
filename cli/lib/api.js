@@ -8,7 +8,7 @@ const { getInstalledVersions, getVersionAge } = require('./outdated');
 const { queryOSV, summarizeVulns } = require('./osv');
 const { batchFetchRepos } = require('./github-graphql');
 const { computeBlastRadius } = require('./blast');
-const { maintainerRisk, securityPosture } = require('./posture');
+const { maintainerRisk, securityPosture, suspiciousRelease } = require('./posture');
 
 /**
  * Fetch npm-only info for a package (no GitHub call).
@@ -221,6 +221,7 @@ async function scanPackages(names, options) {
     entry.blast = computeBlastRadius(entry);
     entry.maintainerRisk = maintainerRisk(entry);
     entry.posture = securityPosture(entry);
+    entry.suspicious = suspiciousRelease(entry);
 
     results.push(entry);
   }
