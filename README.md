@@ -42,7 +42,7 @@ npx oss-health-scan express lodash moment react
   express                             ████████████████░░░░ 78.8/100  71.7M/wk
 ```
 
-**Zero dependencies. v1.6.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
+**Zero dependencies. v1.7.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
 `npm audit` finds *known* vulnerabilities. **`oss-health-scan` finds abandoned dependencies _before_ they become a security problem** — deprecated, unmaintained, and outdated packages, in one command.
 

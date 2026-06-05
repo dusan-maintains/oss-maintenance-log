@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented here.
 
+## [1.7.0] — 2026-06-05
+
+### Added
+- **`--paranoid`** — supply-chain risk report: risk counts, worst dependency, plain-English "why it matters", and suggested replacements.
+- **Blast-radius score** — every package rated LOW/MODERATE/HIGH/EXTREME (reach × install-scripts × single-maintainer × abandonment × CVEs); included in `--json`.
+- **`diff <git-ref>`** — dependency risk diff vs a ref: new/removed risks and a verdict; exits 1 if a critical dependency is introduced.
+- **`--html`** — self-contained HTML report (dark, inline CSS, zero JS).
+- **`--transitive` / `--prod-only`** — scan the whole dependency tree from the lockfile (npm/yarn/pnpm).
+- **`--create-issues`** — markdown issue drafts for abandoned deps (generate only — never auto-files).
+- **Manifest signals** — `maintainerRisk`, `securityPosture`, `suspicious`, `hasInstallScripts`, `maintainerCount` on every result; `--json` is now an **OSS Health Manifest** (`format: oss-health-manifest/v1`).
+- **`scan-action/`** — turnkey PR-comment GitHub Action (sticky comment + fail-on-critical).
+- **`badge-worker/`** — Cloudflare Worker health-badge endpoint.
+- Comparison table vs npm audit / Dependabot / Snyk.
+
+### Changed
+- `getNpmInfo()` now reports `downloads: null` on fetch failure (distinct from a genuine 0); reporters guard on falsy.
+
+### Tests
+- 97 passing (up from 71).
+
 ## [1.6.0] — 2026-03-20
 
 ### Added
