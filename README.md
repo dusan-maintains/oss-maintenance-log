@@ -48,6 +48,45 @@ npx oss-health-scan express lodash moment react
 
 > 📦 The published npm package **`oss-health-scan`** lives in [`cli/`](cli/) (zero-dep, MIT). The repo root is the evidence-log pipeline plus the reusable [composite Action](action.yml) — which is why the root `package.json` is marked `private`.
 
+---
+
+> **Your dependencies may not be vulnerable. They may be worse: abandoned.**
+
+### 🚨 `--paranoid` — supply-chain risk report
+
+```bash
+npx oss-health-scan --paranoid          # scans your package.json
+npx oss-health-scan core-js node-sass request left-pad express moment --paranoid
+```
+
+```text
+  ⚠  SUPPLY CHAIN RISK REPORT
+  Scanned dependencies: 6
+
+      3  critical maintenance risks
+      3  abandoned packages (deprecated / archived)
+      1  single-maintainer, high-impact (>1M downloads)
+      2  packages that run install scripts
+      1  EXTREME blast radius   3 HIGH
+
+  ── Worst dependency ──
+  core-js    97.7/100  ·  blast EXTREME
+      • Extremely popular — 61.8M downloads/week
+      • Single maintainer — bus-factor / account-takeover risk
+      • Runs install scripts — arbitrary code on `npm install`
+
+  request    5/100  ·  blast HIGH
+      • Deprecated by its own maintainer · 14.6M downloads/week
+      • No upstream commit in 1.8 years
+      → Remove — migrate to undici, got, axios
+
+  left-pad   5/100  ·  blast MODERATE
+      • Deprecated + archived · still 1.2M downloads/week
+      → Remove — migrate to String.prototype.padStart() (native)
+```
+
+Every flagged package gets a **blast-radius** rating (*how much pain if it's compromised* — reach × install-scripts × single-maintainer × abandonment × CVEs), a plain-English *why this matters*, and a suggested replacement. The full breakdown is machine-readable via `--json` (an **OSS Health Manifest**) and `--sarif`.
+
 <details>
 <summary><strong>CLI flags</strong></summary>
 
