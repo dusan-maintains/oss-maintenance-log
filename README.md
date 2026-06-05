@@ -44,7 +44,9 @@ npx oss-health-scan express lodash moment react
 
 **Zero dependencies. v1.6.0.** Scans any npm package, scores 0–100, detects outdated versions (libyear), checks known CVEs via OSV.dev, auto-retries on failures, exits with code 1 on critical findings. GitHub GraphQL batching (1 API call for 50 packages). SARIF output for GitHub Code Scanning. Programmatic API for custom integrations. CI-ready.
 
-`npm audit` finds CVEs. **This finds abandoned packages, outdated deps, AND vulnerabilities — in one command.**
+`npm audit` finds *known* vulnerabilities. **`oss-health-scan` finds abandoned dependencies _before_ they become a security problem** — deprecated, unmaintained, and outdated packages, in one command.
+
+> 📦 The published npm package **`oss-health-scan`** lives in [`cli/`](cli/) (zero-dep, MIT). The repo root is the evidence-log pipeline plus the reusable [composite Action](action.yml) — which is why the root `package.json` is marked `private`.
 
 <details>
 <summary><strong>CLI flags</strong></summary>
