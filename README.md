@@ -275,6 +275,31 @@ npx oss-health-scan express lodash moment
 
 ### CI Integration
 
+**Turnkey — scan every PR, post a sticky report, fail on critical** (recommended):
+
+```yaml
+# .github/workflows/oss-health.yml
+name: OSS Health
+on: [pull_request]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  oss-health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dusan-maintains/oss-maintenance-log/scan-action@main
+        with:
+          comment: true
+          fail-on-critical: true
+```
+
+Posts a sticky dependency-health report on the PR and fails the check when a deprecated/abandoned dependency is introduced.
+
+<details>
+<summary><strong>Other setups (scheduled, threshold, SARIF)</strong></summary>
+
 ```yaml
 # .github/workflows/health-check.yml
 name: Dependency Health Check
@@ -304,6 +329,8 @@ jobs:
         with:
           sarif_file: health.sarif
 ```
+
+</details>
 
 ### GitHub Action (reusable)
 

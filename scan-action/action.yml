@@ -1,0 +1,69 @@
+name: "OSS Health Scan"
+description: "Scan dependencies for abandoned, deprecated, and unhealthy packages. Comments on PRs and can fail the check on critical findings."
+author: "dusan-maintains"
+
+branding:
+  icon: "shield"
+  color: "red"
+
+inputs:
+  working-directory:
+    description: "Directory containing the package.json to scan."
+    required: false
+    default: "."
+  comment:
+    description: "Post the health report as a sticky comment on the pull request."
+    required: false
+    default: "true"
+  fail-on-critical:
+    description: "Fail the job when a dependency is critical (deprecated/archived or health < 30)."
+    required: false
+    default: "true"
+  github-token:
+    description: "Token used to post the PR comment. Defaults to the workflow token."
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Scan dependencies
+      id: scan
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        npx -y oss-health-scan --json     > "$RUNNER_TEMP/oss-health.json" || true
+        npx -y oss-health-scan --markdown > "$RUNNER_TEMP/oss-health.md"   || true
+        crit=$(node -e "try{var j=require('$RUNNER_TEMP/oss-health.json');process.stdout.write(String(j.results.filter(function(r){return r.risk_level==='critical'}).length))}catch(e){process.stdout.write('0')}")
+        echo "critical=$crit" >> "$GITHUB_OUTPUT"
+        echo "Critical dependency health issues: $crit"
+
+    - name: Comment on the pull request
+      if: ${{ inputs.comment == 'true' && github.event_name == 'pull_request' }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token || github.token }}
+      run: |
+        printf '%s\n\n%s\n' "<!-- oss-health-scan -->" "$(cat "$RUNNER_TEMP/oss-health.md")" > "$RUNNER_TEMP/comment.md"
+        pr="${{ github.event.pull_request.number }}"
+        repo="${{ github.repository }}"
+        if gh pr comment "$pr" --repo "$repo" --edit-last --body-file "$RUNNER_TEMP/comment.md" 2>/dev/null; then
+          echo "Updated existing comment."
+        else
+          gh pr comment "$pr" --repo "$repo" --body-file "$RUNNER_TEMP/comment.md"
+        fi
+
+    - name: Fail on critical findings
+      if: ${{ inputs.fail-on-critical == 'true' }}
+      shell: bash
+      run: |
+        if [ "${{ steps.scan.outputs.critical }}" -gt 0 ]; then
+          echo "::error::oss-health-scan found ${{ steps.scan.outputs.critical }} critical dependency health issue(s)."
+          exit 1
+        fi
+        echo "No critical dependency health issues."
