@@ -7,6 +7,7 @@ const { scanPackages, scanPackageJson } = require('../lib/api');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
 const { printParanoid } = require('../lib/paranoid');
+const { readLockfile } = require('../lib/lockfile');
 const { toSarif } = require('../lib/sarif');
 const { detectUnused } = require('../lib/unused');
 const { version } = require('../package.json');
@@ -28,6 +29,8 @@ const HELP = `
     --vulns         Check OSV.dev for known vulnerabilities (CVEs)
     --unused        Detect dependencies not imported in source code
     --paranoid      Supply-chain risk report: blast radius, why-it-matters, fixes
+    --transitive    Scan the whole dependency tree from the lockfile
+    --prod-only     Exclude devDependencies
     --threshold N   Only show packages below health score N (default: show all)
     --sort FIELD    Sort by: score (default), name, downloads, risk
     --dev           Include devDependencies
@@ -66,7 +69,7 @@ function loadConfig(dir) {
 }
 
 function parseArgs(args) {
-  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, paranoid: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
+  const flags = { json: false, sarif: false, markdown: false, ci: false, outdated: false, vulns: false, unused: false, paranoid: false, transitive: false, prodOnly: false, threshold: 0, sort: 'score', dev: false, color: true, dir: null };
   const positional = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -80,6 +83,8 @@ function parseArgs(args) {
     else if (a === '--vulns') flags.vulns = true;
     else if (a === '--unused') flags.unused = true;
     else if (a === '--paranoid') flags.paranoid = true;
+    else if (a === '--transitive') flags.transitive = true;
+    else if (a === '--prod-only') flags.prodOnly = true;
     else if (a === '--no-color') flags.color = false;
     else if (a === '-v' || a === '--version') { process.stdout.write(`oss-health-scan v${version}\n`); process.exit(0); }
     else if (a === '-h' || a === '--help') { process.stdout.write(HELP); process.exit(0); }
@@ -118,15 +123,33 @@ function readDeps(dir, flags) {
   }
 
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-  const deps = Object.keys(pkg.dependencies || {});
-  const devDeps = flags.dev ? Object.keys(pkg.devDependencies || {}) : [];
-  let packages = [...deps, ...devDeps];
+  let packages;
+
+  if (flags.transitive) {
+    const lock = readLockfile(dir, { prodOnly: flags.prodOnly || !flags.dev });
+    if (lock.names.length > 0) {
+      packages = lock.names;
+      if (!flags.json && !flags.sarif && !flags.markdown) {
+        process.stderr.write(`  Resolved ${packages.length} packages from ${lock.source}\n`);
+      }
+    } else {
+      process.stderr.write(`  No lockfile found for --transitive; scanning direct dependencies\n`);
+    }
+  }
+
+  if (!packages) {
+    const deps = Object.keys(pkg.dependencies || {});
+    const devDeps = (flags.dev && !flags.prodOnly) ? Object.keys(pkg.devDependencies || {}) : [];
+    packages = [...deps, ...devDeps];
+  }
 
   // Apply exclusions from config
   if (flags.exclude && flags.exclude.length > 0) {
     const excludeSet = new Set(flags.exclude);
     packages = packages.filter(p => !excludeSet.has(p));
   }
+
+  packages = [...new Set(packages)];
 
   if (packages.length === 0) {
     process.stderr.write(`No dependencies found in ${pkgPath}\n`);
