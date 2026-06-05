@@ -9,6 +9,7 @@ const { printReport } = require('../lib/reporter');
 const { printParanoid } = require('../lib/paranoid');
 const { readLockfile } = require('../lib/lockfile');
 const { toHtml } = require('../lib/html');
+const { runDiff } = require('../lib/diff');
 const { toSarif } = require('../lib/sarif');
 const { detectUnused } = require('../lib/unused');
 const { version } = require('../package.json');
@@ -20,6 +21,7 @@ const HELP = `
     npx oss-health-scan                  Scan ./package.json
     npx oss-health-scan path/to/dir      Scan package.json in given directory
     npx oss-health-scan pkg1 pkg2 ...    Scan specific npm packages
+    npx oss-health-scan diff <git-ref>   Risk diff of dependency changes vs a ref
 
   Options:
     --json          Output raw JSON instead of terminal report
@@ -250,7 +252,56 @@ function printMarkdown(results, total, flags) {
   process.stdout.write(lines.join('\n') + '\n');
 }
 
+async function diffMain(args) {
+  const ref = args.find(a => !a.startsWith('-')) || 'HEAD';
+  const dev = args.includes('--dev');
+  const asJson = args.includes('--json');
+  const color = !args.includes('--no-color');
+
+  let res;
+  try {
+    res = await runDiff(ref, { dev });
+  } catch (e) {
+    process.stderr.write(`diff error: ${e.message}\n`);
+    process.exit(2);
+  }
+  const addedCrit = res.added.filter(r => r.risk_level === 'critical');
+
+  if (asJson) {
+    process.stdout.write(JSON.stringify({ format: 'oss-health-manifest/v1', mode: 'diff', ref, added: res.added, removed: res.removed }, null, 2) + '\n');
+    process.exit(addedCrit.length > 0 ? 1 : 0);
+  }
+
+  const c = color
+    ? { red: '\x1b[31m', yellow: '\x1b[33m', green: '\x1b[32m', dim: '\x1b[2m', bold: '\x1b[1m', reset: '\x1b[0m' }
+    : { red: '', yellow: '', green: '', dim: '', bold: '', reset: '' };
+  const w = s => process.stdout.write(s);
+  const padr = (s, n) => { s = String(s); return s.length >= n ? s : s + ' '.repeat(n - s.length); };
+
+  w(`\n  ${c.bold}Dependency Risk Diff${c.reset} ${c.dim}(vs ${ref})${c.reset}\n\n`);
+  if (res.added.length) {
+    w(`  ${c.bold}New dependencies (${res.added.length}):${c.reset}\n`);
+    for (const r of [...res.added].sort((a, b) => (a.health_score || 0) - (b.health_score || 0))) {
+      const col = r.health_score == null ? c.dim : r.health_score < 30 ? c.red : r.health_score < 60 ? c.yellow : c.green;
+      const score = r.health_score == null ? '   ?' : `${r.health_score}/100`;
+      w(`    ${c.green}+${c.reset} ${padr(r.name, 28)} ${col}${score}${c.reset} ${c.dim}${r.risk_level || ''}${r.reason ? '  ' + r.reason : ''}${c.reset}\n`);
+    }
+  } else {
+    w(`  ${c.dim}No new dependencies.${c.reset}\n`);
+  }
+  if (res.removed.length) {
+    w(`\n  ${c.bold}Removed (${res.removed.length}):${c.reset}\n`);
+    for (const r of res.removed) w(`    ${c.dim}- ${r.name} (${r.health_score}/100 ${r.risk_level})${c.reset}\n`);
+  }
+  const verdict = addedCrit.length
+    ? `${c.red}✗ This change introduces ${addedCrit.length} critical dependency risk(s).${c.reset}`
+    : `${c.green}✓ No new critical dependency risk.${c.reset}`;
+  w(`\n  ${verdict}\n\n`);
+  process.exit(addedCrit.length > 0 ? 1 : 0);
+}
+
 async function main() {
+  if (process.argv[2] === 'diff') { await diffMain(process.argv.slice(3)); return; }
   const { flags, positional } = parseArgs(process.argv.slice(2));
 
   // Load config file and merge (CLI flags override config)
