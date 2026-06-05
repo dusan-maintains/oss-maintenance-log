@@ -1,9 +1,9 @@
 # Health Alerts
 
-Generated: 2026-06-04T20:24:17Z
+Generated: 2026-06-05T04:46:59Z
 Total: 2 (🔴 0 critical, 🟡 2 warning)
 
 | Severity | Package | Score | Alert | Details |
 |---|---|---|---|---|
-| 🟡 warning | extrabacon/python-shell | 59.1/100 | Health score dropped by 13.5 points in 7 days (72.6 -> 59.1). | Trend: declining. 30d delta: -14.2 |
-| 🟡 warning | Hellenic/react-hexgrid | 35.7/100 | Health score dropped by 13.3 points in 7 days (49 -> 35.7). | Trend: declining. 30d delta: -13.9 |
+| 🟡 warning | extrabacon/python-shell | 59.1/100 | Health score dropped by 13.5 points in 7 days (72.6 -> 59.1). | Trend: declining. 30d delta: -14.1 |
+| 🟡 warning | Hellenic/react-hexgrid | 35.7/100 | Health score dropped by 13.3 points in 7 days (49 -> 35.7). | Trend: declining. 30d delta: -13.8 |

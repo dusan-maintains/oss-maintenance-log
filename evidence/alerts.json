@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-04T20:24:17Z",
+  "generated_at_utc": "2026-06-05T04:46:59Z",
   "total_alerts": 2,
   "critical_alerts": 0,
   "warning_alerts": 2,
@@ -10,7 +10,7 @@
       "repo": "extrabacon/python-shell",
       "score": 59.1,
       "message": "Health score dropped by 13.5 points in 7 days (72.6 -> 59.1).",
-      "details": "Trend: declining. 30d delta: -14.2"
+      "details": "Trend: declining. 30d delta: -14.1"
     },
     {
       "type": "score_drop",
@@ -18,7 +18,7 @@
       "repo": "Hellenic/react-hexgrid",
       "score": 35.7,
       "message": "Health score dropped by 13.3 points in 7 days (49 -> 35.7).",
-      "details": "Trend: declining. 30d delta: -13.9"
+      "details": "Trend: declining. 30d delta: -13.8"
     }
   ]
 }
