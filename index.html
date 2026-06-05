@@ -340,6 +340,46 @@
     opacity: 0;
   }
 
+  /* ── Hero ──────────────────────────────────────────────── */
+  .hero { text-align: center; padding: 28px 0 4px; }
+  .hero h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+    font-weight: 800; letter-spacing: -0.03em; line-height: 1.12;
+    color: var(--text); margin-bottom: 14px;
+  }
+  .hero h1 .accent { color: var(--red); }
+  .hero p.lead { color: var(--muted); font-size: 1.02rem; max-width: 660px; margin: 0 auto 20px; }
+  .hero p.lead strong { color: var(--text); }
+  .hero .npx {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #05070c; border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 20px; font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.92rem; color: var(--green);
+  }
+  .hero .npx .prompt { color: var(--muted); }
+
+  /* ── Big census stats ──────────────────────────────────── */
+  .bigstats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px; margin: 20px 0 14px;
+  }
+  .bigstat {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px;
+  }
+  .bigstat .big { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .bigstat .big.red { color: var(--red); }
+  .bigstat .big.yellow { color: var(--yellow); }
+  .bigstat .big.cyan { color: var(--cyan); }
+  .bigstat .cap { color: var(--muted); font-size: 0.82rem; margin-top: 8px; line-height: 1.4; }
+  .section-lead { color: var(--muted); font-size: 0.9rem; margin: 2px 0 16px; max-width: 740px; }
+  .flag-dep { color: var(--red); font-weight: 600; }
+  .flag-arch { color: var(--purple); font-weight: 600; }
+  .divider-label {
+    text-align: center; color: var(--muted); font-size: 0.74rem;
+    text-transform: uppercase; letter-spacing: 0.12em; margin: 44px 0 22px;
+  }
+
   @media (max-width: 640px) {
     main { padding: 16px; }
     header { padding: 16px; }
@@ -364,6 +404,27 @@
 </header>
 
 <main>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Most of npm runs on packages <span class="accent">nobody maintains</span>.</h1>
+    <p class="lead"><code>npm audit</code> finds known vulnerabilities. <strong>oss-health-scan</strong> finds abandoned dependencies <em>before</em> they become one.</p>
+    <div class="npx"><span class="prompt">$</span> npx oss-health-scan</div>
+  </div>
+
+  <!-- Census: Hall of Risk -->
+  <section>
+    <h2>🪦 Hall of Risk — the most-depended-on dead packages</h2>
+    <div class="bigstats">
+      <div class="bigstat"><div class="big red" id="c-dead">—</div><div class="cap">deprecated or archived, of <span id="c-total">123</span> most-depended-on packages</div></div>
+      <div class="bigstat"><div class="big yellow" id="c-dl">—</div><div class="cap">downloads / week these dead packages still pull</div></div>
+      <div class="bigstat"><div class="big cyan" id="c-cold">—</div><div class="cap">"cold" — no upstream push in 1–7 years</div></div>
+    </div>
+    <p class="section-lead">Deprecated → 5/100, archived → 8/100 — hard flags from the registry itself. Only one of these even trips a CVE; that's the point — <code>npm audit</code> is blind to abandonment. <a href="https://github.com/dusan-maintains/oss-maintenance-log/blob/main/docs/STATE_OF_NPM_ABANDONMENT.md" target="_blank">Full writeup →</a></p>
+    <div class="data-table-wrap" id="census-wrap"><div class="loading">Loading census…</div></div>
+  </section>
+
+  <div class="divider-label">— live proof: packages I actively triage —</div>
+
   <!-- Stats Strip -->
   <div class="stats-strip" id="stats">
     <div class="stat"><div class="label">Packages</div><div class="value blue" id="s-pkgs">—</div></div>
@@ -506,6 +567,38 @@ function healthCard(s, i, trendMap, repoStatusMap) {
       ${s.status_label ? `<span>🏷️ <span class="val">${s.status_label}</span></span>` : ''}
     </div>
   </div>`;
+}
+
+async function loadCensus() {
+  try {
+    const data = await fetch('https://raw.githubusercontent.com/dusan-maintains/oss-maintenance-log/main/docs/data/abandonment-study.json').then(r => r.json());
+    const results = data.results || [];
+    const dead = results.filter(r => r.deprecated || r.archived).sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
+    const cold = results.filter(r => !r.deprecated && !r.archived && (r.daysSincePush || 0) > 365);
+    const deadDl = data.dead_weekly_downloads != null ? data.dead_weekly_downloads : dead.reduce((s, r) => s + (r.downloads || 0), 0);
+
+    document.getElementById('c-dead').textContent = data.dead_count != null ? data.dead_count : dead.length;
+    document.getElementById('c-total').textContent = data.packages || results.length;
+    document.getElementById('c-dl').textContent = fmt(deadDl);
+    document.getElementById('c-cold').textContent = cold.length;
+
+    const age = d => d == null ? '—' : d >= 365 ? (d / 365).toFixed(1) + 'y' : d >= 30 ? Math.round(d / 30) + 'mo' : d + 'd';
+    const top = dead.slice(0, 14);
+    document.getElementById('census-wrap').innerHTML = `<table>
+      <thead><tr><th>Package</th><th class="num">Downloads/wk</th><th>Status</th><th class="num">Last publish</th><th class="num">Last push</th><th class="num">Health</th></tr></thead>
+      <tbody>${top.map(r => `<tr>
+        <td><a href="${r.repoUrl || '#'}" target="_blank">${r.name}</a></td>
+        <td class="num">${fmt(r.downloads || 0)}</td>
+        <td>${r.deprecated ? '<span class="flag-dep">deprecated</span>' : ''}${r.deprecated && r.archived ? ' + ' : ''}${r.archived ? '<span class="flag-arch">archived</span>' : ''}</td>
+        <td class="num">${age(r.daysSincePublish)}</td>
+        <td class="num">${age(r.daysSincePush)}</td>
+        <td class="num"><span class="risk-badge critical">${r.health_score}</span></td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+  } catch (e) {
+    const w = document.getElementById('census-wrap');
+    if (w) w.innerHTML = '<div class="loading">Census data unavailable.</div>';
+  }
 }
 
 async function load() {
@@ -693,6 +786,7 @@ async function load() {
   }
 }
 
+loadCensus();
 load();
 </script>
 </body>
