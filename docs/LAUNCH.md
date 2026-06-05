@@ -70,3 +70,41 @@ Lead with the **number**, not the tool. The data is strong enough that any spin 
 - No asking for upvotes/stars anywhere. HN auto-penalizes vote-begging and ring voting; it tanks the post and the account.
 - No bought stars. On a young repo it's detectable, it's the opposite of "critics rate it," and it poisons the credibility this census is built to earn.
 - Earn the curve with the artifact. The data is the growth engine.
+
+---
+
+## Track B — launch the tool itself (second wave, ~1 week after the census)
+
+Once the census post has done its work, launch the CLI on its own merits to a tool-hungry audience.
+
+**Titles:**
+1. `Show HN: oss-health-scan – find abandoned dependencies before they become a CVE`
+2. `Show HN: a --paranoid mode that scores your npm deps by "blast radius if compromised"`
+
+**Post body:**
+
+> `npm audit` tells you what's already vulnerable. I wanted to see what's *becoming* dangerous — abandoned packages, single-maintainer deps with millions of downloads, packages that run install scripts. So I built `oss-health-scan`:
+>
+>     npx oss-health-scan --paranoid
+>
+> It scores every dependency 0–100, rates each by **blast radius** (reach × install-scripts × single-maintainer × abandonment × CVEs), explains *why* in plain English, and suggests a replacement. Zero deps, no account. There's a GitHub Action that comments the report on PRs and fails on critical, a `diff <ref>` mode for "did this PR make my deps worse", `--html` reports, and a machine-readable OSS Health Manifest via `--json`.
+
+**First comment:** lead with the honest limits — the score is opinionated (weights live in `lib/scoring.js`), blast radius is a heuristic, and it complements rather than replaces `npm audit` / Snyk. Invite people to run it on their own tree and paste results.
+
+## Demo GIF (record this — animation can't be generated headless)
+
+A terminal GIF on the README roughly doubles "I'll try it" intent. Record the `--paranoid` run:
+
+```bash
+# option A — asciinema + agg
+npm i -g asciinema agg
+asciinema rec demo.cast --command "npx oss-health-scan core-js node-sass request left-pad express moment --paranoid"
+agg demo.cast docs/paranoid-demo.gif
+
+# option B — terminalizer
+npm i -g terminalizer
+terminalizer record demo -d "npx oss-health-scan core-js node-sass request --paranoid"
+terminalizer render demo -o docs/paranoid-demo.gif
+```
+
+Then embed near the top of the README: `![oss-health-scan --paranoid](docs/paranoid-demo.gif)`. Keep it under ~15s — the EXTREME/HIGH blast lines and the `request → undici` suggestion are the moneyshots.
