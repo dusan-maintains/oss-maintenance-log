@@ -1,20 +1,8 @@
 {
-  "generated_at_utc": "2026-06-06T04:19:44Z",
+  "generated_at_utc": "2026-06-06T08:46:52Z",
   "open_actions": 2,
-  "urgent_actions": 2,
+  "urgent_actions": 1,
   "items": [
-    {
-      "repository": "Hellenic/react-hexgrid",
-      "pr_number": 123,
-      "pr_title": "test: add coverage for GridGenerator.ring and .spiral",
-      "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
-      "last_external_author": "StantonMatt",
-      "last_external_at": "06/02/2026 06:10:07",
-      "hours_since_last_external": 94.16,
-      "overdue_sla": true,
-      "priority": "urgent",
-      "source_report": "review-sla-react-hexgrid.json"
-    },
     {
       "repository": "extrabacon/python-shell",
       "pr_number": 320,
@@ -22,10 +10,22 @@
       "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
       "last_external_author": "StantonMatt",
       "last_external_at": "06/02/2026 06:38:44",
-      "hours_since_last_external": 93.68,
+      "hours_since_last_external": 98.13,
       "overdue_sla": true,
       "priority": "urgent",
       "source_report": "review-sla-python-shell.json"
+    },
+    {
+      "repository": "Hellenic/react-hexgrid",
+      "pr_number": 123,
+      "pr_title": "test: add coverage for GridGenerator.ring and .spiral",
+      "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
+      "last_external_author": "kikiminyes",
+      "last_external_at": "06/06/2026 04:29:59",
+      "hours_since_last_external": 4.28,
+      "overdue_sla": false,
+      "priority": "normal",
+      "source_report": "review-sla-react-hexgrid.json"
     }
   ]
 }
