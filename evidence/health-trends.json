@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-07T04:55:56Z",
-  "data_points": 326,
+  "generated_at_utc": "2026-06-07T09:36:04Z",
+  "data_points": 327,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -14,11 +14,11 @@
     },
     {
       "repo": "grafana/grafana",
-      "current_score": 62.1,
+      "current_score": 62.2,
       "score_7d_ago": 62.2,
       "score_30d_ago": 62.2,
-      "delta_7d": -0.10000000000000142,
-      "delta_30d": -0.10000000000000142,
+      "delta_7d": 0.0,
+      "delta_30d": 0.0,
       "trend": "stable"
     },
     {
