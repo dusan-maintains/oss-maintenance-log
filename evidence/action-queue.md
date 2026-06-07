@@ -1,13 +1,13 @@
 # Action Queue
 
-Generated: 2026-06-07T09:36:04Z
+Generated: 2026-06-07T14:19:40Z
 - Open actions: 2
 - Urgent actions: 2
 
 | Priority | Repository | PR | Hours since external feedback | Last author | Last feedback at | Link |
 |---|---|---|---|---|---|---|
-| urgent | `extrabacon/python-shell` | #320 | 122.95 | StantonMatt | 06/02/2026 06:38:44 | [link](https://github.com/extrabacon/python-shell/pull/320) |
-| urgent | `Hellenic/react-hexgrid` | #123 | 29.1 | kikiminyes | 06/06/2026 04:29:59 | [link](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| urgent | `extrabacon/python-shell` | #320 | 127.68 | StantonMatt | 06/02/2026 06:38:44 | [link](https://github.com/extrabacon/python-shell/pull/320) |
+| urgent | `Hellenic/react-hexgrid` | #123 | 33.83 | kikiminyes | 06/06/2026 04:29:59 | [link](https://github.com/Hellenic/react-hexgrid/pull/123) |
 
 Suggested quick reply template:
 
