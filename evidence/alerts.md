@@ -1,6 +1,6 @@
 # Health Alerts
 
-Generated: 2026-06-09T10:03:00Z
+Generated: 2026-06-09T15:27:11Z
 Total: 2 (🔴 0 critical, 🟡 2 warning)
 
 | Severity | Package | Score | Alert | Details |
