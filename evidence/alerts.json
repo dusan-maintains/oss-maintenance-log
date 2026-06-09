@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-09T15:27:11Z",
+  "generated_at_utc": "2026-06-09T20:20:23Z",
   "total_alerts": 2,
   "critical_alerts": 0,
   "warning_alerts": 2,
@@ -18,7 +18,7 @@
       "repo": "Hellenic/react-hexgrid",
       "score": 35.7,
       "message": "Health score dropped by 13.4 points in 7 days (49.1 -> 35.7).",
-      "details": "Trend: declining. 30d delta: -13.5"
+      "details": "Trend: declining. 30d delta: -13.4"
     }
   ]
 }
