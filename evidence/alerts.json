@@ -1,24 +1,7 @@
 {
-  "generated_at_utc": "2026-06-09T20:20:23Z",
-  "total_alerts": 2,
+  "generated_at_utc": "2026-06-10T04:48:16Z",
+  "total_alerts": 0,
   "critical_alerts": 0,
-  "warning_alerts": 2,
-  "alerts": [
-    {
-      "type": "score_drop",
-      "severity": "warning",
-      "repo": "extrabacon/python-shell",
-      "score": 59.0,
-      "message": "Health score dropped by 13.4 points in 7 days (72.4 -> 59).",
-      "details": "Trend: declining. 30d delta: -14.1"
-    },
-    {
-      "type": "score_drop",
-      "severity": "warning",
-      "repo": "Hellenic/react-hexgrid",
-      "score": 35.7,
-      "message": "Health score dropped by 13.4 points in 7 days (49.1 -> 35.7).",
-      "details": "Trend: declining. 30d delta: -13.4"
-    }
-  ]
+  "warning_alerts": 0,
+  "alerts": []
 }
