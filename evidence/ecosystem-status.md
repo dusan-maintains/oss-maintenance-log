@@ -1,19 +1,19 @@
 # Ecosystem Status
 
-Generated: 2026-06-10T16:07:43Z
+Generated: 2026-06-10T20:44:47Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 7
-- Total stars: 86050
-- Total forks: 17961
+- Total stars: 86054
+- Total forks: 17962
 - Total npm downloads last week: 2416196
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | Open | 74330 | 14046 | 0 | 1 | 0 |
+| [grafana/grafana](https://github.com/grafana/grafana) | Open | 74334 | 14047 | 0 | 1 | 0 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 2615 | 2258 | 0 | 1 | 0 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2611 | 648 | 18341 | 3 | 3 |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 258 | 96 | 4707 | 1 | 1 |
