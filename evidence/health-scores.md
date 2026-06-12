@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-06-12T10:39:40Z
+Generated: 2026-06-12T15:39:44Z
 
 ## Summary
 - Average health score: **54.8 / 100**
@@ -16,8 +16,8 @@ Generated: 2026-06-12T10:39:40Z
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.7** | warning | 3.50 | 8.53 | 6.68 | 10129 | 2611 |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **58.7** | warning | 2.24 | 7.74 | 9.18 | 321894 | 2171 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.5** | warning | 3.55 | 8.62 | 10 | 2122679 | 3716 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.4** | healthy | 6.67 | 9.28 | 0 | 0 | 2633 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 74369 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.4** | healthy | 6.67 | 9.28 | 0 | 0 | 2637 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 74377 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
