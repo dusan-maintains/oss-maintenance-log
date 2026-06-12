@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-11T20:35:18Z",
+  "generated_at_utc": "2026-06-12T05:03:26Z",
   "open_actions": 2,
   "urgent_actions": 2,
   "items": [
@@ -10,7 +10,7 @@
       "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
       "last_external_author": "StantonMatt",
       "last_external_at": "06/02/2026 06:38:44",
-      "hours_since_last_external": 229.94,
+      "hours_since_last_external": 238.41,
       "overdue_sla": true,
       "priority": "urgent",
       "source_report": "review-sla-python-shell.json"
@@ -22,7 +22,7 @@
       "pr_url": "https://github.com/Hellenic/react-hexgrid/pull/123",
       "last_external_author": "kikiminyes",
       "last_external_at": "06/06/2026 04:29:59",
-      "hours_since_last_external": 136.09,
+      "hours_since_last_external": 144.56,
       "overdue_sla": true,
       "priority": "urgent",
       "source_report": "review-sla-react-hexgrid.json"
