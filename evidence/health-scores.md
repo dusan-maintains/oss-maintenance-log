@@ -1,9 +1,9 @@
 # Package Health Scores
 
-Generated: 2026-06-12T05:03:26Z
+Generated: 2026-06-12T10:39:40Z
 
 ## Summary
-- Average health score: **54.9 / 100**
+- Average health score: **54.8 / 100**
 - Critical: 0
 - Warning: 5
 - Healthy: 2
@@ -11,13 +11,13 @@ Generated: 2026-06-12T05:03:26Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **35.7** | warning | 0.24 | 6.42 | 5.21 | 1339 | 351 |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.2** | warning | 4.17 | 6.02 | 6.12 | 4707 | 258 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **55.5** | warning | 3.50 | 8.53 | 7.11 | 18341 | 2611 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **58.9** | warning | 2.24 | 7.74 | 9.28 | 370942 | 2170 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.5** | warning | 3.55 | 8.62 | 10 | 2020867 | 3716 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **36.0** | warning | 0.24 | 6.42 | 5.37 | 1663 | 351 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.4** | warning | 4.17 | 6.02 | 6.19 | 5145 | 258 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.7** | warning | 3.50 | 8.53 | 6.68 | 10129 | 2611 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **58.7** | warning | 2.24 | 7.74 | 9.18 | 321894 | 2171 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.5** | warning | 3.55 | 8.62 | 10 | 2122679 | 3716 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.4** | healthy | 6.67 | 9.28 | 0 | 0 | 2633 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 74362 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 74369 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
