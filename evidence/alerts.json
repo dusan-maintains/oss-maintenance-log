@@ -1,16 +1,7 @@
 {
-  "generated_at_utc": "2026-06-13T14:26:08Z",
-  "total_alerts": 1,
+  "generated_at_utc": "2026-06-13T19:53:59Z",
+  "total_alerts": 0,
   "critical_alerts": 0,
-  "warning_alerts": 1,
-  "alerts": [
-    {
-      "type": "score_drop",
-      "severity": "warning",
-      "repo": "Hellenic/react-hexgrid",
-      "score": 35.9,
-      "message": "Health score dropped by 13.2 points in 7 days (49.1 -> 35.9).",
-      "details": "Trend: declining. 30d delta: -13.4"
-    }
-  ]
+  "warning_alerts": 0,
+  "alerts": []
 }

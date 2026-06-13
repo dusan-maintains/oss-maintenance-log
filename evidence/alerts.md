@@ -1,8 +1,6 @@
 # Health Alerts
 
-Generated: 2026-06-13T14:26:08Z
-Total: 1 (🔴 0 critical, 🟡 1 warning)
+Generated: 2026-06-13T19:53:59Z
+Total: 0 (🔴 0 critical, 🟡 0 warning)
 
-| Severity | Package | Score | Alert | Details |
-|---|---|---|---|---|
-| 🟡 warning | Hellenic/react-hexgrid | 35.9/100 | Health score dropped by 13.2 points in 7 days (49.1 -> 35.9). | Trend: declining. 30d delta: -13.4 |
+✅ No alerts. All packages are within healthy thresholds.
