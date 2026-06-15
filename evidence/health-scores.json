@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-06-14T19:57:51Z",
+  "generated_at_utc": "2026-06-15T05:28:02Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 54.9,
+    "average_health_score": 54.8,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 35.8,
+      "health_score": 35.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.25,
-          "download_score": 5.25,
-          "downloads_last_week": 1403
+          "score": 5.14,
+          "download_score": 5.14,
+          "downloads_last_week": 1214
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1403,
+      "npm_downloads_last_week": 1214,
       "status_label": "Maintainer Needed"
     },
     {
@@ -70,20 +70,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.26,
-          "download_score": 6.26,
-          "downloads_last_week": 5695
+          "score": 6.25,
+          "download_score": 6.25,
+          "downloads_last_week": 5641
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1612.0,
+          "days_since_push": 1613.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 5695,
+      "npm_downloads_last_week": 5641,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.69,
-          "download_score": 6.69,
-          "downloads_last_week": 10367
+          "score": 6.71,
+          "download_score": 6.71,
+          "downloads_last_week": 10565
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2611,
-      "npm_downloads_last_week": 10367,
+      "npm_downloads_last_week": 10565,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 2.22,
-          "push_recency": 6.66,
+          "push_recency": 6.65,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -150,7 +150,7 @@
           "weight": 0.2,
           "score": 9.34,
           "download_score": 9.34,
-          "downloads_last_week": 400970
+          "downloads_last_week": 400533
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2170,
-      "npm_downloads_last_week": 400970,
+      "npm_downloads_last_week": 400533,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2191746
+          "downloads_last_week": 2197795
         },
         "risk": {
           "weight": 0.15,
@@ -200,7 +200,7 @@
         }
       },
       "stars": 3716,
-      "npm_downloads_last_week": 2191746,
+      "npm_downloads_last_week": 2197795,
       "status_label": "Open Backlog"
     },
     {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 378,
+          "open_issues": 381,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2652,
+      "stars": 2654,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.99,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3622,
+          "open_issues": 3634,
           "open_tracked_prs": 0
         }
       },
-      "stars": 74420,
+      "stars": 74425,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
