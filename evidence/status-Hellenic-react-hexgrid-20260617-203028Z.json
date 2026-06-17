@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-06-06T08:46:51Z",
+  "generated_at_utc": "2026-06-17T20:30:28Z",
   "repo": {
     "owner": "Hellenic",
     "name": "react-hexgrid",
     "html_url": "https://github.com/Hellenic/react-hexgrid",
     "stars": 351,
-    "forks": 137,
+    "forks": 136,
     "open_issues": 34,
     "pushed_at": "2024-07-31T18:24:34Z"
   },
   "npm": {
     "package": "react-hexgrid",
-    "downloads_last_week": 1339,
-    "start": "2026-05-27",
-    "end": "2026-06-02"
+    "downloads_last_week": 1167,
+    "start": "2026-06-10",
+    "end": "2026-06-16"
   },
   "tracked_prs": [
     {
