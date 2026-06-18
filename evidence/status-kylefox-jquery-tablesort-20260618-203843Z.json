@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-06-07T09:35:59Z",
+  "generated_at_utc": "2026-06-18T20:38:43Z",
   "repo": {
     "owner": "kylefox",
     "name": "jquery-tablesort",
     "html_url": "https://github.com/kylefox/jquery-tablesort",
     "stars": 258,
-    "forks": 96,
+    "forks": 95,
     "open_issues": 15,
     "pushed_at": "2022-01-14T13:52:41Z"
   },
   "npm": {
     "package": "jquery-tablesort",
-    "downloads_last_week": 4707,
-    "start": "2026-05-27",
-    "end": "2026-06-02"
+    "downloads_last_week": 6077,
+    "start": "2026-06-11",
+    "end": "2026-06-17"
   },
   "tracked_prs": [
     {
