@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-20T04:40:47Z",
+  "generated_at_utc": "2026-06-20T09:41:43Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.9,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 688.0,
+          "days_since_push": 689.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.5,
+      "health_score": 52.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.24,
-          "download_score": 6.24,
-          "downloads_last_week": 5565
+          "score": 6.14,
+          "download_score": 6.14,
+          "downloads_last_week": 4807
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 5565,
+      "npm_downloads_last_week": 4807,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 55.1,
+      "health_score": 55.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.9,
-          "download_score": 6.9,
-          "downloads_last_week": 13895
+          "score": 6.94,
+          "download_score": 6.94,
+          "downloads_last_week": 14608
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2611,
-      "npm_downloads_last_week": 13895,
+      "npm_downloads_last_week": 14608,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -135,8 +135,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 2.18,
-          "push_recency": 6.53,
+          "score": 2.17,
+          "push_recency": 6.52,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -150,7 +150,7 @@
           "weight": 0.2,
           "score": 9.45,
           "download_score": 9.45,
-          "downloads_last_week": 466750
+          "downloads_last_week": 467453
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2170,
-      "npm_downloads_last_week": 466750,
+      "npm_downloads_last_week": 467453,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,18 +189,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2245727
+          "downloads_last_week": 2196637
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 722.0,
+          "days_since_push": 723.0,
           "open_issues": 209,
           "open_tracked_prs": 1
         }
       },
       "stars": 3720,
-      "npm_downloads_last_week": 2245727,
+      "npm_downloads_last_week": 2196637,
       "status_label": "Open Backlog"
     },
     {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 342,
+          "open_issues": 339,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2699,
+      "stars": 2702,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3601,
+          "open_issues": 3603,
           "open_tracked_prs": 0
         }
       },
-      "stars": 74538,
+      "stars": 74541,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
