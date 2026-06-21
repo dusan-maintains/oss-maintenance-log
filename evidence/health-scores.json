@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-20T19:56:51Z",
+  "generated_at_utc": "2026-06-21T05:18:00Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1618.0,
+          "days_since_push": 1619.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 2.17,
-          "push_recency": 6.51,
+          "push_recency": 6.5,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -199,7 +199,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3720,
+      "stars": 3719,
       "npm_downloads_last_week": 2196637,
       "status_label": "Open Backlog"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 342,
+          "open_issues": 347,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2705,
+      "stars": 2708,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.2,
+      "health_score": 62.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.99,
+          "push_recency": 9.97,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,12 +272,12 @@
         "risk": {
           "weight": 0.15,
           "score": 7.0,
-          "days_since_push": 0.0,
-          "open_issues": 3604,
+          "days_since_push": 1.0,
+          "open_issues": 3590,
           "open_tracked_prs": 0
         }
       },
-      "stars": 74552,
+      "stars": 74553,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
