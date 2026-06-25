@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-06-13T09:33:44Z",
+  "generated_at_utc": "2026-06-25T04:33:44Z",
   "repo": {
     "owner": "kylefox",
     "name": "jquery-modal",
     "html_url": "https://github.com/kylefox/jquery-modal",
-    "stars": 2611,
+    "stars": 2610,
     "forks": 647,
     "open_issues": 75,
     "pushed_at": "2024-04-18T03:52:43Z"
   },
   "npm": {
     "package": "jquery-modal",
-    "downloads_last_week": 10294,
-    "start": "2026-06-06",
-    "end": "2026-06-12"
+    "downloads_last_week": 15558,
+    "start": "2026-06-17",
+    "end": "2026-06-23"
   },
   "tracked_prs": [
     {
