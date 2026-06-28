@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-27T19:44:37Z",
+  "generated_at_utc": "2026-06-28T04:50:12Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.9,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 0.23,
-          "push_recency": 0.69,
+          "push_recency": 0.68,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1625.0,
+          "days_since_push": 1626.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 2.11,
-          "push_recency": 6.34,
+          "push_recency": 6.33,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 118.0,
+          "days_since_push": 119.0,
           "open_issues": 73,
           "open_tracked_prs": 1
         }
@@ -221,7 +221,7 @@
         "community": {
           "weight": 0.25,
           "score": 9.3,
-          "stars_score": 8.6,
+          "stars_score": 8.61,
           "forks_score": 10.0
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 362,
+          "open_issues": 374,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2766,
+      "stars": 2767,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.2,
+      "health_score": 62.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3534,
+          "open_issues": 3519,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75093,
+      "stars": 75115,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
