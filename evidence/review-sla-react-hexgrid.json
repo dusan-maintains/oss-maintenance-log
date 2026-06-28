@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-28T14:15:58Z",
+  "generated_at_utc": "2026-06-28T19:45:50Z",
   "repository": "Hellenic/react-hexgrid",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
@@ -23,7 +23,7 @@
       "last_external_url": "https://github.com/Hellenic/react-hexgrid/pull/123#issuecomment-4637376390",
       "last_own_after_external_at": null,
       "needs_response": true,
-      "hours_since_last_external": 537.77,
+      "hours_since_last_external": 543.26,
       "overdue_sla": true
     }
   ]
