@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-30T04:33:46Z",
+  "generated_at_utc": "2026-06-30T10:00:37Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 698.0,
+          "days_since_push": 699.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -130,13 +130,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 58.6,
+      "health_score": 58.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 2.09,
-          "push_recency": 6.28,
+          "push_recency": 6.27,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 732.0,
+          "days_since_push": 733.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -220,8 +220,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.3,
-          "stars_score": 8.61,
+          "score": 9.31,
+          "stars_score": 8.62,
           "forks_score": 10.0
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 354,
+          "open_issues": 345,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2791,
+      "stars": 2793,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3541,
+          "open_issues": 3535,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75191,
+      "stars": 75202,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
