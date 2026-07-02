@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-02T04:30:53Z",
+  "generated_at_utc": "2026-07-02T09:31:43Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 700.0,
+          "days_since_push": 701.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -169,7 +169,7 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.4,
+      "health_score": 59.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.62,
+          "score": 8.64,
           "stars_score": 8.93,
-          "forks_score": 8.3
+          "forks_score": 8.34
         },
         "popularity": {
           "weight": 0.2,
@@ -194,12 +194,12 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 734.0,
+          "days_since_push": 735.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
       },
-      "stars": 3721,
+      "stars": 3722,
       "npm_downloads_last_week": 2272594,
       "status_label": "Open Backlog"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 342,
+          "open_issues": 334,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2804,
+      "stars": 2807,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3557,
+          "open_issues": 3565,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75170,
+      "stars": 75183,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
