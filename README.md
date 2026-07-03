@@ -209,13 +209,13 @@ Config-driven PowerShell + GitHub Actions that automatically:
 <!-- TRACKED_PROJECTS:START -->
 | Project | Stars | npm/week | Status | Health | My PRs |
 |---------|-------|----------|--------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 75.2k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [grafana/grafana](https://github.com/grafana/grafana) | 75.3k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 2.8k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 12.6k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 6.1k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 442.2k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 2.3M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1.6k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 16.3k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 5.2k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 415.6k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 2.2M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1.4k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
 *Across tracked projects:* **<!-- STATS:START -->87.2k stars · 2.7M downloads/week across tracked projects · refreshed 07/03/2026<!-- STATS:END -->**
