@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-04T04:01:30Z",
+  "generated_at_utc": "2026-07-04T08:50:16Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 702.0,
+          "days_since_push": 703.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 736.0,
+          "days_since_push": 737.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 410,
+          "open_issues": 413,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2832,
+      "stars": 2836,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.2,
+      "health_score": 62.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.99,
+          "push_recency": 9.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -277,7 +277,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 75290,
+      "stars": 75294,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
