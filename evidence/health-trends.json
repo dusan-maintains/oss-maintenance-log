@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-07-05T14:09:05Z",
-  "data_points": 438,
+  "generated_at_utc": "2026-07-05T19:41:44Z",
+  "data_points": 439,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
       "current_score": 58.3,
-      "score_7d_ago": 58.7,
+      "score_7d_ago": 58.6,
       "score_30d_ago": 59.1,
-      "delta_7d": -0.4000000000000057,
+      "delta_7d": -0.30000000000000426,
       "delta_30d": -0.8000000000000043,
       "trend": "stable"
     },
