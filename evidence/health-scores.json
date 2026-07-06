@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T19:41:44Z",
+  "generated_at_utc": "2026-07-06T04:38:46Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.7,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1633.0,
+          "days_since_push": 1634.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -121,7 +121,7 @@
           "open_tracked_prs": 3
         }
       },
-      "stars": 2606,
+      "stars": 2607,
       "npm_downloads_last_week": 15083,
       "status_label": "Maintainers Wanted"
     },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 126.0,
+          "days_since_push": 127.0,
           "open_issues": 73,
           "open_tracked_prs": 1
         }
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 336,
+          "open_issues": 341,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2861,
+      "stars": 2866,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -247,13 +247,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.1,
+      "health_score": 62.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.65,
-          "push_recency": 9.96,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,12 +272,12 @@
         "risk": {
           "weight": 0.15,
           "score": 7.0,
-          "days_since_push": 1.0,
-          "open_issues": 3547,
+          "days_since_push": 0.0,
+          "open_issues": 3533,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75318,
+      "stars": 75325,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
