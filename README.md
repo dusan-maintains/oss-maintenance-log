@@ -209,7 +209,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 <!-- TRACKED_PROJECTS:START -->
 | Project | Stars | npm/week | Status | Health | My PRs |
 |---------|-------|----------|--------|--------|--------|
-| [grafana/grafana](https://github.com/grafana/grafana) | 75.4k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
+| [grafana/grafana](https://github.com/grafana/grafana) | 75.3k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 2.9k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 14.8k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 258 | 4.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
@@ -218,7 +218,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 351 | 1k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->87.3k stars · 2.5M downloads/week across tracked projects · refreshed 07/07/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->87.3k stars · 2.5M downloads/week across tracked projects · refreshed 07/08/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
