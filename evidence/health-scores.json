@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-07-09T09:57:22Z",
+  "generated_at_utc": "2026-07-09T15:33:24Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 54.7,
+    "average_health_score": 54.6,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 35.2,
+      "health_score": 35.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.02,
-          "download_score": 5.02,
-          "downloads_last_week": 1023
+          "score": 5.08,
+          "download_score": 5.08,
+          "downloads_last_week": 1123
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1023,
+      "npm_downloads_last_week": 1123,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.2,
+      "health_score": 51.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.09,
-          "download_score": 6.09,
-          "downloads_last_week": 4516
+          "score": 5.87,
+          "download_score": 5.87,
+          "downloads_last_week": 3314
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 4516,
+      "npm_downloads_last_week": 3314,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 55.1,
+      "health_score": 55.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.95,
-          "download_score": 6.95,
-          "downloads_last_week": 14755
+          "score": 6.88,
+          "download_score": 6.88,
+          "downloads_last_week": 13405
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2606,
-      "npm_downloads_last_week": 14755,
+      "npm_downloads_last_week": 13405,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -130,13 +130,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 58.2,
+      "health_score": 58.4,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 2.02,
-          "push_recency": 6.06,
+          "push_recency": 6.05,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.36,
-          "download_score": 9.36,
-          "downloads_last_week": 413965
+          "score": 9.47,
+          "download_score": 9.47,
+          "downloads_last_week": 478805
         },
         "risk": {
           "weight": 0.15,
@@ -160,8 +160,8 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 2168,
-      "npm_downloads_last_week": 413965,
+      "stars": 2167,
+      "npm_downloads_last_week": 478805,
       "status_label": "Maintainer Gap"
     },
     {
@@ -174,8 +174,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.53,
-          "push_recency": 0.58,
+          "score": 3.52,
+          "push_recency": 0.57,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2100218
+          "downloads_last_week": 2226726
         },
         "risk": {
           "weight": 0.15,
@@ -199,8 +199,8 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3727,
-      "npm_downloads_last_week": 2100218,
+      "stars": 3728,
+      "npm_downloads_last_week": 2226726,
       "status_label": "Open Backlog"
     },
     {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 349,
+          "open_issues": 357,
           "open_tracked_prs": 0
         }
       },
-      "stars": 2892,
+      "stars": 2895,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3525,
+          "open_issues": 3515,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75373,
+      "stars": 75380,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
