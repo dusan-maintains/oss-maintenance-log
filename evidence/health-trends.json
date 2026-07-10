@@ -1,15 +1,15 @@
 {
-  "generated_at_utc": "2026-07-09T20:04:03Z",
-  "data_points": 455,
+  "generated_at_utc": "2026-07-10T04:14:00Z",
+  "data_points": 456,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
       "current_score": 58.4,
-      "score_7d_ago": 58.5,
-      "score_30d_ago": 59.0,
-      "delta_7d": -0.10000000000000142,
-      "delta_30d": -0.6000000000000014,
+      "score_7d_ago": 58.3,
+      "score_30d_ago": 58.9,
+      "delta_7d": 0.10000000000000142,
+      "delta_30d": -0.5,
       "trend": "stable"
     },
     {
@@ -24,9 +24,9 @@
     {
       "repo": "Hellenic/react-hexgrid",
       "current_score": 35.3,
-      "score_7d_ago": 35.8,
+      "score_7d_ago": 35.7,
       "score_30d_ago": 35.7,
-      "delta_7d": -0.5,
+      "delta_7d": -0.4000000000000057,
       "delta_30d": -0.4000000000000057,
       "trend": "stable"
     },
@@ -42,18 +42,18 @@
     {
       "repo": "kylefox/jquery-modal",
       "current_score": 55.0,
-      "score_7d_ago": 54.9,
+      "score_7d_ago": 55.3,
       "score_30d_ago": 55.5,
-      "delta_7d": 0.10000000000000142,
+      "delta_7d": -0.29999999999999716,
       "delta_30d": -0.5,
       "trend": "stable"
     },
     {
       "repo": "kylefox/jquery-tablesort",
       "current_score": 51.7,
-      "score_7d_ago": 52.6,
+      "score_7d_ago": 52.4,
       "score_30d_ago": 52.2,
-      "delta_7d": -0.8999999999999986,
+      "delta_7d": -0.6999999999999957,
       "delta_30d": -0.5,
       "trend": "stable"
     },
