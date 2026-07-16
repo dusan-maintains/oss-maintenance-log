@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T08:33:48Z",
+  "generated_at_utc": "2026-07-16T14:22:32Z",
   "repo": {
     "owner": "Hellenic",
     "name": "react-hexgrid",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "react-hexgrid",
-    "downloads_last_week": 1176,
-    "start": "2026-07-08",
-    "end": "2026-07-14"
+    "downloads_last_week": 1137,
+    "start": "2026-07-09",
+    "end": "2026-07-15"
   },
   "tracked_prs": [
     {
