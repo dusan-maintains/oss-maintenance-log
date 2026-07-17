@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-07-17T14:02:54Z",
-  "data_points": 486,
+  "generated_at_utc": "2026-07-17T19:32:35Z",
+  "data_points": 487,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -34,9 +34,9 @@
       "repo": "jkbrzt/rrule",
       "current_score": 59.4,
       "score_7d_ago": 59.4,
-      "score_30d_ago": 59.5,
+      "score_30d_ago": 59.4,
       "delta_7d": 0.0,
-      "delta_30d": -0.10000000000000142,
+      "delta_30d": 0.0,
       "trend": "stable"
     },
     {
