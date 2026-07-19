@@ -1,7 +1,7 @@
 # Health Score Trends
 
-Generated: 2026-07-19T03:54:14Z
-Data points: 492 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-07-19T08:32:40Z
+Data points: 493 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
@@ -11,4 +11,4 @@ Data points: 492 (oldest: 03/17/2026 20:04:19)
 | extrabacon/python-shell | **58.3** | 58.5 | -0.2 | 59 | -0.7 | ➡️ stable |
 | jkbrzt/rrule | **59.4** | 59.4 | 0 | 59.4 | 0 | ➡️ stable |
 | lingdojo/kana-dojo | **60.5** | 60.5 | 0 | 60.4 | +0.1 | ➡️ stable |
-| grafana/grafana | **62.2** | 62.1 | +0.1 | 62.2 | 0 | ➡️ stable |
+| grafana/grafana | **62.2** | 62.2 | 0 | 62.2 | 0 | ➡️ stable |
