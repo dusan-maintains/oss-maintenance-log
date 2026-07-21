@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-21T08:44:11Z",
+  "generated_at_utc": "2026-07-21T14:21:10Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.7,
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.21,
-          "download_score": 5.21,
-          "downloads_last_week": 1334
+          "score": 5.2,
+          "download_score": 5.2,
+          "downloads_last_week": 1318
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1334,
+      "npm_downloads_last_week": 1318,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.2,
+      "health_score": 52.1,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.12,
-          "download_score": 6.12,
-          "downloads_last_week": 4681
+          "score": 6.04,
+          "download_score": 6.04,
+          "downloads_last_week": 4225
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 4681,
+      "npm_downloads_last_week": 4225,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 54.9,
+      "health_score": 55.0,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.83,
-          "download_score": 6.83,
-          "downloads_last_week": 12605
+          "score": 6.87,
+          "download_score": 6.87,
+          "downloads_last_week": 13184
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2606,
-      "npm_downloads_last_week": 12605,
+      "npm_downloads_last_week": 13184,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.93,
-          "push_recency": 5.79,
+          "push_recency": 5.78,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.65,
-          "download_score": 9.65,
-          "downloads_last_week": 620529
+          "score": 9.66,
+          "download_score": 9.66,
+          "downloads_last_week": 624519
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2165,
-      "npm_downloads_last_week": 620529,
+      "npm_downloads_last_week": 624519,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2426045
+          "downloads_last_week": 2443885
         },
         "risk": {
           "weight": 0.15,
@@ -200,7 +200,7 @@
         }
       },
       "stars": 3732,
-      "npm_downloads_last_week": 2426045,
+      "npm_downloads_last_week": 2443885,
       "status_label": "Open Backlog"
     },
     {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 436,
+          "open_issues": 406,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3004,
+      "stars": 3005,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,7 +273,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3462,
+          "open_issues": 3479,
           "open_tracked_prs": 0
         }
       },
