@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-07-23T14:31:03Z",
+  "generated_at_utc": "2026-07-23T19:45:38Z",
   "repo": {
     "owner": "kylefox",
     "name": "jquery-modal",
     "html_url": "https://github.com/kylefox/jquery-modal",
     "stars": 2606,
     "forks": 647,
-    "open_issues": 75,
+    "open_issues": 76,
     "pushed_at": "2024-04-18T03:52:43Z"
   },
   "npm": {
