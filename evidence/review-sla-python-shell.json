@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-24T08:42:20Z",
+  "generated_at_utc": "2026-07-24T14:12:38Z",
   "repository": "extrabacon/python-shell",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
@@ -23,7 +23,7 @@
       "last_external_url": "https://github.com/extrabacon/python-shell/pull/320#pullrequestreview-4407182993",
       "last_own_after_external_at": null,
       "needs_response": true,
-      "hours_since_last_external": 1250.06,
+      "hours_since_last_external": 1255.57,
       "overdue_sla": true
     }
   ]
