@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-07-28T03:35:02Z",
+  "generated_at_utc": "2026-07-28T08:51:09Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 54.9,
+    "average_health_score": 54.8,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 726.0,
+          "days_since_push": 727.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -130,13 +130,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 58.4,
+      "health_score": 58.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 1.88,
-          "push_recency": 5.64,
+          "push_recency": 5.63,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -175,7 +175,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.51,
-          "push_recency": 0.54,
+          "push_recency": 0.53,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 760.0,
+          "days_since_push": 761.0,
           "open_issues": 212,
           "open_tracked_prs": 1
         }
@@ -221,7 +221,7 @@
         "community": {
           "weight": 0.25,
           "score": 9.36,
-          "stars_score": 8.71,
+          "stars_score": 8.72,
           "forks_score": 10.0
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 344,
+          "open_issues": 358,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3061,
+      "stars": 3064,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3433,
+          "open_issues": 3431,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75817,
+      "stars": 75800,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
