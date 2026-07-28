@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T08:51:09Z",
+  "generated_at_utc": "2026-07-28T14:37:03Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3431,
+          "open_issues": 3413,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75800,
+      "stars": 75811,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
