@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-07-29T09:08:01Z",
+  "generated_at_utc": "2026-07-29T14:30:42Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 54.8,
+    "average_health_score": 54.9,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.39,
-          "download_score": 5.39,
-          "downloads_last_week": 1702
+          "score": 5.4,
+          "download_score": 5.4,
+          "downloads_last_week": 1731
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 351,
-      "npm_downloads_last_week": 1702,
+      "npm_downloads_last_week": 1731,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.4,
+      "health_score": 52.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.22,
-          "download_score": 6.22,
-          "downloads_last_week": 5410
+          "score": 6.37,
+          "download_score": 6.37,
+          "downloads_last_week": 6634
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 258,
-      "npm_downloads_last_week": 5410,
+      "npm_downloads_last_week": 6634,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.93,
-          "download_score": 6.93,
-          "downloads_last_week": 14314
+          "score": 6.96,
+          "download_score": 6.96,
+          "downloads_last_week": 15074
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2606,
-      "npm_downloads_last_week": 14314,
+      "npm_downloads_last_week": 15074,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -130,7 +130,7 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 58.3,
+      "health_score": 58.4,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.74,
-          "download_score": 9.74,
-          "downloads_last_week": 697369
+          "score": 9.78,
+          "download_score": 9.78,
+          "downloads_last_week": 733073
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2165,
-      "npm_downloads_last_week": 697369,
+      "npm_downloads_last_week": 733073,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2532142
+          "downloads_last_week": 2502441
         },
         "risk": {
           "weight": 0.15,
@@ -200,7 +200,7 @@
         }
       },
       "stars": 3734,
-      "npm_downloads_last_week": 2532142,
+      "npm_downloads_last_week": 2502441,
       "status_label": "Open Backlog"
     },
     {
@@ -234,7 +234,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 332,
+          "open_issues": 321,
           "open_tracked_prs": 0
         }
       },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3405,
+          "open_issues": 3355,
           "open_tracked_prs": 0
         }
       },
-      "stars": 75830,
+      "stars": 75836,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
