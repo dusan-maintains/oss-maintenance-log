@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-08-01T13:54:31Z
+Generated: 2026-08-01T19:33:17Z
 Repository: `jkbrzt/rrule`
 Contributor: `dusan-maintains`
 SLA: `24` hours
