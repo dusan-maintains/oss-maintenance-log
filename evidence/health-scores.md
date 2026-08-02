@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-08-02T03:52:30Z
+Generated: 2026-08-02T08:36:36Z
 
 ## Summary
 - Average health score: **54.9 / 100**
@@ -11,13 +11,13 @@ Generated: 2026-08-02T03:52:30Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **35.7** | warning | 0.2 | 6.42 | 5.29 | 1489 | 351 |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.8** | warning | 4.17 | 6.02 | 6.39 | 6865 | 258 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **55.3** | warning | 3.47 | 8.52 | 7.04 | 16804 | 2606 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **58.4** | warning | 1.84 | 7.75 | 9.83 | 786434 | 2165 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.4** | warning | 3.51 | 8.64 | 10 | 2540563 | 3736 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.6** | healthy | 6.67 | 9.36 | 0 | 0 | 3086 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.66 | 10 | 0 | 0 | 75914 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟡 **35.6** | warning | 0.2 | 6.42 | 5.27 | 1458 | 351 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.8** | warning | 4.17 | 6.02 | 6.41 | 7046 | 258 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **55.3** | warning | 3.47 | 8.52 | 7.07 | 17508 | 2606 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **58.4** | warning | 1.84 | 7.75 | 9.84 | 797349 | 2165 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.4** | warning | 3.51 | 8.64 | 10 | 2554655 | 3736 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.6** | healthy | 6.67 | 9.36 | 0 | 0 | 3090 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.66 | 10 | 0 | 0 | 75919 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
