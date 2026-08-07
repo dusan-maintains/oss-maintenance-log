@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-08-06T14:34:29Z
+Generated: 2026-08-07T00:15:22Z
 Repository: `kylefox/jquery-tablesort`
 Contributor: `dusan-maintains`
 SLA: `24` hours
