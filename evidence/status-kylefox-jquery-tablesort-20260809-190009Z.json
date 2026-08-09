@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-29T14:30:36Z",
+  "generated_at_utc": "2026-08-09T19:00:09Z",
   "repo": {
     "owner": "kylefox",
     "name": "jquery-tablesort",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "jquery-tablesort",
-    "downloads_last_week": 6634,
-    "start": "2026-07-22",
-    "end": "2026-07-28"
+    "downloads_last_week": 7832,
+    "start": "2026-08-02",
+    "end": "2026-08-08"
   },
   "tracked_prs": [
     {
