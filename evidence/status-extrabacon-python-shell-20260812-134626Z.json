@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-01T08:33:34Z",
+  "generated_at_utc": "2026-08-12T13:46:26Z",
   "repo": {
     "owner": "extrabacon",
     "name": "python-shell",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "python-shell",
-    "downloads_last_week": 776172,
-    "start": "2026-07-24",
-    "end": "2026-07-30"
+    "downloads_last_week": 881311,
+    "start": "2026-08-03",
+    "end": "2026-08-09"
   },
   "tracked_prs": [
     {
