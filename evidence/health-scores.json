@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-20T07:05:26Z",
+  "generated_at_utc": "2026-08-20T13:10:38Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.7,
@@ -13,7 +13,7 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 35.4,
+      "health_score": 35.5,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.19,
-          "download_score": 5.19,
-          "downloads_last_week": 1297
+          "score": 5.24,
+          "download_score": 5.24,
+          "downloads_last_week": 1400
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 352,
-      "npm_downloads_last_week": 1297,
+      "npm_downloads_last_week": 1400,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 52.9,
+      "health_score": 52.7,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.45,
-          "download_score": 6.45,
-          "downloads_last_week": 7408
+          "score": 6.36,
+          "download_score": 6.36,
+          "downloads_last_week": 6504
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 254,
-      "npm_downloads_last_week": 7408,
+      "npm_downloads_last_week": 6504,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -111,7 +111,7 @@
           "weight": 0.2,
           "score": 6.94,
           "download_score": 6.94,
-          "downloads_last_week": 14520
+          "downloads_last_week": 14493
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2604,
-      "npm_downloads_last_week": 14520,
+      "npm_downloads_last_week": 14493,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.72,
-          "push_recency": 5.16,
+          "push_recency": 5.15,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -148,9 +148,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.73,
-          "download_score": 9.73,
-          "downloads_last_week": 687470
+          "score": 9.7,
+          "download_score": 9.7,
+          "downloads_last_week": 661093
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 2163,
-      "npm_downloads_last_week": 687470,
+      "npm_downloads_last_week": 661093,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2350710
+          "downloads_last_week": 2359202
         },
         "risk": {
           "weight": 0.15,
@@ -199,8 +199,8 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3738,
-      "npm_downloads_last_week": 2350710,
+      "stars": 3737,
+      "npm_downloads_last_week": 2359202,
       "status_label": "Open Backlog"
     },
     {
@@ -238,7 +238,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 3215,
+      "stars": 3219,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3366,
+          "open_issues": 3348,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76320,
+      "stars": 76327,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
