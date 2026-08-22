@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-08-21T18:55:29Z
+Generated: 2026-08-22T01:49:54Z
 
 ## Summary
 - Average health score: **54.7 / 100**
@@ -17,7 +17,7 @@ Generated: 2026-08-21T18:55:29Z
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **57.6** | warning | 1.71 | 7.76 | 9.7 | 661093 | 2163 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.3** | warning | 3.50 | 8.63 | 10 | 2359202 | 3738 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.6** | healthy | 6.67 | 9.38 | 0 | 0 | 3231 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 76343 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 76333 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
