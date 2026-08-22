@@ -211,11 +211,11 @@ Config-driven PowerShell + GitHub Actions that automatically:
 |---------|-------|----------|--------|--------|--------|
 | [grafana/grafana](https://github.com/grafana/grafana) | 76.3k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 3.2k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 14.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 254 | 6.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 661.1k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 2.4M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 352 | 1.4k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 13.3k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 254 | 6.9k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 639.8k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 2.3M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 352 | 1.5k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
 *Across tracked projects:* **<!-- STATS:START -->88.7k stars · 3M downloads/week across tracked projects · refreshed 08/22/2026<!-- STATS:END -->**
