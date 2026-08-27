@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-27T09:48:44Z",
+  "generated_at_utc": "2026-08-27T22:15:58Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.8,
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.49,
-          "download_score": 5.49,
-          "downloads_last_week": 1977
+          "score": 5.52,
+          "download_score": 5.52,
+          "downloads_last_week": 2062
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 352,
-      "npm_downloads_last_week": 1977,
+      "npm_downloads_last_week": 2062,
       "status_label": "Maintainer Needed"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 53.0,
+      "health_score": 53.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,9 +70,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.54,
-          "download_score": 6.54,
-          "downloads_last_week": 8442
+          "score": 6.62,
+          "download_score": 6.62,
+          "downloads_last_week": 9352
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 254,
-      "npm_downloads_last_week": 8442,
+      "npm_downloads_last_week": 9352,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 54.9,
+      "health_score": 54.8,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,20 +109,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.91,
-          "download_score": 6.91,
-          "downloads_last_week": 13918
+          "score": 6.85,
+          "download_score": 6.85,
+          "downloads_last_week": 12855
         },
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 861.0,
+          "days_since_push": 862.0,
           "open_issues": 76,
           "open_tracked_prs": 3
         }
       },
       "stars": 2604,
-      "npm_downloads_last_week": 13918,
+      "npm_downloads_last_week": 12855,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -136,7 +136,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.67,
-          "push_recency": 5.02,
+          "push_recency": 5.01,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -148,20 +148,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 9.81,
-          "download_score": 9.81,
-          "downloads_last_week": 767774
+          "score": 9.82,
+          "download_score": 9.82,
+          "downloads_last_week": 783729
         },
         "risk": {
           "weight": 0.15,
           "score": 8.0,
-          "days_since_push": 179.0,
+          "days_since_push": 180.0,
           "open_issues": 74,
           "open_tracked_prs": 1
         }
       },
       "stars": 2163,
-      "npm_downloads_last_week": 767774,
+      "npm_downloads_last_week": 783729,
       "status_label": "Maintainer Gap"
     },
     {
@@ -189,7 +189,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2883517
+          "downloads_last_week": 2895893
         },
         "risk": {
           "weight": 0.15,
@@ -200,7 +200,7 @@
         }
       },
       "stars": 3742,
-      "npm_downloads_last_week": 2883517,
+      "npm_downloads_last_week": 2895893,
       "status_label": "Open Backlog"
     },
     {
@@ -208,7 +208,7 @@
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
       "package": null,
-      "health_score": 60.6,
+      "health_score": 60.7,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
@@ -220,8 +220,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.39,
-          "stars_score": 8.78,
+          "score": 9.4,
+          "stars_score": 8.79,
           "forks_score": 10.0
         },
         "popularity": {
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 333,
+          "open_issues": 360,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3262,
+      "stars": 3270,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3330,
+          "open_issues": 3315,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76447,
+      "stars": 76456,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
