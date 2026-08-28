@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-08-27T22:15:58Z",
+  "generated_at_utc": "2026-08-28T11:23:35Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 54.8,
+    "average_health_score": 54.4,
     "critical": 0,
     "warning": 5,
     "healthy": 2
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 757.0,
+          "days_since_push": 758.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1686.0,
+          "days_since_push": 1687.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -85,6 +85,45 @@
       "stars": 254,
       "npm_downloads_last_week": 9352,
       "status_label": "Maintainers Wanted"
+    },
+    {
+      "owner": "extrabacon",
+      "repo": "python-shell",
+      "repo_url": "https://github.com/extrabacon/python-shell",
+      "package": "python-shell",
+      "health_score": 54.7,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 1.67,
+          "push_recency": 5.0,
+          "issue_ratio": 0.0,
+          "pr_response": 0.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 7.76,
+          "stars_score": 8.34,
+          "forks_score": 7.17
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 9.82,
+          "download_score": 9.82,
+          "downloads_last_week": 783729
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.0,
+          "days_since_push": 180.0,
+          "open_issues": 74,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 2163,
+      "npm_downloads_last_week": 783729,
+      "status_label": "Maintainer Gap"
     },
     {
       "owner": "kylefox",
@@ -121,48 +160,9 @@
           "open_tracked_prs": 3
         }
       },
-      "stars": 2604,
+      "stars": 2603,
       "npm_downloads_last_week": 12855,
       "status_label": "Maintainers Wanted"
-    },
-    {
-      "owner": "extrabacon",
-      "repo": "python-shell",
-      "repo_url": "https://github.com/extrabacon/python-shell",
-      "package": "python-shell",
-      "health_score": 57.7,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 1.67,
-          "push_recency": 5.01,
-          "issue_ratio": 0.0,
-          "pr_response": 0.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 7.76,
-          "stars_score": 8.34,
-          "forks_score": 7.17
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 9.82,
-          "download_score": 9.82,
-          "downloads_last_week": 783729
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 8.0,
-          "days_since_push": 180.0,
-          "open_issues": 74,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 2163,
-      "npm_downloads_last_week": 783729,
-      "status_label": "Maintainer Gap"
     },
     {
       "owner": "jkbrzt",
@@ -175,7 +175,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.49,
-          "push_recency": 0.48,
+          "push_recency": 0.47,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 791.0,
+          "days_since_push": 792.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 360,
+          "open_issues": 368,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3270,
+      "stars": 3280,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3315,
+          "open_issues": 3328,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76456,
+      "stars": 76462,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
