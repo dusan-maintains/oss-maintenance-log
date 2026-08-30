@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-30T05:24:12Z",
+  "generated_at_utc": "2026-08-30T11:54:41Z",
   "repo": {
     "owner": "kylefox",
     "name": "jquery-modal",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "jquery-modal",
-    "downloads_last_week": 11777,
-    "start": "2026-08-22",
-    "end": "2026-08-28"
+    "downloads_last_week": 11052,
+    "start": "2026-08-23",
+    "end": "2026-08-29"
   },
   "tracked_prs": [
     {
