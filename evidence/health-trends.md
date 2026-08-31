@@ -1,11 +1,11 @@
 # Health Score Trends
 
-Generated: 2026-08-31T13:50:12Z
-Data points: 660 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-08-31T22:50:45Z
+Data points: 661 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
-| Hellenic/react-hexgrid | **36.1** | 35.8 | +0.3 | 35.7 | +0.4 | ➡️ stable |
+| Hellenic/react-hexgrid | **36.1** | 35.8 | +0.3 | 35.6 | +0.5 | ➡️ stable |
 | kylefox/jquery-tablesort | **53.4** | 53.1 | +0.3 | 52.8 | +0.6 | ➡️ stable |
 | kylefox/jquery-modal | **54.6** | 55 | -0.4 | 55.3 | -0.7 | ➡️ stable |
 | extrabacon/python-shell | **54.7** | 57.7 | -3.0 | 58.4 | -3.7 | ➡️ stable |
