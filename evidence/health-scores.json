@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-01T05:08:03Z",
+  "generated_at_utc": "2026-09-01T11:39:29Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.4,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 761.0,
+          "days_since_push": 762.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -130,13 +130,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 54.7,
+      "health_score": 54.6,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 1.64,
-          "push_recency": 4.93,
+          "push_recency": 4.92,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -194,7 +194,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 795.0,
+          "days_since_push": 796.0,
           "open_issues": 211,
           "open_tracked_prs": 1
         }
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 337,
+          "open_issues": 335,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3302,
+      "stars": 3301,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3315,
+          "open_issues": 3321,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76536,
+      "stars": 76540,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
