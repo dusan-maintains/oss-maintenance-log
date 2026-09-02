@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-02T04:33:51Z",
+  "generated_at_utc": "2026-09-02T11:18:44Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 54.4,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 762.0,
+          "days_since_push": 763.0,
           "open_issues": 34,
           "open_tracked_prs": 1
         }
@@ -97,7 +97,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 3.45,
-          "push_recency": 0.36,
+          "push_recency": 0.35,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -135,8 +135,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 1.64,
-          "push_recency": 4.91,
+          "score": 1.63,
+          "push_recency": 4.9,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -156,7 +156,7 @@
           "weight": 0.15,
           "score": 6.0,
           "days_since_push": 185.0,
-          "open_issues": 73,
+          "open_issues": 74,
           "open_tracked_prs": 1
         }
       },
@@ -181,9 +181,9 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 8.63,
+          "score": 8.64,
           "stars_score": 8.93,
-          "forks_score": 8.33
+          "forks_score": 8.34
         },
         "popularity": {
           "weight": 0.2,
@@ -194,8 +194,8 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 796.0,
-          "open_issues": 211,
+          "days_since_push": 797.0,
+          "open_issues": 212,
           "open_tracked_prs": 1
         }
       },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 344,
+          "open_issues": 333,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3303,
+      "stars": 3304,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -273,11 +273,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3332,
+          "open_issues": 3337,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76553,
+      "stars": 76563,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     }
