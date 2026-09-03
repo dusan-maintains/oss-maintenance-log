@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-03T04:33:52Z",
-  "data_points": 670,
+  "generated_at_utc": "2026-09-03T11:14:18Z",
+  "data_points": 671,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -42,27 +42,27 @@
     {
       "repo": "kylefox/jquery-modal",
       "current_score": 54.6,
-      "score_7d_ago": 54.9,
+      "score_7d_ago": 54.8,
       "score_30d_ago": 55.3,
-      "delta_7d": -0.29999999999999716,
+      "delta_7d": -0.19999999999999574,
       "delta_30d": -0.6999999999999957,
       "trend": "stable"
     },
     {
       "repo": "kylefox/jquery-tablesort",
       "current_score": 53.4,
-      "score_7d_ago": 53.0,
+      "score_7d_ago": 53.2,
       "score_30d_ago": 52.9,
-      "delta_7d": 0.3999999999999986,
+      "delta_7d": 0.19999999999999574,
       "delta_30d": 0.5,
       "trend": "stable"
     },
     {
       "repo": "lingdojo/kana-dojo",
       "current_score": 60.7,
-      "score_7d_ago": 60.6,
+      "score_7d_ago": 60.7,
       "score_30d_ago": 60.6,
-      "delta_7d": 0.10000000000000142,
+      "delta_7d": 0.0,
       "delta_30d": 0.10000000000000142,
       "trend": "stable"
     }
