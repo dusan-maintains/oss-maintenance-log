@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Tracked Packages](https://img.shields.io/badge/packages%20tracked-7-blue.svg)](#currently-tracked-projects)
 [![Tracked Ecosystem](https://img.shields.io/badge/tracked%20ecosystem-3.8M%2B-brightgreen.svg)](#-live-data)
-[![Open PRs](https://img.shields.io/badge/upstream%20PRs-7%20open-orange.svg)](#contributions)
+[![Open PRs](https://img.shields.io/badge/upstream%20PRs-6%20open-orange.svg)](#contributions)
 [![Auto-Updates](https://img.shields.io/badge/auto--updates-every%206h-blueviolet.svg)](https://github.com/dusan-maintains/oss-maintenance-log/actions)
 
 ---
@@ -239,6 +239,7 @@ Each package gets a **weighted health score (0–100)**:
 
 <!-- CONTRIBUTIONS_MERGED:START -->
 - **kana-dojo [#6309](https://github.com/lingdojo/kana-dojo/pull/6309)** — content: add new japanese idiom. Merged 02/27/2026.
+- **react-hexgrid [#123](https://github.com/Hellenic/react-hexgrid/pull/123)** — test: add coverage for GridGenerator.ring and .spiral. Merged 09/03/2026.
 <!-- CONTRIBUTIONS_MERGED:END -->
 
 ### Open
@@ -250,7 +251,6 @@ Each package gets a **weighted health score (0–100)**:
 - **jquery-tablesort [#49](https://github.com/kylefox/jquery-tablesort/pull/49)** — Fix stale tablesort.$th reference after header clicks
 - **python-shell [#320](https://github.com/extrabacon/python-shell/pull/320)** — Fix runString temp path to use tmpdir() and add regression test
 - **rrule [#664](https://github.com/jkbrzt/rrule/pull/664)** — fix: handle WeekdayStr arrays when serializing BYDAY
-- **react-hexgrid [#123](https://github.com/Hellenic/react-hexgrid/pull/123)** — test: add coverage for GridGenerator.ring and .spiral
 <!-- CONTRIBUTIONS_OPEN:END -->
 
 ## Use It Yourself
