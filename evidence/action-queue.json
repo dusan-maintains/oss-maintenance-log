@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-04T11:17:50Z",
+  "generated_at_utc": "2026-09-04T16:21:37Z",
   "open_actions": 1,
   "urgent_actions": 1,
   "items": {
@@ -9,7 +9,7 @@
     "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
     "last_external_author": "StantonMatt",
     "last_external_at": "06/02/2026 06:38:44",
-    "hours_since_last_external": 2260.65,
+    "hours_since_last_external": 2265.71,
     "overdue_sla": true,
     "priority": "urgent",
     "source_report": "review-sla-python-shell.json"

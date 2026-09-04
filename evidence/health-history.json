@@ -27673,5 +27673,46 @@
         "risk": "healthy"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-04T16:21:37Z",
+    "average": 59.1,
+    "scores": [
+      {
+        "repo": "kylefox/jquery-tablesort",
+        "score": 53.4,
+        "risk": "warning"
+      },
+      {
+        "repo": "kylefox/jquery-modal",
+        "score": 54.6,
+        "risk": "warning"
+      },
+      {
+        "repo": "extrabacon/python-shell",
+        "score": 54.6,
+        "risk": "warning"
+      },
+      {
+        "repo": "jkbrzt/rrule",
+        "score": 59.3,
+        "risk": "warning"
+      },
+      {
+        "repo": "lingdojo/kana-dojo",
+        "score": 60.7,
+        "risk": "healthy"
+      },
+      {
+        "repo": "grafana/grafana",
+        "score": 62.2,
+        "risk": "healthy"
+      },
+      {
+        "repo": "Hellenic/react-hexgrid",
+        "score": 68.7,
+        "risk": "healthy"
+      }
+    ]
   }
 ]
