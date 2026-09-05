@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-04T20:45:31Z",
+  "generated_at_utc": "2026-09-05T04:28:45Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.1,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1694.0,
+          "days_since_push": 1695.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -97,7 +97,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.62,
-          "push_recency": 4.86,
+          "push_recency": 4.85,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 355,
+          "open_issues": 359,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3318,
+      "stars": 3317,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3368,
+          "open_issues": 3359,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76584,
+      "stars": 76589,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.65,
-          "push_recency": 9.96,
+          "push_recency": 9.95,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -277,7 +277,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 352,
+      "stars": 353,
       "npm_downloads_last_week": 2102,
       "status_label": "Maintainer Needed"
     }

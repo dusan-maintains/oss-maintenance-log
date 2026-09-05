@@ -215,10 +215,10 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 254 | 10.6k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 815.6k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 3M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 352 | 2.1k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 353 | 2.1k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->89k stars · 3.8M downloads/week across tracked projects · refreshed 09/04/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->89k stars · 3.8M downloads/week across tracked projects · refreshed 09/05/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
