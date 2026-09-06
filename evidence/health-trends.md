@@ -1,7 +1,7 @@
 # Health Score Trends
 
-Generated: 2026-09-06T10:56:44Z
-Data points: 683 (oldest: 03/17/2026 20:04:19)
+Generated: 2026-09-06T15:28:23Z
+Data points: 684 (oldest: 03/17/2026 20:04:19)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
@@ -11,4 +11,4 @@ Data points: 683 (oldest: 03/17/2026 20:04:19)
 | jkbrzt/rrule | **59.3** | 59.3 | 0 | 59.4 | -0.1 | ➡️ stable |
 | lingdojo/kana-dojo | **60.7** | 60.7 | 0 | 60.6 | +0.1 | ➡️ stable |
 | grafana/grafana | **62.2** | 62.2 | 0 | 62.2 | 0 | ➡️ stable |
-| Hellenic/react-hexgrid | **68.7** | 36.1 | +32.6 | 35.4 | +33.3 | 📈 improving |
+| Hellenic/react-hexgrid | **68.6** | 36.1 | +32.5 | 35.4 | +33.2 | 📈 improving |
