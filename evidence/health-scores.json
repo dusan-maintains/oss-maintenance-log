@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-06T15:28:23Z",
+  "generated_at_utc": "2026-09-06T20:24:13Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 59.0,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 189.0,
+          "days_since_push": 190.0,
           "open_issues": 74,
           "open_tracked_prs": 1
         }
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 871.0,
+          "days_since_push": 872.0,
           "open_issues": 76,
           "open_tracked_prs": 3
         }
@@ -181,8 +181,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.4,
-          "stars_score": 8.8,
+          "score": 9.41,
+          "stars_score": 8.81,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 352,
+          "open_issues": 355,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3325,
+      "stars": 3326,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.99,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 76633,
+      "stars": 76637,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.63,
-          "push_recency": 9.89,
+          "push_recency": 9.88,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
