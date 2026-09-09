@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-09-09T16:38:42Z
+Generated: 2026-09-09T20:56:03Z
 
 ## Summary
 - Average health score: **58.7 / 100**
@@ -16,7 +16,7 @@ Generated: 2026-09-09T16:38:42Z
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **54.4** | warning | 1.59 | 7.76 | 9.83 | 786793 | 2161 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.3** | warning | 3.48 | 8.64 | 10 | 2601744 | 3743 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.7** | healthy | 6.67 | 9.41 | 0 | 0 | 3343 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 76660 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 76653 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **67.3** | healthy | 6.59 | 6.42 | 4.97 | 952 | 353 |
 
 ### Scoring Methodology
