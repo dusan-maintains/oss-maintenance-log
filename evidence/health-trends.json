@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-12T20:33:48Z",
-  "data_points": 708,
+  "generated_at_utc": "2026-09-13T04:47:35Z",
+  "data_points": 709,
   "oldest_snapshot": "2026-03-17T20:04:19Z",
   "trends": [
     {
@@ -24,9 +24,9 @@
     {
       "repo": "Hellenic/react-hexgrid",
       "current_score": 67.4,
-      "score_7d_ago": 68.7,
+      "score_7d_ago": 68.6,
       "score_30d_ago": 35.5,
-      "delta_7d": -1.2999999999999972,
+      "delta_7d": -1.1999999999999886,
       "delta_30d": 31.900000000000006,
       "trend": "stable"
     },
