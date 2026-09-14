@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-14T12:46:55Z",
+  "generated_at_utc": "2026-09-14T21:49:28Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.8,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 879.0,
+          "days_since_push": 880.0,
           "open_issues": 77,
           "open_tracked_prs": 3
         }
@@ -97,7 +97,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.56,
-          "push_recency": 4.68,
+          "push_recency": 4.67,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 197.0,
+          "days_since_push": 198.0,
           "open_issues": 75,
           "open_tracked_prs": 1
         }
@@ -182,7 +182,7 @@
         "community": {
           "weight": 0.25,
           "score": 9.41,
-          "stars_score": 8.82,
+          "stars_score": 8.83,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 363,
+          "open_issues": 359,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3383,
+      "stars": 3388,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3282,
+          "open_issues": 3292,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76743,
+      "stars": 76751,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.53,
-          "push_recency": 9.59,
+          "push_recency": 9.58,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
