@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-16T11:33:37Z",
+  "generated_at_utc": "2026-09-16T16:55:04Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.8,
@@ -77,12 +77,12 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 881.0,
+          "days_since_push": 882.0,
           "open_issues": 77,
           "open_tracked_prs": 3
         }
       },
-      "stars": 2602,
+      "stars": 2603,
       "npm_downloads_last_week": 7312,
       "status_label": "Maintainers Wanted"
     },
@@ -97,7 +97,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.55,
-          "push_recency": 4.65,
+          "push_recency": 4.64,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -160,7 +160,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3744,
+      "stars": 3743,
       "npm_downloads_last_week": 2176938,
       "status_label": "Open Backlog"
     },
@@ -195,7 +195,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 353,
+          "open_issues": 355,
           "open_tracked_prs": 0
         }
       },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3296,
+          "open_issues": 3311,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76771,
+      "stars": 76775,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.51,
-          "push_recency": 9.52,
+          "score": 6.50,
+          "push_recency": 9.51,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
