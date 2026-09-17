@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-17T04:52:26Z",
+  "generated_at_utc": "2026-09-17T11:41:16Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.7,
@@ -96,8 +96,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 3.45,
-          "push_recency": 0.34,
+          "score": 3.44,
+          "push_recency": 0.33,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 811.0,
+          "days_since_push": 812.0,
           "open_issues": 214,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 355,
+          "open_issues": 353,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3403,
+      "stars": 3405,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3320,
+          "open_issues": 3310,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76779,
+      "stars": 76788,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.5,
-          "push_recency": 9.5,
+          "score": 6.50,
+          "push_recency": 9.49,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 13.0,
+          "days_since_push": 14.0,
           "open_issues": 33,
           "open_tracked_prs": 0
         }
