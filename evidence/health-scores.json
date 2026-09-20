@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-19T20:40:23Z",
+  "generated_at_utc": "2026-09-20T04:53:50Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.6,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1709.0,
+          "days_since_push": 1710.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -58,7 +58,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.53,
-          "push_recency": 4.59,
+          "push_recency": 4.58,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -130,13 +130,13 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.3,
+      "health_score": 59.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.48,
-          "push_recency": 0.44,
+          "push_recency": 0.43,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -181,8 +181,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.41,
-          "stars_score": 8.83,
+          "score": 9.42,
+          "stars_score": 8.84,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 341,
+          "open_issues": 344,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3419,
+      "stars": 3420,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3301,
+          "open_issues": 3292,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76809,
+      "stars": 76813,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.47,
-          "push_recency": 9.4,
+          "score": 6.46,
+          "push_recency": 9.39,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
