@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-20T11:23:32Z",
+  "generated_at_utc": "2026-09-20T16:06:12Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.6,
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 885.0,
+          "days_since_push": 886.0,
           "open_issues": 77,
           "open_tracked_prs": 3
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 344,
+          "open_issues": 346,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3426,
+      "stars": 3429,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -208,13 +208,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.1,
+      "health_score": 62.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.98,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3296,
+          "open_issues": 3297,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76817,
+      "stars": 76818,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 66.7,
+      "health_score": 66.6,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.46,
-          "push_recency": 9.38,
+          "push_recency": 9.37,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
