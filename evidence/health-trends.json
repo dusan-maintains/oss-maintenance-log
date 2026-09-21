@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-09-21T12:48:20Z",
-  "data_points": 709,
-  "oldest_snapshot": "2026-03-25T16:21:45Z",
+  "generated_at_utc": "2026-09-21T21:58:46Z",
+  "data_points": 708,
+  "oldest_snapshot": "2026-03-26T05:53:57Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
@@ -43,9 +43,9 @@
       "repo": "kylefox/jquery-modal",
       "current_score": 54.0,
       "score_7d_ago": 54.0,
-      "score_30d_ago": 55.2,
+      "score_30d_ago": 55.1,
       "delta_7d": 0.0,
-      "delta_30d": -1.2000000000000028,
+      "delta_30d": -1.1000000000000014,
       "trend": "stable"
     },
     {
