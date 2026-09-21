@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-21T04:55:38Z",
+  "generated_at_utc": "2026-09-21T12:48:20Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.6,
@@ -31,9 +31,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.8,
-          "download_score": 6.8,
-          "downloads_last_week": 12093
+          "score": 6.82,
+          "download_score": 6.82,
+          "downloads_last_week": 12380
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 254,
-      "npm_downloads_last_week": 12093,
+      "npm_downloads_last_week": 12380,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -72,7 +72,7 @@
           "weight": 0.2,
           "score": 9.65,
           "download_score": 9.65,
-          "downloads_last_week": 612517
+          "downloads_last_week": 615084
         },
         "risk": {
           "weight": 0.15,
@@ -83,7 +83,7 @@
         }
       },
       "stars": 2161,
-      "npm_downloads_last_week": 612517,
+      "npm_downloads_last_week": 615084,
       "status_label": "Maintainer Gap"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.44,
-          "download_score": 6.44,
-          "downloads_last_week": 7355
+          "score": 6.45,
+          "download_score": 6.45,
+          "downloads_last_week": 7396
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2603,
-      "npm_downloads_last_week": 7355,
+      "npm_downloads_last_week": 7396,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,18 +150,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 2177851
+          "downloads_last_week": 2171983
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 815.0,
+          "days_since_push": 816.0,
           "open_issues": 214,
           "open_tracked_prs": 1
         }
       },
       "stars": 3744,
-      "npm_downloads_last_week": 2177851,
+      "npm_downloads_last_week": 2171983,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 371,
+          "open_issues": 387,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3432,
+      "stars": 3436,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3293,
+          "open_issues": 3299,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76825,
+      "stars": 76837,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 66.6,
+      "health_score": 66.7,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.45,
-          "push_recency": 9.35,
+          "push_recency": 9.34,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,20 +265,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 4.88,
-          "download_score": 4.88,
-          "downloads_last_week": 842
+          "score": 4.91,
+          "download_score": 4.91,
+          "downloads_last_week": 880
         },
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 17.0,
+          "days_since_push": 18.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 842,
+      "npm_downloads_last_week": 880,
       "status_label": "Maintainer Needed"
     }
   ]
