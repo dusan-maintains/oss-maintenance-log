@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-09-22T04:55:59Z
+Generated: 2026-09-22T11:38:15Z
 Repository: `extrabacon/python-shell`
 Contributor: `dusan-maintains`
 SLA: `24` hours
@@ -13,4 +13,4 @@ SLA: `24` hours
 ## Details
 | PR | State | Needs response | Hours since external feedback | Overdue | Last external author | Last external at | Link |
 |---|---|---|---|---|---|---|---|
-| #320 | open | yes | 2686.29 | yes | StantonMatt | 06/02/2026 06:38:44 | [link](https://github.com/extrabacon/python-shell/pull/320) |
+| #320 | open | yes | 2692.99 | yes | StantonMatt | 06/02/2026 06:38:44 | [link](https://github.com/extrabacon/python-shell/pull/320) |
