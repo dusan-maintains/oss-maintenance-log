@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-23T04:45:05Z",
+  "generated_at_utc": "2026-09-23T11:36:59Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.6,
@@ -58,7 +58,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.51,
-          "push_recency": 4.53,
+          "push_recency": 4.52,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -66,7 +66,7 @@
           "weight": 0.25,
           "score": 7.76,
           "stars_score": 8.34,
-          "forks_score": 7.17
+          "forks_score": 7.18
         },
         "popularity": {
           "weight": 0.2,
@@ -78,7 +78,7 @@
           "weight": 0.15,
           "score": 6.0,
           "days_since_push": 206.0,
-          "open_issues": 75,
+          "open_issues": 77,
           "open_tracked_prs": 1
         }
       },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 817.0,
+          "days_since_push": 818.0,
           "open_issues": 214,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 465,
+          "open_issues": 456,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3447,
+      "stars": 3446,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3301,
+          "open_issues": 3299,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76862,
+      "stars": 76868,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.43,
-          "push_recency": 9.28,
+          "score": 6.42,
+          "push_recency": 9.27,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 19.0,
+          "days_since_push": 20.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
