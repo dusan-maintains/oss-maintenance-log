@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-24T04:50:33Z",
+  "generated_at_utc": "2026-09-24T11:45:40Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.6,
@@ -43,7 +43,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 254,
+      "stars": 255,
       "npm_downloads_last_week": 12488,
       "status_label": "Maintainers Wanted"
     },
@@ -57,8 +57,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 1.50,
-          "push_recency": 4.51,
+          "score": 1.5,
+          "push_recency": 4.5,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 818.0,
+          "days_since_push": 819.0,
           "open_issues": 214,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 478,
+          "open_issues": 499,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3455,
+      "stars": 3457,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3314,
+          "open_issues": 3299,
           "open_tracked_prs": 0
         }
       },
-      "stars": 76876,
+      "stars": 76886,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.41,
-          "push_recency": 9.24,
+          "push_recency": 9.23,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 20.0,
+          "days_since_push": 21.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }

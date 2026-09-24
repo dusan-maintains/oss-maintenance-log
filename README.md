@@ -212,13 +212,13 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [grafana/grafana](https://github.com/grafana/grafana) | 76.9k | — | 🟢 Open | ![health](evidence/badges/health-grafana.svg) | [#119212](https://github.com/grafana/grafana/pull/119212) |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 3.5k | — | ✅ **Merged** | ![health](evidence/badges/health-kana-dojo.svg) | [#6309](https://github.com/lingdojo/kana-dojo/pull/6309) |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 7.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 254 | 12.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 255 | 12.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 608k | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 2.1M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 354 | 913 | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
-*Across tracked projects:* **<!-- STATS:START -->89.4k stars · 2.8M downloads/week across tracked projects · refreshed 09/24/2026<!-- STATS:END -->**
+*Across tracked projects:* **<!-- STATS:START -->89.5k stars · 2.8M downloads/week across tracked projects · refreshed 09/24/2026<!-- STATS:END -->**
 
 ## Health Scoring
 
