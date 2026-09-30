@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-09-30T12:34:37Z",
-  "data_points": 706,
-  "oldest_snapshot": "2026-04-03T13:38:13Z",
+  "generated_at_utc": "2026-09-30T22:16:08Z",
+  "data_points": 705,
+  "oldest_snapshot": "2026-04-04T03:16:07Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
