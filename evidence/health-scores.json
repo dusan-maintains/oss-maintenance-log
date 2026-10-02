@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-01T22:41:24Z",
+  "generated_at_utc": "2026-10-02T05:37:07Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.9,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.46,
-          "push_recency": 4.38,
+          "push_recency": 4.37,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -33,7 +33,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1060571
+          "downloads_last_week": 1063381
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 2163,
-      "npm_downloads_last_week": 1060571,
+      "npm_downloads_last_week": 1063381,
       "status_label": "Maintainer Gap"
     },
     {
@@ -72,18 +72,18 @@
           "weight": 0.2,
           "score": 7.25,
           "download_score": 7.25,
-          "downloads_last_week": 22281
+          "downloads_last_week": 22235
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1721.0,
+          "days_since_push": 1722.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
       },
       "stars": 255,
-      "npm_downloads_last_week": 22281,
+      "npm_downloads_last_week": 22235,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.76,
-          "download_score": 6.76,
-          "downloads_last_week": 11412
+          "score": 6.75,
+          "download_score": 6.75,
+          "downloads_last_week": 11179
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2603,
-      "npm_downloads_last_week": 11412,
+      "npm_downloads_last_week": 11179,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,7 +150,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 3513548
+          "downloads_last_week": 3569023
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 3743,
-      "npm_downloads_last_week": 3513548,
+      "npm_downloads_last_week": 3569023,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 594,
+          "open_issues": 602,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3537,
+      "stars": 3538,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3295,
+          "open_issues": 3294,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77038,
+      "stars": 77044,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.32,
-          "push_recency": 8.97,
+          "push_recency": 8.96,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.39,
-          "download_score": 5.39,
-          "downloads_last_week": 1704
+          "score": 5.37,
+          "download_score": 5.37,
+          "downloads_last_week": 1670
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 1704,
+      "npm_downloads_last_week": 1670,
       "status_label": "Maintainer Needed"
     }
   ]
