@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-02T22:14:06Z",
+  "generated_at_utc": "2026-10-03T05:19:20Z",
   "repo": {
     "owner": "jkbrzt",
     "name": "rrule",
@@ -11,9 +11,9 @@
   },
   "npm": {
     "package": "rrule",
-    "downloads_last_week": 3569023,
-    "start": "2026-09-24",
-    "end": "2026-09-30"
+    "downloads_last_week": 3650203,
+    "start": "2026-09-25",
+    "end": "2026-10-01"
   },
   "tracked_prs": [
     {

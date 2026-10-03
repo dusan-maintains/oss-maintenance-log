@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-02T22:14:09Z",
+  "generated_at_utc": "2026-10-03T05:19:23Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.9,
@@ -33,7 +33,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1063381
+          "downloads_last_week": 1057977
         },
         "risk": {
           "weight": 0.15,
@@ -44,7 +44,7 @@
         }
       },
       "stars": 2163,
-      "npm_downloads_last_week": 1063381,
+      "npm_downloads_last_week": 1057977,
       "status_label": "Maintainer Gap"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 54.5,
+      "health_score": 54.4,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,20 +70,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.25,
-          "download_score": 7.25,
-          "downloads_last_week": 22235
+          "score": 7.21,
+          "download_score": 7.21,
+          "downloads_last_week": 21233
         },
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1722.0,
+          "days_since_push": 1723.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
       },
       "stars": 255,
-      "npm_downloads_last_week": 22235,
+      "npm_downloads_last_week": 21233,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.75,
-          "download_score": 6.75,
-          "downloads_last_week": 11179
+          "score": 6.77,
+          "download_score": 6.77,
+          "downloads_last_week": 11464
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2603,
-      "npm_downloads_last_week": 11179,
+      "npm_downloads_last_week": 11464,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,7 +150,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 3569023
+          "downloads_last_week": 3650203
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +161,7 @@
         }
       },
       "stars": 3742,
-      "npm_downloads_last_week": 3569023,
+      "npm_downloads_last_week": 3650203,
       "status_label": "Open Backlog"
     },
     {
@@ -181,8 +181,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.43,
-          "stars_score": 8.87,
+          "score": 9.44,
+          "stars_score": 8.88,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 619,
+          "open_issues": 633,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3546,
+      "stars": 3548,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3315,
+          "open_issues": 3310,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77041,
+      "stars": 77045,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 67.1,
+      "health_score": 67.0,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.31,
-          "push_recency": 8.94,
+          "push_recency": 8.93,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +265,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.37,
-          "download_score": 5.37,
-          "downloads_last_week": 1670
+          "score": 5.35,
+          "download_score": 5.35,
+          "downloads_last_week": 1625
         },
         "risk": {
           "weight": 0.15,
@@ -278,7 +278,7 @@
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 1670,
+      "npm_downloads_last_week": 1625,
       "status_label": "Maintainer Needed"
     }
   ]
