@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-10-03T16:17:39Z",
+  "generated_at_utc": "2026-10-03T21:14:01Z",
   "summary": {
     "tracked_projects": 7,
     "tracked_prs_total": 9,
     "tracked_prs_open": 6,
-    "total_stars": 89719,
-    "total_forks": 19994,
+    "total_stars": 89720,
+    "total_forks": 19997,
     "total_npm_downloads_last_week": 4742502
   },
   "projects": [
@@ -15,7 +15,7 @@
       "repo_url": "https://github.com/grafana/grafana",
       "stars": 77051,
       "forks": 14814,
-      "open_issues": 3313,
+      "open_issues": 3314,
       "pushed_at": "2026-10-03T16:01:27Z",
       "package": null,
       "npm_downloads_last_week": 0,
@@ -46,10 +46,10 @@
       "owner": "lingdojo",
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
-      "stars": 3552,
-      "forks": 3503,
-      "open_issues": 613,
-      "pushed_at": "2026-10-03T16:15:14Z",
+      "stars": 3553,
+      "forks": 3506,
+      "open_issues": 617,
+      "pushed_at": "2026-10-03T21:01:01Z",
       "package": null,
       "npm_downloads_last_week": 0,
       "npm_start": null,
