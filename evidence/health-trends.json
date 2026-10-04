@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-03T21:14:19Z",
+  "generated_at_utc": "2026-10-04T05:52:26Z",
   "data_points": 703,
-  "oldest_snapshot": "2026-04-07T03:31:12Z",
+  "oldest_snapshot": "2026-04-07T07:49:56Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
@@ -23,10 +23,10 @@
     },
     {
       "repo": "Hellenic/react-hexgrid",
-      "current_score": 67.0,
+      "current_score": 66.9,
       "score_7d_ago": 67.0,
-      "score_30d_ago": 68.8,
-      "delta_7d": 0.0,
+      "score_30d_ago": 68.7,
+      "delta_7d": -0.09999999999999432,
       "delta_30d": -1.7999999999999972,
       "trend": "stable"
     },
