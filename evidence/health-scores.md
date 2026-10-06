@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-10-06T06:20:23Z
+Generated: 2026-10-06T18:21:51Z
 
 ## Summary
 - Average health score: **58.9 / 100**
@@ -15,8 +15,8 @@ Generated: 2026-10-06T06:20:23Z
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **54.3** | warning | 4.17 | 6.01 | 7.15 | 19629 | 255 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.6** | warning | 3.44 | 8.53 | 6.77 | 11607 | 2602 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.47 | 8.64 | 10 | 3732089 | 3742 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3566 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77096 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3570 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77114 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.9** | healthy | 6.27 | 6.42 | 5.38 | 1678 | 354 |
 
 ### Scoring Methodology
