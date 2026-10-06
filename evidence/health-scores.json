@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-05T14:38:05Z",
+  "generated_at_utc": "2026-10-06T00:03:16Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.9,
@@ -13,13 +13,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 54.2,
+      "health_score": 54.1,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 1.44,
-          "push_recency": 4.32,
+          "push_recency": 4.31,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 218.0,
+          "days_since_push": 219.0,
           "open_issues": 77,
           "open_tracked_prs": 1
         }
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 900.0,
+          "days_since_push": 901.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
@@ -195,7 +195,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 645,
+          "open_issues": 651,
           "open_tracked_prs": 0
         }
       },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3277,
+          "open_issues": 3297,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77088,
+      "stars": 77092,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 67.0,
+      "health_score": 66.9,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.28,
-          "push_recency": 8.85,
+          "push_recency": 8.83,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
