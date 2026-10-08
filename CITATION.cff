@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+type: software
+title: "OSS Maintenance Log"
+abstract: "Automated public evidence log for open-source maintenance work. Tracks PR SLA, npm download health, and repo metrics across abandoned-but-critical packages. Self-updates every 6 hours via GitHub Actions."
+authors:
+  - alias: dusan-maintains
+repository-code: "https://github.com/dusan-maintains/oss-maintenance-log"
+url: "https://dusan-maintains.github.io/oss-maintenance-log"
+license: MIT
+version: "1.0.0"
+date-released: "2026-02-27"
+keywords:
+  - open-source
+  - maintenance
+  - automation
+  - github-actions
+  - npm
+  - evidence
+  - oss
