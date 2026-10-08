@@ -1,13 +1,10 @@
----
-name: Pull Request
-about: Contribute to the maintenance log
----
+## Что меняет PR
+<!-- 2-3 предложения: проблема → фикс -->
 
-**What does this PR do?**
+## Проверено
+- [ ] `npm test` в cli/ зелёный
+- [ ] `powershell scripts/validate-repo.ps1` зелёный
+- [ ] Если тронуты evidence-выходы — схемы в schemas/ обновлены
 
-
-**Checklist**
-- [ ] Scripts tested locally (`./scripts/update-evidence.ps1` etc.)
-- [ ] Evidence files regenerated (not manually edited)
-- [ ] New tracked packages include maintainer-needed signal source
-- [ ] Workflow file updated if new SLA report added
+## Связанное
+<!-- issue / upstream PR -->
