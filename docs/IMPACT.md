@@ -13,7 +13,7 @@ Last updated: 2026-04-17 (regenerate-aware sections are rebuilt by `scripts/upda
 - **84,400** combined GitHub stars across the seven tracked upstream repositories.
 - **9** tracked pull requests filed — 2 merged, 7 open and actively tracked with review SLA.
 - **180-day** rolling health history maintained with snapshots every 6 hours.
-- **~700** evidence snapshots committed since launch, each cryptographically signed as a bot commit.
+- **~700** evidence snapshots committed since launch by the automation bot, each regenerated from live registry data and validated against JSON Schemas in CI.
 - **Zero** npm runtime dependencies in the public CLI — a dependency scanner that is itself dependency-free.
 
 ---
@@ -42,7 +42,7 @@ Data source: official npm registry download counts, pulled every 6 hours by `scr
 | **Combined weekly** | **1,928,596** | — |
 | **Monthly equivalent (×4.3)** | **~8,292,963** | — |
 
-For context, the Claude for Open Source Program eligibility threshold is 1,000,000 monthly npm downloads. The packages under active external maintenance here clear that bar by **~8.3×**.
+For context, the Claude for Open Source Program eligibility threshold is 1,000,000 monthly npm downloads. The upstream packages this project contributes patches to clear that bar by **~8.3×** in combined install volume (their downloads, not this repository's).
 
 ### Signal contributions to flagship repositories
 
@@ -112,7 +112,7 @@ These five packages are dependencies of packages you probably use. A partial dow
 - **`jquery-modal`** / **`jquery-tablesort`**: the long tail of jQuery still in production on hundreds of thousands of sites — WordPress plugin ecosystems, legacy CMS deployments, admin dashboards that predate the React era but still run critical workflows.
 - **`react-hexgrid`**: niche but structurally critical for a category of data-visualization tools (geospatial, hex-binning).
 
-Total downstream package count is not trivially measurable from public data — this is on the near-term roadmap (see `docs/ROADMAP.md` → "Downstream dependency graph"). Even without that analysis, an abandoned package with 1.6M weekly downloads is a supply-chain failure domain that nobody currently owns. This repository owns it for the packages listed.
+Total downstream package count is not trivially measurable from public data — this is on the near-term roadmap (see `docs/ROADMAP.md` → "Downstream dependency graph"). Even without that analysis, an abandoned package with 1.6M weekly downloads is a supply-chain failure domain that nobody currently owns. This repository tracks it publicly and ships patches for the packages listed.
 
 ### What breaking changes are prevented
 
@@ -151,7 +151,7 @@ No claim in this document survives if the `evidence/` directory contradicts it. 
 - That `oss-maintenance-log` is authoritative in the way OpenSSF Scorecard or Snyk is — it is a single maintainer's public, auditable work log for a specific scope.
 - That the tracked upstream maintainers are at fault for the maintenance gap — they are not. Open-source maintainership is voluntary and often unpaid; life circumstances change.
 - That every tracked PR will be merged. Some may be superseded, declined, or absorbed into other forks. The evidence log tracks outcomes, not predictions.
-- That star count on this repository matters — it is a personal work log, not a product with a growth strategy.
+- That star count on this repository matters — the evidence log is the public audit trail; the product direction lives in `docs/ROADMAP.md` (hosted monitoring for teams on top of the free CLI).
 
 ---
 
