@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-09T13:16:57Z",
+  "generated_at_utc": "2026-10-09T22:38:21Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.7,
@@ -57,8 +57,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 1.42,
-          "push_recency": 4.25,
+          "score": 1.41,
+          "push_recency": 4.24,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 222.0,
+          "days_since_push": 223.0,
           "open_issues": 77,
           "open_tracked_prs": 1
         }
@@ -116,12 +116,12 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 904.0,
+          "days_since_push": 905.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
       },
-      "stars": 2603,
+      "stars": 2602,
       "npm_downloads_last_week": 10537,
       "status_label": "Maintainers Wanted"
     },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 637,
+          "open_issues": 640,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3587,
+      "stars": 3584,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3315,
+          "open_issues": 3310,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77169,
+      "stars": 77202,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.24,
-          "push_recency": 8.71,
+          "score": 6.23,
+          "push_recency": 8.7,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
