@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-10-09T22:38:21Z
+Generated: 2026-10-10T05:52:48Z
 
 ## Summary
 - Average health score: **58.7 / 100**
@@ -11,13 +11,13 @@ Generated: 2026-10-09T22:38:21Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.7** | warning | 4.17 | 6.01 | 6.88 | 13405 | 255 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **54.0** | warning | 1.41 | 7.76 | 9.98 | 978556 | 2162 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.5** | warning | 3.44 | 8.53 | 6.7 | 10537 | 2602 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.47 | 8.64 | 10 | 3015068 | 3745 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3584 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77202 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.2** | healthy | 6.23 | 6.42 | 5.1 | 1146 | 354 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.7** | warning | 4.17 | 6.01 | 6.89 | 13542 | 255 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **54.1** | warning | 1.41 | 7.76 | 10 | 1041475 | 2162 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.5** | warning | 3.44 | 8.53 | 6.73 | 10970 | 2602 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.47 | 8.64 | 10 | 3014574 | 3745 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3583 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77212 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.4** | healthy | 6.23 | 6.42 | 5.19 | 1292 | 354 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
