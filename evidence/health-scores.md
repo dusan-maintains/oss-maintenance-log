@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-10-10T21:43:48Z
+Generated: 2026-10-11T05:46:23Z
 
 ## Summary
 - Average health score: **58.7 / 100**
@@ -11,13 +11,13 @@ Generated: 2026-10-10T21:43:48Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.7** | warning | 4.17 | 6.01 | 6.89 | 13542 | 255 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **54.0** | warning | 1.41 | 7.76 | 10 | 1041475 | 2162 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.5** | warning | 3.44 | 8.53 | 6.73 | 10970 | 2602 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.47 | 8.64 | 10 | 3014574 | 3744 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3586 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77222 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.3** | healthy | 6.22 | 6.42 | 5.19 | 1292 | 354 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **54.0** | warning | 4.17 | 6.01 | 7.03 | 16610 | 255 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **54.0** | warning | 1.41 | 7.76 | 10 | 1076692 | 2162 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.6** | warning | 3.44 | 8.53 | 6.74 | 11112 | 2602 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.47 | 8.64 | 10 | 3063938 | 3744 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.44 | 0 | 0 | 3587 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.66 | 10 | 0 | 0 | 77231 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.3** | healthy | 6.22 | 6.42 | 5.18 | 1275 | 354 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
