@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-11T05:46:23Z",
+  "generated_at_utc": "2026-10-11T12:49:38Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.7,
@@ -8,45 +8,6 @@
     "healthy": 3
   },
   "scores": [
-    {
-      "owner": "kylefox",
-      "repo": "jquery-tablesort",
-      "repo_url": "https://github.com/kylefox/jquery-tablesort",
-      "package": "jquery-tablesort",
-      "health_score": 54.0,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 4.17,
-          "push_recency": 0.01,
-          "issue_ratio": 2.5,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 6.01,
-          "stars_score": 6.02,
-          "forks_score": 6.0
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 7.03,
-          "download_score": 7.03,
-          "downloads_last_week": 16610
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 5.5,
-          "days_since_push": 1731.0,
-          "open_issues": 15,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 255,
-      "npm_downloads_last_week": 16610,
-      "status_label": "Maintainers Wanted"
-    },
     {
       "owner": "extrabacon",
       "repo": "python-shell",
@@ -72,7 +33,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1076692
+          "downloads_last_week": 1082981
         },
         "risk": {
           "weight": 0.15,
@@ -83,8 +44,47 @@
         }
       },
       "stars": 2162,
-      "npm_downloads_last_week": 1076692,
+      "npm_downloads_last_week": 1082981,
       "status_label": "Maintainer Gap"
+    },
+    {
+      "owner": "kylefox",
+      "repo": "jquery-tablesort",
+      "repo_url": "https://github.com/kylefox/jquery-tablesort",
+      "package": "jquery-tablesort",
+      "health_score": 54.1,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 4.17,
+          "push_recency": 0.01,
+          "issue_ratio": 2.5,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 6.01,
+          "stars_score": 6.02,
+          "forks_score": 6.0
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 7.07,
+          "download_score": 7.07,
+          "downloads_last_week": 17372
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 5.5,
+          "days_since_push": 1731.0,
+          "open_issues": 15,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 255,
+      "npm_downloads_last_week": 17372,
+      "status_label": "Maintainers Wanted"
     },
     {
       "owner": "kylefox",
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.74,
-          "download_score": 6.74,
-          "downloads_last_week": 11112
+          "score": 6.77,
+          "download_score": 6.77,
+          "downloads_last_week": 11557
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 2602,
-      "npm_downloads_last_week": 11112,
+      "npm_downloads_last_week": 11557,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,18 +150,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 3063938
+          "downloads_last_week": 3064066
         },
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 835.0,
+          "days_since_push": 836.0,
           "open_issues": 215,
           "open_tracked_prs": 1
         }
       },
       "stars": 3744,
-      "npm_downloads_last_week": 3063938,
+      "npm_downloads_last_week": 3064066,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 652,
+          "open_issues": 646,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3587,
+      "stars": 3596,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.99,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3293,
+          "open_issues": 3295,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77231,
+      "stars": 77239,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 66.3,
+      "health_score": 66.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.22,
-          "push_recency": 8.66,
+          "push_recency": 8.65,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,20 +265,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.18,
-          "download_score": 5.18,
-          "downloads_last_week": 1275
+          "score": 5.13,
+          "download_score": 5.13,
+          "downloads_last_week": 1199
         },
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 37.0,
+          "days_since_push": 38.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 1275,
+      "npm_downloads_last_week": 1199,
       "status_label": "Maintainer Needed"
     }
   ]
