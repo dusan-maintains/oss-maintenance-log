@@ -1,22 +1,22 @@
 # Ecosystem Status
 
-Generated: 2026-10-12T05:57:24Z
+Generated: 2026-10-12T15:24:44Z
 
 ## Summary
 - Tracked projects: 7
 - Tracked PRs (total): 9
 - Tracked PRs (open): 6
-- Total stars: 89981
-- Total forks: 20121
-- Total npm downloads last week: 4177175
+- Total stars: 90008
+- Total forks: 20137
+- Total npm downloads last week: 4174258
 
 ## Projects
 | Project | Status | Stars | Forks | npm weekly | Tracked PRs | Open tracked PRs |
 |---|---|---|---|---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | Open | 77261 | 14839 | 0 | 1 | 0 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 3603 | 3605 | 0 | 1 | 0 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2602 | 647 | 11557 | 3 | 3 |
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 255 | 95 | 17372 | 1 | 1 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2162 | 233 | 1082981 | 1 | 1 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3744 | 566 | 3064066 | 1 | 1 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | Maintainer Needed | 354 | 136 | 1199 | 1 | 0 |
+| [grafana/grafana](https://github.com/grafana/grafana) | Open | 77275 | 14838 | 0 | 1 | 0 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | Merged | 3616 | 3622 | 0 | 1 | 0 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | Maintainers Wanted | 2602 | 647 | 11574 | 3 | 3 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | Maintainers Wanted | 255 | 95 | 18265 | 1 | 1 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | Maintainer Gap | 2162 | 233 | 1043039 | 1 | 1 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | Open Backlog | 3744 | 566 | 3100149 | 1 | 1 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | Maintainer Needed | 354 | 136 | 1231 | 1 | 0 |
