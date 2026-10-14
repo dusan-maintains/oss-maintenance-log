@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-14T17:10:06Z",
+  "generated_at_utc": "2026-10-14T21:40:45Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.7,
@@ -8,6 +8,45 @@
     "healthy": 3
   },
   "scores": [
+    {
+      "owner": "extrabacon",
+      "repo": "python-shell",
+      "repo_url": "https://github.com/extrabacon/python-shell",
+      "package": "python-shell",
+      "health_score": 53.9,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 1.39,
+          "push_recency": 4.16,
+          "issue_ratio": 0.0,
+          "pr_response": 0.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 7.76,
+          "stars_score": 8.34,
+          "forks_score": 7.18
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 10.0,
+          "download_score": 10.0,
+          "downloads_last_week": 1011863
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.0,
+          "days_since_push": 228.0,
+          "open_issues": 77,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 2160,
+      "npm_downloads_last_week": 1011863,
+      "status_label": "Maintainer Gap"
+    },
     {
       "owner": "kylefox",
       "repo": "jquery-tablesort",
@@ -46,45 +85,6 @@
       "stars": 255,
       "npm_downloads_last_week": 16675,
       "status_label": "Maintainers Wanted"
-    },
-    {
-      "owner": "extrabacon",
-      "repo": "python-shell",
-      "repo_url": "https://github.com/extrabacon/python-shell",
-      "package": "python-shell",
-      "health_score": 54.0,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 1.39,
-          "push_recency": 4.17,
-          "issue_ratio": 0.0,
-          "pr_response": 0.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 7.76,
-          "stars_score": 8.34,
-          "forks_score": 7.18
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 10.0,
-          "download_score": 10.0,
-          "downloads_last_week": 1011863
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 6.0,
-          "days_since_push": 227.0,
-          "open_issues": 77,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 2160,
-      "npm_downloads_last_week": 1011863,
-      "status_label": "Maintainer Gap"
     },
     {
       "owner": "kylefox",
@@ -181,8 +181,8 @@
         },
         "community": {
           "weight": 0.25,
-          "score": 9.45,
-          "stars_score": 8.9,
+          "score": 9.46,
+          "stars_score": 8.91,
           "forks_score": 10.0
         },
         "popularity": {
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 559,
+          "open_issues": 569,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3645,
+      "stars": 3648,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -238,7 +238,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 77270,
+      "stars": 77281,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
