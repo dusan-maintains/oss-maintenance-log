@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-10-17T15:34:28Z
+Generated: 2026-10-17T20:36:31Z
 
 ## Summary
 - Average health score: **58.7 / 100**
@@ -15,9 +15,9 @@ Generated: 2026-10-17T15:34:28Z
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **54.0** | warning | 4.17 | 6.01 | 7.04 | 16675 | 255 |
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.6** | warning | 3.43 | 8.53 | 6.75 | 11282 | 2600 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 3092311 | 3744 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3660 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77330 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **66.0** | healthy | 6.15 | 6.42 | 5.15 | 1232 | 354 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3662 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77336 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **65.9** | healthy | 6.15 | 6.42 | 5.15 | 1232 | 354 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
