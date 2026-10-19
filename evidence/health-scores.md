@@ -1,9 +1,9 @@
 # Package Health Scores
 
-Generated: 2026-10-19T04:40:20Z
+Generated: 2026-10-19T13:14:39Z
 
 ## Summary
-- Average health score: **58 / 100**
+- Average health score: **57.9 / 100**
 - Critical: 0
 - Warning: 4
 - Healthy: 3
@@ -11,13 +11,13 @@ Generated: 2026-10-19T04:40:20Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.0** | warning | 4.17 | 6.01 | 6.5 | 7922 | 255 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **53.1** | warning | 1.37 | 7.76 | 9.62 | 588852 | 2160 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **53.6** | warning | 3.43 | 8.53 | 6.29 | 5937 | 2600 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 1752826 | 3744 |
-| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3674 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77357 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **64.4** | healthy | 6.13 | 6.42 | 4.42 | 445 | 354 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.8** | warning | 4.17 | 6.01 | 6.42 | 7084 | 255 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **52.9** | warning | 1.36 | 7.76 | 9.54 | 528057 | 2160 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **53.5** | warning | 3.43 | 8.53 | 6.24 | 5576 | 2600 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 1767336 | 3744 |
+| [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3681 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77369 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **64.2** | healthy | 6.13 | 6.42 | 4.34 | 403 | 354 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
