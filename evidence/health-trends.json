@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-19T13:14:39Z",
-  "data_points": 691,
-  "oldest_snapshot": "2026-04-22T14:09:19Z",
+  "generated_at_utc": "2026-10-19T22:21:12Z",
+  "data_points": 690,
+  "oldest_snapshot": "2026-04-23T03:47:10Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
@@ -34,9 +34,9 @@
       "repo": "jkbrzt/rrule",
       "current_score": 59.2,
       "score_7d_ago": 59.2,
-      "score_30d_ago": 59.3,
+      "score_30d_ago": 59.2,
       "delta_7d": 0.0,
-      "delta_30d": -0.09999999999999432,
+      "delta_30d": 0.0,
       "trend": "stable"
     },
     {
