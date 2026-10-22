@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-21T21:42:43Z",
+  "generated_at_utc": "2026-10-22T04:44:37Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 57.9,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1741.0,
+          "days_since_push": 1742.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -195,7 +195,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 619,
+          "open_issues": 617,
           "open_tracked_prs": 0
         }
       },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3344,
+          "open_issues": 3349,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77408,
+      "stars": 77414,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 64.2,
+      "health_score": 64.1,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.10,
-          "push_recency": 8.31,
+          "score": 6.1,
+          "push_recency": 8.3,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
