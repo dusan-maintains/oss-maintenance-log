@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-10-24T04:36:07Z",
+  "generated_at_utc": "2026-10-24T10:59:59Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 58.1,
+    "average_health_score": 58.0,
     "critical": 0,
     "warning": 4,
     "healthy": 3
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.34,
-          "push_recency": 4.02,
+          "push_recency": 4.01,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 848.0,
+          "days_since_push": 849.0,
           "open_issues": 218,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 640,
+          "open_issues": 654,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3706,
+      "stars": 3710,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.99,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3328,
+          "open_issues": 3329,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77467,
+      "stars": 77475,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 64.4,
+      "health_score": 64.3,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.08,
-          "push_recency": 8.24,
+          "push_recency": 8.23,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 50.0,
+          "days_since_push": 51.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
