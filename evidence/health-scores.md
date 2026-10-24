@@ -1,9 +1,9 @@
 # Package Health Scores
 
-Generated: 2026-10-23T21:24:17Z
+Generated: 2026-10-24T04:36:07Z
 
 ## Summary
-- Average health score: **57.9 / 100**
+- Average health score: **58.1 / 100**
 - Critical: 0
 - Warning: 4
 - Healthy: 3
@@ -11,13 +11,13 @@ Generated: 2026-10-23T21:24:17Z
 ## Scores
 | Package | Health Score | Risk | Maintenance | Community | Popularity | Downloads/wk | Stars |
 |---|---|---|---|---|---|---|---|
-| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **52.8** | warning | 4.17 | 6.01 | 6.42 | 7084 | 255 |
-| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **52.8** | warning | 1.34 | 7.76 | 9.54 | 528057 | 2160 |
-| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **53.5** | warning | 3.43 | 8.53 | 6.24 | 5576 | 2600 |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 1767336 | 3747 |
+| [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 🟡 **52.9** | warning | 1.34 | 7.76 | 9.59 | 570411 | 2160 |
+| [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 🟡 **53.3** | warning | 4.17 | 6.01 | 6.67 | 10024 | 255 |
+| [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **53.6** | warning | 3.43 | 8.53 | 6.3 | 5989 | 2600 |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 1942405 | 3747 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3706 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77460 |
-| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **64.1** | healthy | 6.08 | 6.42 | 4.34 | 403 | 354 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.66 | 10 | 0 | 0 | 77467 |
+| [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **64.4** | healthy | 6.08 | 6.42 | 4.49 | 495 | 354 |
 
 ### Scoring Methodology
 | Category | Weight | What it measures |
