@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-26T04:46:49Z",
+  "generated_at_utc": "2026-10-26T13:02:26Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 58.0,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.33,
-          "push_recency": 3.99,
+          "push_recency": 3.98,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -144,7 +144,7 @@
           "weight": 0.25,
           "score": 8.64,
           "stars_score": 8.93,
-          "forks_score": 8.34
+          "forks_score": 8.35
         },
         "popularity": {
           "weight": 0.2,
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 850.0,
+          "days_since_push": 851.0,
           "open_issues": 218,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 671,
+          "open_issues": 674,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3718,
+      "stars": 3721,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3318,
+          "open_issues": 3313,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77510,
+      "stars": 77512,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.06,
-          "push_recency": 8.17,
+          "score": 6.05,
+          "push_recency": 8.16,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 52.0,
+          "days_since_push": 53.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
