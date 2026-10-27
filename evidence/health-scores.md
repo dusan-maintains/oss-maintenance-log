@@ -1,6 +1,6 @@
 # Package Health Scores
 
-Generated: 2026-10-27T18:00:27Z
+Generated: 2026-10-27T22:13:42Z
 
 ## Summary
 - Average health score: **58.3 / 100**
@@ -16,7 +16,7 @@ Generated: 2026-10-27T18:00:27Z
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 🟡 **54.0** | warning | 3.43 | 8.53 | 6.48 | 7685 | 2600 |
 | [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 🟡 **59.2** | warning | 3.46 | 8.64 | 10 | 2772696 | 3747 |
 | [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🟢 **60.8** | healthy | 6.67 | 9.46 | 0 | 0 | 3729 |
-| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77551 |
+| [grafana/grafana](https://github.com/grafana/grafana) | 🟢 **62.2** | healthy | 6.67 | 10 | 0 | 0 | 77555 |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 🟢 **65.1** | healthy | 6.04 | 6.42 | 4.95 | 932 | 354 |
 
 ### Scoring Methodology
