@@ -1,17 +1,6 @@
 {
-  "generated_at_utc": "2026-10-30T12:55:29Z",
-  "open_actions": 1,
-  "urgent_actions": 1,
-  "items": {
-    "repository": "extrabacon/python-shell",
-    "pr_number": 320,
-    "pr_title": "Fix runString temp path to use tmpdir() and add regression test",
-    "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
-    "last_external_author": "StantonMatt",
-    "last_external_at": "06/02/2026 06:38:44",
-    "hours_since_last_external": 3606.28,
-    "overdue_sla": true,
-    "priority": "urgent",
-    "source_report": "review-sla-python-shell.json"
-  }
+  "generated_at_utc": "2026-10-30T22:19:02Z",
+  "open_actions": 0,
+  "urgent_actions": 0,
+  "items": null
 }

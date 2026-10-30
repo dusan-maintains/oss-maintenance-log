@@ -1,13 +1,7 @@
 # Action Queue
 
-Generated: 2026-10-30T12:55:29Z
-- Open actions: 1
-- Urgent actions: 1
+Generated: 2026-10-30T22:19:02Z
+- Open actions: 0
+- Urgent actions: 0
 
-| Priority | Repository | PR | Hours since external feedback | Last author | Last feedback at | Link |
-|---|---|---|---|---|---|---|
-| urgent | `extrabacon/python-shell` | #320 | 3606.28 | StantonMatt | 06/02/2026 06:38:44 | [link](https://github.com/extrabacon/python-shell/pull/320) |
-
-Suggested quick reply template:
-
-> Thanks for the feedback. I reviewed your points and will push a focused update shortly.
+No maintainer replies pending.

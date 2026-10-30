@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-30T12:55:24Z",
+  "generated_at_utc": "2026-10-30T22:18:57Z",
   "repository": "extrabacon/python-shell",
   "contributor": "dusan-maintains",
   "sla_hours": 24,
   "summary": {
     "tracked_open_prs": 1,
-    "needs_response_count": 1,
-    "overdue_count": 1
+    "needs_response_count": 0,
+    "overdue_count": 0
   },
   "items": [
     {
@@ -15,16 +15,16 @@
       "pr_state": "open",
       "pr_url": "https://github.com/extrabacon/python-shell/pull/320",
       "updated_at": "2026-06-02T06:38:44Z",
-      "external_feedback_count": 1,
+      "external_feedback_count": 0,
       "own_followups_count": 0,
-      "last_external_type": "review_commented",
-      "last_external_author": "StantonMatt",
-      "last_external_at": "06/02/2026 06:38:44",
-      "last_external_url": "https://github.com/extrabacon/python-shell/pull/320#pullrequestreview-4407182993",
+      "last_external_type": null,
+      "last_external_author": null,
+      "last_external_at": null,
+      "last_external_url": null,
       "last_own_after_external_at": null,
-      "needs_response": true,
-      "hours_since_last_external": 3606.28,
-      "overdue_sla": true
+      "needs_response": false,
+      "hours_since_last_external": null,
+      "overdue_sla": false
     }
   ]
 }

@@ -1,91 +1,13 @@
 {
-  "generated_at_utc": "2026-10-30T12:55:29Z",
+  "generated_at_utc": "2026-10-30T22:19:02Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 58.7,
+    "average_health_score": 60.6,
     "critical": 0,
-    "warning": 4,
-    "healthy": 3
+    "warning": 3,
+    "healthy": 4
   },
   "scores": [
-    {
-      "owner": "extrabacon",
-      "repo": "python-shell",
-      "repo_url": "https://github.com/extrabacon/python-shell",
-      "package": "python-shell",
-      "health_score": 53.6,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 1.31,
-          "push_recency": 3.92,
-          "issue_ratio": 0.0,
-          "pr_response": 0.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 7.76,
-          "stars_score": 8.34,
-          "forks_score": 7.18
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 10.0,
-          "download_score": 10.0,
-          "downloads_last_week": 1211600
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 6.0,
-          "days_since_push": 243.0,
-          "open_issues": 77,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 2159,
-      "npm_downloads_last_week": 1211600,
-      "status_label": "Maintainer Gap"
-    },
-    {
-      "owner": "kylefox",
-      "repo": "jquery-tablesort",
-      "repo_url": "https://github.com/kylefox/jquery-tablesort",
-      "package": "jquery-tablesort",
-      "health_score": 54.6,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 4.17,
-          "push_recency": 0.01,
-          "issue_ratio": 2.5,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 6.01,
-          "stars_score": 6.02,
-          "forks_score": 6.0
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 7.33,
-          "download_score": 7.33,
-          "downloads_last_week": 24944
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 5.5,
-          "days_since_push": 1750.0,
-          "open_issues": 15,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 255,
-      "npm_downloads_last_week": 24944,
-      "status_label": "Maintainers Wanted"
-    },
     {
       "owner": "kylefox",
       "repo": "jquery-modal",
@@ -111,18 +33,57 @@
           "weight": 0.2,
           "score": 6.83,
           "download_score": 6.83,
-          "downloads_last_week": 12479
+          "downloads_last_week": 12501
         },
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 925.0,
+          "days_since_push": 926.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
       },
       "stars": 2600,
-      "npm_downloads_last_week": 12479,
+      "npm_downloads_last_week": 12501,
+      "status_label": "Maintainers Wanted"
+    },
+    {
+      "owner": "kylefox",
+      "repo": "jquery-tablesort",
+      "repo_url": "https://github.com/kylefox/jquery-tablesort",
+      "package": "jquery-tablesort",
+      "health_score": 54.7,
+      "risk_level": "warning",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 4.17,
+          "push_recency": 0.01,
+          "issue_ratio": 2.5,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 6.01,
+          "stars_score": 6.02,
+          "forks_score": 6.0
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 7.35,
+          "download_score": 7.35,
+          "downloads_last_week": 25863
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 5.5,
+          "days_since_push": 1750.0,
+          "open_issues": 15,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 255,
+      "npm_downloads_last_week": 25863,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -150,7 +111,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 4282831
+          "downloads_last_week": 4287988
         },
         "risk": {
           "weight": 0.15,
@@ -161,7 +122,7 @@
         }
       },
       "stars": 3749,
-      "npm_downloads_last_week": 4282831,
+      "npm_downloads_last_week": 4287988,
       "status_label": "Open Backlog"
     },
     {
@@ -195,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 660,
+          "open_issues": 662,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3754,
+      "stars": 3758,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3329,
+          "open_issues": 3354,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77583,
+      "stars": 77585,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -253,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.01,
-          "push_recency": 8.04,
+          "push_recency": 8.02,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -265,9 +226,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.38,
-          "download_score": 5.38,
-          "downloads_last_week": 1684
+          "score": 5.43,
+          "download_score": 5.43,
+          "downloads_last_week": 1808
         },
         "risk": {
           "weight": 0.15,
@@ -278,8 +239,47 @@
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 1684,
+      "npm_downloads_last_week": 1808,
       "status_label": "Maintainer Needed"
+    },
+    {
+      "owner": "extrabacon",
+      "repo": "python-shell",
+      "repo_url": "https://github.com/extrabacon/python-shell",
+      "package": "python-shell",
+      "health_score": 66.9,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 4.64,
+          "push_recency": 3.91,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 7.76,
+          "stars_score": 8.34,
+          "forks_score": 7.17
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 10.0,
+          "download_score": 10.0,
+          "downloads_last_week": 1255250
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.0,
+          "days_since_push": 244.0,
+          "open_issues": 72,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 2159,
+      "npm_downloads_last_week": 1255250,
+      "status_label": "Maintainer Gap"
     }
   ]
 }
