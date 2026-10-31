@@ -214,7 +214,7 @@ Config-driven PowerShell + GitHub Actions that automatically:
 | [kylefox/jquery-modal](https://github.com/kylefox/jquery-modal) | 2.6k | 12.5k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-modal.svg) | [#315](https://github.com/kylefox/jquery-modal/pull/315), [#316](https://github.com/kylefox/jquery-modal/pull/316), [#317](https://github.com/kylefox/jquery-modal/pull/317) |
 | [kylefox/jquery-tablesort](https://github.com/kylefox/jquery-tablesort) | 255 | 25.9k | 🟡 Maintainers Wanted | ![health](evidence/badges/health-jquery-tablesort.svg) | [#49](https://github.com/kylefox/jquery-tablesort/pull/49) |
 | [extrabacon/python-shell](https://github.com/extrabacon/python-shell) | 2.2k | 1.3M | 🔴 Maintainer Gap | ![health](evidence/badges/health-python-shell.svg) | [#320](https://github.com/extrabacon/python-shell/pull/320) |
-| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.7k | 4.3M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
+| [jkbrzt/rrule](https://github.com/jkbrzt/rrule) | 3.8k | 4.3M | 🔴 Open Backlog | ![health](evidence/badges/health-rrule.svg) | [#664](https://github.com/jkbrzt/rrule/pull/664) |
 | [Hellenic/react-hexgrid](https://github.com/Hellenic/react-hexgrid) | 354 | 1.8k | 🟡 Maintainer Needed | ![health](evidence/badges/health-react-hexgrid.svg) | [#123](https://github.com/Hellenic/react-hexgrid/pull/123) |
 <!-- TRACKED_PROJECTS:END -->
 
