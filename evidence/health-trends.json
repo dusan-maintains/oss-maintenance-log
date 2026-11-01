@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-11-01T06:03:25Z",
+  "generated_at_utc": "2026-11-01T13:24:08Z",
   "data_points": 685,
-  "oldest_snapshot": "2026-05-05T08:27:38Z",
+  "oldest_snapshot": "2026-05-05T14:24:25Z",
   "trends": [
     {
       "repo": "extrabacon/python-shell",
@@ -14,11 +14,11 @@
     },
     {
       "repo": "grafana/grafana",
-      "current_score": 62.1,
+      "current_score": 62.2,
       "score_7d_ago": 62.2,
       "score_30d_ago": 62.2,
-      "delta_7d": -0.10000000000000142,
-      "delta_30d": -0.10000000000000142,
+      "delta_7d": 0.0,
+      "delta_30d": 0.0,
       "trend": "stable"
     },
     {

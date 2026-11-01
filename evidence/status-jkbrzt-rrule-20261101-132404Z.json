@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-10-19T22:21:08Z",
+  "generated_at_utc": "2026-11-01T13:24:04Z",
   "repo": {
     "owner": "jkbrzt",
     "name": "rrule",
     "html_url": "https://github.com/jkbrzt/rrule",
-    "stars": 3744,
-    "forks": 567,
+    "stars": 3750,
+    "forks": 568,
     "open_issues": 217,
     "pushed_at": "2024-06-27T17:52:15Z"
   },
   "npm": {
     "package": "rrule",
-    "downloads_last_week": 1767336,
-    "start": "2026-10-12",
-    "end": "2026-10-18"
+    "downloads_last_week": 4287988,
+    "start": "2026-10-23",
+    "end": "2026-10-29"
   },
   "tracked_prs": [
     {
