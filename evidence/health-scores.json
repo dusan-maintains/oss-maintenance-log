@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-03T14:13:05Z",
+  "generated_at_utc": "2026-11-03T23:23:05Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 60.7,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 929.0,
+          "days_since_push": 930.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
@@ -121,7 +121,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3750,
+      "stars": 3751,
       "npm_downloads_last_week": 4462134,
       "status_label": "Open Backlog"
     },
@@ -156,7 +156,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 548,
+          "open_issues": 546,
           "open_tracked_prs": 0
         }
       },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3332,
+          "open_issues": 3339,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77656,
+      "stars": 77669,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -214,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.97,
-          "push_recency": 7.91,
+          "push_recency": 7.9,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 4.62,
-          "push_recency": 3.86,
+          "push_recency": 3.85,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,12 +272,12 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 247.0,
+          "days_since_push": 248.0,
           "open_issues": 72,
           "open_tracked_prs": 1
         }
       },
-      "stars": 2159,
+      "stars": 2158,
       "npm_downloads_last_week": 1459008,
       "status_label": "Maintainer Gap"
     }
