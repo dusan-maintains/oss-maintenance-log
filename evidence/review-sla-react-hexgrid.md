@@ -1,6 +1,6 @@
 # PR Review SLA Status
 
-Generated: 2026-11-04T06:21:21Z
+Generated: 2026-11-04T19:45:07Z
 Repository: `Hellenic/react-hexgrid`
 Contributor: `dusan-maintains`
 SLA: `24` hours
@@ -13,4 +13,4 @@ SLA: `24` hours
 ## Details
 | PR | State | Needs response | Hours since external feedback | Overdue | Last external author | Last external at | Link |
 |---|---|---|---|---|---|---|---|
-| #123 | closed | no | 3625.86 | no | kikiminyes | 06/06/2026 04:29:59 | [link](https://github.com/Hellenic/react-hexgrid/pull/123) |
+| #123 | closed | no | 3639.25 | no | kikiminyes | 06/06/2026 04:29:59 | [link](https://github.com/Hellenic/react-hexgrid/pull/123) |
