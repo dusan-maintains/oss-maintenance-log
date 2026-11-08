@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-08T13:24:28Z",
+  "generated_at_utc": "2026-11-08T22:04:14Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 60.7,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 934.0,
+          "days_since_push": 935.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
@@ -121,7 +121,7 @@
           "open_tracked_prs": 1
         }
       },
-      "stars": 3751,
+      "stars": 3752,
       "npm_downloads_last_week": 5061269,
       "status_label": "Open Backlog"
     },
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 593,
+          "open_issues": 597,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3827,
+      "stars": 3828,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -174,8 +174,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -199,7 +199,7 @@
           "open_tracked_prs": 0
         }
       },
-      "stars": 77758,
+      "stars": 77769,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -214,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.92,
-          "push_recency": 7.76,
+          "push_recency": 7.75,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 4.60,
-          "push_recency": 3.79,
+          "score": 4.59,
+          "push_recency": 3.78,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 252.0,
+          "days_since_push": 253.0,
           "open_issues": 72,
           "open_tracked_prs": 1
         }
