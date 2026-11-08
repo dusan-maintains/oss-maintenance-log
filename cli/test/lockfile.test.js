@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { readLockfile } = require('../lib/lockfile');
+const { readLockfile, findWorkspaceDirs } = require('../lib/lockfile');
 
 function tmp() {
   return fs.mkdtempSync(path.join(os.tmpdir(), 'oss-lock-'));
@@ -50,5 +50,74 @@ describe('readLockfile', () => {
     const r = readLockfile(tmp());
     assert.equal(r.names.length, 0);
     assert.equal(r.source, null);
+  });
+});
+
+describe('findWorkspaceDirs', () => {
+  it('returns empty array when no workspaces defined', () => {
+    const d = tmp();
+    fs.writeFileSync(path.join(d, 'package.json'), JSON.stringify({ name: 'root' }));
+    assert.deepEqual(findWorkspaceDirs(d), []);
+  });
+
+  it('detects workspaces from package.json array (npm / yarn)', () => {
+    const d = tmp();
+    fs.writeFileSync(path.join(d, 'package.json'), JSON.stringify({
+      name: 'monorepo',
+      workspaces: ['packages/*']
+    }));
+    const p1 = path.join(d, 'packages', 'pkg-a');
+    const p2 = path.join(d, 'packages', 'pkg-b');
+    fs.mkdirSync(p1, { recursive: true });
+    fs.mkdirSync(p2, { recursive: true });
+    fs.writeFileSync(path.join(p1, 'package.json'), JSON.stringify({ name: 'pkg-a' }));
+    fs.writeFileSync(path.join(p2, 'package.json'), JSON.stringify({ name: 'pkg-b' }));
+
+    const ws = findWorkspaceDirs(d);
+    assert.equal(ws.length, 2);
+    assert.ok(ws.includes(p1));
+    assert.ok(ws.includes(p2));
+  });
+
+  it('detects workspaces from package.json object format (yarn workspaces.packages)', () => {
+    const d = tmp();
+    fs.writeFileSync(path.join(d, 'package.json'), JSON.stringify({
+      name: 'yarn-repo',
+      workspaces: {
+        packages: ['packages/*', 'apps/*']
+      }
+    }));
+    const p1 = path.join(d, 'packages', 'core');
+    const p2 = path.join(d, 'apps', 'web');
+    fs.mkdirSync(p1, { recursive: true });
+    fs.mkdirSync(p2, { recursive: true });
+    fs.writeFileSync(path.join(p1, 'package.json'), JSON.stringify({ name: '@scope/core' }));
+    fs.writeFileSync(path.join(p2, 'package.json'), JSON.stringify({ name: '@scope/web' }));
+
+    const ws = findWorkspaceDirs(d);
+    assert.equal(ws.length, 2);
+    assert.ok(ws.includes(p1));
+    assert.ok(ws.includes(p2));
+  });
+
+  it('detects workspaces from pnpm-workspace.yaml', () => {
+    const d = tmp();
+    fs.writeFileSync(path.join(d, 'package.json'), JSON.stringify({ name: 'pnpm-repo' }));
+    fs.writeFileSync(path.join(d, 'pnpm-workspace.yaml'), `
+packages:
+  - 'packages/*'
+  - 'services/**'
+`);
+    const p1 = path.join(d, 'packages', 'shared');
+    const p2 = path.join(d, 'services', 'auth', 'api');
+    fs.mkdirSync(p1, { recursive: true });
+    fs.mkdirSync(p2, { recursive: true });
+    fs.writeFileSync(path.join(p1, 'package.json'), JSON.stringify({ name: 'shared' }));
+    fs.writeFileSync(path.join(p2, 'package.json'), JSON.stringify({ name: 'auth-api' }));
+
+    const ws = findWorkspaceDirs(d);
+    assert.equal(ws.length, 2);
+    assert.ok(ws.includes(p1));
+    assert.ok(ws.includes(p2));
   });
 });

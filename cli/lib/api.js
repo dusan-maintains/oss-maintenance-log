@@ -9,6 +9,7 @@ const { queryOSV, summarizeVulns } = require('./osv');
 const { batchFetchRepos } = require('./github-graphql');
 const { computeBlastRadius } = require('./blast');
 const { maintainerRisk, securityPosture, suspiciousRelease } = require('./posture');
+const { findWorkspaceDirs } = require('./lockfile');
 
 /**
  * Fetch npm-only info for a package (no GitHub call).
@@ -268,7 +269,25 @@ async function scanPackageJson(dir, options) {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
   const deps = Object.keys(pkg.dependencies || {});
   const devDeps = opts.dev ? Object.keys(pkg.devDependencies || {}) : [];
-  const names = [...deps, ...devDeps];
+  const namesList = [...deps, ...devDeps];
+
+  const workspaceDirs = findWorkspaceDirs(path.resolve(dir || '.'));
+  const internalPkgNames = new Set();
+  if (pkg.name) internalPkgNames.add(pkg.name);
+
+  if (workspaceDirs.length > 0) {
+    for (const wsDir of workspaceDirs) {
+      try {
+        const wsPkg = JSON.parse(fs.readFileSync(path.join(wsDir, 'package.json'), 'utf8'));
+        if (wsPkg.name) internalPkgNames.add(wsPkg.name);
+        const wsDeps = Object.keys(wsPkg.dependencies || {});
+        const wsDevDeps = opts.dev ? Object.keys(wsPkg.devDependencies || {}) : [];
+        namesList.push(...wsDeps, ...wsDevDeps);
+      } catch (e) { /* ignore invalid workspace package.json */ }
+    }
+  }
+
+  const names = [...new Set(namesList)].filter(p => !internalPkgNames.has(p));
 
   if (names.length === 0) {
     return { scanned: 0, results: [], pkgName: pkg.name };

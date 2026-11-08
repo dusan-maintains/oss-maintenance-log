@@ -7,7 +7,7 @@ const { scanPackages, scanPackageJson } = require('../lib/api');
 const { computeScore } = require('../lib/scoring');
 const { printReport } = require('../lib/reporter');
 const { printParanoid } = require('../lib/paranoid');
-const { readLockfile } = require('../lib/lockfile');
+const { readLockfile, findWorkspaceDirs } = require('../lib/lockfile');
 const { toHtml } = require('../lib/html');
 const { runDiff } = require('../lib/diff');
 const { toIssuesMarkdown } = require('../lib/issues');
@@ -148,7 +148,30 @@ function readDeps(dir, flags) {
   if (!packages) {
     const deps = Object.keys(pkg.dependencies || {});
     const devDeps = (flags.dev && !flags.prodOnly) ? Object.keys(pkg.devDependencies || {}) : [];
-    packages = [...deps, ...devDeps];
+    const pkgList = [...deps, ...devDeps];
+
+    // Detect monorepo workspaces and scan all package.json files
+    const workspaceDirs = findWorkspaceDirs(dir);
+    const internalPkgNames = new Set();
+    if (pkg.name) internalPkgNames.add(pkg.name);
+
+    if (workspaceDirs.length > 0) {
+      for (const wsDir of workspaceDirs) {
+        try {
+          const wsPkg = JSON.parse(fs.readFileSync(path.join(wsDir, 'package.json'), 'utf8'));
+          if (wsPkg.name) internalPkgNames.add(wsPkg.name);
+          const wsDeps = Object.keys(wsPkg.dependencies || {});
+          const wsDevDeps = (flags.dev && !flags.prodOnly) ? Object.keys(wsPkg.devDependencies || {}) : [];
+          pkgList.push(...wsDeps, ...wsDevDeps);
+        } catch (e) { /* ignore invalid workspace package.json */ }
+      }
+      if (!flags.json && !flags.sarif && !flags.markdown) {
+        process.stderr.write(`  Detected ${workspaceDirs.length} workspace(s); deduplicating dependencies\n`);
+      }
+    }
+
+    // Deduplicate and filter internal workspace packages
+    packages = pkgList.filter(p => !internalPkgNames.has(p));
   }
 
   // Apply exclusions from config
