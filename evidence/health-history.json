@@ -1,46 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T09:12:34Z",
-    "average": 59.1,
-    "scores": [
-      {
-        "repo": "Hellenic/react-hexgrid",
-        "score": 49.2,
-        "risk": "warning"
-      },
-      {
-        "repo": "kylefox/jquery-tablesort",
-        "score": 53.4,
-        "risk": "warning"
-      },
-      {
-        "repo": "kylefox/jquery-modal",
-        "score": 56.0,
-        "risk": "warning"
-      },
-      {
-        "repo": "jkbrzt/rrule",
-        "score": 59.6,
-        "risk": "warning"
-      },
-      {
-        "repo": "lingdojo/kana-dojo",
-        "score": 60.1,
-        "risk": "healthy"
-      },
-      {
-        "repo": "grafana/grafana",
-        "score": 62.2,
-        "risk": "healthy"
-      },
-      {
-        "repo": "extrabacon/python-shell",
-        "score": 73.1,
-        "risk": "healthy"
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T14:49:16Z",
     "average": 59.1,
     "scores": [
@@ -27635,6 +27594,47 @@
   },
   {
     "timestamp": "2026-11-08T05:59:53Z",
+    "average": 60.7,
+    "scores": [
+      {
+        "repo": "kylefox/jquery-modal",
+        "score": 54.8,
+        "risk": "warning"
+      },
+      {
+        "repo": "kylefox/jquery-tablesort",
+        "score": 55.2,
+        "risk": "warning"
+      },
+      {
+        "repo": "jkbrzt/rrule",
+        "score": 59.2,
+        "risk": "warning"
+      },
+      {
+        "repo": "lingdojo/kana-dojo",
+        "score": 60.9,
+        "risk": "healthy"
+      },
+      {
+        "repo": "grafana/grafana",
+        "score": 62.2,
+        "risk": "healthy"
+      },
+      {
+        "repo": "Hellenic/react-hexgrid",
+        "score": 65.6,
+        "risk": "healthy"
+      },
+      {
+        "repo": "extrabacon/python-shell",
+        "score": 66.8,
+        "risk": "healthy"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-11-08T13:24:28Z",
     "average": 60.7,
     "scores": [
       {
