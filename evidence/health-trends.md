@@ -1,12 +1,12 @@
 # Health Score Trends
 
-Generated: 2026-11-09T06:26:50Z
-Data points: 674 (oldest: 05/13/2026 09:19:34)
+Generated: 2026-11-09T22:21:14Z
+Data points: 672 (oldest: 05/14/2026 04:12:32)
 
 | Package | Current | 7d ago | Δ 7d | 30d ago | Δ 30d | Trend |
 |---|---|---|---|---|---|---|
-| kylefox/jquery-modal | **54.8** | 54.7 | +0.1 | 54.5 | +0.3 | ➡️ stable |
-| kylefox/jquery-tablesort | **55.2** | 54.9 | +0.3 | 53.7 | +1.5 | ➡️ stable |
+| kylefox/jquery-modal | **54.8** | 54.7 | +0.1 | 54.6 | +0.2 | ➡️ stable |
+| kylefox/jquery-tablesort | **55.2** | 54.9 | +0.3 | 54 | +1.2 | ➡️ stable |
 | jkbrzt/rrule | **59.2** | 59.2 | 0 | 59.2 | 0 | ➡️ stable |
 | lingdojo/kana-dojo | **60.9** | 60.8 | +0.1 | 60.8 | +0.1 | ➡️ stable |
 | grafana/grafana | **62.2** | 62.2 | 0 | 62.2 | 0 | ➡️ stable |
