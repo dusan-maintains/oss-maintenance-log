@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T19:41:22Z",
+  "generated_at_utc": "2026-11-14T06:21:46Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 60.6,
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1764.0,
+          "days_since_push": 1765.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -116,12 +116,12 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 869.0,
+          "days_since_push": 870.0,
           "open_issues": 220,
           "open_tracked_prs": 1
         }
       },
-      "stars": 3751,
+      "stars": 3752,
       "npm_downloads_last_week": 5113468,
       "status_label": "Open Backlog"
     },
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 631,
+          "open_issues": 664,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3858,
+      "stars": 3857,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -174,8 +174,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.67,
-          "push_recency": 10.0,
+          "score": 6.66,
+          "push_recency": 9.99,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3292,
+          "open_issues": 3293,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77879,
+      "stars": 77894,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 5.87,
-          "push_recency": 7.61,
+          "score": 5.86,
+          "push_recency": 7.59,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 4.57,
-          "push_recency": 3.71,
+          "push_recency": 3.7,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 257.0,
+          "days_since_push": 258.0,
           "open_issues": 72,
           "open_tracked_prs": 1
         }
