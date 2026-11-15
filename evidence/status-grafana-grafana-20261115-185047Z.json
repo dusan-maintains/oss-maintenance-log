@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-10-28T12:53:45Z",
+  "generated_at_utc": "2026-11-15T18:50:47Z",
   "repo": {
     "owner": "grafana",
     "name": "grafana",
     "html_url": "https://github.com/grafana/grafana",
-    "stars": 77566,
-    "forks": 14876,
-    "open_issues": 3247,
-    "pushed_at": "2026-10-28T12:51:12Z"
+    "stars": 77921,
+    "forks": 14983,
+    "open_issues": 3301,
+    "pushed_at": "2026-11-15T16:08:47Z"
   },
   "npm": null,
   "tracked_prs": [

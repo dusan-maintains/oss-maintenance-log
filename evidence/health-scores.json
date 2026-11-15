@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-15T06:31:07Z",
+  "generated_at_utc": "2026-11-15T18:50:59Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 60.6,
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 941.0,
+          "days_since_push": 942.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
@@ -111,7 +111,7 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 5142735
+          "downloads_last_week": 5185006
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 3753,
-      "npm_downloads_last_week": 5142735,
+      "npm_downloads_last_week": 5185006,
       "status_label": "Open Backlog"
     },
     {
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 673,
+          "open_issues": 678,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3867,
+      "stars": 3873,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -169,13 +169,13 @@
       "repo": "grafana",
       "repo_url": "https://github.com/grafana/grafana",
       "package": null,
-      "health_score": 62.1,
+      "health_score": 62.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.66,
-          "push_recency": 9.98,
+          "score": 6.67,
+          "push_recency": 10.0,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3292,
+          "open_issues": 3301,
           "open_tracked_prs": 0
         }
       },
-      "stars": 77909,
+      "stars": 77921,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -208,13 +208,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 65.3,
+      "health_score": 65.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.85,
-          "push_recency": 7.56,
+          "push_recency": 7.55,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -233,7 +233,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 72.0,
+          "days_since_push": 73.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
@@ -247,13 +247,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 66.7,
+      "health_score": 66.6,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 4.56,
-          "push_recency": 3.69,
+          "push_recency": 3.68,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
