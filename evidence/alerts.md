@@ -1,6 +1,8 @@
 # Health Alerts
 
-Generated: 2026-11-17T20:55:00Z
-Total: 0 (🔴 0 critical, 🟡 0 warning)
+Generated: 2026-11-18T07:27:59Z
+Total: 1 (🔴 0 critical, 🟡 1 warning)
 
-✅ No alerts. All packages are within healthy thresholds.
+| Severity | Package | Score | Alert | Details |
+|---|---|---|---|---|
+| 🟡 warning | extrabacon/python-shell | 53.3/100 | Health score dropped by 13.4 points in 7 days (66.7 -> 53.3). | Trend: declining. 30d delta: 0.399999999999999 |
