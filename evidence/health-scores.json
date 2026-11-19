@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-11-18T20:30:26Z",
+  "generated_at_utc": "2026-11-19T07:24:12Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 58.7,
+    "average_health_score": 58.6,
     "critical": 0,
     "warning": 4,
     "healthy": 3
@@ -13,13 +13,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 53.3,
+      "health_score": 53.2,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 1.21,
-          "push_recency": 3.64,
+          "push_recency": 3.63,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1769.0,
+          "days_since_push": 1770.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -130,13 +130,13 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 59.2,
+      "health_score": 59.1,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 3.45,
-          "push_recency": 0.35,
+          "push_recency": 0.34,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -155,7 +155,7 @@
         "risk": {
           "weight": 0.15,
           "score": 2.5,
-          "days_since_push": 874.0,
+          "days_since_push": 875.0,
           "open_issues": 221,
           "open_tracked_prs": 1
         }
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 721,
+          "open_issues": 734,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3888,
+      "stars": 3886,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -234,11 +234,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3334,
+          "open_issues": 3335,
           "open_tracked_prs": 0
         }
       },
-      "stars": 78008,
+      "stars": 77986,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -247,13 +247,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 65.0,
+      "health_score": 64.9,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.82,
-          "push_recency": 7.46,
+          "push_recency": 7.45,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 76.0,
+          "days_since_push": 77.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
