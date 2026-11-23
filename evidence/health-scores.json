@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-11-23T07:37:40Z",
+  "generated_at_utc": "2026-11-23T23:53:05Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 58.7,
+    "average_health_score": 61.4,
     "critical": 0,
-    "warning": 4,
-    "healthy": 3
+    "warning": 3,
+    "healthy": 4
   },
   "scores": [
     {
@@ -13,13 +13,13 @@
       "repo": "python-shell",
       "repo_url": "https://github.com/extrabacon/python-shell",
       "package": "python-shell",
-      "health_score": 53.2,
+      "health_score": 53.1,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 1.19,
-          "push_recency": 3.58,
+          "push_recency": 3.57,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -38,7 +38,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 267.0,
+          "days_since_push": 268.0,
           "open_issues": 77,
           "open_tracked_prs": 1
         }
@@ -77,7 +77,7 @@
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 949.0,
+          "days_since_push": 950.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
@@ -126,45 +126,6 @@
       "status_label": "Maintainers Wanted"
     },
     {
-      "owner": "jkbrzt",
-      "repo": "rrule",
-      "repo_url": "https://github.com/jkbrzt/rrule",
-      "package": "rrule",
-      "health_score": 59.1,
-      "risk_level": "warning",
-      "breakdown": {
-        "maintenance": {
-          "weight": 0.4,
-          "score": 3.45,
-          "push_recency": 0.34,
-          "issue_ratio": 0.0,
-          "pr_response": 10.0
-        },
-        "community": {
-          "weight": 0.25,
-          "score": 8.64,
-          "stars_score": 8.94,
-          "forks_score": 8.34
-        },
-        "popularity": {
-          "weight": 0.2,
-          "score": 10.0,
-          "download_score": 10.0,
-          "downloads_last_week": 5553537
-        },
-        "risk": {
-          "weight": 0.15,
-          "score": 2.5,
-          "days_since_push": 879.0,
-          "open_issues": 226,
-          "open_tracked_prs": 1
-        }
-      },
-      "stars": 3752,
-      "npm_downloads_last_week": 5553537,
-      "status_label": "Open Backlog"
-    },
-    {
       "owner": "lingdojo",
       "repo": "kana-dojo",
       "repo_url": "https://github.com/lingdojo/kana-dojo",
@@ -195,7 +156,7 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 459,
+          "open_issues": 479,
           "open_tracked_prs": 0
         }
       },
@@ -234,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3303,
+          "open_issues": 3315,
           "open_tracked_prs": 0
         }
       },
-      "stars": 78047,
+      "stars": 78078,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -252,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 5.78,
-          "push_recency": 7.33,
+          "score": 5.77,
+          "push_recency": 7.31,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -280,6 +241,45 @@
       "stars": 354,
       "npm_downloads_last_week": 2063,
       "status_label": "Maintainer Needed"
+    },
+    {
+      "owner": "jkbrzt",
+      "repo": "rrule",
+      "repo_url": "https://github.com/jkbrzt/rrule",
+      "package": "rrule",
+      "health_score": 78.0,
+      "risk_level": "healthy",
+      "breakdown": {
+        "maintenance": {
+          "weight": 0.4,
+          "score": 6.66,
+          "push_recency": 9.99,
+          "issue_ratio": 0.0,
+          "pr_response": 10.0
+        },
+        "community": {
+          "weight": 0.25,
+          "score": 8.64,
+          "stars_score": 8.94,
+          "forks_score": 8.34
+        },
+        "popularity": {
+          "weight": 0.2,
+          "score": 10.0,
+          "download_score": 10.0,
+          "downloads_last_week": 5553537
+        },
+        "risk": {
+          "weight": 0.15,
+          "score": 6.5,
+          "days_since_push": 0.0,
+          "open_issues": 226,
+          "open_tracked_prs": 1
+        }
+      },
+      "stars": 3753,
+      "npm_downloads_last_week": 5553537,
+      "status_label": "Open Backlog"
     }
   ]
 }

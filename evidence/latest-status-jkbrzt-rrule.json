@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-11-23T07:37:36Z",
+  "generated_at_utc": "2026-11-23T23:53:01Z",
   "repo": {
     "owner": "jkbrzt",
     "name": "rrule",
     "html_url": "https://github.com/jkbrzt/rrule",
-    "stars": 3752,
-    "forks": 565,
+    "stars": 3753,
+    "forks": 566,
     "open_issues": 226,
-    "pushed_at": "2024-06-27T17:52:15Z"
+    "pushed_at": "2026-11-23T20:40:30Z"
   },
   "npm": {
     "package": "rrule",
