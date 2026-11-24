@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-23T23:53:05Z",
+  "generated_at_utc": "2026-11-24T09:53:31Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 61.4,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.19,
-          "push_recency": 3.57,
+          "push_recency": 3.56,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1774.0,
+          "days_since_push": 1775.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 479,
+          "open_issues": 497,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3898,
+      "stars": 3900,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3315,
+          "open_issues": 3320,
           "open_tracked_prs": 0
         }
       },
-      "stars": 78078,
+      "stars": 78082,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -214,7 +214,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 5.77,
-          "push_recency": 7.31,
+          "push_recency": 7.3,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -233,7 +233,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 81.0,
+          "days_since_push": 82.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
@@ -253,7 +253,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 6.66,
-          "push_recency": 9.99,
+          "push_recency": 9.98,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -272,7 +272,7 @@
         "risk": {
           "weight": 0.15,
           "score": 6.5,
-          "days_since_push": 0.0,
+          "days_since_push": 1.0,
           "open_issues": 226,
           "open_tracked_prs": 1
         }
