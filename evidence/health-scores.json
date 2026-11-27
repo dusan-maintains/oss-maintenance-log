@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-11-27T08:31:55Z",
+  "generated_at_utc": "2026-11-27T21:16:18Z",
   "summary": {
     "total_projects": 7,
-    "average_health_score": 61.4,
+    "average_health_score": 61.3,
     "critical": 0,
     "warning": 3,
     "healthy": 4
@@ -33,18 +33,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 1373189
+          "downloads_last_week": 1297724
         },
         "risk": {
           "weight": 0.15,
           "score": 6.0,
-          "days_since_push": 271.0,
+          "days_since_push": 272.0,
           "open_issues": 77,
           "open_tracked_prs": 1
         }
       },
       "stars": 2156,
-      "npm_downloads_last_week": 1373189,
+      "npm_downloads_last_week": 1297724,
       "status_label": "Maintainer Gap"
     },
     {
@@ -52,7 +52,7 @@
       "repo": "jquery-modal",
       "repo_url": "https://github.com/kylefox/jquery-modal",
       "package": "jquery-modal",
-      "health_score": 54.4,
+      "health_score": 54.3,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -70,20 +70,20 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 6.7,
-          "download_score": 6.7,
-          "downloads_last_week": 10504
+          "score": 6.63,
+          "download_score": 6.63,
+          "downloads_last_week": 9566
         },
         "risk": {
           "weight": 0.15,
           "score": 4.0,
-          "days_since_push": 953.0,
+          "days_since_push": 954.0,
           "open_issues": 78,
           "open_tracked_prs": 3
         }
       },
       "stars": 2596,
-      "npm_downloads_last_week": 10504,
+      "npm_downloads_last_week": 9566,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -91,7 +91,7 @@
       "repo": "jquery-tablesort",
       "repo_url": "https://github.com/kylefox/jquery-tablesort",
       "package": "jquery-tablesort",
-      "health_score": 55.7,
+      "health_score": 55.6,
       "risk_level": "warning",
       "breakdown": {
         "maintenance": {
@@ -109,9 +109,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 7.88,
-          "download_score": 7.88,
-          "downloads_last_week": 53746
+          "score": 7.81,
+          "download_score": 7.81,
+          "downloads_last_week": 48278
         },
         "risk": {
           "weight": 0.15,
@@ -122,7 +122,7 @@
         }
       },
       "stars": 255,
-      "npm_downloads_last_week": 53746,
+      "npm_downloads_last_week": 48278,
       "status_label": "Maintainers Wanted"
     },
     {
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 571,
+          "open_issues": 592,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3916,
+      "stars": 3922,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3285,
+          "open_issues": 3288,
           "open_tracked_prs": 0
         }
       },
-      "stars": 78221,
+      "stars": 78227,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -208,13 +208,13 @@
       "repo": "react-hexgrid",
       "repo_url": "https://github.com/Hellenic/react-hexgrid",
       "package": "react-hexgrid",
-      "health_score": 65.5,
+      "health_score": 65.2,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 5.74,
-          "push_recency": 7.22,
+          "push_recency": 7.21,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -226,9 +226,9 @@
         },
         "popularity": {
           "weight": 0.2,
-          "score": 5.72,
-          "download_score": 5.72,
-          "downloads_last_week": 2698
+          "score": 5.62,
+          "download_score": 5.62,
+          "downloads_last_week": 2365
         },
         "risk": {
           "weight": 0.15,
@@ -239,7 +239,7 @@
         }
       },
       "stars": 354,
-      "npm_downloads_last_week": 2698,
+      "npm_downloads_last_week": 2365,
       "status_label": "Maintainer Needed"
     },
     {
@@ -247,13 +247,13 @@
       "repo": "rrule",
       "repo_url": "https://github.com/jkbrzt/rrule",
       "package": "rrule",
-      "health_score": 77.9,
+      "health_score": 77.8,
       "risk_level": "healthy",
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
           "score": 6.62,
-          "push_recency": 9.87,
+          "push_recency": 9.85,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -267,18 +267,18 @@
           "weight": 0.2,
           "score": 10.0,
           "download_score": 10.0,
-          "downloads_last_week": 5459659
+          "downloads_last_week": 5231746
         },
         "risk": {
           "weight": 0.15,
           "score": 6.5,
-          "days_since_push": 3.0,
+          "days_since_push": 4.0,
           "open_issues": 227,
           "open_tracked_prs": 1
         }
       },
       "stars": 3754,
-      "npm_downloads_last_week": 5459659,
+      "npm_downloads_last_week": 5231746,
       "status_label": "Open Backlog"
     }
   ]
