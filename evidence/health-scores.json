@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-27T21:16:18Z",
+  "generated_at_utc": "2026-11-28T07:48:05Z",
   "summary": {
     "total_projects": 7,
     "average_health_score": 61.3,
@@ -19,7 +19,7 @@
         "maintenance": {
           "weight": 0.4,
           "score": 1.17,
-          "push_recency": 3.52,
+          "push_recency": 3.51,
           "issue_ratio": 0.0,
           "pr_response": 0.0
         },
@@ -116,7 +116,7 @@
         "risk": {
           "weight": 0.15,
           "score": 5.5,
-          "days_since_push": 1778.0,
+          "days_since_push": 1779.0,
           "open_issues": 15,
           "open_tracked_prs": 1
         }
@@ -156,11 +156,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 592,
+          "open_issues": 595,
           "open_tracked_prs": 0
         }
       },
-      "stars": 3922,
+      "stars": 3925,
       "npm_downloads_last_week": 0,
       "status_label": "Merged"
     },
@@ -195,11 +195,11 @@
           "weight": 0.15,
           "score": 7.0,
           "days_since_push": 0.0,
-          "open_issues": 3288,
+          "open_issues": 3272,
           "open_tracked_prs": 0
         }
       },
-      "stars": 78227,
+      "stars": 78212,
       "npm_downloads_last_week": 0,
       "status_label": "Open"
     },
@@ -213,8 +213,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 5.74,
-          "push_recency": 7.21,
+          "score": 5.73,
+          "push_recency": 7.19,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
@@ -233,7 +233,7 @@
         "risk": {
           "weight": 0.15,
           "score": 10.0,
-          "days_since_push": 85.0,
+          "days_since_push": 86.0,
           "open_issues": 34,
           "open_tracked_prs": 0
         }
@@ -252,8 +252,8 @@
       "breakdown": {
         "maintenance": {
           "weight": 0.4,
-          "score": 6.62,
-          "push_recency": 9.85,
+          "score": 6.61,
+          "push_recency": 9.83,
           "issue_ratio": 0.0,
           "pr_response": 10.0
         },
